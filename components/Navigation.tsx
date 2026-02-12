@@ -21,11 +21,12 @@ export const Navigation: React.FC<NavigationProps> = ({ currentView, setView }) 
   }, []);
 
   const navItems: { label: string; value: ViewState }[] = [
-    { label: 'Services', value: 'how-i-help' },
+    { label: 'How I Help', value: 'how-i-help' },
     { label: 'About', value: 'about' },
-    { label: 'Stories', value: 'results' },
+    { label: 'Results', value: 'results' },
     { label: 'Workshops', value: 'workshops' },
     { label: 'Resources', value: 'resources' },
+    { label: 'FAQ', value: 'faq' },
   ];
 
   const handleNavClick = (view: ViewState) => {
@@ -35,14 +36,13 @@ export const Navigation: React.FC<NavigationProps> = ({ currentView, setView }) 
   };
 
   return (
-    <nav 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        isScrolled ? 'bg-[#F9F8F6]/80 backdrop-blur-md py-4 shadow-sm' : 'bg-transparent py-6'
-      }`}
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled ? 'bg-[#F9F8F6]/80 backdrop-blur-md py-4 shadow-sm' : 'bg-transparent py-6'
+        }`}
     >
       <div className="max-w-6xl mx-auto px-6 flex justify-between items-center">
         {/* Logo / Brand */}
-        <button 
+        <button
           onClick={() => handleNavClick('home')}
           className="text-2xl font-serif text-sand-900 tracking-tight hover:opacity-80 transition-opacity z-50 relative"
         >
@@ -55,15 +55,14 @@ export const Navigation: React.FC<NavigationProps> = ({ currentView, setView }) 
             <button
               key={item.value}
               onClick={() => handleNavClick(item.value)}
-              className={`text-sm font-sans tracking-wide transition-colors ${
-                currentView === item.value ? 'text-sand-900 font-bold' : 'text-sand-500 hover:text-sand-800'
-              }`}
+              className={`text-sm font-sans tracking-wide transition-colors ${currentView === item.value ? 'text-sand-900 font-bold' : 'text-sand-500 hover:text-sand-800'
+                }`}
             >
               {item.label}
             </button>
           ))}
-          <Button 
-            size="sm" 
+          <Button
+            size="sm"
             onClick={() => window.open('https://calendly.com', '_blank')}
           >
             Book Free Chat
@@ -71,7 +70,7 @@ export const Navigation: React.FC<NavigationProps> = ({ currentView, setView }) 
         </div>
 
         {/* Mobile Menu Toggle */}
-        <button 
+        <button
           className="md:hidden text-sand-900 z-50 relative"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
@@ -92,7 +91,7 @@ export const Navigation: React.FC<NavigationProps> = ({ currentView, setView }) 
             </button>
           ))}
           <div className="pt-8">
-            <Button 
+            <Button
               size="lg"
               onClick={() => window.open('https://calendly.com', '_blank')}
             >

@@ -1,4 +1,4 @@
-export type ViewState = 'home' | 'how-i-help' | 'about' | 'results' | 'workshops' | 'resources';
+export type ViewState = 'home' | 'how-i-help' | 'about' | 'results' | 'workshops' | 'resources' | 'faq';
 
 export interface Testimonial {
   id: string;

@@ -8,6 +8,8 @@ import { About } from './views/About';
 import { Results } from './views/Results';
 import { Workshops } from './views/Workshops';
 import { Resources } from './views/Resources';
+import { FAQ } from './views/FAQ';
+import { StickyCTA } from './components/StickyCTA';
 
 const App: React.FC = () => {
   const [currentView, setCurrentView] = useState<ViewState>('home');
@@ -25,6 +27,7 @@ const App: React.FC = () => {
       case 'results': return <Results />;
       case 'workshops': return <Workshops />;
       case 'resources': return <Resources />;
+      case 'faq': return <FAQ />;
       default: return <Home setView={setCurrentView} />;
     }
   };
@@ -32,11 +35,12 @@ const App: React.FC = () => {
   return (
     <div className="min-h-screen flex flex-col font-sans selection:bg-stone-200 selection:text-stone-800">
       <Navigation currentView={currentView} setView={setCurrentView} />
-      
+
       <main className="flex-grow">
         {renderView()}
       </main>
 
+      <StickyCTA />
       <Footer setView={setCurrentView} />
     </div>
   );

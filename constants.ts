@@ -9,7 +9,7 @@ export const TESTIMONIALS: Testimonial[] = [
   },
   {
     id: '2',
-    quote: "After six months, she knows what to do when she feels upset, is more helpful around the house, communicating what she needs and why so that we argue less. She is doing well in school, calmer overall, and more confident in who she is. I'm so proud of her!",
+    quote: "I came to you with an ADHD daughter who had trouble getting along with her siblings and teachers. After six months, she knows what to do when she feels upset, is more helpful around the house, communicating what she needs and why so that we argue less. She is doing well in school, calmer overall, and she sleeps through the night after you helped her figure out what was keeping her up (the bedding!). She's more confident in who she is and I'm so proud of her!",
     author: "Parent of a child with ADHD",
     context: "Family Coaching"
   },
@@ -36,7 +36,7 @@ export const TESTIMONIALS: Testimonial[] = [
 export const SERVICES: Service[] = [
   {
     title: "1-on-1 Coaching",
-    description: "Personalized guidance and strategies for stress relief. Coaching puts you in the driver's seat — we focus on your strengths and build on what you're already doing well, through small manageable steps.",
+    description: "Personalized guidance and strategies for stress relief. Coaching puts you in the driver's seat to move towards how you want to feel through small manageable steps. We focus on your strengths and build on what you're already doing well.",
     price: "$500 (6-session package)",
     features: ["Bi-weekly 30-min sessions", "Parent support included", "Customized toolkit"]
   },

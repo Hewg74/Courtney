@@ -39,7 +39,7 @@ export const Home: React.FC<HomeProps> = ({ setView }) => {
 
             <Reveal variant="fadeUp" delay={0.4}>
               <p className="text-lg md:text-xl text-sand-600 max-w-xl mx-auto lg:mx-0 leading-relaxed font-sans font-light">
-                Hi, I'm Courtney! I'm a Board-Certified Health & Wellness Coach (NBC-HWC) and Qigong teacher with a background in children's mental health. I help families and individuals build routines to support calm, connection, and confidence using tools that fit easily into your life.
+                Hi, I'm Courtney! I'm a Board-Certified Health & Wellness Coach (NBC-HWC) and long-time Qigong teacher with a background in children's mental health. I help people build routines to support calm, connection, and confidence using tools that fit easily into your life.
               </p>
             </Reveal>
 
@@ -148,7 +148,7 @@ export const Home: React.FC<HomeProps> = ({ setView }) => {
               >
                 <h3 className="text-2xl font-serif text-sand-900 mb-4">1-on-1 Coaching</h3>
                 <p className="text-sand-600 text-sm leading-relaxed mb-8 min-h-[80px]">
-                  Personalized guidance and strategies for stress relief. We focus on your strengths and build on what you're already doing well — through small manageable steps.
+                  Personalized guidance and strategies for stress relief. Coaching puts you in the driver's seat to move towards how you want to feel — through small manageable steps.
                 </p>
                 <div className="text-xs font-bold uppercase tracking-widest text-sand-500 group-hover:text-clay-600">Learn More &rarr;</div>
               </div>

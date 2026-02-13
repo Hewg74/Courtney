@@ -15,7 +15,7 @@ export const HowIHelp: React.FC = () => {
         </div>
         <div className="text-lg text-sand-600 font-light leading-relaxed max-w-md md:ml-auto">
           <p>
-            Coaching is future-focused and action-oriented. My approach is based on your strengths and lifestyle to help you feel supported - not overwhelmed.
+            I help families and individuals build practical tools for stress-relief, connection, and resilience. My approach is based on your strengths and lifestyle to help you feel supported - not overwhelmed.
           </p>
         </div>
       </div>

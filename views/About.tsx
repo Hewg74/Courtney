@@ -27,7 +27,7 @@ export const About: React.FC = () => {
               I help families and individuals build routines to support calm, connection, and confidence using tools that fit easily into your life. My approach is based on your strengths and lifestyle to help you feel supported - not overwhelmed.
             </p>
             <p>
-              My career includes literacy and creative programs for kids at organizations like 826Valencia and Reading Partners, education therapy, and pediatric mental health coaching — collaborating with licensed therapists and psychiatric providers.
+              My career includes literacy and creative programs for kids at organizations like 826Valencia and Reading Partners, education therapy, and pediatric mental health coaching — collaborating with licensed pediatric therapists and psychiatric providers.
             </p>
           </div>
         </div>
@@ -88,7 +88,7 @@ export const About: React.FC = () => {
             </li>
             <li className="flex items-start gap-3">
               <div className="w-1.5 h-1.5 rounded-full bg-clay-500 mt-2.5 flex-shrink-0" />
-              <span>Pediatric Mental Health Coach — collaborating with licensed therapists and psychiatric providers</span>
+              <span>Pediatric Mental Health Coach — collaborating with licensed pediatric therapists and psychiatric providers</span>
             </li>
             <li className="flex items-start gap-3">
               <div className="w-1.5 h-1.5 rounded-full bg-clay-500 mt-2.5 flex-shrink-0" />
@@ -98,7 +98,7 @@ export const About: React.FC = () => {
           <ul className="space-y-4 text-sand-700">
             <li className="flex items-start gap-3">
               <div className="w-1.5 h-1.5 rounded-full bg-clay-500 mt-2.5 flex-shrink-0" />
-              <span>Former Faculty at <strong>Lumeria Maui Retreat Center</strong></span>
+              <span>Former Faculty at <strong>Lumeria Maui Retreat Center</strong> & <strong>Maui Academy of Healing Arts</strong></span>
             </li>
             <li className="flex items-start gap-3">
               <div className="w-1.5 h-1.5 rounded-full bg-clay-500 mt-2.5 flex-shrink-0" />

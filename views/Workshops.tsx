@@ -52,7 +52,7 @@ export const Workshops: React.FC = () => {
               <h2 className="text-3xl font-serif text-sand-900">Raising Resilient Kids</h2>
             </div>
             <p className="text-sand-600 leading-relaxed font-light text-lg">
-              A fun and accessible way to learn practical tools, connect and share with other families, and create a calmer home rhythm. Popular topics include communication, emotional regulation, sleep, and routine. Available both online & in-person.
+              A fun and accessible way to learn practical tools, connect and share with other families, and create a calmer home rhythm. Popular topics include communication, emotional regulation, sleep, routine, and organization. Available both online & in-person.
             </p>
             <div className="pt-4">
               <Button variant="outline" className="border-clay-200 text-clay-700 hover:bg-clay-50">Inquire About Availability</Button>

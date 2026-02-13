@@ -3,19 +3,31 @@ import { Testimonial, Service } from './types';
 export const TESTIMONIALS: Testimonial[] = [
   {
     id: '1',
-    quote: "Since working with Courtney, I have seen a miraculous transformation in my child. Once nearly debilitated by anxiety, they now have confidence, courage, and tools to help curtail negative thoughts. They've learned to embrace their unique talents rather than fear them.",
-    author: "Parent of a 12-year-old",
+    quote: "Since working with Courtney, I have seen a miraculous transformation in my son. Once nearly debilitated by anxiety, he now has confidence and courage and tools to help him curtail negative thoughts. He has learned to embrace his unique talents rather than fear or suppress them. You have made such a difference in his life!",
+    author: "Kerrie",
     context: "Arizona"
   },
   {
     id: '2',
+    quote: "After six months, she knows what to do when she feels upset, is more helpful around the house, communicating what she needs and why so that we argue less. She is doing well in school, calmer overall, and more confident in who she is. I'm so proud of her!",
+    author: "Parent of a child with ADHD",
+    context: "Family Coaching"
+  },
+  {
+    id: '3',
+    quote: "After our coaching sessions I'm doing better. I know what to do now. It really helped to have someone to talk to and help me reflect on what to do. The answers were there, I was just too close to the waterfall to hear it.",
+    author: "Rona B.",
+    context: "Hawaii"
+  },
+  {
+    id: '4',
     quote: "Courtney has the ability to direct you gently to self-reflection so you can accomplish your goals. She creates an environment of safety, trust, and empowerment.",
     author: "Client",
     context: "Parent Coaching"
   },
   {
-    id: '3',
-    quote: "I came looking for help with my kid's anxiety. What I found was someone who actually understood my kid — not just the behavior, but who they are underneath it. That changed everything.",
+    id: '5',
+    quote: "Someone who actually understood my kid — not just the behavior, but who they are underneath it. That changed everything.",
     author: "Parent",
     context: "San Francisco"
   }
@@ -24,21 +36,21 @@ export const TESTIMONIALS: Testimonial[] = [
 export const SERVICES: Service[] = [
   {
     title: "1-on-1 Coaching",
-    description: "Personalized sessions for kids, teens, and adults. Whether specifically for your child or for your own nervous system regulation, we adhere to the same principles: gentle, strength-based growth.",
+    description: "Personalized guidance and strategies for stress relief. Coaching puts you in the driver's seat — we focus on your strengths and build on what you're already doing well, through small manageable steps.",
     price: "$500 (6-session package)",
     features: ["Bi-weekly 30-min sessions", "Parent support included", "Customized toolkit"]
   },
   {
     title: "The Calm Kid Program",
-    description: "A structured 8-week program for anxious, overwhelmed, or deeply sensitive kids. Week by week, your child builds a personalized mind-body toolkit.",
-    price: "Inquire for pricing",
-    features: ["8 weekly themes", "Video lessons + Live coaching", "Workbook & Journal", "Parent guide"]
+    description: "A structured 8-week program for kids dealing with anxiety, ADHD, or overwhelm. Week by week, we build practical tools your child can actually use.",
+    price: "$1,200 (8-week program)",
+    features: ["8 weekly 1-on-1 sessions", "Parent check-ins included", "Personalized toolkit"]
   },
   {
-    title: "Qigong & Workshops",
-    description: "Interactive sessions for schools and organizations on emotional regulation. Also offering Qigong classes for clients seeking movement-based healing.",
+    title: "Workshops",
+    description: "Interactive workshops that help families learn skills like emotional regulation, communication, and stress resilience — plus mind-body exercises (that your kiddo might actually try!).",
     price: "Custom",
-    features: ["Online or In-Person (Maui)", "For Schools & Families", "Somatic & Qigong Tools"]
+    features: ["Online or In-Person", "For Schools & Parent Groups", "Communication & Stress Resilience"]
   }
 ];
 
@@ -55,14 +67,14 @@ export const CASE_STUDIES: CaseStudy[] = [
     id: '1',
     title: "From Debilitating Anxiety to Sleeping Through the Night",
     situation: "A 10-year-old with severe anxiety was unable to sleep alone and experienced daily panic about school.",
-    work: "We normalized their sensitivity and built a bedtime ritual using body-scan techniques. We moved from 'fixing' the anxiety to understanding its signal.",
+    work: "We built a bedtime ritual using body-scan techniques and shifted the focus from 'fixing' the anxiety to understanding what it was telling us.",
     outcome: "Sleeping through the night by week 6. School attendance is regular, and the child now has a specific 'reset' button they use independently."
   },
   {
     id: '2',
     title: "The 'Too Much' Teenager",
     situation: "A 15-year-old creative felt overwhelmed by the world's noise and their own big emotions, leading to shutdown.",
-    work: "We refrained 'too much' as 'deeply feeling' and 'gifted'. Used qigong and breath to manage sensory overload.",
+    work: "We helped them find language for their emotions and built practical tools for managing overwhelm — including breath and movement techniques.",
     outcome: "The teen now articulates their needs ('I need 10 mins of quiet') instead of shutting down. Improved relationship with parents."
   },
   {
@@ -76,7 +88,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     id: '4',
     title: "The Stressed Mom",
     situation: "A mother felt her child's behavior was a reflection of her failing. High stress in the home loop.",
-    work: "Focused on maternal nervous system regulation first. Oxygen mask principle.",
+    work: "Focused on mom's stress and calm first — the oxygen mask principle.",
     outcome: "Mom's calm became the anchor. As she relaxed, the child's behavioral spikes decreased in intensity and duration."
   }
 ];
@@ -84,15 +96,15 @@ export const CASE_STUDIES: CaseStudy[] = [
 export const FAQ_ITEMS = [
   {
     q: "Who do you work with?",
-    a: "I work with children (ages 6-17), teens, and their families. My specialization is with anxious, sensitive, or neurodivergent kids (ADHD, sensory processing) who need tools beyond standard behavioral correction."
+    a: "I work with children (ages 6-17), teens, adults, and their families. I specialize in working with kids dealing with anxiety, ADHD, stress, sleep challenges, and communication issues — and the parents who want real tools to support them."
   },
   {
-    q: "What is wellness coaching and how is it different from therapy?",
-    a: "Therapy often looks back to heal; coaching looks forward to build skills. I don't diagnose or treat mental illness. I help families build practical habits, mindsets, and routines to navigate daily life with more ease. Many of my clients also see a therapist; the two work beautifully together."
+    q: "What is mental wellness coaching and how is it different from therapy?",
+    a: "Coaching is future-focused and action-oriented. It can work as a stand-alone service or complement therapy and/or psychiatry by helping you build skills, habits, and strategies. Coaches don't diagnose or treat mental health conditions. Many of my clients also see a therapist, and the two work really well together."
   },
   {
-    q: "Do I need to practice qigong or meditation?",
-    a: "No. Those are tools in my toolkit, and we only use them if they resonate with your child. Some kids love the movement; others prefer logical strategies or creative expression. We follow what works."
+    q: "Do I have to practice qigong if I work with you?",
+    a: "No. While I teach Qigong and may offer it as a tool, coaching sessions and workshops are tailored to each client. You choose the methods that feel right for you."
   },
   {
     q: "What does a typical session look like?",
@@ -104,7 +116,7 @@ export const FAQ_ITEMS = [
   },
   {
     q: "Do you work with the parents or the child?",
-    a: "Both. For younger children (under 10), I spend about 30-50% of the time with parents. For teens, it's mostly 1-on-1, with parent check-ins. The family system is the client, not just the child."
+    a: "Both. For younger children (under 10), I spend about 30-50% of the time with parents. For teens, it's mostly 1-on-1, with parent check-ins. Honestly, parents often end up doing important work too — and that's where a lot of the real change happens."
   },
   {
     q: "Is coaching covered by insurance?",
@@ -112,14 +124,6 @@ export const FAQ_ITEMS = [
   },
   {
     q: "How do I know if coaching is right for my child vs. therapy?",
-    a: "If your child is in acute crisis, actively self-harming, or unable to function in daily life, therapy is the right first step. If your child is basically functioning but struggling with specific roadblocks (worry, sleep, confidence) and you want action-oriented tools, coaching is a great fit."
-  },
-  {
-    q: "What do you mean by 'intuitive' coaching?",
-    a: "It means I listen to more than just the words. I pay attention to the energy, the body language, and the unspoken emotions in the room. It allows me to get to the heart of the matter faster and help kids feel truly 'seen,' often in ways they haven't experienced before."
-  },
-  {
-    q: "My child is very sensitive / intuitive / psychic — can you help?",
-    a: "Yes. This is a core part of my work and the subject of my book. I help these children understand their sensitivity as a superpower, not a defect. We work on boundaries, grounding, and how to manage 'feeling everyone else's feelings.'"
+    a: "If your child is in acute crisis, actively self-harming, or unable to function in daily life, therapy is the right first step. If your child is dealing with anxiety, sleep issues, confidence, or communication challenges and you want practical, action-oriented tools, coaching is a great fit."
   }
 ];

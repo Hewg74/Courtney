@@ -1,8 +1,8 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import { Button } from '../components/Button';
 import { ViewState } from '../types';
-import { ArrowRight, Star, Heart, BookOpen, Quote, Sparkles, Award, Users } from 'lucide-react';
-import { motion, useTransform, useMotionValue } from 'framer-motion';
+import { Quote, Sparkles, Award, Users, Play } from 'lucide-react';
+import { motion } from 'framer-motion';
 import { Reveal } from '../components/Reveal';
 
 interface HomeProps {
@@ -10,27 +10,6 @@ interface HomeProps {
 }
 
 export const Home: React.FC<HomeProps> = ({ setView }) => {
-  // Book Tilt Logic
-  const mouseX = useMotionValue(0);
-  const mouseY = useMotionValue(0);
-  const rotateX = useTransform(mouseY, [-0.5, 0.5], ["7deg", "-7deg"]);
-  const rotateY = useTransform(mouseX, [-0.5, 0.5], ["-7deg", "7deg"]);
-
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    const rect = e.currentTarget.getBoundingClientRect();
-    const width = rect.width;
-    const height = rect.height;
-    const mouseXFromCenter = e.clientX - rect.left - width / 2;
-    const mouseYFromCenter = e.clientY - rect.top - height / 2;
-    mouseX.set(mouseXFromCenter / width);
-    mouseY.set(mouseYFromCenter / height);
-  };
-
-  const handleMouseLeave = () => {
-    mouseX.set(0);
-    mouseY.set(0);
-  };
-
   return (
     <div className="animate-fade-in pb-24 relative overflow-x-hidden">
 
@@ -54,13 +33,13 @@ export const Home: React.FC<HomeProps> = ({ setView }) => {
           <div className="space-y-8 text-center lg:text-left order-2 lg:order-1 relative">
             <Reveal variant="fadeUp" delay={0.2}>
               <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif text-sand-900 leading-[1.05] tracking-tight">
-                Helping sensitive kids <span className="italic font-light text-clay-600 inline-block">& adults</span> build confidence.
+                Mental Wellness Coaching for kids <span className="italic font-light text-clay-600 inline-block">& families</span>
               </h1>
             </Reveal>
 
             <Reveal variant="fadeUp" delay={0.4}>
               <p className="text-lg md:text-xl text-sand-600 max-w-xl mx-auto lg:mx-0 leading-relaxed font-sans font-light">
-                I'm Courtney — a board-certified health & wellness coach, Qigong teacher, and author. I help you and your family find what's already strong so everyone breathes easier.
+                Hi, I'm Courtney! I'm a Board-Certified Health & Wellness Coach (NBC-HWC) and Qigong teacher with a background in children's mental health. I help families and individuals build routines to support calm, connection, and confidence using tools that fit easily into your life.
               </p>
             </Reveal>
 
@@ -84,8 +63,8 @@ export const Home: React.FC<HomeProps> = ({ setView }) => {
                 </div>
                 <div className="hidden sm:block w-px h-4 bg-sand-300"></div>
                 <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-sand-500">
-                  <BookOpen size={16} className="text-clay-500" />
-                  <span>Author</span>
+                  <Sparkles size={16} className="text-clay-500" />
+                  <span>Qigong Teacher</span>
                 </div>
                 <div className="hidden sm:block w-px h-4 bg-sand-300"></div>
                 <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-sand-500">
@@ -100,11 +79,11 @@ export const Home: React.FC<HomeProps> = ({ setView }) => {
           <div className="order-1 lg:order-2 flex justify-center lg:justify-end relative">
             <Reveal variant="scaleUp" delay={0.4}>
               <div className="relative w-72 h-72 md:w-96 md:h-96 lg:w-[500px] lg:h-[500px]">
-                {/* Blob Background */}
-                <div className="absolute inset-0 bg-sand-200 rounded-[60%_40%_30%_70%/60%_30%_70%_40%] rotate-3 opacity-50 blur-xl animate-pulse"></div>
+                {/* Soft Background */}
+                <div className="absolute inset-0 bg-sand-200 rounded-[2rem] rotate-2 opacity-50 blur-xl"></div>
 
-                {/* Image Mask */}
-                <div className="absolute inset-0 overflow-hidden rounded-[60%_40%_30%_70%/60%_30%_70%_40%] shadow-2xl border-4 border-white/50">
+                {/* Image */}
+                <div className="absolute inset-0 overflow-hidden rounded-[2rem] shadow-2xl border-4 border-white/50">
                   <img
                     src="/images/headshot.jpg"
                     alt="Courtney Alex"
@@ -129,10 +108,10 @@ export const Home: React.FC<HomeProps> = ({ setView }) => {
         </Reveal>
         <div className="grid md:grid-cols-2 gap-6 text-left">
           {[
-            { id: 1, text: "Anxiety is running the show — bedtime battles, school resistance, or your own daily overwhelm that leaves everyone drained." },
-            { id: 2, text: "You (or your child) are bright, creative, and deeply sensitive — but can't seem to find a routine that works." },
-            { id: 3, text: "You've tried therapy, maybe medication, and you're looking for someone who sees the whole person — not just a diagnosis." },
-            { id: 4, text: "You know there are hidden gifts waiting to be uncovered, and you need someone who can help bring them out." }
+            { id: 1, text: "Anxiety is running the show — meltdowns after school, bedtime battles, school resistance, or your own daily overwhelm that leaves everyone drained." },
+            { id: 2, text: "Your child is struggling with ADHD, sleep, emotional regulation, or communication — and you're looking for tools that actually work for your family." },
+            { id: 3, text: "You've tried therapy, maybe medication, and you're looking for someone who sees the whole person — not just a diagnosis. Something that complements what you're already doing." },
+            { id: 4, text: "You know your child has real strengths, and you want someone who can help them see that too — and build from there." }
           ].map((item, i) => (
             <Reveal key={item.id} delay={i * 0.1}>
               <div className="bg-sand-50 p-8 rounded-2xl hover:shadow-soft transition-shadow duration-300 border border-sand-100 h-full">
@@ -169,7 +148,7 @@ export const Home: React.FC<HomeProps> = ({ setView }) => {
               >
                 <h3 className="text-2xl font-serif text-sand-900 mb-4">1-on-1 Coaching</h3>
                 <p className="text-sand-600 text-sm leading-relaxed mb-8 min-h-[80px]">
-                  Personalized sessions for kids, teens, and families. We work with who your kid actually is to build confidence and practical tools.
+                  Personalized guidance and strategies for stress relief. We focus on your strengths and build on what you're already doing well — through small manageable steps.
                 </p>
                 <div className="text-xs font-bold uppercase tracking-widest text-sand-500 group-hover:text-clay-600">Learn More &rarr;</div>
               </div>
@@ -186,7 +165,7 @@ export const Home: React.FC<HomeProps> = ({ setView }) => {
                 </div>
                 <h3 className="text-2xl font-serif text-sand-900 mb-4">The Calm Kid Program</h3>
                 <p className="text-sand-600 text-sm leading-relaxed mb-8 min-h-[80px]">
-                  An 8-week structured journey for anxious or sensitive kids. Week by week, we build a personalized mind-body toolkit.
+                  An 8-week structured program for kids dealing with anxiety, ADHD, or overwhelm. Week by week, we build practical tools your child can actually use.
                 </p>
                 <div className="text-xs font-bold uppercase tracking-widest text-clay-700">Learn More &rarr;</div>
               </div>
@@ -200,7 +179,7 @@ export const Home: React.FC<HomeProps> = ({ setView }) => {
               >
                 <h3 className="text-2xl font-serif text-sand-900 mb-4">Workshops</h3>
                 <p className="text-sand-600 text-sm leading-relaxed mb-8 min-h-[80px]">
-                  Interactive sessions for schools and organizations on emotional regulation, stress resilience, and mind-body tools.
+                  Interactive workshops to learn skills like emotional regulation, communication, and stress resilience — plus mind-body exercises (that your kiddo might actually try!).
                 </p>
                 <div className="text-xs font-bold uppercase tracking-widest text-sand-500 group-hover:text-clay-600">Learn More &rarr;</div>
               </div>
@@ -217,10 +196,10 @@ export const Home: React.FC<HomeProps> = ({ setView }) => {
               <h2 className="text-4xl md:text-5xl font-serif text-sand-900">A different kind of coaching.</h2>
               <div className="text-sand-600 text-lg leading-relaxed space-y-6 font-light">
                 <p>
-                  I'm not here to diagnose or treat — I'm here to help your family build skills that actually stick. My approach is strength-based, meaning we start with what your child is already doing well.
+                  I'm not here to diagnose or treat — and I'm not here to talk about what's not working. My approach is based on your strengths and lifestyle to help you feel supported - not overwhelmed.
                 </p>
                 <p>
-                  I bring a holistic lens to every session: body, mind, heart, and spirit. I'm board-certified and evidence-informed, but I also trust what I see and feel. That combination — rigor and intuition — is what makes this work.
+                  A lot of families have tried approaches that want them to do things a certain way. That's not how I work. We focus on what you're already doing well and build from there — through small manageable steps that actually fit your life.
                 </p>
               </div>
             </div>
@@ -228,9 +207,9 @@ export const Home: React.FC<HomeProps> = ({ setView }) => {
 
           <div className="space-y-6">
             {[
-              { title: "Strength-Based", desc: "We focus on what's working — including the gifts your child doesn't know they have yet." },
-              { title: "Evidence-Informed & Intuitive", desc: "Board-certified coaching grounded in research, guided by deep listening." },
-              { title: "Whole-Family", desc: "When the kid shifts, the family shifts. Parents are always part of the conversation." }
+              { title: "Strength-Based", desc: "We focus on what's working — helping your child discover their strengths and where they shine." },
+              { title: "Evidence-Informed", desc: "Board-certified coaching grounded in research and real-world strategies." },
+              { title: "Whole-Family", desc: "When the child shifts, the family shifts. Parents are always part of the conversation." }
             ].map((item, i) => (
               <Reveal key={i} delay={i * 0.2} variant="fadeUp">
                 <div className="flex gap-6 items-start p-6 rounded-2xl bg-white shadow-sm border border-sand-100">
@@ -258,17 +237,17 @@ export const Home: React.FC<HomeProps> = ({ setView }) => {
                 "Since working with Courtney, I have seen a miraculous transformation. Once nearly debilitated by anxiety, my child now has confidence, courage, and tools."
               </p>
               <cite className="block not-italic text-sm font-sans tracking-wide text-sand-400">
-                — Parent of a 12-year-old, Arizona
+                — Parent of a 19-year-old, Arizona
               </cite>
             </div>
 
             <div className="flex flex-col md:flex-row gap-8 pt-12 border-t border-sand-800">
               <div className="flex-1 space-y-4">
-                <p className="text-lg font-light italic">"Courtney creates an environment of safety, trust, and empowerment."</p>
+                <p className="text-lg font-serif italic text-sand-300">"Courtney creates an environment of safety, trust, and empowerment."</p>
               </div>
               <div className="hidden md:block w-px bg-sand-800"></div>
               <div className="flex-1 space-y-4">
-                <p className="text-lg font-light italic">"Someone who actually understood my kid — not just the behavior."</p>
+                <p className="text-lg font-serif italic text-sand-300">"Someone who actually understood my kid — not just the behavior."</p>
               </div>
             </div>
 
@@ -279,43 +258,39 @@ export const Home: React.FC<HomeProps> = ({ setView }) => {
         </Reveal>
       </section>
 
-      {/* 6. The Book - Interactive 3D Tilt */}
+      {/* 6. Qigong Section */}
       <section className="py-24 px-6 max-w-5xl mx-auto">
         <Reveal width="100%">
-          <div className="bg-clay-50 rounded-[3rem] p-10 md:p-20 flex flex-col md:flex-row gap-12 items-center">
+          <div className="bg-sage-50 rounded-[3rem] p-10 md:p-20 flex flex-col md:flex-row gap-12 items-center">
 
-            {/* Interactive Book Container */}
-            <motion.div
-              style={{ rotateX, rotateY, transformStyle: "preserve-3d" }}
-              onMouseMove={handleMouseMove}
-              onMouseLeave={handleMouseLeave}
-              className="w-48 md:w-64 flex-shrink-0 relative perspective-1000 cursor-pointer"
-            >
-              <motion.div
-                style={{ transform: "translateZ(20px)" }}
-                className="shadow-2xl bg-white aspect-[2/3] overflow-hidden rounded-r-md"
+            <div className="w-full md:w-1/2 aspect-video bg-sage-100 rounded-2xl overflow-hidden relative flex-shrink-0">
+              <img src="/images/qigong.png" alt="Courtney teaching Qigong" className="w-full h-full object-cover" />
+              <a
+                href="https://youtube.com/@courtneyalexqi"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="absolute inset-0 flex items-center justify-center bg-black/10 hover:bg-black/20 transition-colors"
               >
-                <img src="/images/book-cover.png" alt="Trust Your Magical Self Book Cover" className="w-full h-full object-cover" />
-
-                {/* Shine Effect */}
-                <div className="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/20 to-white/0 pointer-events-none mix-blend-overlay" />
-              </motion.div>
-
-              {/* Fake Book Pages/Thickness */}
-              <div className="absolute top-1 bottom-1 left-0 w-4 bg-gray-200 -z-10 rounded-l-sm" style={{ transform: "translateX(-4px) translateZ(-10px)" }}></div>
-            </motion.div>
+                <div className="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center shadow-lg">
+                  <Play size={24} className="text-sage-700 ml-1" />
+                </div>
+              </a>
+            </div>
 
             <div className="space-y-6 text-center md:text-left">
-              <div className="inline-block px-3 py-1 bg-white rounded-full text-xs font-bold uppercase tracking-wider text-clay-600 shadow-sm">The Book</div>
+              <div className="inline-block px-3 py-1 bg-white rounded-full text-xs font-bold uppercase tracking-wider text-sage-600 shadow-sm">Mind &amp; Body</div>
               <h2 className="text-3xl md:text-4xl font-serif text-sand-900">
-                Trust Your Magical Self
+                Qigong with Courtney
               </h2>
               <p className="text-sand-700 leading-relaxed text-lg">
-                A guide for sensitive, intuitive kids and the adults who love them. It's about honoring inner knowing and learning to thrive as the person you actually are.
+                Think of it as meditation-meets-fitness (pronounced CHEE-GONG). I teach weekly classes for all levels — a gentle way to ease tension and stress from mind, body, and heart.
               </p>
-              <div className="pt-2">
-                <Button variant="primary" onClick={() => window.open('https://amazon.com', '_blank')}>
-                  Order on Amazon
+              <div className="pt-2 flex flex-col sm:flex-row gap-4">
+                <Button variant="primary" onClick={() => setView('workshops')}>
+                  See Class Schedule
+                </Button>
+                <Button variant="outline" onClick={() => window.open('https://youtube.com/@courtneyalexqi', '_blank')}>
+                  Watch on YouTube
                 </Button>
               </div>
             </div>
@@ -335,7 +310,7 @@ export const Home: React.FC<HomeProps> = ({ setView }) => {
         </Reveal>
         <Reveal delay={0.3}>
           <p className="text-xl text-sand-600 font-light max-w-2xl mx-auto">
-            I've worked alongside licensed therapists and have spent years developing my ability to see what's happening beneath the surface. I believe sensitive, intuitive kids aren't broken — they're gifted.
+            I've worked alongside licensed therapists and psychiatric providers, helping families navigate anxiety, ADHD, and stress. I help kids and adults build on what's already working — so everyone feels a little more supported.
           </p>
         </Reveal>
         <Reveal delay={0.4}>
@@ -349,7 +324,7 @@ export const Home: React.FC<HomeProps> = ({ setView }) => {
           <div className="max-w-2xl mx-auto space-y-8">
             <h2 className="text-4xl md:text-5xl font-serif text-sand-900">Let's talk about your family.</h2>
             <p className="text-lg text-sand-600 font-light">
-              Book a free 15-minute intro chat. No pressure, no commitment — just a conversation.
+              15-minute free intro chat sessions are available to discuss fit. No pressure, no commitment — just a conversation.
             </p>
             <Button size="lg" onClick={() => window.open('https://calendly.com', '_blank')}>
               Book Your Free Chat

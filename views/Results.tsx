@@ -9,7 +9,7 @@ export const Results: React.FC = () => {
 
       {/* Header */}
       <div className="text-center space-y-6 border-b border-sand-200 pb-16">
-        <span className="text-clay-500 font-sans text-xs font-bold uppercase tracking-widest">Client Love</span>
+        <span className="text-clay-500 font-sans text-xs font-bold uppercase tracking-widest">What Families Say</span>
         <h1 className="text-5xl md:text-6xl font-serif text-sand-900">Real Families.<br />Real Shifts.</h1>
         <p className="text-xl text-sand-600 max-w-2xl mx-auto font-light">
           From daily meltdowns to peaceful evenings. Here's what's possible.
@@ -70,11 +70,11 @@ export const Results: React.FC = () => {
           ))}
 
           {/* CTA in grid */}
-          <div className="break-inside-avoid bg-sand-900 p-10 rounded-3xl text-center space-y-6 flex flex-col justify-center items-center h-full min-h-[300px]">
-            <h3 className="text-2xl font-serif text-sand-50">Your story could be next.</h3>
-            <p className="text-sand-300 font-light text-sm">You don't have to navigate this alone.</p>
-            <Button size="md" className="bg-sand-50 text-sand-900 hover:bg-clay-100" onClick={() => window.open('https://calendly.com', '_blank')}>
-              Start Here
+          <div className="break-inside-avoid bg-sand-100 p-10 rounded-3xl text-center space-y-6 flex flex-col justify-center items-center h-full min-h-[300px]">
+            <h3 className="text-2xl font-serif text-sand-900">Your story could be next.</h3>
+            <p className="text-sand-600 font-light text-sm">Here's how I can support your family.</p>
+            <Button size="sm" className="bg-sand-800 text-sand-50 hover:bg-sand-700" onClick={() => window.open('https://calendly.com', '_blank')}>
+              Book a Free Chat
             </Button>
           </div>
         </div>

@@ -17,7 +17,7 @@ export const FAQ: React.FC = () => {
                 <span className="text-clay-500 font-sans text-xs font-bold uppercase tracking-widest">Common Questions</span>
                 <h1 className="text-5xl md:text-6xl font-serif text-sand-900">FAQ</h1>
                 <p className="text-xl text-sand-600 font-light">
-                    Everything you need to know about how we work together.
+                    Some things you might want to know about working together.
                 </p>
             </div>
 
@@ -58,7 +58,7 @@ export const FAQ: React.FC = () => {
             <div className="text-center bg-sand-50 p-12 rounded-[2.5rem] mt-12 space-y-8">
                 <h3 className="font-serif text-2xl text-sand-900">Still have questions?</h3>
                 <p className="text-sand-600 font-light">
-                    I'm happy to answer them. Book a free 15-minute intro chat and we can discuss your specific situation.
+                    I'm happy to answer them. 15-minute free intro chat sessions are available to discuss fit. No pressure — just a conversation.
                 </p>
                 <Button size="lg" onClick={() => window.open('https://calendly.com', '_blank')}>
                     Book Free Chat

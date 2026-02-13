@@ -21,16 +21,13 @@ export const About: React.FC = () => {
           </h1>
           <div className="space-y-6 text-sand-700 text-lg leading-relaxed font-light">
             <p>
-              I am a National Board Certified Health & Wellness Coach and Qigong teacher specializing in anxiety, family resilience, and somatic healing.
+              I'm a Board-Certified Health & Wellness Coach (NBC-HWC) and long-time Qigong teacher with a background in children's mental health.
             </p>
             <p>
-              I've worked alongside licensed therapists and psychiatric providers at Bend Health and Lyra, helping families navigate the complex landscape of ADHD, anxiety, and sensory processing issues.
+              I help families and individuals build routines to support calm, connection, and confidence using tools that fit easily into your life. My approach is based on your strengths and lifestyle to help you feel supported - not overwhelmed.
             </p>
             <p>
-              But my work goes beyond the clinical. I bring a holistic lens to every session — body, mind, heart, and spirit. As a long-time practitioner of Qigong, I help clients of all ages regulate their nervous systems through breath and gentle movement.
-            </p>
-            <p>
-              I believe sensitive, intuitive kids (and adults!) aren't broken — they're gifted. My work is about helping you honor that sensitivity as a superpower.
+              My career includes literacy and creative programs for kids at organizations like 826Valencia and Reading Partners, education therapy, and pediatric mental health coaching — collaborating with licensed therapists and psychiatric providers.
             </p>
           </div>
         </div>
@@ -47,32 +44,27 @@ export const About: React.FC = () => {
           {[
             {
               title: "Strength-Based",
-              desc: "Every kid has something working well. We build from there — including gifts others might overlook.",
+              desc: "Every child has something working well. We build from there — working with your child's strengths, interests, and learning style.",
               color: "bg-clay-100"
             },
             {
-              title: "Holistic",
-              desc: "Body, mind, heart, and spirit. Because kids don't experience life in separate compartments.",
+              title: "Mind & Body",
+              desc: "Mind, body, and heart. Because kids don't experience life in separate compartments — and neither do adults.",
               color: "bg-sage-100"
             },
             {
-              title: "Intuitive",
-              desc: "I trust what I see and sense in session, not just what's on a checklist. It helps us get to the root faster.",
-              color: "bg-sand-200"
-            },
-            {
               title: "Evidence-Informed",
-              desc: "Grounded in research, polyvagal theory, and best practices. But never rigid.",
+              desc: "Grounded in research and best practices. But never rigid — what works for your family is what matters.",
               color: "bg-sand-100"
             },
             {
               title: "Family-Centered",
-              desc: "The whole system matters. When parents shift their energy, the child's behavior shifts too.",
+              desc: "The whole family matters. Parents are always part of the conversation — and often, that's where the biggest shifts happen.",
               color: "bg-clay-50"
             },
             {
               title: "Creative",
-              desc: "Out-of-the-box strategies tailored to your kid. Not a one-size-fits-all method.",
+              desc: "Out-of-the-box strategies tailored to your child. Not a one-size-fits-all method.",
               color: "bg-sage-50"
             }
           ].map((item, i) => (
@@ -96,7 +88,7 @@ export const About: React.FC = () => {
             </li>
             <li className="flex items-start gap-3">
               <div className="w-1.5 h-1.5 rounded-full bg-clay-500 mt-2.5 flex-shrink-0" />
-              <span>Pediatric Mental Health Coach at <strong>Bend Health & Lyra Health</strong></span>
+              <span>Pediatric Mental Health Coach — collaborating with licensed therapists and psychiatric providers</span>
             </li>
             <li className="flex items-start gap-3">
               <div className="w-1.5 h-1.5 rounded-full bg-clay-500 mt-2.5 flex-shrink-0" />
@@ -126,15 +118,16 @@ export const About: React.FC = () => {
           <img src="/images/qigong.png" alt="Courtney Qigong Practice" className="w-full h-full object-cover" />
           <div className="absolute inset-0 flex items-center justify-center">
             <span className="bg-white/80 backdrop-blur-sm px-6 py-2 rounded-full text-sage-800 text-xs font-bold uppercase tracking-widest">
-              Mind • Body • Spirit
+              Mind &bull; Body &bull; Heart
             </span>
           </div>
         </div>
       </div>
 
-      <div className="text-center bg-sand-900 text-sand-50 rounded-3xl p-16">
-        <h2 className="text-3xl font-serif mb-6">Ready to find your family's flow?</h2>
-        <Button variant="primary" className="bg-sand-50 text-sand-900 hover:bg-clay-100" onClick={() => window.open('https://calendly.com', '_blank')}>
+      <div className="text-center bg-sage-50 rounded-3xl p-16">
+        <h2 className="text-3xl font-serif text-sand-900 mb-6">Let's talk about your family.</h2>
+        <p className="text-sand-600 font-light mb-8">15-minute free intro chat sessions are available to discuss fit. No pressure — just a conversation.</p>
+        <Button variant="primary" onClick={() => window.open('https://calendly.com', '_blank')}>
           Book a Free Chat
         </Button>
       </div>

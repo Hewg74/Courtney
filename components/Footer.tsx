@@ -13,7 +13,7 @@ export const Footer: React.FC<FooterProps> = ({ setView }) => {
         <div className="md:col-span-5 space-y-6">
           <h3 className="text-3xl font-serif text-sand-50">Courtney Alex</h3>
           <p className="text-sand-400 font-sans text-sm leading-relaxed max-w-xs font-light">
-            Supporting anxious kids and overwhelmed families with gentle, evidence-based wellness coaching.
+            Helping families and individuals build routines to support calm, connection, and confidence.
           </p>
           <div className="pt-2 text-xs tracking-widest uppercase text-sand-600 font-bold">
             NBC-HWC Certified
@@ -25,7 +25,6 @@ export const Footer: React.FC<FooterProps> = ({ setView }) => {
           <ul className="space-y-3 text-sm font-light text-sand-300">
             <li><button onClick={() => setView('how-i-help')} className="hover:text-white transition-colors">How I Help</button></li>
             <li><button onClick={() => setView('workshops')} className="hover:text-white transition-colors">Workshops</button></li>
-            <li><button onClick={() => setView('resources')} className="hover:text-white transition-colors">Resources</button></li>
             <li><button onClick={() => setView('about')} className="hover:text-white transition-colors">About</button></li>
             <li><button onClick={() => setView('results')} className="hover:text-white transition-colors">Results</button></li>
             <li><button onClick={() => setView('faq')} className="hover:text-white transition-colors">FAQ</button></li>
@@ -36,11 +35,14 @@ export const Footer: React.FC<FooterProps> = ({ setView }) => {
           <h4 className="text-sand-50 font-sans font-bold text-xs uppercase tracking-widest">Connect</h4>
           <p className="text-sm text-sand-300 font-light">
             <a href="mailto:hello@courtneyalex.com" className="hover:text-white transition-colors">hello@courtneyalex.com</a><br />
-            Maui, HI & Virtual Worldwide
+            Virtual Worldwide
           </p>
-          <div className="pt-2">
-            <button onClick={() => window.open('https://instagram.com', '_blank')} className="text-sand-400 hover:text-white transition-colors text-sm underline decoration-sand-700 underline-offset-4">
+          <div className="pt-2 flex gap-4">
+            <button onClick={() => window.open('https://instagram.com/tiny_psychic', '_blank')} className="text-sand-400 hover:text-white transition-colors text-sm underline decoration-sand-700 underline-offset-4">
               Instagram
+            </button>
+            <button onClick={() => window.open('https://youtube.com/@courtneyalexqi', '_blank')} className="text-sand-400 hover:text-white transition-colors text-sm underline decoration-sand-700 underline-offset-4">
+              YouTube
             </button>
           </div>
         </div>

@@ -266,7 +266,7 @@ export const Home: React.FC<HomeProps> = ({ setView }) => {
       <section className="py-24 px-6 max-w-4xl mx-auto text-center space-y-8">
         <Reveal className="mx-auto">
           <div className="w-32 h-32 bg-sand-200 rounded-full mx-auto overflow-hidden border-4 border-white shadow-sm">
-            <img src="/images/headshot.jpg" alt="Courtney Alex" className="w-full h-full object-cover" />
+            <img src="/images/meditation.png" alt="Courtney Alex" className="w-full h-full object-cover" />
           </div>
         </Reveal>
         <Reveal delay={0.2}>

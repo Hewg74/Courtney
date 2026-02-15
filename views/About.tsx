@@ -143,7 +143,7 @@ export const About: React.FC<AboutProps> = ({ setView }) => {
       <div className="text-center space-y-12">
         <Reveal>
           <div className="aspect-video max-w-4xl mx-auto bg-sage-50 rounded-[3rem] overflow-hidden relative shadow-soft">
-            <img src="/images/meditation.png" alt="Maui Landscape" className="w-full h-full object-cover" />
+            <img src="/images/maui.jpg" alt="Maui Landscape" className="w-full h-full object-cover" />
             <div className="absolute inset-0 flex items-center justify-center">
               <span className="bg-white/90 backdrop-blur-sm px-8 py-3 rounded-full text-sage-800 text-xs font-bold uppercase tracking-widest shadow-lg">
                 Mind &bull; Body &bull; Heart

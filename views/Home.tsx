@@ -1,9 +1,9 @@
 import React from 'react';
 import { Button } from '../components/Button';
 import { ViewState } from '../types';
-import { Quote, Sparkles, Award, Users, Play } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { Quote, Award, Sparkles, Users } from 'lucide-react';
 import { Reveal } from '../components/Reveal';
+import { TESTIMONIALS } from '../constants';
 
 interface HomeProps {
   setView: (view: ViewState) => void;
@@ -13,321 +13,238 @@ export const Home: React.FC<HomeProps> = ({ setView }) => {
   return (
     <div className="animate-fade-in pb-24 relative overflow-x-hidden">
 
-      {/* 1. Hero Section - Side-by-Side Layout */}
+      {/* ─── 1. HERO ─── */}
       <section className="relative min-h-[90vh] flex items-center px-6 overflow-hidden">
-        {/* Ambient Washes - Animated */}
-        <motion.div
-          animate={{ scale: [1, 1.1, 1], opacity: [0.3, 0.5, 0.3] }}
-          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-clay-50/50 via-sand-50 to-white -z-20"
-        />
-        <motion.div
-          animate={{ x: [0, 20, 0], y: [0, -20, 0], opacity: [0.2, 0.5, 0.2] }}
-          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute top-[10%] right-[5%] w-[500px] h-[500px] bg-sage-100/40 rounded-full blur-[100px] -z-10"
-        />
+        {/* Ambient background */}
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-clay-50/50 via-sand-50 to-white -z-20" />
+        <div className="absolute top-[10%] right-[5%] w-[500px] h-[500px] bg-sage-100/30 rounded-full blur-[100px] -z-10" />
 
         <div className="max-w-7xl mx-auto w-full grid lg:grid-cols-2 gap-12 lg:gap-20 items-center relative z-10 pt-20 lg:pt-0">
 
-          {/* Left: Text Content */}
-          <div className="space-y-8 text-center lg:text-left order-2 lg:order-1 relative">
+          {/* Left: Text */}
+          <div className="space-y-6 text-center lg:text-left order-2 lg:order-1">
             <Reveal variant="fadeUp" delay={0.2}>
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif text-sand-900 leading-[1.05] tracking-tight">
-                Mental Wellness Coaching for kids <span className="italic font-light text-clay-600 inline-block">& families</span>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif text-sand-900 leading-[1.1] tracking-tight">
+                Helping adults and families feel steadier, calmer, and more connected.
               </h1>
             </Reveal>
 
             <Reveal variant="fadeUp" delay={0.4}>
-              <p className="text-lg md:text-xl text-sand-600 max-w-xl mx-auto lg:mx-0 leading-relaxed font-sans font-light">
-                Hi, I'm Courtney! I'm a Board-Certified Health & Wellness Coach (NBC-HWC) and long-time Qigong teacher with a background in children's mental health. I help people build routines to support calm, connection, and confidence using tools that fit easily into your life.
+              <p className="text-lg md:text-xl text-sand-600 max-w-xl mx-auto lg:mx-0 leading-relaxed font-light">
+                Coaching and mind-body tools for stress relief, emotional regulation, and resilience — for adults, parents, and kids.
+              </p>
+            </Reveal>
+
+            <Reveal variant="fadeUp" delay={0.5}>
+              <p className="text-sm text-sand-400 max-w-lg mx-auto lg:mx-0 tracking-wide">
+                Areas I support: stress · anxiety · ADHD · executive functioning · communication · routines · behavior · sleep
               </p>
             </Reveal>
 
             <Reveal variant="fadeUp" delay={0.6}>
-              <div className="pt-2 flex flex-col sm:flex-row items-center lg:items-start justify-center lg:justify-start gap-5">
-                <Button size="lg" onClick={() => window.open('https://calendly.com', '_blank')}>
-                  Book a Free 15-Min Chat
+              <div className="pt-4 flex justify-center lg:justify-start">
+                <Button
+                  size="lg"
+                  onClick={() => setView('work-with-me')}
+                  className="bg-sand-900 text-white hover:bg-sand-800 px-10 py-4 text-base font-semibold shadow-md"
+                >
+                  Work With Me
                 </Button>
-                <Button variant="text" size="lg" onClick={() => setView('how-i-help')}>
-                  See how I help
-                </Button>
-              </div>
-            </Reveal>
-
-            {/* Trust Anchors - Enhanced */}
-            <Reveal variant="fadeIn" delay={0.8}>
-              <div className="pt-8 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 sm:gap-8 border-t border-sand-200 mt-8">
-                <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-sand-500">
-                  <Award size={16} className="text-clay-500" />
-                  <span>NBC-HWC Certified</span>
-                </div>
-                <div className="hidden sm:block w-px h-4 bg-sand-300"></div>
-                <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-sand-500">
-                  <Sparkles size={16} className="text-clay-500" />
-                  <span>Qigong Teacher</span>
-                </div>
-                <div className="hidden sm:block w-px h-4 bg-sand-300"></div>
-                <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-sand-500">
-                  <Users size={16} className="text-clay-500" />
-                  <span>30+ Families/Mo</span>
-                </div>
               </div>
             </Reveal>
           </div>
 
-          {/* Right: Organic Shape Image */}
+          {/* Right: Photo in arch shape */}
           <div className="order-1 lg:order-2 flex justify-center lg:justify-end relative">
             <Reveal variant="scaleUp" delay={0.4}>
-              <div className="relative w-72 h-72 md:w-96 md:h-96 lg:w-[500px] lg:h-[500px]">
-                {/* Soft Background */}
-                <div className="absolute inset-0 bg-sand-200 rounded-[2rem] rotate-2 opacity-50 blur-xl"></div>
+              <div className="relative w-72 h-96 md:w-80 md:h-[28rem] lg:w-[380px] lg:h-[500px]">
+                {/* Soft glow behind */}
+                <div className="absolute inset-0 bg-sand-200 rounded-t-full rounded-b-3xl rotate-1 opacity-40 blur-xl"></div>
 
-                {/* Image */}
-                <div className="absolute inset-0 overflow-hidden rounded-[2rem] shadow-2xl border-4 border-white/50">
+                {/* Arch-shaped image container */}
+                <div className="absolute inset-0 overflow-hidden rounded-t-full rounded-b-3xl shadow-2xl border-4 border-white/50">
                   <img
                     src="/images/headshot.jpg"
-                    alt="Courtney Alex"
+                    alt="Courtney Alex — Board-Certified Health & Wellness Coach"
                     className="w-full h-full object-cover transform scale-105 hover:scale-110 transition-transform duration-700"
                   />
                 </div>
 
-                {/* Floating Decor */}
+                {/* Floating decor */}
                 <div className="absolute -top-4 -right-4 w-12 h-12 bg-clay-100 rounded-full blur-md opacity-60"></div>
                 <div className="absolute -bottom-8 -left-8 w-20 h-20 bg-sage-100 rounded-full blur-lg opacity-60"></div>
               </div>
             </Reveal>
           </div>
-
         </div>
       </section>
 
-      {/* 2. Problem Identification */}
-      <section className="py-24 px-6 max-w-4xl mx-auto text-center space-y-16">
-        <Reveal>
-          <h2 className="text-3xl md:text-4xl font-serif text-sand-900 italic">Sound familiar?</h2>
-        </Reveal>
-        <div className="grid md:grid-cols-2 gap-6 text-left">
-          {[
-            { id: 1, text: "Anxiety is running the show — meltdowns after school, bedtime battles, school resistance, or your own daily overwhelm that leaves everyone drained." },
-            { id: 2, text: "Your child is struggling with ADHD, sleep, emotional regulation, or communication — and you're looking for tools that actually work for your family." },
-            { id: 3, text: "You've tried therapy, maybe medication, and you're looking for someone who sees the whole person — not just a diagnosis. Something that complements what you're already doing." },
-            { id: 4, text: "You know your child has real strengths, and you want someone who can help them see that too — and build from there." }
-          ].map((item, i) => (
-            <Reveal key={item.id} delay={i * 0.1}>
-              <div className="bg-sand-50 p-8 rounded-2xl hover:shadow-soft transition-shadow duration-300 border border-sand-100 h-full">
-                <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-clay-600 mb-4 font-bold shadow-sm font-serif text-lg">
-                  {item.id}
-                </div>
-                <p className="text-sand-700 leading-relaxed font-light">
-                  {item.text}
-                </p>
-              </div>
-            </Reveal>
-          ))}
-        </div>
-        <Reveal delay={0.4}>
-          <p className="text-lg text-sand-600 font-medium pt-4">If any of this resonates, you're in the right place.</p>
-        </Reveal>
-      </section>
-
-      {/* 3. Services Overview */}
+      {/* ─── 2. CHOOSE YOUR PATH — 3 Tiles ─── */}
       <section className="py-24 bg-white relative">
         <div className="max-w-6xl mx-auto px-6 relative z-10">
           <Reveal className="mx-auto">
             <div className="text-center mb-16 space-y-4">
-              <h2 className="text-4xl md:text-5xl font-serif text-sand-900">How we can work together</h2>
+              <h2 className="text-4xl md:text-5xl font-serif text-sand-900">Choose your path</h2>
             </div>
           </Reveal>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {/* Card 1 */}
+            {/* Adult Coaching */}
             <Reveal delay={0.1}>
               <div
-                onClick={() => setView('how-i-help')}
-                className="group cursor-pointer bg-sand-50 p-8 rounded-3xl hover:shadow-medium transition-all duration-300 border border-transparent hover:border-sand-200 h-full"
+                onClick={() => setView('work-with-me')}
+                className="group cursor-pointer bg-sand-50 p-8 rounded-3xl hover:shadow-medium transition-all duration-300 border border-transparent hover:border-sand-200 h-full flex flex-col"
               >
-                <h3 className="text-2xl font-serif text-sand-900 mb-4">1-on-1 Coaching</h3>
-                <p className="text-sand-600 text-sm leading-relaxed mb-8 min-h-[80px]">
-                  Personalized guidance and strategies for stress relief. Coaching puts you in the driver's seat to move towards how you want to feel — through small manageable steps.
+                <div className="w-14 h-14 bg-clay-50 rounded-2xl flex items-center justify-center mb-6">
+                  <Users size={24} className="text-clay-500" strokeWidth={1.5} />
+                </div>
+                <h3 className="text-2xl font-serif text-sand-900 mb-4">Adult Coaching</h3>
+                <p className="text-sand-600 text-sm leading-relaxed mb-8 flex-grow">
+                  Personalized support for stress, overwhelm, and building sustainable routines that fit your life.
                 </p>
                 <div className="text-xs font-bold uppercase tracking-widest text-sand-500 group-hover:text-clay-600">Learn More &rarr;</div>
               </div>
             </Reveal>
 
-            {/* Card 2 - Highlighted */}
-            <Reveal delay={0.2} variant="scaleUp">
+            {/* Family & Parent Coaching */}
+            <Reveal delay={0.2}>
               <div
-                onClick={() => setView('how-i-help')}
-                className="group cursor-pointer bg-clay-50 p-8 rounded-3xl shadow-soft hover:shadow-medium transition-all duration-300 relative border border-clay-100 h-full"
+                onClick={() => setView('work-with-me')}
+                className="group cursor-pointer bg-sand-50 p-8 rounded-3xl hover:shadow-medium transition-all duration-300 border border-transparent hover:border-sand-200 h-full flex flex-col"
               >
-                <div className="absolute top-4 right-4 bg-white px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider text-clay-600 shadow-sm">
-                  Recommended
+                <div className="w-14 h-14 bg-sage-50 rounded-2xl flex items-center justify-center mb-6">
+                  <Sparkles size={24} className="text-sage-500" strokeWidth={1.5} />
                 </div>
-                <h3 className="text-2xl font-serif text-sand-900 mb-4">The Calm Kid Program</h3>
-                <p className="text-sand-600 text-sm leading-relaxed mb-8 min-h-[80px]">
-                  An 8-week structured program for kids dealing with anxiety, ADHD, or overwhelm. Week by week, we build practical tools your child can actually use.
+                <h3 className="text-2xl font-serif text-sand-900 mb-4">Family &amp; Parent Coaching</h3>
+                <p className="text-sand-600 text-sm leading-relaxed mb-8 flex-grow">
+                  Practical strategies for anxiety, ADHD, behavior, communication, and connection — for kids and the adults who support them.
                 </p>
-                <div className="text-xs font-bold uppercase tracking-widest text-clay-700">Learn More &rarr;</div>
+                <div className="text-xs font-bold uppercase tracking-widest text-sand-500 group-hover:text-clay-600">Learn More &rarr;</div>
               </div>
             </Reveal>
 
-            {/* Card 3 */}
+            {/* Qigong Classes */}
             <Reveal delay={0.3}>
               <div
-                onClick={() => setView('workshops')}
-                className="group cursor-pointer bg-sand-50 p-8 rounded-3xl hover:shadow-medium transition-all duration-300 border border-transparent hover:border-sand-200 h-full"
+                onClick={() => setView('qigong')}
+                className="group cursor-pointer bg-sage-50 p-8 rounded-3xl hover:shadow-medium transition-all duration-300 border border-transparent hover:border-sage-200 h-full flex flex-col"
               >
-                <h3 className="text-2xl font-serif text-sand-900 mb-4">Workshops</h3>
-                <p className="text-sand-600 text-sm leading-relaxed mb-8 min-h-[80px]">
-                  Interactive workshops to learn skills like emotional regulation, communication, and stress resilience — plus mind-body exercises (that your kiddo might actually try!).
+                <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center mb-6">
+                  <Award size={24} className="text-sage-500" strokeWidth={1.5} />
+                </div>
+                <h3 className="text-2xl font-serif text-sand-900 mb-4">Qigong Classes</h3>
+                <p className="text-sand-600 text-sm leading-relaxed mb-8 flex-grow">
+                  A gentle mind-body practice to ease tension and restore calm. Group, private, and retreat sessions available.
                 </p>
-                <div className="text-xs font-bold uppercase tracking-widest text-sand-500 group-hover:text-clay-600">Learn More &rarr;</div>
+                <div className="text-xs font-bold uppercase tracking-widest text-sage-600 group-hover:text-sage-800">See Classes &rarr;</div>
               </div>
             </Reveal>
           </div>
         </div>
       </section>
 
-      {/* 4. The Approach */}
-      <section className="py-24 px-6 max-w-6xl mx-auto">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+      {/* ─── 3. WHAT CLIENTS NOTICE ─── */}
+      <section className="py-20 px-6">
+        <div className="max-w-4xl mx-auto">
           <Reveal>
-            <div className="space-y-8">
-              <h2 className="text-4xl md:text-5xl font-serif text-sand-900">A different kind of coaching.</h2>
-              <div className="text-sand-600 text-lg leading-relaxed space-y-6 font-light">
-                <p>
-                  I'm not here to diagnose or treat — and I'm not here to talk about what's not working. My approach is based on your strengths and lifestyle to help you feel supported - not overwhelmed.
-                </p>
-                <p>
-                  A lot of families have tried approaches that want them to do things a certain way. That's not how I work. We focus on what you're already doing well and build from there — through small manageable steps that actually fit your life.
-                </p>
-              </div>
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-serif text-sand-900">What clients notice</h2>
             </div>
           </Reveal>
-
-          <div className="space-y-6">
-            {[
-              { title: "Strength-Based", desc: "We focus on what's working — helping your child discover their strengths and where they shine." },
-              { title: "Evidence-Informed", desc: "Board-certified coaching grounded in research and real-world strategies." },
-              { title: "Whole-Family", desc: "When the child shifts, the family shifts. Parents are always part of the conversation." }
-            ].map((item, i) => (
-              <Reveal key={i} delay={i * 0.2} variant="fadeUp">
-                <div className="flex gap-6 items-start p-6 rounded-2xl bg-white shadow-sm border border-sand-100">
-                  <div className="w-2 h-2 mt-2.5 rounded-full bg-sage-400 flex-shrink-0" />
-                  <div>
-                    <h4 className="font-serif text-xl text-sand-900 mb-2">{item.title}</h4>
-                    <p className="text-sand-600 text-sm">{item.desc}</p>
-                  </div>
+          <Reveal delay={0.2}>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[
+                "Better sleep and steadier energy",
+                "Less overwhelm, shutdown, and reactivity",
+                "Stronger routines and follow-through",
+                "Clearer communication and boundaries",
+                "More confidence and emotional resilience"
+              ].map((item, i) => (
+                <div key={i} className="flex items-start gap-4 p-5 bg-white rounded-2xl border border-sand-100">
+                  <div className="w-2 h-2 mt-2 rounded-full bg-sage-400 flex-shrink-0" />
+                  <p className="text-sand-700 text-sm leading-relaxed">{item}</p>
                 </div>
-              </Reveal>
-            ))}
-          </div>
+              ))}
+            </div>
+          </Reveal>
         </div>
       </section>
 
-      {/* 5. Testimonials */}
-      <section className="py-24 bg-sand-900 text-sand-50 overflow-hidden">
-        <Reveal width="100%">
-          <div className="max-w-4xl mx-auto px-6 text-center space-y-12">
-            <h2 className="text-xs font-bold uppercase tracking-widest text-sand-400">What families say</h2>
-
-            <div className="space-y-8">
-              <Quote className="mx-auto text-clay-400 opacity-50" size={48} />
-              <p className="text-2xl md:text-4xl font-serif italic leading-tight text-sand-100">
-                "Since working with Courtney, I have seen a miraculous transformation. Once nearly debilitated by anxiety, my child now has confidence, courage, and tools."
-              </p>
-              <cite className="block not-italic text-sm font-sans tracking-wide text-sand-400">
-                — Parent of a 19-year-old, Arizona
-              </cite>
-            </div>
-
-            <div className="flex flex-col md:flex-row gap-8 pt-12 border-t border-sand-800">
-              <div className="flex-1 space-y-4">
-                <p className="text-lg font-serif italic text-sand-300">"Courtney creates an environment of safety, trust, and empowerment."</p>
-              </div>
-              <div className="hidden md:block w-px bg-sand-800"></div>
-              <div className="flex-1 space-y-4">
-                <p className="text-lg font-serif italic text-sand-300">"Someone who actually understood my kid — not just the behavior."</p>
-              </div>
-            </div>
-
-            <Button variant="outline" className="text-sand-100 border-sand-700 hover:bg-sand-800" onClick={() => setView('results')}>
-              Read more stories
-            </Button>
+      {/* ─── 4. CREDIBILITY STRIP ─── */}
+      <section className="py-10 px-6 border-y border-sand-200 bg-sand-50/50">
+        <Reveal>
+          <div className="max-w-4xl mx-auto text-center">
+            <p className="text-sm md:text-base text-sand-600 tracking-wide leading-relaxed">
+              Board-certified (NBC-HWC) coach supporting adults and families
+              <span className="hidden sm:inline"> — </span>
+              <br className="sm:hidden" />
+              including through leading digital health organizations.
+            </p>
+            <p className="text-xs text-sand-400 mt-3 tracking-widest uppercase font-bold">
+              NBC-HWC · Qigong Teacher · Author
+            </p>
           </div>
         </Reveal>
       </section>
 
-      {/* 6. Qigong Section */}
-      <section className="py-24 px-6 max-w-5xl mx-auto">
-        <Reveal width="100%">
-          <div className="bg-sage-50 rounded-[3rem] p-10 md:p-20 flex flex-col md:flex-row gap-12 items-center">
-
-            <div className="w-full md:w-1/2 aspect-video bg-sage-100 rounded-2xl overflow-hidden relative flex-shrink-0">
-              <img src="/images/qigong.png" alt="Courtney teaching Qigong" className="w-full h-full object-cover" />
-              <a
-                href="https://youtube.com/@courtneyalexqi"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="absolute inset-0 flex items-center justify-center bg-black/10 hover:bg-black/20 transition-colors"
-              >
-                <div className="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center shadow-lg">
-                  <Play size={24} className="text-sage-700 ml-1" />
-                </div>
-              </a>
-            </div>
-
-            <div className="space-y-6 text-center md:text-left">
-              <div className="inline-block px-3 py-1 bg-white rounded-full text-xs font-bold uppercase tracking-wider text-sage-600 shadow-sm">Mind &amp; Body</div>
-              <h2 className="text-3xl md:text-4xl font-serif text-sand-900">
-                Qigong with Courtney
-              </h2>
-              <p className="text-sand-700 leading-relaxed text-lg">
-                Think of it as meditation-meets-fitness (pronounced CHEE-GONG). I teach weekly classes for all levels — a gentle way to ease tension and stress from mind, body, and heart.
-              </p>
-              <div className="pt-2 flex flex-col sm:flex-row gap-4">
-                <Button variant="primary" onClick={() => setView('workshops')}>
-                  See Class Schedule
-                </Button>
-                <Button variant="outline" onClick={() => window.open('https://youtube.com/@courtneyalexqi', '_blank')}>
-                  Watch on YouTube
-                </Button>
-              </div>
-            </div>
-          </div>
-        </Reveal>
-      </section>
-
-      {/* 7. About Preview */}
+      {/* ─── 5. SHORT INTRO ─── */}
       <section className="py-24 px-6 max-w-4xl mx-auto text-center space-y-8">
         <Reveal className="mx-auto">
-          <div className="w-32 h-32 bg-sand-200 rounded-full mx-auto overflow-hidden border-4 border-white shadow-sm">
+          <div className="w-28 h-28 bg-sand-200 rounded-full mx-auto overflow-hidden border-4 border-white shadow-sm">
             <img src="/images/headshot.jpg" alt="Courtney Alex" className="w-full h-full object-cover" />
           </div>
         </Reveal>
         <Reveal delay={0.2}>
-          <h2 className="text-4xl font-serif text-sand-900">Hi, I'm Courtney</h2>
+          <h2 className="text-4xl font-serif text-sand-900">Hi, I'm Courtney.</h2>
         </Reveal>
         <Reveal delay={0.3}>
-          <p className="text-xl text-sand-600 font-light max-w-2xl mx-auto">
-            I've worked alongside licensed therapists and psychiatric providers, helping families navigate anxiety, ADHD, and stress. I help kids and adults build on what's already working — so everyone feels a little more supported.
+          <p className="text-xl text-sand-600 font-light max-w-2xl mx-auto leading-relaxed">
+            My approach is strengths-based and practical — we start with what's already working and build from there, through small steps that fit your lifestyle. Every session and tool is based on what works for you.
           </p>
         </Reveal>
         <Reveal delay={0.4}>
-          <Button variant="text" onClick={() => setView('about')}>More about me &rarr;</Button>
+          <Button variant="text" onClick={() => setView('about')}>Meet Courtney &rarr;</Button>
         </Reveal>
       </section>
 
-      {/* 8. Final CTA */}
+      {/* ─── 6. TESTIMONIALS ─── */}
+      <section className="py-24 bg-sand-900 text-sand-50 overflow-hidden">
+        <Reveal width="100%">
+          <div className="max-w-4xl mx-auto px-6 text-center space-y-12">
+            <h2 className="text-xs font-bold uppercase tracking-widest text-sand-400">What people say</h2>
+
+            <div className="space-y-8">
+              <Quote className="mx-auto text-clay-400 opacity-50" size={48} />
+              <p className="text-2xl md:text-4xl font-serif italic leading-tight text-sand-100">
+                "{TESTIMONIALS[0].quote.substring(0, 180)}..."
+              </p>
+              <cite className="block not-italic text-sm font-sans tracking-wide text-sand-400">
+                — {TESTIMONIALS[0].author}, {TESTIMONIALS[0].context}
+              </cite>
+            </div>
+
+            <div className="pt-12 border-t border-sand-800 max-w-2xl mx-auto">
+              <p className="text-lg font-serif italic text-sand-300">
+                "{TESTIMONIALS[2].quote}"
+              </p>
+              <cite className="block not-italic text-sm font-sans tracking-wide text-sand-500 mt-4">
+                — {TESTIMONIALS[2].author}, {TESTIMONIALS[2].context}
+              </cite>
+            </div>
+          </div>
+        </Reveal>
+      </section>
+
+      {/* ─── 7. CONTACT CTA ─── */}
       <section className="py-24 bg-sage-50 text-center px-6">
         <Reveal className="mx-auto">
           <div className="max-w-2xl mx-auto space-y-8">
-            <h2 className="text-4xl md:text-5xl font-serif text-sand-900">Let's talk about your family.</h2>
+            <h2 className="text-4xl md:text-5xl font-serif text-sand-900">Not sure what's the best fit?</h2>
             <p className="text-lg text-sand-600 font-light">
-              15-minute free intro chat sessions are available to discuss fit. No pressure, no commitment — just a conversation.
+              Reach out — I'm happy to talk through what might work for you.
             </p>
-            <Button size="lg" onClick={() => window.open('https://calendly.com', '_blank')}>
-              Book Your Free Chat
+            <Button size="lg" onClick={() => setView('contact')}>
+              Contact
             </Button>
           </div>
         </Reveal>
@@ -336,4 +253,3 @@ export const Home: React.FC<HomeProps> = ({ setView }) => {
     </div>
   );
 };
-

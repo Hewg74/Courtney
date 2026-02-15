@@ -21,11 +21,10 @@ export const Navigation: React.FC<NavigationProps> = ({ currentView, setView }) 
   }, []);
 
   const navItems: { label: string; value: ViewState }[] = [
-    { label: 'How I Help', value: 'how-i-help' },
+    { label: 'Work With Me', value: 'work-with-me' },
+    { label: 'Qigong', value: 'qigong' },
     { label: 'About', value: 'about' },
-    { label: 'Results', value: 'results' },
-    { label: 'Workshops', value: 'workshops' },
-    { label: 'FAQ', value: 'faq' },
+    { label: 'Contact', value: 'contact' },
   ];
 
   const handleNavClick = (view: ViewState) => {
@@ -62,9 +61,9 @@ export const Navigation: React.FC<NavigationProps> = ({ currentView, setView }) 
           ))}
           <Button
             size="sm"
-            onClick={() => window.open('https://calendly.com', '_blank')}
+            onClick={() => window.open('https://calendly.com/courtneyalex-int/15min', '_blank')}
           >
-            Book Free Chat
+            Book a Call
           </Button>
         </div>
 
@@ -92,9 +91,9 @@ export const Navigation: React.FC<NavigationProps> = ({ currentView, setView }) 
           <div className="pt-8">
             <Button
               size="lg"
-              onClick={() => window.open('https://calendly.com', '_blank')}
+              onClick={() => window.open('https://calendly.com/courtneyalex-int/15min', '_blank')}
             >
-              Book Free Chat
+              Book a Call
             </Button>
           </div>
         </div>

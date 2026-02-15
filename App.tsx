@@ -3,12 +3,10 @@ import { ViewState } from './types';
 import { Navigation } from './components/Navigation';
 import { Footer } from './components/Footer';
 import { Home } from './views/Home';
-import { HowIHelp } from './views/HowIHelp';
+import { WorkWithMe } from './views/WorkWithMe';
+import { Qigong } from './views/Qigong';
 import { About } from './views/About';
-import { Results } from './views/Results';
-import { Workshops } from './views/Workshops';
-import { Resources } from './views/Resources';
-import { FAQ } from './views/FAQ';
+import { Contact } from './views/Contact';
 import { StickyCTA } from './components/StickyCTA';
 
 const App: React.FC = () => {
@@ -22,12 +20,10 @@ const App: React.FC = () => {
   const renderView = () => {
     switch (currentView) {
       case 'home': return <Home setView={setCurrentView} />;
-      case 'how-i-help': return <HowIHelp />;
-      case 'about': return <About />;
-      case 'results': return <Results />;
-      case 'workshops': return <Workshops />;
-      case 'resources': return <Resources />;
-      case 'faq': return <FAQ />;
+      case 'work-with-me': return <WorkWithMe setView={setCurrentView} />;
+      case 'qigong': return <Qigong />;
+      case 'about': return <About setView={setCurrentView} />;
+      case 'contact': return <Contact />;
       default: return <Home setView={setCurrentView} />;
     }
   };

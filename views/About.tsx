@@ -141,7 +141,7 @@ export const About: React.FC<AboutProps> = ({ setView }) => {
               </li>
               <li className="flex items-start gap-4">
                 <div className="w-1.5 h-1.5 rounded-full bg-clay-500 mt-2.5 flex-shrink-0" />
-                <span>Creative programs at <strong>826Valencia</strong> & Reading Partners</span>
+                <span>Children's education programs at <strong>826Valencia</strong> & Reading Partners & Education Therapy</span>
               </li>
               <li className="flex items-start gap-4">
                 <div className="w-1.5 h-1.5 rounded-full bg-clay-500 mt-2.5 flex-shrink-0" />

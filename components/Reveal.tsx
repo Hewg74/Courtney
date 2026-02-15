@@ -47,7 +47,8 @@ export const Reveal: React.FC<RevealProps> = ({
                 variants={variants[variant]}
                 initial="hidden"
                 animate={mainControls}
-                transition={{ duration: 0.8, delay: delay, ease: [0.22, 1, 0.36, 1] }} // Custom easing for "premium" feel
+                transition={{ duration: 0.8, delay: delay, ease: [0.22, 1, 0.36, 1] }}
+                className="h-full"
             >
                 {children}
             </motion.div>

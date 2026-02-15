@@ -254,8 +254,8 @@ export const Home: React.FC<HomeProps> = ({ setView }) => {
               </div>
               <div className="hidden md:block w-px bg-sand-800 self-stretch"></div>
               <div className="flex-1 space-y-4">
-                 <p className="text-lg md:text-xl font-serif italic text-sand-300">"{TESTIMONIALS[4].quote}"</p>
-                 <cite className="block not-italic text-sm font-sans tracking-wide text-sand-500 mt-4">— {TESTIMONIALS[4].author}, {TESTIMONIALS[4].context}</cite>
+                 <p className="text-lg md:text-xl font-serif italic text-sand-300">"{TESTIMONIALS[1].quote}"</p>
+                 <cite className="block not-italic text-sm font-sans tracking-wide text-sand-500 mt-4">— {TESTIMONIALS[1].author}, {TESTIMONIALS[1].context}</cite>
               </div>
             </div>
           </div>

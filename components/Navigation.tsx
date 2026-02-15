@@ -35,7 +35,7 @@ export const Navigation: React.FC<NavigationProps> = ({ currentView, setView }) 
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled ? 'bg-[#F9F8F6]/80 backdrop-blur-md py-4 shadow-sm' : 'bg-transparent py-6'
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled ? 'bg-sand-50/90 backdrop-blur-md py-4 shadow-sm' : 'bg-transparent py-6'
         }`}
     >
       <div className="max-w-6xl mx-auto px-6 flex justify-between items-center">

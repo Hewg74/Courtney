@@ -17,7 +17,7 @@ export const About: React.FC<AboutProps> = ({ setView }) => {
         <div className="w-full md:w-1/2 relative">
           <Reveal variant="scaleUp">
             <div className="aspect-[4/5] bg-sand-200 rounded-[3rem] overflow-hidden relative z-10 shadow-lg">
-              <img src="/images/headshot.jpg" alt="Courtney Alex" className="w-full h-full object-cover" />
+              <img src="/images/courtney-pose.png" alt="Courtney Alex" className="w-full h-full object-cover" />
             </div>
             <div className="absolute -bottom-6 -right-6 w-full h-full border-2 border-sand-300 rounded-[3rem] -z-10"></div>
           </Reveal>

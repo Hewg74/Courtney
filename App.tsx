@@ -29,7 +29,7 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col font-sans selection:bg-stone-200 selection:text-stone-800">
+    <div className="min-h-screen flex flex-col font-sans selection:bg-clay-200 selection:text-clay-900">
       <Navigation currentView={currentView} setView={setCurrentView} />
 
       <main className="flex-grow">

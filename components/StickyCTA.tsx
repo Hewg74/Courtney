@@ -21,8 +21,8 @@ export const StickyCTA: React.FC = () => {
             <Button
                 variant="primary"
                 size="md"
-                className="shadow-medium bg-sand-900 text-sand-50 hover:bg-clay-600"
-                onClick={() => window.open('https://calendly.com', '_blank')}
+                className="shadow-medium bg-sand-900 text-sand-50 hover:bg-clay-600 border border-sand-800"
+                onClick={() => window.open('https://calendly.com/courtneyalex-int/15min', '_blank')}
             >
                 Book a Free Chat
             </Button>

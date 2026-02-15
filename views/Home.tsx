@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button } from '../components/Button';
 import { ViewState } from '../types';
-import { Quote, Sparkles, Award, Users } from 'lucide-react';
+import { Quote, Sparkles, Award, Users, Sun, Feather, Compass, MessageCircle, Star, Heart } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { Reveal } from '../components/Reveal';
 import { TESTIMONIALS } from '../constants';
@@ -105,34 +105,8 @@ export const Home: React.FC<HomeProps> = ({ setView }) => {
         </div>
       </section>
 
-      {/* 2. What Clients Notice (Moved & Updated) */}
-      <section className="py-24 px-6 max-w-6xl mx-auto text-center space-y-16">
-        <Reveal>
-          <h2 className="text-3xl md:text-4xl font-serif text-sand-900 italic">What clients notice</h2>
-        </Reveal>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 text-left">
-          {[
-            "Better sleep and steadier energy",
-            "Less overwhelm, shutdown, and reactivity",
-            "Stronger routines and follow-through",
-            "Clearer communication and boundaries",
-            "More confidence and emotional resilience",
-            "A greater sense of calm and connection"
-          ].map((item, i) => (
-            <Reveal key={i} delay={i * 0.1}>
-              <div className="bg-sand-50 p-8 rounded-2xl hover:shadow-soft transition-shadow duration-300 border border-sand-100 h-full flex items-start gap-4">
-                <div className="w-2 h-2 mt-2 rounded-full bg-sage-400 flex-shrink-0" />
-                <p className="text-sand-700 leading-relaxed font-light">
-                  {item}
-                </p>
-              </div>
-            </Reveal>
-          ))}
-        </div>
-      </section>
-
-      {/* 3. Services Overview (Moved & Renamed) */}
-      <section className="py-12 pb-24 bg-white relative">
+      {/* 2. Services Overview (Moved & Renamed) */}
+      <section className="py-24 bg-white relative">
         <div className="max-w-6xl mx-auto px-6 relative z-10">
           <Reveal className="mx-auto">
             <div className="text-center mb-16 space-y-4">
@@ -182,6 +156,75 @@ export const Home: React.FC<HomeProps> = ({ setView }) => {
                 <div className="text-xs font-bold uppercase tracking-widest text-sand-500 group-hover:text-clay-600">See Classes &rarr;</div>
               </div>
             </Reveal>
+          </div>
+        </div>
+      </section>
+
+      {/* 3. What Clients Notice (Moved & Updated) */}
+      <section className="py-24 px-6 bg-sand-50 relative overflow-hidden">
+        {/* Subtle Background Pattern */}
+        <div className="absolute top-0 right-0 w-96 h-96 bg-sage-50/50 rounded-full blur-3xl -z-10 translate-x-1/2 -translate-y-1/2"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-clay-50/50 rounded-full blur-3xl -z-10 -translate-x-1/2 translate-y-1/2"></div>
+
+        <div className="max-w-6xl mx-auto text-center space-y-16 relative z-10">
+          <Reveal>
+            <div className="space-y-4">
+               <h2 className="text-3xl md:text-4xl font-serif text-sand-900 italic">What clients notice</h2>
+               <p className="text-sand-600 max-w-2xl mx-auto font-light">
+                 Change happens in small, sustainable shifts. Here’s what clients often report after working together.
+               </p>
+            </div>
+          </Reveal>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
+            {[
+              {
+                icon: Sun,
+                text: "Better sleep and steadier energy",
+                color: "text-amber-500",
+                bg: "bg-amber-100"
+              },
+              {
+                icon: Feather,
+                text: "Less overwhelm, shutdown, and reactivity",
+                color: "text-clay-500",
+                bg: "bg-clay-100"
+              },
+              {
+                icon: Compass,
+                text: "Stronger routines and follow-through",
+                color: "text-sage-600",
+                bg: "bg-sage-100"
+              },
+              {
+                icon: MessageCircle,
+                text: "Clearer communication and boundaries",
+                color: "text-blue-400",
+                bg: "bg-blue-100"
+              },
+              {
+                icon: Star,
+                text: "More confidence and emotional resilience",
+                color: "text-yellow-500",
+                bg: "bg-yellow-100"
+              },
+              {
+                icon: Heart,
+                text: "A greater sense of calm and connection",
+                color: "text-rose-400",
+                bg: "bg-rose-100"
+              }
+            ].map((item, i) => (
+              <Reveal key={i} delay={i * 0.1}>
+                <div className="group bg-white p-8 rounded-2xl shadow-sm hover:shadow-soft transition-all duration-300 border border-sand-100 h-full flex flex-col items-center text-center space-y-4">
+                  <div className={`p-4 rounded-full ${item.bg} bg-opacity-50 group-hover:scale-110 transition-transform duration-300`}>
+                    <item.icon size={24} className={item.color} strokeWidth={1.5} />
+                  </div>
+                  <p className="text-sand-800 text-lg leading-relaxed font-medium">
+                    {item.text}
+                  </p>
+                </div>
+              </Reveal>
+            ))}
           </div>
         </div>
       </section>

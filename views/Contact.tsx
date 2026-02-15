@@ -8,7 +8,7 @@ export const Contact: React.FC = () => {
         <div className="animate-fade-in pt-32 pb-24 px-6 max-w-5xl mx-auto space-y-24">
 
             {/* ─── Header ─── */}
-            <div className="text-center space-y-8 max-w-3xl mx-auto">
+            <div className="flex flex-col items-center text-center space-y-8 max-w-3xl mx-auto">
                 <Reveal variant="fadeUp">
                     <h1 className="text-5xl md:text-7xl font-serif text-sand-900 leading-none">Get in touch</h1>
                 </Reveal>
@@ -74,10 +74,10 @@ export const Contact: React.FC = () => {
                     </p>
                     <div className="flex justify-center gap-8">
                         <button
-                            onClick={() => window.open('https://instagram.com/tiny_psychic', '_blank')}
+                            onClick={() => window.open('https://instagram.com/courtneyalex_healthcoach', '_blank')}
                             className="text-sand-400 hover:text-sand-800 transition-colors text-sm font-medium tracking-wide"
                         >
-                            INSTAGRAM
+                            @COURTNEYALEX_HEALTHCOACH
                         </button>
                         <button
                             onClick={() => window.open('https://youtube.com/@courtneyalexqi', '_blank')}

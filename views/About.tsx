@@ -154,11 +154,15 @@ export const About: React.FC<AboutProps> = ({ setView }) => {
 
       {/* ─── 4. Qigong / Personal ─── */}
       <div className="text-center space-y-12">
-        <Reveal>
-          <div className="aspect-video max-w-4xl mx-auto bg-sage-50 rounded-[3rem] overflow-hidden relative shadow-soft">
-            <img src="/images/maui.jpg" alt="Maui Landscape" className="w-full h-full object-cover" />
+        <Reveal width="100%">
+          <div className="w-full aspect-video bg-sage-50 rounded-[3rem] overflow-hidden relative shadow-soft">
+            <img 
+              src="/images/maui.jpg" 
+              alt="Maui Landscape" 
+              className="w-full h-full object-cover object-center" 
+            />
             <div className="absolute inset-0 flex items-center justify-center">
-              <span className="bg-white/90 backdrop-blur-sm px-8 py-3 rounded-full text-sage-800 text-xs font-bold uppercase tracking-widest shadow-lg">
+              <span className="bg-white/90 backdrop-blur-sm px-8 py-3 rounded-full text-sage-800 text-xs font-bold uppercase tracking-widest shadow-lg text-center">
                 Mind &bull; Body &bull; Heart
               </span>
             </div>

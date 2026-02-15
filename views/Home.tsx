@@ -15,7 +15,7 @@ export const Home: React.FC<HomeProps> = ({ setView }) => {
     <div className="animate-fade-in pb-24 relative overflow-x-hidden">
 
       {/* 1. Hero Section - Side-by-Side Layout (Old Design) */}
-      <section className="relative min-h-[90vh] flex items-center px-6 overflow-hidden pt-32 lg:pt-32">
+      <section className="relative min-h-[90vh] flex items-center px-6 overflow-hidden pt-32 lg:pt-32 pb-16 lg:pb-24">
         {/* Ambient Washes - Animated (Old Design) */}
         <motion.div
           animate={{ scale: [1, 1.1, 1], opacity: [0.3, 0.5, 0.3] }}
@@ -110,7 +110,7 @@ export const Home: React.FC<HomeProps> = ({ setView }) => {
         <div className="max-w-6xl mx-auto px-6 relative z-10">
           <Reveal className="mx-auto">
             <div className="text-center mb-16 space-y-4">
-              <h2 className="text-4xl md:text-5xl font-serif text-sand-900">How I can help</h2>
+              <h2 className="text-4xl md:text-5xl font-serif text-sand-900">Here are my offerings</h2>
             </div>
           </Reveal>
 
@@ -166,11 +166,11 @@ export const Home: React.FC<HomeProps> = ({ setView }) => {
         <div className="absolute top-0 right-0 w-96 h-96 bg-sage-50/50 rounded-full blur-3xl -z-10 translate-x-1/2 -translate-y-1/2"></div>
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-clay-50/50 rounded-full blur-3xl -z-10 -translate-x-1/2 translate-y-1/2"></div>
 
-        <div className="max-w-6xl mx-auto text-center space-y-16 relative z-10">
+        <div className="max-w-6xl mx-auto text-left space-y-16 relative z-10">
           <Reveal>
             <div className="space-y-4">
                <h2 className="text-3xl md:text-4xl font-serif text-sand-900 italic">What clients notice</h2>
-               <p className="text-sand-600 max-w-2xl mx-auto font-light">
+               <p className="text-sand-600 max-w-2xl font-light">
                  Change happens in small, sustainable shifts. Here’s what clients often report after working together.
                </p>
             </div>
@@ -180,38 +180,38 @@ export const Home: React.FC<HomeProps> = ({ setView }) => {
               {
                 icon: Sun,
                 text: "Better sleep and steadier energy",
-                color: "text-amber-500",
-                bg: "bg-amber-100"
+                color: "text-clay-600",
+                bg: "bg-clay-100"
               },
               {
                 icon: Feather,
                 text: "Less overwhelm, shutdown, and reactivity",
-                color: "text-clay-500",
-                bg: "bg-clay-100"
-              },
-              {
-                icon: Compass,
-                text: "Stronger routines and follow-through",
                 color: "text-sage-600",
                 bg: "bg-sage-100"
               },
               {
+                icon: Compass,
+                text: "Stronger routines and follow-through",
+                color: "text-sand-600",
+                bg: "bg-sand-200"
+              },
+              {
                 icon: MessageCircle,
                 text: "Clearer communication and boundaries",
-                color: "text-blue-400",
-                bg: "bg-blue-100"
+                color: "text-clay-500",
+                bg: "bg-clay-50"
               },
               {
                 icon: Star,
                 text: "More confidence and emotional resilience",
-                color: "text-yellow-500",
-                bg: "bg-yellow-100"
+                color: "text-sage-500",
+                bg: "bg-sage-50"
               },
               {
                 icon: Heart,
                 text: "A greater sense of calm and connection",
-                color: "text-rose-400",
-                bg: "bg-rose-100"
+                color: "text-sand-500",
+                bg: "bg-sand-100"
               }
             ].map((item, i) => (
               <Reveal key={i} delay={i * 0.1}>

@@ -2,6 +2,7 @@ import React from 'react';
 import { Button } from '../components/Button';
 import { ViewState } from '../types';
 import { Reveal } from '../components/Reveal';
+import { Sparkles, Heart, BookOpen, Users, Compass, Sun } from 'lucide-react';
 
 interface AboutProps {
   setView: (view: ViewState) => void;
@@ -61,38 +62,50 @@ export const About: React.FC<AboutProps> = ({ setView }) => {
             {
               title: "Strengths-Based",
               desc: "Every person has something working well. We build from there — working with your strengths, interests, and learning style.",
-              color: "bg-clay-100"
+              color: "bg-clay-100",
+              iconColor: "text-clay-600",
+              icon: Sparkles
             },
             {
               title: "Mind & Body",
               desc: "Mind, body, and heart. Because we don't experience life in separate compartments — coaching can include embodied tools when they're a fit.",
-              color: "bg-sage-100"
+              color: "bg-sage-100",
+              iconColor: "text-sage-600",
+              icon: Heart
             },
             {
               title: "Evidence-Informed",
               desc: "Grounded in research and best practices — but always flexible. What works for your life is what matters.",
-              color: "bg-sand-100"
+              color: "bg-sand-100",
+              iconColor: "text-sand-600",
+              icon: BookOpen
             },
             {
               title: "Family-Centered",
               desc: "The whole family matters. Parents are always part of the conversation — and often, that's where the biggest shifts happen.",
-              color: "bg-clay-50"
+              color: "bg-clay-50",
+              iconColor: "text-clay-600",
+              icon: Users
             },
             {
               title: "Individualized",
               desc: "There's no scripted method. Your plan is built around your goals, your life, and what's already working.",
-              color: "bg-sage-50"
+              color: "bg-sage-50",
+              iconColor: "text-sage-600",
+              icon: Compass
             },
             {
               title: "Positive & Encouraging",
               desc: "We focus on what's going right. By amplifying the positive and building on small wins, we create momentum for lasting change.",
-              color: "bg-sand-50"
+              color: "bg-sand-50",
+              iconColor: "text-sand-600",
+              icon: Sun
             }
           ].map((item, i) => (
             <Reveal key={i} delay={i * 0.1} className="h-full">
               <div className="bg-white p-8 rounded-[2.5rem] shadow-soft border border-sand-50 hover:shadow-medium transition-all duration-300 h-full">
-                <div className={`w-14 h-14 ${item.color} rounded-2xl flex items-center justify-center mb-6`}>
-                  <div className="w-2 h-2 bg-current opacity-50 rounded-full" />
+                <div className={`w-14 h-14 ${item.color} rounded-2xl flex items-center justify-center mb-6 transition-transform duration-300 group-hover:scale-110`}>
+                  <item.icon size={24} className={item.iconColor} strokeWidth={1.5} />
                 </div>
                 <h3 className="text-2xl font-serif text-sand-900 mb-4">{item.title}</h3>
                 <p className="text-sand-600 font-light leading-relaxed text-sm">{item.desc}</p>

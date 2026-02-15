@@ -32,25 +32,25 @@ export const Home: React.FC<HomeProps> = ({ setView }) => {
 
           {/* Left: Text Content */}
           <div className="space-y-8 text-center lg:text-left order-2 lg:order-1 relative">
-            <Reveal variant="fadeUp" delay={0.2}>
+            <Reveal variant="fadeUp" delay={0.2} className="mx-auto lg:mx-0">
               <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif text-sand-900 leading-[1.05] tracking-tight">
                 Helping adults & families feel steadier, calmer, & more <span className="italic font-light text-clay-600">connected.</span>
               </h1>
             </Reveal>
 
-            <Reveal variant="fadeUp" delay={0.4}>
+            <Reveal variant="fadeUp" delay={0.4} className="mx-auto lg:mx-0">
               <p className="text-lg md:text-xl text-sand-600 max-w-xl mx-auto lg:mx-0 leading-relaxed font-sans font-light">
                 Coaching and mind-body tools for stress relief, emotional regulation, and resilience — for adults, parents, and kids.
               </p>
             </Reveal>
 
-            <Reveal variant="fadeUp" delay={0.5}>
+            <Reveal variant="fadeUp" delay={0.5} className="mx-auto lg:mx-0">
               <p className="text-sm text-sand-400 max-w-lg mx-auto lg:mx-0 tracking-wide">
                 Areas I support: stress · anxiety · ADHD · executive functioning · communication · routines · behavior · sleep
               </p>
             </Reveal>
 
-            <Reveal variant="fadeUp" delay={0.6}>
+            <Reveal variant="fadeUp" delay={0.6} className="mx-auto lg:mx-0">
               <div className="pt-2 flex flex-col sm:flex-row items-center lg:items-start justify-center lg:justify-start gap-5">
                 <Button size="lg" onClick={() => setView('work-with-me')}>
                   Work With Me
@@ -59,7 +59,7 @@ export const Home: React.FC<HomeProps> = ({ setView }) => {
             </Reveal>
 
             {/* Trust Anchors - Enhanced (Old Design Structure with New Content) */}
-            <Reveal variant="fadeIn" delay={0.8}>
+            <Reveal variant="fadeIn" delay={0.8} className="mx-auto lg:mx-0">
               <div className="pt-8 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 sm:gap-8 border-t border-sand-200 mt-8">
                 <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-sand-500">
                   <Award size={16} className="text-clay-500" />
@@ -166,7 +166,7 @@ export const Home: React.FC<HomeProps> = ({ setView }) => {
         <div className="absolute top-0 right-0 w-96 h-96 bg-sage-50/50 rounded-full blur-3xl -z-10 translate-x-1/2 -translate-y-1/2"></div>
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-clay-50/50 rounded-full blur-3xl -z-10 -translate-x-1/2 translate-y-1/2"></div>
 
-        <div className="max-w-6xl mx-auto text-left space-y-16 relative z-10">
+        <div className="max-w-6xl mx-auto text-center md:text-left space-y-16 relative z-10">
           <Reveal>
             <div className="space-y-4">
                <h2 className="text-3xl md:text-4xl font-serif text-sand-900 italic">What clients notice</h2>
@@ -247,7 +247,7 @@ export const Home: React.FC<HomeProps> = ({ setView }) => {
             </div>
 
             {/* Secondary Testimonials */}
-            <div className="flex flex-col md:flex-row gap-8 pt-12 border-t border-sand-800 text-left">
+            <div className="flex flex-col md:flex-row gap-8 pt-12 border-t border-sand-800 text-center md:text-left">
               <div className="flex-1 space-y-4">
                  <p className="text-lg md:text-xl font-serif italic text-sand-300">"{TESTIMONIALS[2].quote}"</p>
                  <cite className="block not-italic text-sm font-sans tracking-wide text-sand-500 mt-4">— {TESTIMONIALS[2].author}, {TESTIMONIALS[2].context}</cite>

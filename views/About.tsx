@@ -23,7 +23,7 @@ export const About: React.FC<AboutProps> = ({ setView }) => {
           </Reveal>
         </div>
 
-        <div className="w-full md:w-1/2 space-y-8">
+        <div className="w-full md:w-1/2 space-y-8 text-center md:text-left">
           <Reveal>
             <h1 className="text-5xl md:text-7xl font-serif text-sand-900 leading-[0.9]">
               Hi, I'm <span className="text-clay-600 italic">Courtney</span>.
@@ -161,7 +161,7 @@ export const About: React.FC<AboutProps> = ({ setView }) => {
               alt="Maui Landscape" 
               className="w-full h-full object-cover object-center" 
             />
-            <div className="absolute inset-0 flex items-center justify-center">
+            <div className="absolute flex items-center justify-center">
               <span className="bg-white/90 backdrop-blur-sm px-8 py-3 rounded-full text-sage-800 text-xs font-bold uppercase tracking-widest shadow-lg text-center">
                 Mind &bull; Body &bull; Heart
               </span>

@@ -16,7 +16,7 @@ export const WorkWithMe: React.FC<WorkWithMeProps> = ({ setView }) => {
         <div className="animate-fade-in pt-32 pb-24 px-6 max-w-6xl mx-auto space-y-32">
 
             {/* ─── Page Header ─── */}
-            <div className="grid md:grid-cols-2 gap-12 items-end border-b border-sand-200 pb-16">
+            <div className="grid md:grid-cols-2 gap-12 items-end border-b border-sand-200 pb-16 text-center md:text-left">
                 <div className="space-y-6">
                     <span className="text-clay-600 font-sans text-xs font-bold uppercase tracking-widest">Services</span>
                     <h1 className="text-5xl md:text-7xl font-serif text-sand-900 leading-[0.9]">Work With Me</h1>
@@ -65,7 +65,7 @@ export const WorkWithMe: React.FC<WorkWithMeProps> = ({ setView }) => {
                                 <img 
                                     src="/images/teaching-class.png" 
                                     alt="Courtney teaching a class" 
-                                    className="w-full h-full object-cover" 
+                                    className="w-full h-full object-cover object-top" 
                                 />
                             </div>
                         </div>
@@ -175,7 +175,7 @@ export const WorkWithMe: React.FC<WorkWithMeProps> = ({ setView }) => {
                     {/* Packages — Recommended */}
                     <Reveal delay={0.1} className="h-full">
                         <div className="bg-white rounded-[3rem] p-10 md:p-14 shadow-soft border border-sand-100 relative h-full flex flex-col hover:shadow-medium transition-shadow duration-300">
-                            <div className="absolute top-8 right-8 bg-sage-50 px-4 py-1.5 rounded-full text-[11px] font-bold uppercase tracking-wider text-sage-700">
+                            <div className="mb-6 md:mb-0 md:absolute md:top-8 md:right-8 bg-sage-50 px-4 py-1.5 rounded-full text-[11px] font-bold uppercase tracking-wider text-sage-700 self-start inline-block">
                                 Recommended
                             </div>
                             <h3 className="text-3xl font-serif text-sand-900 mb-2">6-Session Package</h3>
@@ -227,7 +227,7 @@ export const WorkWithMe: React.FC<WorkWithMeProps> = ({ setView }) => {
                                 ))}
                             </div>
                             <Button variant="outline" className="w-full" onClick={() => window.open('https://calendly.com/courtneyalex-int/15min', '_blank')}>
-                                Book a Session
+                                Book a Free 15-Min Chat
                             </Button>
                             <p className="text-[10px] text-sand-400 mt-4 text-center">Hawaii GE Tax applies</p>
                         </div>

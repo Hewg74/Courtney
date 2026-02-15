@@ -8,7 +8,7 @@ interface FooterProps {
 export const Footer: React.FC<FooterProps> = ({ setView }) => {
   return (
     <footer className="bg-sand-900 text-sand-200 py-20 px-6 rounded-t-[3rem] mt-12 mx-2">
-      <div className="max-w-6xl mx-auto grid md:grid-cols-12 gap-12">
+      <div className="max-w-6xl mx-auto grid md:grid-cols-12 gap-12 text-center md:text-left">
 
         <div className="md:col-span-5 space-y-6">
           <h3 className="text-3xl font-serif text-sand-50">Courtney Alex</h3>

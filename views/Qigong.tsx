@@ -47,7 +47,7 @@ export const Qigong: React.FC = () => {
                         <div className="text-sm text-sand-700 space-y-3 pt-6 border-t border-sand-50">
                             <p className="flex justify-between"><strong className="font-medium text-sand-900">When</strong> <span>Every Tuesday, 7:30–8:30 PM</span></p>
                             <p className="flex justify-between"><strong className="font-medium text-sand-900">Where</strong> <a href="https://www.fuzionfit.com/contact" target="_blank" rel="noopener noreferrer" className="text-sage-600 underline underline-offset-2 hover:text-sage-800">FuzionFit Maui</a></p>
-                            <p className="flex justify-between"><strong className="font-medium text-sand-900">Rate</strong> <span>$25 drop-in</span></p>
+                            <p className="flex justify-between"><strong className="font-medium text-sand-900">Rate</strong> <span>$25 drop-in or included in gym membership</span></p>
                         </div>
                     </div>
                 </Reveal>

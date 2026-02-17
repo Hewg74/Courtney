@@ -41,7 +41,7 @@ export const About: React.FC<AboutProps> = ({ setView }) => {
                 I've worked at organizations like 826Valencia and Reading Partners, and as faculty at Lumeria Maui Retreat Center. I'm also the author of <em>Trust Your Magical Self</em>.
               </p>
               <p>
-                When I'm not coaching, I'm probably teaching Qigong, being outside, or trying to figure out what's for dinner.
+                When I'm not coaching, you’ll probably find me in the garden, painting, drawing, or learning something new about health!
               </p>
             </div>
           </Reveal>
@@ -141,11 +141,11 @@ export const About: React.FC<AboutProps> = ({ setView }) => {
               </li>
               <li className="flex items-start gap-4">
                 <div className="w-1.5 h-1.5 rounded-full bg-clay-500 mt-2.5 flex-shrink-0" />
-                <span>Children's education programs at <strong>826Valencia</strong> & Reading Partners & Education Therapy</span>
+                <span>Children's literacy programs at <strong>826Valencia</strong> & Reading Partners; Tutoring kids of all ages at Education Therapy</span>
               </li>
               <li className="flex items-start gap-4">
                 <div className="w-1.5 h-1.5 rounded-full bg-clay-500 mt-2.5 flex-shrink-0" />
-                <span>Certified Qigong Teacher</span>
+                <span>Certified Holden Qigong Teacher</span>
               </li>
             </ul>
           </div>
@@ -156,10 +156,10 @@ export const About: React.FC<AboutProps> = ({ setView }) => {
       <div className="text-center space-y-12">
         <Reveal width="100%">
           <div className="w-full aspect-video bg-sage-50 rounded-[3rem] overflow-hidden relative shadow-soft">
-            <img 
-              src="/images/maui.jpg" 
-              alt="Maui Landscape" 
-              className="w-full h-full object-cover object-center" 
+            <img
+              src="/images/maui.jpg"
+              alt="Maui Landscape"
+              className="w-full h-full object-cover object-center"
             />
             <div className="absolute flex items-center justify-center">
               <span className="bg-white/90 backdrop-blur-sm px-8 py-3 rounded-full text-sage-800 text-xs font-bold uppercase tracking-widest shadow-lg text-center">

@@ -169,10 +169,10 @@ export const Home: React.FC<HomeProps> = ({ setView }) => {
         <div className="max-w-6xl mx-auto text-center md:text-left space-y-16 relative z-10">
           <Reveal>
             <div className="space-y-4">
-               <h2 className="text-3xl md:text-4xl font-serif text-sand-900 italic">What clients notice</h2>
-               <p className="text-sand-600 max-w-2xl font-light">
-                 Change happens in small, sustainable shifts. Here’s what clients often report after working together.
-               </p>
+              <h2 className="text-3xl md:text-4xl font-serif text-sand-900 italic">What clients notice</h2>
+              <p className="text-sand-600 max-w-2xl font-light">
+                Change happens in small, sustainable shifts. Here’s what clients often report after working together.
+              </p>
             </div>
           </Reveal>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
@@ -249,13 +249,13 @@ export const Home: React.FC<HomeProps> = ({ setView }) => {
             {/* Secondary Testimonials */}
             <div className="flex flex-col md:flex-row gap-8 pt-12 border-t border-sand-800 text-center md:text-left">
               <div className="flex-1 space-y-4">
-                 <p className="text-lg md:text-xl font-serif italic text-sand-300">"{TESTIMONIALS[2].quote}"</p>
-                 <cite className="block not-italic text-sm font-sans tracking-wide text-sand-500 mt-4">— {TESTIMONIALS[2].author}, {TESTIMONIALS[2].context}</cite>
+                <p className="text-lg md:text-xl font-serif italic text-sand-300">"{TESTIMONIALS[2].quote}"</p>
+                <cite className="block not-italic text-sm font-sans tracking-wide text-sand-500 mt-4">— {TESTIMONIALS[2].author}, {TESTIMONIALS[2].context}</cite>
               </div>
               <div className="hidden md:block w-px bg-sand-800 self-stretch"></div>
               <div className="flex-1 space-y-4">
-                 <p className="text-lg md:text-xl font-serif italic text-sand-300">"{TESTIMONIALS[1].quote}"</p>
-                 <cite className="block not-italic text-sm font-sans tracking-wide text-sand-500 mt-4">— {TESTIMONIALS[1].author}, {TESTIMONIALS[1].context}</cite>
+                <p className="text-lg md:text-xl font-serif italic text-sand-300">"{TESTIMONIALS[1].quote}"</p>
+                <cite className="block not-italic text-sm font-sans tracking-wide text-sand-500 mt-4">— {TESTIMONIALS[1].author}, {TESTIMONIALS[1].context}</cite>
               </div>
             </div>
           </div>
@@ -278,7 +278,7 @@ export const Home: React.FC<HomeProps> = ({ setView }) => {
               My approach is strengths-based and practical — we start with what's already working and build from there, through small steps that fit your lifestyle. Every session and tool is based on what works for you.
             </p>
             <p className="text-base text-sand-500 font-light tracking-wide pt-2">
-              Board-certified (NBC-HWC) coach supporting adults and families — including through leading digital health organizations.
+              Board-certified (NBC-HWC) coach supporting adults and families — including experience working alongside therapists and psychiatric providers through leading digital health organizations.
             </p>
           </div>
         </Reveal>

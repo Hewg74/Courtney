@@ -62,10 +62,10 @@ export const WorkWithMe: React.FC<WorkWithMeProps> = ({ setView }) => {
                                 </div>
                             </div>
                             <div className="order-1 lg:order-2 relative aspect-[4/3] lg:aspect-[3/4] rounded-[2.5rem] overflow-hidden shadow-md bg-sand-50">
-                                <img 
-                                    src="/images/teaching-class.png" 
-                                    alt="Courtney teaching a class" 
-                                    className="w-full h-full object-cover object-top" 
+                                <img
+                                    src="/images/teaching-class.png"
+                                    alt="Courtney teaching a class"
+                                    className="w-full h-full object-cover object-top"
                                 />
                             </div>
                         </div>
@@ -123,7 +123,8 @@ export const WorkWithMe: React.FC<WorkWithMeProps> = ({ setView }) => {
                             "Less overwhelm, shutdown, and reactivity",
                             "Stronger routines and follow-through",
                             "Clearer communication and boundaries",
-                            "More confidence and emotional resilience"
+                            "More confidence and emotional resilience",
+                            "A greater sense of calm and connection"
                         ].map((item, i) => (
                             <div key={i} className="flex items-center gap-4 p-6 bg-sand-50 rounded-[2rem] border border-sand-100 flex-1 min-w-[280px] max-w-[350px]">
                                 <div className="w-2 h-2 rounded-full bg-sage-400 flex-shrink-0" />

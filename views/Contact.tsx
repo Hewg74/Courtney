@@ -14,7 +14,7 @@ export const Contact: React.FC = () => {
                 </Reveal>
                 <Reveal variant="fadeUp" delay={0.2}>
                     <p className="text-xl text-sand-600 font-light leading-relaxed">
-                        I'm happy to talk through what might work for you. Reach out to ask a question, book a session, or just say hello.
+                        I'm happy to talk through what might work for you. Reach out to ask a question or book a session.
                     </p>
                 </Reveal>
             </div>

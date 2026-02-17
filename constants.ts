@@ -11,7 +11,7 @@ export const TESTIMONIALS: Testimonial[] = [
     id: '2',
     quote: "I came to you with an ADHD daughter who had trouble getting along with her siblings and teachers. After six months, she knows what to do when she feels upset, is more helpful around the house, communicating what she needs and why so that we argue less. She is doing well in school, calmer overall, and she sleeps through the night after you helped her figure out what was keeping her up (the bedding!). She's more confident in who she is and I'm so proud of her!",
     author: "Parent of a child with ADHD",
-    context: "Family Coaching"
+    context: "California"
   },
   {
     id: '3',
@@ -36,7 +36,7 @@ export const TESTIMONIALS: Testimonial[] = [
 export const FAQ_ITEMS = [
   {
     q: "Who do you work with?",
-    a: "I work with adults, children (ages 6–17), teens, and their families. I specialize in working with people dealing with anxiety, ADHD, stress, sleep challenges, executive functioning, and communication — and the parents who want real tools to support them."
+    a: "I work with adults, children, teens, and their families. I specialize in working with people dealing with anxiety, ADHD, stress, sleep challenges, executive functioning, and communication — and the parents who want real tools to support them."
   },
   {
     q: "What is health and wellness coaching, and how is it different from therapy?",
@@ -52,11 +52,11 @@ export const FAQ_ITEMS = [
   },
   {
     q: "How long do people typically work with you?",
-    a: "The initial engagement is often a 6-session package over 3 months. Many people choose to continue with periodic check-ins or rejoin for specific transitions (like starting a new school year or navigating a career change)."
+    a: "The initial engagement is often a 6-session package over 3 months. That said, it depends on your goals for our work together, which we’ll outline during the first coaching session. Every 6 sessions, we’ll check in. Once goals are complete, many people choose to continue with periodic check-ins or rejoin for specific transitions (like starting a new school year or navigating a career change)."
   },
   {
     q: "For family coaching — do you work with the parents or the child?",
-    a: "Both. For younger children (under 10), I spend about 30–50% of the time with parents. For teens, it's mostly 1-on-1, with parent check-ins. Parents often end up doing meaningful work too — and that's where a lot of real change happens."
+    a: "Both. For younger children (under 13), I often work with parents only, or parent and child together. For teens, it's mostly 1-on-1, with parent check-ins. Parents often end up doing meaningful work through coaching too — and that's where a lot of real change happens."
   },
   {
     q: "Is coaching covered by insurance?",
@@ -64,6 +64,6 @@ export const FAQ_ITEMS = [
   },
   {
     q: "How do I know if coaching is right for me (or my child) vs. therapy?",
-    a: "If someone is in acute crisis, actively self-harming, or unable to function in daily life, therapy is the right first step. If you're dealing with stress, anxiety, sleep issues, confidence, routines, or communication challenges and want practical, action-oriented tools, coaching is a great fit."
+    a: "If someone is in acute crisis, actively self-harming, or unable to function in daily life, therapy is often the right first step. If you're dealing with stress, anxiety, sleep issues, confidence, routines, or communication challenges and want practical, action-oriented tools, coaching is a great fit. We can discuss this in more detail during our initial 15-min chat."
   }
 ];

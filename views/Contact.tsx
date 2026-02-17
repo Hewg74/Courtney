@@ -23,7 +23,7 @@ export const Contact: React.FC = () => {
             {/* ─── Contact Options ─── */}
             <div className="grid md:grid-cols-2 gap-6 md:gap-12">
                 {/* Book a Call */}
-                <Reveal delay={0.1} className="h-full">
+                <Reveal delay={0.1} width="100%" className="h-full">
                     <div className="bg-white rounded-[3rem] p-10 md:p-16 shadow-soft border border-sand-50 h-full flex flex-col items-center text-center space-y-8 hover:shadow-medium hover:-translate-y-1 transition-all duration-300">
                         <div className="w-20 h-20 bg-sage-50 rounded-[2rem] flex items-center justify-center">
                             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-sage-600">
@@ -48,7 +48,7 @@ export const Contact: React.FC = () => {
                 </Reveal>
 
                 {/* Email */}
-                <Reveal delay={0.2} className="h-full">
+                <Reveal delay={0.2} width="100%" className="h-full">
                     <div className="bg-sand-50 rounded-[3rem] p-10 md:p-16 border border-sand-100 h-full flex flex-col items-center text-center space-y-8 hover:shadow-soft hover:-translate-y-1 transition-all duration-300">
                         <div className="w-20 h-20 bg-white rounded-[2rem] flex items-center justify-center shadow-sm">
                             <Mail size={32} className="text-clay-500" strokeWidth={1.5} />

@@ -2,6 +2,7 @@ import React from 'react';
 import { Button } from '../components/Button';
 import { Play } from 'lucide-react';
 import { Reveal } from '../components/Reveal';
+import { YOUTUBE_URL, openExternal } from '../constants';
 
 export const Qigong: React.FC = () => {
     return (
@@ -21,7 +22,7 @@ export const Qigong: React.FC = () => {
             {/* ─── Video / Image Section ─── */}
             <Reveal delay={0.2} width="100%">
                 <div className="relative aspect-video bg-sage-50 rounded-[2.5rem] overflow-hidden shadow-soft">
-                    <img src="/images/qigong-eyes-closed.png" alt="Courtney teaching Qigong" className="w-full h-full object-cover" />
+                    <img src="/images/qigong-eyes-closed.png" alt="Courtney teaching Qigong" loading="lazy" className="w-full h-full object-cover" />
                     <a
                         href="https://youtube.com/@courtneyalexqi"
                         target="_blank"
@@ -75,7 +76,7 @@ export const Qigong: React.FC = () => {
                     <p className="text-sand-600 font-light max-w-xl mx-auto">
                         Check out my YouTube channel for free Qigong classes you can follow along with anytime.
                     </p>
-                    <Button variant="outline" onClick={() => window.open('https://youtube.com/@courtneyalexqi', '_blank')}>
+                    <Button variant="outline" onClick={() => openExternal(YOUTUBE_URL)}>
                         Watch on YouTube &rarr;
                     </Button>
                 </div>

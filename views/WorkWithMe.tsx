@@ -1,16 +1,17 @@
 import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from '../components/Button';
 import { ViewState } from '../types';
-import { Check, ChevronDown, ChevronUp } from 'lucide-react';
+import { Check, ChevronDown } from 'lucide-react';
 import { Reveal } from '../components/Reveal';
-import { FAQ_ITEMS } from '../constants';
+import { FAQ_ITEMS, CALENDLY_URL, openExternal } from '../constants';
 
 interface WorkWithMeProps {
     setView: (view: ViewState) => void;
 }
 
 export const WorkWithMe: React.FC<WorkWithMeProps> = ({ setView }) => {
-    const [openFaq, setOpenFaq] = useState<number | null>(null);
+    const [openFaq, setOpenFaq] = useState<number | null>(0);
 
     return (
         <div className="animate-fade-in pt-32 pb-24 px-6 max-w-6xl mx-auto space-y-32">
@@ -62,10 +63,11 @@ export const WorkWithMe: React.FC<WorkWithMeProps> = ({ setView }) => {
                                 </div>
                             </div>
                             <div className="order-1 lg:order-2 relative aspect-[4/3] lg:aspect-[3/4] rounded-[2.5rem] overflow-hidden shadow-md bg-sand-50">
-                                <img 
-                                    src="/images/teaching-class.png" 
-                                    alt="Courtney teaching a class" 
-                                    className="w-full h-full object-cover object-top" 
+                                <img
+                                    src="/images/teaching-class.png"
+                                    alt="Courtney teaching a class"
+                                    loading="lazy"
+                                    className="w-full h-full object-cover object-top"
                                 />
                             </div>
                         </div>
@@ -171,7 +173,7 @@ export const WorkWithMe: React.FC<WorkWithMeProps> = ({ setView }) => {
                     <h2 className="text-4xl md:text-5xl font-serif text-sand-900 text-center">Session options</h2>
                 </Reveal>
 
-                <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <div className="grid md:grid-cols-2 gap-6 md:gap-8 max-w-5xl mx-auto">
                     {/* Packages — Recommended */}
                     <Reveal delay={0.1} className="h-full">
                         <div className="bg-white rounded-[3rem] p-10 md:p-14 shadow-soft border border-sand-100 relative h-full flex flex-col hover:shadow-medium transition-shadow duration-300">
@@ -196,7 +198,7 @@ export const WorkWithMe: React.FC<WorkWithMeProps> = ({ setView }) => {
                                     </div>
                                 ))}
                             </div>
-                            <Button className="w-full" onClick={() => window.open('https://calendly.com/courtneyalex-int/15min', '_blank')}>
+                            <Button className="w-full" onClick={() => openExternal(CALENDLY_URL)}>
                                 Book a Free 15-Min Chat
                             </Button>
                             <p className="text-[10px] text-sand-400 mt-4 text-center">Hawaii GE Tax applies</p>
@@ -226,7 +228,7 @@ export const WorkWithMe: React.FC<WorkWithMeProps> = ({ setView }) => {
                                     </div>
                                 ))}
                             </div>
-                            <Button variant="outline" className="w-full" onClick={() => window.open('https://calendly.com/courtneyalex-int/15min', '_blank')}>
+                            <Button variant="outline" className="w-full" onClick={() => openExternal(CALENDLY_URL)}>
                                 Book a Free 15-Min Chat
                             </Button>
                             <p className="text-[10px] text-sand-400 mt-4 text-center">Hawaii GE Tax applies</p>
@@ -264,20 +266,35 @@ export const WorkWithMe: React.FC<WorkWithMeProps> = ({ setView }) => {
                             <div className="bg-white rounded-3xl border border-sand-100 overflow-hidden">
                                 <button
                                     onClick={() => setOpenFaq(openFaq === i ? null : i)}
+                                    aria-expanded={openFaq === i}
+                                    aria-controls={`faq-answer-${i}`}
                                     className="w-full text-left px-8 py-6 flex items-center justify-between gap-4 hover:bg-sand-50/50 transition-colors"
                                 >
                                     <span className="font-serif text-xl text-sand-900">{item.q}</span>
-                                    {openFaq === i ? (
-                                        <ChevronUp size={20} className="text-sand-400 flex-shrink-0" />
-                                    ) : (
+                                    <motion.div
+                                        animate={{ rotate: openFaq === i ? 180 : 0 }}
+                                        transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+                                    >
                                         <ChevronDown size={20} className="text-sand-400 flex-shrink-0" />
-                                    )}
+                                    </motion.div>
                                 </button>
-                                {openFaq === i && (
-                                    <div className="px-8 pb-8 text-sand-600 font-light leading-relaxed animate-fade-in text-base">
-                                        {item.a}
-                                    </div>
-                                )}
+                                <AnimatePresence initial={false}>
+                                    {openFaq === i && (
+                                        <motion.div
+                                            id={`faq-answer-${i}`}
+                                            role="region"
+                                            initial={{ height: 0, opacity: 0 }}
+                                            animate={{ height: "auto", opacity: 1 }}
+                                            exit={{ height: 0, opacity: 0 }}
+                                            transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+                                            className="overflow-hidden"
+                                        >
+                                            <div className="px-8 pb-8 text-sand-600 font-light leading-relaxed text-base">
+                                                {item.a}
+                                            </div>
+                                        </motion.div>
+                                    )}
+                                </AnimatePresence>
                             </div>
                         </Reveal>
                     ))}
@@ -288,7 +305,7 @@ export const WorkWithMe: React.FC<WorkWithMeProps> = ({ setView }) => {
             <section className="text-center bg-sage-50 rounded-[3rem] p-16 md:p-24">
                 <h2 className="text-4xl md:text-5xl font-serif text-sand-900 mb-6">Ready to get started?</h2>
                 <p className="text-sand-600 font-light mb-10 text-lg">Book a free 15-minute chat to talk through what might work for you.</p>
-                <Button size="lg" onClick={() => window.open('https://calendly.com/courtneyalex-int/15min', '_blank')}>
+                <Button size="lg" onClick={() => openExternal(CALENDLY_URL)}>
                     Book a Free Chat
                 </Button>
             </section>

@@ -1,6 +1,21 @@
 import React, { useRef, useEffect } from 'react';
 import { motion, useInView, useAnimation } from 'framer-motion';
 
+const REVEAL_VARIANTS = {
+    fadeUp: {
+        hidden: { opacity: 0, y: 30 },
+        visible: { opacity: 1, y: 0 },
+    },
+    fadeIn: {
+        hidden: { opacity: 0 },
+        visible: { opacity: 1 },
+    },
+    scaleUp: {
+        hidden: { opacity: 0, scale: 0.85 },
+        visible: { opacity: 1, scale: 1 },
+    },
+};
+
 interface RevealProps {
     children: React.ReactNode;
     width?: 'fit-content' | '100%';
@@ -26,28 +41,13 @@ export const Reveal: React.FC<RevealProps> = ({
         }
     }, [isInView, mainControls]);
 
-    const variants = {
-        fadeUp: {
-            hidden: { opacity: 0, y: 75 },
-            visible: { opacity: 1, y: 0 },
-        },
-        fadeIn: {
-            hidden: { opacity: 0 },
-            visible: { opacity: 1 },
-        },
-        scaleUp: {
-            hidden: { opacity: 0, scale: 0.8 },
-            visible: { opacity: 1, scale: 1 },
-        },
-    };
-
     return (
         <div ref={ref} style={{ position: 'relative', width }} className={className}>
             <motion.div
-                variants={variants[variant]}
+                variants={REVEAL_VARIANTS[variant]}
                 initial="hidden"
                 animate={mainControls}
-                transition={{ duration: 0.8, delay: delay, ease: [0.22, 1, 0.36, 1] }}
+                transition={{ duration: 0.6, delay: delay, ease: [0.22, 1, 0.36, 1] }}
                 className="h-full"
             >
                 {children}

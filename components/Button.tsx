@@ -13,17 +13,17 @@ export const Button: React.FC<ButtonProps> = ({
   ...props 
 }) => {
   
-  const baseStyles = "inline-flex items-center justify-center transition-all duration-300 font-sans tracking-wide rounded-full disabled:opacity-50 disabled:cursor-not-allowed";
+  const baseStyles = "inline-flex items-center justify-center transition-all duration-300 font-sans tracking-wide rounded-full disabled:opacity-50 disabled:cursor-not-allowed focus:outline-none focus:ring-2 focus:ring-clay-500 focus:ring-offset-2";
   
   const variants = {
     // Primary: Deep sand/charcoal. Tactile but not harsh.
-    primary: "bg-sand-800 text-sand-50 hover:bg-clay-600 hover:shadow-medium active:scale-95",
+    primary: "bg-sand-800 text-sand-50 hover:bg-clay-600 hover:shadow-medium active:scale-95 active:shadow-soft",
     // Secondary: Soft clay wash.
-    secondary: "bg-clay-100 text-clay-800 hover:bg-clay-200",
+    secondary: "bg-clay-100 text-clay-800 hover:bg-clay-200 active:scale-[0.98]",
     // Outline: Delicate line.
-    outline: "border border-sand-300 text-sand-800 hover:border-sand-400 hover:bg-sand-100/50 bg-transparent",
+    outline: "border-2 border-sand-300 text-sand-800 hover:border-sand-400 hover:bg-sand-100/50 bg-transparent active:scale-[0.98]",
     // Text only
-    text: "bg-transparent text-sand-600 hover:text-sand-900 underline decoration-sand-300 underline-offset-4"
+    text: "bg-transparent text-sand-600 hover:text-sand-900 underline decoration-sand-300 underline-offset-4 hover:underline-offset-2 transition-all"
   };
 
   const sizes = {

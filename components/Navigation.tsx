@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { ViewState } from '../types';
 import { Button } from './Button';
 import { Menu, X } from 'lucide-react';
+import { CALENDLY_URL, openExternal } from '../constants';
 
 interface NavigationProps {
   currentView: ViewState;
@@ -56,6 +58,7 @@ export const Navigation: React.FC<NavigationProps> = ({ currentView, setView }) 
         {/* Logo / Brand */}
         <button
           onClick={() => handleNavClick('home')}
+          aria-label="Return to homepage"
           className="text-2xl font-serif text-sand-900 tracking-tight hover:opacity-80 transition-opacity z-50 relative"
         >
           Courtney Alex
@@ -75,7 +78,7 @@ export const Navigation: React.FC<NavigationProps> = ({ currentView, setView }) 
           ))}
           <Button
             size="sm"
-            onClick={() => window.open('https://calendly.com/courtneyalex-int/15min', '_blank')}
+            onClick={() => openExternal(CALENDLY_URL)}
           >
             Book a Call
           </Button>
@@ -85,33 +88,55 @@ export const Navigation: React.FC<NavigationProps> = ({ currentView, setView }) 
         <button
           className="md:hidden text-sand-900 z-50 relative"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
+          aria-expanded={isMobileMenuOpen}
+          aria-controls="mobile-menu"
         >
           {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 
       {/* Mobile Menu Overlay */}
-      {isMobileMenuOpen && (
-        <div className="fixed inset-0 bg-[#F9F8F6] z-40 flex flex-col items-center justify-center space-y-8 animate-fade-in">
-          {navItems.map((item) => (
-            <button
-              key={item.value}
-              onClick={() => handleNavClick(item.value)}
-              className="text-3xl font-serif text-sand-800 hover:text-clay-600 transition-colors"
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+            id="mobile-menu"
+            role="navigation"
+            aria-label="Mobile navigation"
+            className="fixed inset-0 bg-[#F9F8F6] z-40 flex flex-col items-center justify-center space-y-8"
+          >
+            {navItems.map((item, index) => (
+              <motion.button
+                key={item.value}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.1 + index * 0.05, duration: 0.3 }}
+                onClick={() => handleNavClick(item.value)}
+                className="text-3xl font-serif text-sand-800 hover:text-clay-600 transition-colors"
+              >
+                {item.label}
+              </motion.button>
+            ))}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3, duration: 0.3 }}
+              className="pt-8"
             >
-              {item.label}
-            </button>
-          ))}
-          <div className="pt-8">
-            <Button
-              size="lg"
-              onClick={() => window.open('https://calendly.com/courtneyalex-int/15min', '_blank')}
-            >
-              Book a Call
-            </Button>
-          </div>
-        </div>
-      )}
+              <Button
+                size="lg"
+                onClick={() => openExternal(CALENDLY_URL)}
+              >
+                Book a Call
+              </Button>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </nav>
   );
 };

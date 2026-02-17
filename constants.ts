@@ -1,5 +1,14 @@
 import { Testimonial } from './types';
 
+// ─── Centralized URLs ───
+export const CALENDLY_URL = 'https://calendly.com/courtneyalex-int/15min';
+export const INSTAGRAM_URL = 'https://instagram.com/courtneyalex_healthcoach';
+export const YOUTUBE_URL = 'https://youtube.com/@courtneyalexqi';
+
+export const openExternal = (url: string) => {
+  window.open(url, '_blank', 'noopener,noreferrer');
+};
+
 export const TESTIMONIALS: Testimonial[] = [
   {
     id: '1',

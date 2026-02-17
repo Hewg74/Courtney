@@ -43,13 +43,16 @@ export const EmailCapture: React.FC = () => {
 
             <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
+                    <label htmlFor="email-signup" className="sr-only">Email address</label>
                     <input
+                        id="email-signup"
                         type="email"
                         placeholder="Your email address"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         required
-                        className="w-full px-6 py-4 rounded-full bg-sand-50 border border-sand-200 focus:border-clay-400 focus:ring-1 focus:ring-clay-400 outline-none text-sand-800 placeholder:text-sand-400 font-sans transition-all"
+                        disabled={status === 'loading'}
+                        className={`w-full px-6 py-4 rounded-full bg-sand-50 border border-sand-200 focus:border-clay-400 focus:ring-1 focus:ring-clay-400 outline-none text-sand-800 placeholder:text-sand-400 font-sans transition-all ${status === 'loading' ? 'opacity-50 cursor-not-allowed' : ''}`}
                     />
                 </div>
                 <Button variant="primary" className="w-full" disabled={status === 'loading'}>

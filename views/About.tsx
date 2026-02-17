@@ -3,6 +3,7 @@ import { Button } from '../components/Button';
 import { ViewState } from '../types';
 import { Reveal } from '../components/Reveal';
 import { Sparkles, Heart, BookOpen, Users, Compass, Sun } from 'lucide-react';
+import { CALENDLY_URL, openExternal } from '../constants';
 
 interface AboutProps {
   setView: (view: ViewState) => void;
@@ -17,7 +18,7 @@ export const About: React.FC<AboutProps> = ({ setView }) => {
         <div className="w-full md:w-1/2 relative">
           <Reveal variant="scaleUp">
             <div className="aspect-[4/5] bg-sand-200 rounded-[3rem] overflow-hidden relative z-10 shadow-lg">
-              <img src="/images/courtney-pose.png" alt="Courtney Alex" className="w-full h-full object-cover" />
+              <img src="/images/courtney-pose.png" alt="Courtney Alex in a thoughtful pose" loading="lazy" className="w-full h-full object-cover" />
             </div>
             <div className="absolute -bottom-6 -right-6 w-full h-full border-2 border-sand-300 rounded-[3rem] -z-10"></div>
           </Reveal>
@@ -57,7 +58,7 @@ export const About: React.FC<AboutProps> = ({ setView }) => {
           </div>
         </Reveal>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {[
             {
               title: "Strengths-Based",
@@ -156,12 +157,13 @@ export const About: React.FC<AboutProps> = ({ setView }) => {
       <div className="text-center space-y-12">
         <Reveal width="100%">
           <div className="w-full aspect-video bg-sage-50 rounded-[3rem] overflow-hidden relative shadow-soft">
-            <img 
-              src="/images/maui.jpg" 
-              alt="Maui Landscape" 
-              className="w-full h-full object-cover object-center" 
+            <img
+              src="/images/maui.jpg"
+              alt=""
+              loading="lazy"
+              className="w-full h-full object-cover object-center"
             />
-            <div className="absolute flex items-center justify-center">
+            <div className="absolute inset-x-0 bottom-8 flex items-center justify-center">
               <span className="bg-white/90 backdrop-blur-sm px-8 py-3 rounded-full text-sage-800 text-xs font-bold uppercase tracking-widest shadow-lg text-center">
                 Mind &bull; Body &bull; Heart
               </span>
@@ -175,7 +177,7 @@ export const About: React.FC<AboutProps> = ({ setView }) => {
         <div className="text-center bg-sage-50 rounded-[3rem] p-16 md:p-24">
           <h2 className="text-4xl md:text-5xl font-serif text-sand-900 mb-6">Let's talk.</h2>
           <p className="text-sand-600 font-light mb-10 text-lg">Book a free 15-minute chat to see if coaching is a good fit.</p>
-          <Button variant="primary" size="lg" onClick={() => window.open('https://calendly.com/courtneyalex-int/15min', '_blank')}>
+          <Button variant="primary" size="lg" onClick={() => openExternal(CALENDLY_URL)}>
             Book a Free Chat
           </Button>
         </div>

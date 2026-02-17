@@ -2,6 +2,7 @@ import React from 'react';
 import { Button } from '../components/Button';
 import { Mail } from 'lucide-react';
 import { Reveal } from '../components/Reveal';
+import { CALENDLY_URL, INSTAGRAM_URL, YOUTUBE_URL, openExternal } from '../constants';
 
 export const Contact: React.FC = () => {
     return (
@@ -20,10 +21,10 @@ export const Contact: React.FC = () => {
             </div>
 
             {/* ─── Contact Options ─── */}
-            <div className="grid md:grid-cols-2 gap-8 md:gap-12">
+            <div className="grid md:grid-cols-2 gap-6 md:gap-12">
                 {/* Book a Call */}
                 <Reveal delay={0.1} className="h-full">
-                    <div className="bg-white rounded-[3rem] p-10 md:p-16 shadow-soft border border-sand-50 h-full flex flex-col items-center text-center space-y-8 hover:shadow-medium transition-shadow duration-300">
+                    <div className="bg-white rounded-[3rem] p-10 md:p-16 shadow-soft border border-sand-50 h-full flex flex-col items-center text-center space-y-8 hover:shadow-medium hover:-translate-y-1 transition-all duration-300">
                         <div className="w-20 h-20 bg-sage-50 rounded-[2rem] flex items-center justify-center">
                             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-sage-600">
                                 <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
@@ -39,7 +40,7 @@ export const Contact: React.FC = () => {
                         <Button
                             size="lg"
                             className="w-full"
-                            onClick={() => window.open('https://calendly.com/courtneyalex-int/15min', '_blank')}
+                            onClick={() => openExternal(CALENDLY_URL)}
                         >
                             Schedule on Calendly
                         </Button>
@@ -48,7 +49,7 @@ export const Contact: React.FC = () => {
 
                 {/* Email */}
                 <Reveal delay={0.2} className="h-full">
-                    <div className="bg-sand-50 rounded-[3rem] p-10 md:p-16 border border-sand-100 h-full flex flex-col items-center text-center space-y-8">
+                    <div className="bg-sand-50 rounded-[3rem] p-10 md:p-16 border border-sand-100 h-full flex flex-col items-center text-center space-y-8 hover:shadow-soft hover:-translate-y-1 transition-all duration-300">
                         <div className="w-20 h-20 bg-white rounded-[2rem] flex items-center justify-center shadow-sm">
                             <Mail size={32} className="text-clay-500" strokeWidth={1.5} />
                         </div>
@@ -74,13 +75,15 @@ export const Contact: React.FC = () => {
                     </p>
                     <div className="flex justify-center gap-8">
                         <button
-                            onClick={() => window.open('https://instagram.com/courtneyalex_healthcoach', '_blank')}
+                            onClick={() => openExternal(INSTAGRAM_URL)}
+                            aria-label="Follow Courtney on Instagram"
                             className="text-sand-400 hover:text-sand-800 transition-colors text-sm font-medium tracking-wide"
                         >
                             @COURTNEYALEX_HEALTHCOACH
                         </button>
                         <button
-                            onClick={() => window.open('https://youtube.com/@courtneyalexqi', '_blank')}
+                            onClick={() => openExternal(YOUTUBE_URL)}
+                            aria-label="Watch Courtney on YouTube"
                             className="text-sand-400 hover:text-sand-800 transition-colors text-sm font-medium tracking-wide"
                         >
                             YOUTUBE

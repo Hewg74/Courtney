@@ -73,7 +73,7 @@ export const Contact: React.FC = () => {
                     <p className="text-sand-500 text-sm font-light leading-relaxed uppercase tracking-wider">
                         I work with clients virtually worldwide &bull; In-person on Maui
                     </p>
-                    <div className="flex justify-center gap-8">
+                    <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8">
                         <button
                             onClick={() => openExternal(INSTAGRAM_URL)}
                             aria-label="Follow Courtney on Instagram"

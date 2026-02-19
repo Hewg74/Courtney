@@ -6,6 +6,7 @@ import { Button } from './Button';
 
 interface TestimonialGridProps {
     testimonials: Testimonial[];
+    showAll?: boolean;
 }
 
 /**
@@ -21,8 +22,8 @@ function distributeToColumns<T>(items: T[], columnCount: number): T[][] {
     return columns;
 }
 
-export const TestimonialGrid: React.FC<TestimonialGridProps> = ({ testimonials }) => {
-    const [visibleCount, setVisibleCount] = useState(6);
+export const TestimonialGrid: React.FC<TestimonialGridProps> = ({ testimonials, showAll = false }) => {
+    const [visibleCount, setVisibleCount] = useState(showAll ? testimonials.length : 6);
     const prevCountRef = useRef(6);
 
     // Sort: Named authors first, then Anonymous

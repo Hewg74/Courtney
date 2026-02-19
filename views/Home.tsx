@@ -1,11 +1,10 @@
 import React from 'react';
 import { Button } from '../components/Button';
 import { ViewState } from '../types';
-import { Sparkles, Award, Users, Sun, Feather, Compass, MessageCircle, Star, Heart } from 'lucide-react';
+import { Sparkles, Award, Users, Sun, Feather, Compass, MessageCircle, Star, Heart, Quote } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { Reveal } from '../components/Reveal';
-import { TESTIMONIALS, openExternal, CALENDLY_URL } from '../constants';
-import { TestimonialGrid } from '../components/TestimonialGrid';
+import { openExternal, CALENDLY_URL } from '../constants';
 
 // ... (inside component)
 
@@ -223,24 +222,37 @@ export const Home: React.FC<HomeProps> = ({ setView }) => {
         </div>
       </section>
 
-      {/* 4. Testimonials (Gallery Grid) */}
-      <section className="py-32 bg-gradient-to-b from-white via-sand-50/50 to-white relative overflow-hidden">
-        {/* Background Texture/Gradient - Light & Warm */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-full border-x border-sand-100/50 pointer-events-none -z-10" />
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-clay-50/50 rounded-full blur-[120px] -z-10 opacity-60 translate-x-1/3 -translate-y-1/4" />
-        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-sand-100/40 rounded-full blur-[100px] -z-10 opacity-70 -translate-x-1/3 translate-y-1/4" />
+      {/* 4. Featured Testimonials */}
+      <section className="py-24 bg-sand-900 text-sand-50 overflow-hidden">
+        <Reveal width="100%">
+          <div className="max-w-4xl mx-auto px-6 text-center space-y-12">
+            <h2 className="text-xs font-bold uppercase tracking-widest text-sand-400">What families say</h2>
 
-        <div className="max-w-7xl mx-auto px-6 relative z-10">
-          <Reveal width="100%" className="mb-20 text-center">
-            <h2 className="text-xs font-bold uppercase tracking-widest text-clay-600 mb-4">Kind Words</h2>
-            <h3 className="text-4xl md:text-5xl font-serif text-sand-900 italic mb-6">Stories of change & connection</h3>
-            <p className="text-sand-600 max-w-2xl mx-auto font-light text-lg">
-              Real experiences from adults, parents, and families finding their balance.
-            </p>
-          </Reveal>
+            <div className="space-y-8">
+              <Quote className="mx-auto text-clay-400 opacity-50" size={48} />
+              <p className="text-2xl md:text-4xl font-serif italic leading-tight text-sand-100">
+                "Since working with you, I have seen a miraculous transformation in my son. Once nearly debilitated by anxiety and trauma, he now has confidence and courage and tools to help him curtail negative thoughts and toxic people. He has learned to embrace his unique talents rather than fear or suppress them and pursue a healthy lifestyle that includes organic foods and mindfulness in all things. You have made such a difference in his life!"
+              </p>
+              <cite className="block not-italic text-sm font-sans tracking-wide text-sand-400">
+                — Kerrie, Arizona
+              </cite>
+            </div>
 
-          <TestimonialGrid testimonials={TESTIMONIALS} />
-        </div>
+            <div className="flex flex-col md:flex-row gap-8 pt-12 border-t border-sand-800">
+              <div className="flex-1 space-y-4">
+                <p className="text-lg font-serif italic text-sand-300">"Courtney has the ability to direct you gently to self reflection so you can accomplish your goals. And gives you the tools to accomplish them. She is gifted in all she does and creates an environment of safety trust and empowerment."</p>
+              </div>
+              <div className="hidden md:block w-px bg-sand-800"></div>
+              <div className="flex-1 space-y-4">
+                <p className="text-lg font-serif italic text-sand-300">"Someone who actually understood my kid — not just the behavior."</p>
+              </div>
+            </div>
+
+            <Button variant="outline" className="bg-white text-sand-900 border-white hover:bg-sand-100" onClick={() => setView('testimonials')}>
+              Read All Stories
+            </Button>
+          </div>
+        </Reveal>
       </section>
 
       {/* 5. Short Intro (Old "About Preview" Design) */}

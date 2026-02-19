@@ -37,6 +37,7 @@ export const Navigation: React.FC<NavigationProps> = ({ currentView, setView }) 
   const navItems: { label: string; value: ViewState }[] = [
     { label: 'Work With Me', value: 'work-with-me' },
     { label: 'Qigong', value: 'qigong' },
+    { label: 'Testimonials', value: 'testimonials' },
     { label: 'About', value: 'about' },
     { label: 'Contact', value: 'contact' },
   ];

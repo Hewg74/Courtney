@@ -7,9 +7,10 @@ import { WorkWithMe } from './views/WorkWithMe';
 import { Qigong } from './views/Qigong';
 import { About } from './views/About';
 import { Contact } from './views/Contact';
+import { Testimonials } from './views/Testimonials';
 import { StickyCTA } from './components/StickyCTA';
 
-const VALID_VIEWS: ViewState[] = ['home', 'work-with-me', 'qigong', 'about', 'contact'];
+const VALID_VIEWS: ViewState[] = ['home', 'work-with-me', 'qigong', 'about', 'contact', 'testimonials'];
 
 const pathToView = (path: string): ViewState => {
   const clean = path.replace(/^\//, '') || 'home';
@@ -52,6 +53,7 @@ const App: React.FC = () => {
       case 'qigong': return <Qigong />;
       case 'about': return <About setView={setCurrentView} />;
       case 'contact': return <Contact />;
+      case 'testimonials': return <Testimonials />;
       default: return <Home setView={setCurrentView} />;
     }
   };

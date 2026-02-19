@@ -228,27 +228,27 @@ export const Home: React.FC<HomeProps> = ({ setView }) => {
           <div className="max-w-5xl mx-auto px-6 text-center space-y-12">
             <h2 className="text-xs font-bold uppercase tracking-widest text-sand-400">What families say</h2>
 
-            {/* Main Testimonial */}
+            {/* Main Testimonial — Kerrie (id 5, index 4) */}
             <div className="space-y-8">
               <Quote className="mx-auto text-clay-400 opacity-50" size={48} />
               <p className="text-xl md:text-2xl font-serif italic leading-relaxed text-sand-100 max-w-4xl mx-auto">
-                "{TESTIMONIALS[0].quote}"
+                "{TESTIMONIALS[4].quote}"
               </p>
               <cite className="block not-italic text-sm font-sans tracking-wide text-sand-400">
-                — {TESTIMONIALS[0].author}{TESTIMONIALS[0].context ? `, ${TESTIMONIALS[0].context}` : ''}
+                — {TESTIMONIALS[4].author}{TESTIMONIALS[4].context ? `, ${TESTIMONIALS[4].context}` : ''}
               </cite>
             </div>
 
-            {/* Secondary Testimonials */}
+            {/* Secondary Testimonials — Rona (id 10, index 9) & ADHD parent (id 3, index 2) */}
             <div className="flex flex-col md:flex-row gap-8 pt-12 border-t border-sand-800 text-left">
               <div className="flex-1 space-y-4">
-                <p className="text-lg md:text-xl font-serif italic text-sand-300">"{TESTIMONIALS[2].quote}"</p>
-                <cite className="block not-italic text-sm font-sans tracking-wide text-sand-500 mt-4">— {TESTIMONIALS[2].author}{TESTIMONIALS[2].context ? `, ${TESTIMONIALS[2].context}` : ''}</cite>
+                <p className="text-lg md:text-xl font-serif italic text-sand-300">"{TESTIMONIALS[9].quote}"</p>
+                <cite className="block not-italic text-sm font-sans tracking-wide text-sand-500 mt-4">— {TESTIMONIALS[9].author}{TESTIMONIALS[9].context ? `, ${TESTIMONIALS[9].context}` : ''}</cite>
               </div>
               <div className="hidden md:block w-px bg-sand-800 self-stretch"></div>
               <div className="flex-1 space-y-4">
-                <p className="text-lg md:text-xl font-serif italic text-sand-300">"{TESTIMONIALS[1].quote}"</p>
-                <cite className="block not-italic text-sm font-sans tracking-wide text-sand-500 mt-4">— {TESTIMONIALS[1].author}{TESTIMONIALS[1].context ? `, ${TESTIMONIALS[1].context}` : ''}</cite>
+                <p className="text-lg md:text-xl font-serif italic text-sand-300">"{TESTIMONIALS[2].quote}"</p>
+                <cite className="block not-italic text-sm font-sans tracking-wide text-sand-500 mt-4">— {TESTIMONIALS[2].author}{TESTIMONIALS[2].context ? `, ${TESTIMONIALS[2].context}` : ''}</cite>
               </div>
             </div>
 

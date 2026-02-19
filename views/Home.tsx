@@ -4,7 +4,7 @@ import { ViewState } from '../types';
 import { Sparkles, Award, Users, Sun, Feather, Compass, MessageCircle, Star, Heart, Quote } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { Reveal } from '../components/Reveal';
-import { openExternal, CALENDLY_URL } from '../constants';
+import { openExternal, CALENDLY_URL, TESTIMONIALS } from '../constants';
 
 // ... (inside component)
 
@@ -225,26 +225,30 @@ export const Home: React.FC<HomeProps> = ({ setView }) => {
       {/* 4. Featured Testimonials */}
       <section className="py-24 bg-sand-900 text-sand-50 overflow-hidden">
         <Reveal width="100%">
-          <div className="max-w-4xl mx-auto px-6 text-center space-y-12">
+          <div className="max-w-5xl mx-auto px-6 text-center space-y-12">
             <h2 className="text-xs font-bold uppercase tracking-widest text-sand-400">What families say</h2>
 
+            {/* Main Testimonial */}
             <div className="space-y-8">
               <Quote className="mx-auto text-clay-400 opacity-50" size={48} />
-              <p className="text-2xl md:text-4xl font-serif italic leading-tight text-sand-100">
-                "Since working with you, I have seen a miraculous transformation in my son. Once nearly debilitated by anxiety and trauma, he now has confidence and courage and tools to help him curtail negative thoughts and toxic people. He has learned to embrace his unique talents rather than fear or suppress them and pursue a healthy lifestyle that includes organic foods and mindfulness in all things. You have made such a difference in his life!"
+              <p className="text-xl md:text-2xl font-serif italic leading-relaxed text-sand-100 max-w-4xl mx-auto">
+                "{TESTIMONIALS[0].quote}"
               </p>
               <cite className="block not-italic text-sm font-sans tracking-wide text-sand-400">
-                — Kerrie, Arizona
+                — {TESTIMONIALS[0].author}{TESTIMONIALS[0].context ? `, ${TESTIMONIALS[0].context}` : ''}
               </cite>
             </div>
 
-            <div className="flex flex-col md:flex-row gap-8 pt-12 border-t border-sand-800">
+            {/* Secondary Testimonials */}
+            <div className="flex flex-col md:flex-row gap-8 pt-12 border-t border-sand-800 text-left">
               <div className="flex-1 space-y-4">
-                <p className="text-lg font-serif italic text-sand-300">"Courtney has the ability to direct you gently to self reflection so you can accomplish your goals. And gives you the tools to accomplish them. She is gifted in all she does and creates an environment of safety trust and empowerment."</p>
+                <p className="text-lg md:text-xl font-serif italic text-sand-300">"{TESTIMONIALS[2].quote}"</p>
+                <cite className="block not-italic text-sm font-sans tracking-wide text-sand-500 mt-4">— {TESTIMONIALS[2].author}{TESTIMONIALS[2].context ? `, ${TESTIMONIALS[2].context}` : ''}</cite>
               </div>
-              <div className="hidden md:block w-px bg-sand-800"></div>
+              <div className="hidden md:block w-px bg-sand-800 self-stretch"></div>
               <div className="flex-1 space-y-4">
-                <p className="text-lg font-serif italic text-sand-300">"Someone who actually understood my kid — not just the behavior."</p>
+                <p className="text-lg md:text-xl font-serif italic text-sand-300">"{TESTIMONIALS[1].quote}"</p>
+                <cite className="block not-italic text-sm font-sans tracking-wide text-sand-500 mt-4">— {TESTIMONIALS[1].author}{TESTIMONIALS[1].context ? `, ${TESTIMONIALS[1].context}` : ''}</cite>
               </div>
             </div>
 

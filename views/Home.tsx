@@ -159,11 +159,11 @@ export const Home: React.FC<HomeProps> = ({ setView }) => {
         <div className="absolute top-0 right-0 w-96 h-96 bg-sage-50/50 rounded-full blur-3xl -z-10 translate-x-1/2 -translate-y-1/2"></div>
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-clay-50/50 rounded-full blur-3xl -z-10 -translate-x-1/2 translate-y-1/2"></div>
 
-        <div className="max-w-6xl mx-auto text-center md:text-left space-y-16 relative z-10">
-          <Reveal>
+        <div className="max-w-6xl mx-auto text-center space-y-16 relative z-10">
+          <Reveal width="100%">
             <div className="space-y-4">
               <h2 className="text-3xl md:text-4xl font-serif text-sand-900 italic">What clients notice</h2>
-              <p className="text-sand-600 max-w-2xl font-light">
+              <p className="text-sand-600 max-w-2xl mx-auto font-light">
                 Change happens in small, sustainable shifts. Here’s what clients often report after working together.
               </p>
             </div>
@@ -240,7 +240,7 @@ export const Home: React.FC<HomeProps> = ({ setView }) => {
             </div>
 
             {/* Secondary Testimonials — Rona (id 10, index 9) & ADHD parent (id 3, index 2) */}
-            <div className="flex flex-col md:flex-row gap-8 pt-12 border-t border-sand-800 text-left">
+            <div className="flex flex-col md:flex-row gap-8 pt-12 border-t border-sand-800 text-center md:text-left">
               <div className="flex-1 space-y-4">
                 <p className="text-lg md:text-xl font-serif italic text-sand-300">"{TESTIMONIALS[9].quote}"</p>
                 <cite className="block not-italic text-sm font-sans tracking-wide text-sand-500 mt-4">— {TESTIMONIALS[9].author}{TESTIMONIALS[9].context ? `, ${TESTIMONIALS[9].context}` : ''}</cite>
@@ -266,10 +266,10 @@ export const Home: React.FC<HomeProps> = ({ setView }) => {
             <img src="/images/meditation.png" alt="Courtney meditating" loading="lazy" className="w-full h-full object-cover" />
           </div>
         </Reveal>
-        <Reveal delay={0.2}>
+        <Reveal delay={0.2} width="100%">
           <h2 className="text-4xl font-serif text-sand-900">Hi, I'm Courtney.</h2>
         </Reveal>
-        <Reveal delay={0.3}>
+        <Reveal delay={0.3} width="100%">
           <div className="space-y-6 max-w-2xl mx-auto">
             <p className="text-xl text-sand-600 font-light">
               My approach is strengths-based and practical — we start with what's already working and build from there, through small steps that fit your lifestyle. Every session and tool is based on what works for you.
@@ -279,7 +279,7 @@ export const Home: React.FC<HomeProps> = ({ setView }) => {
             </p>
           </div>
         </Reveal>
-        <Reveal delay={0.4}>
+        <Reveal delay={0.4} width="100%">
           <Button variant="text" onClick={() => setView('about')}>Meet Courtney &rarr;</Button>
         </Reveal>
       </section>

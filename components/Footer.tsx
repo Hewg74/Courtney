@@ -24,7 +24,7 @@ export const Footer: React.FC<FooterProps> = ({ setView }) => {
         </div>
 
         {/* Three Columns on Desktop, Stacked on Mobile */}
-        <div className="grid md:grid-cols-3 gap-12 text-center md:text-left">
+        <div className="grid md:grid-cols-3 gap-12 text-center">
 
           {/* Explore */}
           <div className="space-y-6">
@@ -51,7 +51,7 @@ export const Footer: React.FC<FooterProps> = ({ setView }) => {
           {/* Social */}
           <div className="space-y-6">
             <h4 className="text-sand-50 font-sans font-bold text-xs uppercase tracking-widest">Follow</h4>
-            <div className="flex gap-4 justify-center md:justify-start">
+            <div className="flex gap-4 justify-center">
               <button onClick={() => openExternal(INSTAGRAM_URL)} aria-label="Follow Courtney on Instagram" className="text-sand-400 hover:text-clay-200 transition-colors p-2 hover:bg-sand-800 rounded-full">
                 <Instagram size={20} />
               </button>

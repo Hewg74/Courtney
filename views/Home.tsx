@@ -1,10 +1,15 @@
 import React from 'react';
 import { Button } from '../components/Button';
 import { ViewState } from '../types';
-import { Quote, Sparkles, Award, Users, Sun, Feather, Compass, MessageCircle, Star, Heart } from 'lucide-react';
+import { Sparkles, Award, Users, Sun, Feather, Compass, MessageCircle, Star, Heart } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { Reveal } from '../components/Reveal';
 import { TESTIMONIALS, openExternal, CALENDLY_URL } from '../constants';
+import { TestimonialGrid } from '../components/TestimonialGrid';
+
+// ... (inside component)
+
+
 
 interface HomeProps {
   setView: (view: ViewState) => void;
@@ -218,37 +223,24 @@ export const Home: React.FC<HomeProps> = ({ setView }) => {
         </div>
       </section>
 
-      {/* 4. Testimonials (Updated Layout) */}
-      <section className="py-24 bg-sand-900 text-sand-50 overflow-hidden">
-        <Reveal width="100%">
-          <div className="max-w-5xl mx-auto px-6 text-center space-y-12">
-            <h2 className="text-xs font-bold uppercase tracking-widest text-sand-400">What people say</h2>
+      {/* 4. Testimonials (Gallery Grid) */}
+      <section className="py-32 bg-gradient-to-b from-white via-sand-50/50 to-white relative overflow-hidden">
+        {/* Background Texture/Gradient - Light & Warm */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-full border-x border-sand-100/50 pointer-events-none -z-10" />
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-clay-50/50 rounded-full blur-[120px] -z-10 opacity-60 translate-x-1/3 -translate-y-1/4" />
+        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-sand-100/40 rounded-full blur-[100px] -z-10 opacity-70 -translate-x-1/3 translate-y-1/4" />
 
-            {/* Main Testimonial */}
-            <div className="space-y-6 relative">
-              <Quote className="mx-auto text-clay-400 opacity-20" size={56} />
-              <p className="text-xl md:text-2xl lg:text-3xl font-serif italic leading-relaxed text-sand-100 max-w-4xl mx-auto -mt-4">
-                "{TESTIMONIALS[0].quote}"
-              </p>
-              <cite className="block not-italic text-sm font-sans tracking-wide text-sand-400 pt-2">
-                — {TESTIMONIALS[0].author}, {TESTIMONIALS[0].context}
-              </cite>
-            </div>
+        <div className="max-w-7xl mx-auto px-6 relative z-10">
+          <Reveal width="100%" className="mb-20 text-center">
+            <h2 className="text-xs font-bold uppercase tracking-widest text-clay-600 mb-4">Kind Words</h2>
+            <h3 className="text-4xl md:text-5xl font-serif text-sand-900 italic mb-6">Stories of change & connection</h3>
+            <p className="text-sand-600 max-w-2xl mx-auto font-light text-lg">
+              Real experiences from adults, parents, and families finding their balance.
+            </p>
+          </Reveal>
 
-            {/* Secondary Testimonials */}
-            <div className="flex flex-col md:flex-row gap-8 pt-12 border-t border-sand-800 text-center md:text-left">
-              <div className="flex-1 space-y-4">
-                <p className="text-lg md:text-xl font-serif italic text-sand-300">"{TESTIMONIALS[2].quote}"</p>
-                <cite className="block not-italic text-sm font-sans tracking-wide text-sand-500 mt-4">— {TESTIMONIALS[2].author}, {TESTIMONIALS[2].context}</cite>
-              </div>
-              <div className="hidden md:block w-px bg-sand-800 self-stretch"></div>
-              <div className="flex-1 space-y-4">
-                <p className="text-lg md:text-xl font-serif italic text-sand-300">"{TESTIMONIALS[1].quote}"</p>
-                <cite className="block not-italic text-sm font-sans tracking-wide text-sand-500 mt-4">— {TESTIMONIALS[1].author}, {TESTIMONIALS[1].context}</cite>
-              </div>
-            </div>
-          </div>
-        </Reveal>
+          <TestimonialGrid testimonials={TESTIMONIALS} />
+        </div>
       </section>
 
       {/* 5. Short Intro (Old "About Preview" Design) */}

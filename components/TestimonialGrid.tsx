@@ -73,19 +73,19 @@ export const TestimonialGrid: React.FC<TestimonialGridProps> = ({ testimonials, 
                                     whileInView={{ opacity: 1, y: 0, scale: 1 }}
                                     viewport={{ once: true, margin: "-100px" }}
                                     transition={{
-                                        duration: 0.8,
-                                        delay: isNew ? (globalIndex % 6) * 0.15 : 0,
-                                        ease: [0.25, 0.46, 0.45, 0.94]
+                                        duration: 0.7,
+                                        delay: isNew ? (globalIndex % 6) * 0.1 : 0,
+                                        ease: [0.22, 1, 0.36, 1]
                                     }}
                                 >
-                                    <div className="bg-white p-8 md:p-10 rounded-xl shadow-sm border border-sand-100/50 hover:shadow-lg hover:border-sand-200 hover:-translate-y-1 transition-all duration-500 relative group">
+                                    <div className="bg-white p-8 md:p-10 rounded-2xl shadow-sm border border-transparent hover:border-sand-200 hover:shadow-md hover:-translate-y-1 transition-all duration-500 relative group h-full">
                                         {/* Quote Icon - Watermark */}
-                                        <div className="absolute top-6 left-6 text-sand-100 opacity-30 group-hover:text-amber-500/10 transition-all duration-700">
-                                            <Quote size={48} fill="currentColor" strokeWidth={0} />
+                                        <div className="absolute top-8 left-8 text-clay-100 opacity-40 group-hover:text-amber-500/10 transition-all duration-700">
+                                            <Quote size={56} fill="currentColor" strokeWidth={0} />
                                         </div>
 
                                         <div className="relative z-10">
-                                            <p className="font-serif text-sand-900 leading-relaxed text-lg mb-8 italic opacity-90 relative">
+                                            <p className="font-serif text-sand-900 leading-relaxed text-xl mb-8 italic opacity-90 relative">
                                                 "{testimonial.quote}"
                                             </p>
 

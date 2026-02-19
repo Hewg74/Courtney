@@ -13,10 +13,10 @@ export const Testimonials: React.FC = () => {
 
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <Reveal width="100%" className="mb-20 text-center">
-            <h2 className="text-xs font-bold uppercase tracking-widest text-clay-600 mb-4">Kind Words</h2>
-            <h3 className="text-4xl md:text-5xl font-serif text-sand-900 italic mb-6">Stories of change & connection</h3>
+            <h2 className="text-xs font-bold uppercase tracking-widest text-clay-600 mb-4">Client Stories</h2>
+            <h3 className="text-4xl md:text-5xl font-serif text-sand-900 italic mb-6">Finding steadiness & connection</h3>
             <p className="text-sand-600 max-w-2xl mx-auto font-light text-lg">
-              Real experiences from adults, parents, and families finding their balance.
+              There is no single path to feeling better. Here are some real experiences of finding more ease and balance.
             </p>
           </Reveal>
 

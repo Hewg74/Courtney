@@ -87,18 +87,18 @@ export const TestimonialCarousel: React.FC<TestimonialCarouselProps> = ({ testim
                         <div
                             key={`${testimonial.id}-${i}`} // Composite key to ensure uniqueness in render map
                             className={`
-                    relative bg-white p-8 rounded-2xl shadow-sm border border-sand-100 flex flex-col h-full
+                    relative bg-white p-8 rounded-2xl shadow-sm border border-transparent hover:border-sand-200 hover:shadow-md transition-all duration-500 flex flex-col h-full
                     ${i === 1 ? 'hidden md:flex' : ''} 
                     ${i === 2 ? 'hidden lg:flex' : ''}
                     ${i === 0 ? 'flex' : ''}
                 `}
                         >
-                            <div className="absolute top-6 left-6 text-clay-300 opacity-20">
-                                <Quote size={40} />
+                            <div className="absolute top-6 left-6 text-clay-100 opacity-40">
+                                <Quote size={48} fill="currentColor" strokeWidth={0} />
                             </div>
 
                             <div className="flex-grow pt-6 relative z-0">
-                                <p className="font-serif italic text-sand-800 leading-relaxed text-lg">
+                                <p className="font-serif italic text-sand-800 leading-relaxed text-xl">
                                     "{testimonial.quote}"
                                 </p>
                             </div>

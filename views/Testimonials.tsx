@@ -284,7 +284,7 @@ export const Testimonials: React.FC = () => {
               <div key={category.label}>
                 <Reveal width="100%" className="mb-12">
                   <div className="flex items-center gap-6">
-                    <h4 className="text-2xl md:text-3xl font-serif text-sand-900 whitespace-nowrap">
+                    <h4 className="text-2xl md:text-3xl font-serif text-sand-900 md:whitespace-nowrap">
                       {category.label}
                     </h4>
                     <div className="h-px bg-sand-200 flex-1" />

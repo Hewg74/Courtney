@@ -119,7 +119,7 @@ const CATEGORIES: TestimonialCategory[] = [
       },
       {
         quote: "After practicing Qigong with you for over a year now, two interesting things happened recently: I went to my chiropractor and she described my neck and shoulders as 'buoyant', my spine as 'that of a young person'. That is so different from what my chiropractor used to say about my spine\u2026 The chiro also noted that when I first started seeing her, I didn't have a cervical curve likely through poor posture and my accident, but now the healthy cervical curve is back. I also went to my PT and showed her an exercise you gave me\u2026 She said it was the perfect exercise\u2026 and would even show it to other patients. Very cool!",
-        author: "J.C.",
+        author: "JC",
         context: "HI"
       },
       {

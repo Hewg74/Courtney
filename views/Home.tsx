@@ -226,7 +226,7 @@ export const Home: React.FC<HomeProps> = ({ setView }) => {
       <section className="py-24 bg-sand-900 text-sand-50 overflow-hidden">
         <Reveal width="100%">
           <div className="max-w-5xl mx-auto px-6 text-center space-y-12">
-            <h2 className="text-xs font-bold uppercase tracking-widest text-sand-400">What families say</h2>
+            <h2 className="text-xs font-bold uppercase tracking-widest text-sand-400">What Clients Say</h2>
 
             {/* Main Testimonial — Kerrie (id 5, index 4) */}
             <div className="space-y-8">

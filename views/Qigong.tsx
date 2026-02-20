@@ -39,22 +39,22 @@ export const Qigong: React.FC = () => {
             {/* ─── Details ─── */}
             <div className="grid md:grid-cols-2 gap-8">
                 <Reveal delay={0.3} width="100%">
-                    <div className="bg-white p-10 rounded-2xl border border-sand-100 shadow-soft h-full hover:shadow-medium transition-shadow duration-700">
+                    <div className="bg-white p-6 md:p-10 rounded-2xl border border-sand-100 shadow-soft h-full hover:shadow-medium transition-shadow duration-700">
                         <span className="text-[10px] font-bold uppercase tracking-widest text-sage-500 mb-4 block">Weekly Group Class</span>
                         <h3 className="text-3xl font-serif text-sand-900 mb-4">Chi Energy Flow</h3>
                         <p className="text-sand-600 font-light leading-relaxed mb-8">
                             A classic mind-body movement practice to ease tension and stress from mind, body, and heart. All levels welcome — no experience needed.
                         </p>
-                        <div className="text-sm text-sand-700 space-y-3 pt-6 border-t border-sand-50">
-                            <p className="flex justify-between gap-4"><strong className="font-medium text-sand-900 shrink-0">When</strong> <span>Every Tuesday, 7:30–8:30 PM</span></p>
-                            <p className="flex justify-between gap-4"><strong className="font-medium text-sand-900 shrink-0">Where</strong> <a href="https://www.fuzionfit.com/contact" target="_blank" rel="noopener noreferrer" className="text-sage-600 underline underline-offset-2 hover:text-sage-800">FuzionFit Maui</a></p>
-                            <p className="flex justify-between gap-4"><strong className="font-medium text-sand-900 shrink-0">Rate</strong> <span>$25 drop-in or included in gym membership</span></p>
-                        </div>
+                        <dl className="text-sm text-sand-700 space-y-3 pt-6 border-t border-sand-50">
+                            <div className="flex gap-4"><dt className="font-medium text-sand-900 shrink-0 w-14">When</dt><dd className="text-right ml-auto">Every Tuesday, 7:30–8:30 PM</dd></div>
+                            <div className="flex gap-4"><dt className="font-medium text-sand-900 shrink-0 w-14">Where</dt><dd className="text-right ml-auto"><a href="https://www.fuzionfit.com/contact" target="_blank" rel="noopener noreferrer" className="text-sage-600 underline underline-offset-2 hover:text-sage-800">FuzionFit Maui</a></dd></div>
+                            <div className="flex gap-4"><dt className="font-medium text-sand-900 shrink-0 w-14">Rate</dt><dd className="text-right ml-auto">$25 drop-in or included in gym membership</dd></div>
+                        </dl>
                     </div>
                 </Reveal>
 
                 <Reveal delay={0.4} width="100%">
-                    <div className="bg-sage-50 p-10 rounded-2xl border border-sage-100 h-full">
+                    <div className="bg-sage-50 p-6 md:p-10 rounded-2xl border border-sage-100 h-full">
                         <span className="text-[10px] font-bold uppercase tracking-widest text-sage-600 mb-4 block">Private &amp; Semi-Private</span>
                         <h3 className="text-3xl font-serif text-sand-900 mb-4">Custom Sessions</h3>
                         <p className="text-sand-600 font-light leading-relaxed mb-8">

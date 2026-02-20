@@ -57,6 +57,10 @@ const CATEGORIES: TestimonialCategory[] = [
         quote: "Since working with you, I have seen a miraculous transformation in my son. Once nearly debilitated by anxiety, he now has confidence and courage and tools to help him curtail negative thoughts and toxic people. He has learned to embrace his unique talents rather than fear or suppress them and pursue a healthy lifestyle that includes organic foods and mindfulness in all things. You have made such a difference in his life! Thank you for all that you do.",
         author: "Kerrie",
         context: "AZ"
+      },
+      {
+        quote: "My daughter is hard at work writing a novel. She has gained a lot from coaching, and I'm amazed to see how her creative expression has blossomed. She's working on her memory, scheduling homework and creative time well, and able to see neurodiversity as a strength. Her relationships are improving. Thanks! We loved your warm coaching style.",
+        author: "Anonymous"
       }
     ]
   },

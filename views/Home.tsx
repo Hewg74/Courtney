@@ -80,10 +80,10 @@ export const Home: React.FC<HomeProps> = ({ setView }) => {
             <Reveal variant="scaleUp" delay={0.4}>
               <div className="relative w-72 h-[26rem] md:w-80 md:h-[30rem] lg:w-[420px] lg:h-[520px]">
                 {/* Soft Background */}
-                <div className="absolute inset-0 bg-sand-200 rounded-2xl rotate-2 opacity-50 blur-xl"></div>
+                <div className="absolute inset-0 bg-sand-200 rounded-t-full rounded-b-[2rem] rotate-2 opacity-50 blur-xl"></div>
 
                 {/* Image */}
-                <div className="absolute inset-0 overflow-hidden rounded-2xl shadow-inner border border-sand-100">
+                <div className="absolute inset-0 overflow-hidden rounded-t-full rounded-b-[2rem] shadow-inner border border-sand-100">
                   <img
                     src="/images/headshot.jpg"
                     alt="Courtney Alex, health and wellness coach"

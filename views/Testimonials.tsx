@@ -86,6 +86,24 @@ const CATEGORIES: TestimonialCategory[] = [
         quote: "[After our Health Coaching sessions] I'm doing better. I know what to do now\u2026Thank you again for your help. It really helped to have someone to talk to and help me reflect on what to do. The answers were there, I was just too close to the waterfall to hear it.",
         author: "Rona B",
         context: "HI"
+      },
+      {
+        quote: "On the eve of a quiet, COVID Thanksgiving, I was just thinking about how differently I feel emotionally about this situation I've often found myself in. I feel fine. Good! Totally at peace and not wishing or wanting for anything else, anything different. I then wondered when and how this shift took place. And I really believe it is the result of the work we did together this summer. I just wanted to extend a thanks and gratitude\u2026 Thank you!!! Sending love and light!",
+        author: "A."
+      },
+      {
+        quote: "Thank you so much for your beautiful words, they really moved me when I read them after our session. I really feel an energy shift and a change of perspective, so I am very grateful. Take care and talk soon.",
+        author: "Leilah",
+        context: "Spain"
+      },
+      {
+        quote: "I've been doing the action items we discussed and have been having a good sleep week! Thank you!",
+        author: "Anonymous"
+      },
+      {
+        quote: "Dear Courtney, I just wanted to THANK YOU THANK YOU THANK YOU for the session yesterday\u2026 you have no idea how much you helped.",
+        author: "M.",
+        context: "NY"
       }
     ]
   },
@@ -106,6 +124,21 @@ const CATEGORIES: TestimonialCategory[] = [
         quote: "Courtney was a joy to work with - she was diligent in her work and really cared about the families she served. Not only was she a thoughtful coach but a skilled one. Whenever she had a question, she would seek support and feedback in an open minded way allowing her to continuously grow in her craft.",
         author: "Jess S",
         context: "Former Coaching Manager"
+      },
+      {
+        quote: "Dear Courtney, a very big thank you for this course and your energy, your guidance and your tool sharing, your encouragements, explanations and support.",
+        author: "Christine",
+        context: "UK"
+      },
+      {
+        quote: "You have such a gift for listening with presence, and teaching in a clear, concise and gentle way. You make way out inexplicable things really accessible and normal (no small feat!). I've had important aha moments from every class. Your thoughtful responses to everyone wherever they were at was so encouraging, and I feel like you created a really safe space for us to move through whatever came up in a gentle, nurturing way.",
+        author: "Rebekah",
+        context: "CA"
+      },
+      {
+        quote: "You gave clear, easy for a beginner to follow instructions, even with experienced practitioners in the class. I felt that we went somewhere together. The whole experience was uplifting and life affirming.",
+        author: "David",
+        context: "CA"
       }
     ]
   },
@@ -136,6 +169,24 @@ const CATEGORIES: TestimonialCategory[] = [
         quote: "Courtney, an amazing class. My shoulders were so tense, but now they're so calm after class! Today started out feeling weighed down and overwhelmed\u2026 I needed mental clarity. You really delivered.",
         author: "Kaitlin",
         context: "AZ"
+      },
+      {
+        quote: "Thank you for alleviating the back issue I've been having for three days. When we first started turning to the left with our hands toward our chest/heart I could feel immense limitation diagonally across my back. With each repetition I felt easing. I'm back to normal.",
+        author: "Anonymous"
+      },
+      {
+        quote: "It's wonderful to have the tape and a printed version of the movements. I did them this morning before getting out of bed and during the day when I felt anxious. Very helpful and I'm very hopeful the practice is going to help me a lot. I'm looking forward to class on Wednesday. Thank you!!",
+        author: "K",
+        context: "HI"
+      },
+      {
+        quote: "I just caught a look at my face in the mirror. Inner smile for outer glow. I cannot believe this result. It's truly transformational!",
+        author: "KA",
+        context: "CA"
+      },
+      {
+        quote: "I wanted to thank you for helping to lift me out of depression. I came to your classes several months ago on Maui and had a major breakthrough afterwards about the changes I needed to make in my life. Since then, I've worked out a lot\u2026I feel so different and so much like I'm on the right track.",
+        author: "Anonymous"
       }
     ]
   },
@@ -161,6 +212,11 @@ const CATEGORIES: TestimonialCategory[] = [
         quote: "I wanted to let you know I received the gift of your book and it's been an enormous aid in my life. I have used it a great deal in various aspects of my life. I'm grateful to have your book in my possession. I hope you will continue to bring that insight to the world. Thank you so much for what you have provided to me personally.",
         author: "R",
         context: "AZ"
+      },
+      {
+        quote: "Courtney, just a quick note to say thank you for sharing the first part of your book - I'm really moved, full of tears, belief, disbelief, confusion, and a bit of warmth too, thank you!",
+        author: "Christine",
+        context: "UK"
       }
     ]
   }

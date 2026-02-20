@@ -15,7 +15,7 @@ export const Footer: React.FC<FooterProps> = ({ setView }) => {
         {/* Brand Section — Centered */}
         <div className="text-center mb-16 pb-12 border-b border-sand-800">
           <h3 className="text-3xl md:text-4xl font-serif text-sand-50 mb-4">Courtney Alex</h3>
-          <p className="text-sand-300 font-sans text-base leading-relaxed max-w-md mx-auto">
+          <p className="text-sand-300 font-sans text-base leading-relaxed">
             Helping adults and families feel steadier, calmer, and more connected.
           </p>
           <div className="pt-4 text-xs tracking-widest uppercase text-sand-500 font-bold">

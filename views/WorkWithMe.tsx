@@ -80,7 +80,7 @@ export const WorkWithMe: React.FC<WorkWithMeProps> = ({ setView }) => {
                 <Reveal width="100%">
                     <div className="bg-white rounded-[3rem] p-10 md:p-16 shadow-soft border border-sand-50">
                         <div className="max-w-3xl ml-auto">
-                            <h2 className="text-4xl md:text-5xl font-serif text-sand-900 mb-8">Coaching for Families &amp; Parents</h2>
+                            <h2 className="text-4xl md:text-5xl font-serif text-sand-900 mb-8">Coaching for Families &amp; Youth</h2>
                             <div className="text-sand-600 leading-relaxed text-lg font-light space-y-6">
                                 <p>
                                     I work with kids, parents, and families — together and individually. Whether your child is navigating anxiety, ADHD, big emotions, sleep challenges, or school stress, we build practical tools that fit your family's life.

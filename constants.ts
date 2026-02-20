@@ -18,9 +18,9 @@ export const TESTIMONIALS: Testimonial[] = [
   },
   {
     id: '2',
-    quote: "I’m feeling so much better about moving to college now - I helped a friend out who felt the same way I used to! I just want to tell you what a great coach you are and how thankful I am for your help. I’m staying more balanced, less anxious, I’m sleeping and using my phone less and getting out with friends more, I love my new major, I’m saying nice things to myself, feeling more confident talking to people, and I’m excited about my future. This feels great!",
+    quote: "I was really anxious about starting college and doubted myself a lot. Coaching helped me feel more balanced and learn how to be my own best friend. I’m sleeping better, spending less time on my phone, getting out more, and saying kind things to myself. Now I even help other students who are going through what I did and I’m excited about my first job.",
     author: "Anonymous",
-    context: ""
+    context: "CA"
   },
   {
     id: '3',
@@ -36,7 +36,7 @@ export const TESTIMONIALS: Testimonial[] = [
   },
   {
     id: '5',
-    quote: "Since working with you, I have seen a miraculous transformation in my son. Once nearly debilitated by anxiety and trauma, he now has confidence and courage and tools to help him curtail negative thoughts and toxic people. He has learned to embrace his unique talents rather than fear or suppress them and pursue a healthy lifestyle that includes organic foods and mindfulness in all things. You have made such a difference in his life! Thank you for all that you do.",
+    quote: "Since working with you, I have seen a miraculous transformation in my son. Once nearly debilitated by anxiety, he now has confidence and courage and tools to help him curtail negative thoughts and toxic people. He has learned to embrace his unique talents rather than fear or suppress them and pursue a healthy lifestyle that includes organic foods and mindfulness in all things. You have made such a difference in his life.",
     author: "Kerrie",
     context: "AZ"
   },
@@ -84,9 +84,9 @@ export const TESTIMONIALS: Testimonial[] = [
   },
   {
     id: '13',
-    quote: "Once I committed to add weight training in my schedule, everything else fell into place! Thank you. It was a pleasure to have you as my coach. I felt you really listened and were able to hear me, respond to where I’m at with no judgement only compassion, you provided gentle guidance, great feedback and helped give me clarity! I was able to stay on track and I appreciated your flexibility as well. I’ve been a therapist for several decades and can feel you are just a natural at this!",
+    quote: "Courtney created a space where I felt truly heard and supported. Her compassionate, practical guidance helped me stay on track and gain clarity in areas that mattered most. I’ve been a therapist for decades and can feel she is just a natural at this.",
     author: "RL",
-    context: "CA"
+    context: "Canada"
   },
   {
     id: '14',

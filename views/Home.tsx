@@ -128,7 +128,7 @@ export const Home: React.FC<HomeProps> = ({ setView }) => {
                 onClick={() => setView('work-with-me')}
                 className="group cursor-pointer bg-clay-50 p-8 rounded-3xl shadow-soft hover:shadow-medium hover:-translate-y-1 transition-all duration-300 relative border border-clay-100 h-full text-left w-full"
               >
-                <h3 className="text-2xl font-serif text-sand-900 mb-4">Family & Parent Coaching</h3>
+                <h3 className="text-2xl font-serif text-sand-900 mb-4">Family & Youth Coaching</h3>
                 <p className="text-sand-600 text-sm leading-relaxed mb-8 min-h-[80px]">
                   Practical strategies for anxiety, ADHD, behavior, communication, and connection — for kids and the adults who support them.
                 </p>
@@ -239,16 +239,16 @@ export const Home: React.FC<HomeProps> = ({ setView }) => {
               </cite>
             </div>
 
-            {/* Secondary Testimonials — Rona (id 10, index 9) & ADHD parent (id 3, index 2) */}
+            {/* Secondary Testimonials — Anonymous college student (id 2, index 1) & RL therapist (id 13, index 12) */}
             <div className="flex flex-col md:flex-row gap-8 pt-12 border-t border-sand-800 text-center md:text-left">
               <div className="flex-1 space-y-4">
-                <p className="text-lg md:text-xl font-serif italic text-sand-300">"{TESTIMONIALS[9].quote}"</p>
-                <cite className="block not-italic text-sm font-sans tracking-wide text-sand-500 mt-4">— {TESTIMONIALS[9].author}{TESTIMONIALS[9].context ? `, ${TESTIMONIALS[9].context}` : ''}</cite>
+                <p className="text-lg md:text-xl font-serif italic text-sand-300">"{TESTIMONIALS[1].quote}"</p>
+                <cite className="block not-italic text-sm font-sans tracking-wide text-sand-500 mt-4">— {TESTIMONIALS[1].author}{TESTIMONIALS[1].context ? `, ${TESTIMONIALS[1].context}` : ''}</cite>
               </div>
               <div className="hidden md:block w-px bg-sand-800 self-stretch"></div>
               <div className="flex-1 space-y-4">
-                <p className="text-lg md:text-xl font-serif italic text-sand-300">"{TESTIMONIALS[2].quote}"</p>
-                <cite className="block not-italic text-sm font-sans tracking-wide text-sand-500 mt-4">— {TESTIMONIALS[2].author}{TESTIMONIALS[2].context ? `, ${TESTIMONIALS[2].context}` : ''}</cite>
+                <p className="text-lg md:text-xl font-serif italic text-sand-300">"{TESTIMONIALS[12].quote}"</p>
+                <cite className="block not-italic text-sm font-sans tracking-wide text-sand-500 mt-4">— {TESTIMONIALS[12].author}{TESTIMONIALS[12].context ? `, ${TESTIMONIALS[12].context}` : ''}</cite>
               </div>
             </div>
 
@@ -266,10 +266,10 @@ export const Home: React.FC<HomeProps> = ({ setView }) => {
             <img src="/images/meditation.png" alt="Courtney meditating" loading="lazy" className="w-full h-full object-cover" />
           </div>
         </Reveal>
-        <Reveal delay={0.2} width="100%">
+        <Reveal delay={0.2}>
           <h2 className="text-4xl font-serif text-sand-900">Hi, I'm Courtney.</h2>
         </Reveal>
-        <Reveal delay={0.3} width="100%">
+        <Reveal delay={0.3}>
           <div className="space-y-6 max-w-2xl mx-auto">
             <p className="text-xl text-sand-600 font-light">
               My approach is strengths-based and practical — we start with what's already working and build from there, through small steps that fit your lifestyle. Every session and tool is based on what works for you.
@@ -279,7 +279,7 @@ export const Home: React.FC<HomeProps> = ({ setView }) => {
             </p>
           </div>
         </Reveal>
-        <Reveal delay={0.4} width="100%">
+        <Reveal delay={0.4}>
           <Button variant="text" onClick={() => setView('about')}>Meet Courtney &rarr;</Button>
         </Reveal>
       </section>

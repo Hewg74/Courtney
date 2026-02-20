@@ -17,11 +17,11 @@ export const Button: React.FC<ButtonProps> = ({
 
   const variants = {
     // Primary: Deep sand/charcoal. Tactile but not harsh.
-    primary: "bg-sand-800 text-sand-50 hover:bg-clay-600 hover:shadow-medium active:bg-clay-700 active:shadow-inner",
+    primary: "bg-sand-800 text-sand-50 hover:bg-clay-600 hover:shadow-medium hover:shadow-clay-500/20 active:scale-[0.98] active:shadow-soft shadow-[inset_0_1px_1px_rgba(255,255,255,0.2)]",
     // Secondary: Soft clay wash.
-    secondary: "bg-clay-100 text-clay-800 hover:bg-clay-200 active:bg-clay-300 active:shadow-inner",
+    secondary: "bg-clay-100 text-clay-800 hover:bg-clay-200 active:scale-[0.98] shadow-[inset_0_1px_1px_rgba(255,255,255,0.5)]",
     // Outline: Delicate line.
-    outline: "border border-sand-300 text-sand-800 hover:border-sand-400 hover:bg-sand-100/50 bg-transparent active:bg-sand-200/50 active:shadow-inner",
+    outline: "border border-sand-300 text-sand-800 hover:border-sand-400 hover:bg-sand-50/50 bg-transparent active:scale-[0.98]",
     // Text only
     text: "bg-transparent text-sand-600 hover:text-sand-900 underline decoration-sand-300 underline-offset-4 hover:underline-offset-2 transition-all"
   };

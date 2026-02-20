@@ -1,146 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Courtney | Health & Wellness Coaching for Adults & Families</title>
-    <meta name="description" content="Board-certified health & wellness coaching for stress relief, sleep, and resilience — for adults & families.">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              serif: ['"Cormorant Garamond"', 'serif'],
-              sans: ['"Outfit"', 'sans-serif'],
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Courtney | Health & Wellness Coaching for Adults & Families</title>
+  <meta name="description"
+    content="Board-certified health & wellness coaching for stress relief, sleep, and resilience — for adults & families.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'serif'],
+            sans: ['"Inter"', 'sans-serif'],
+          },
+          borderRadius: {
+            'xl': '0.75rem',
+            '2xl': '1rem',
+            '3xl': '1.5rem',
+            '4xl': '2rem',
+          },
+          colors: {
+            stone: {
+              50: '#fafaf9',
+              100: '#f5f5f4',
+              200: '#e7e5e4',
+              300: '#d6d3d1',
+              400: '#a8a29e',
+              500: '#78716c',
+              600: '#57534e',
+              700: '#44403c',
+              800: '#292524',
+              900: '#1c1917',
             },
-            borderRadius: {
-              'xl': '0.75rem',
-              '2xl': '1rem',
-              '3xl': '1.5rem', 
-              '4xl': '2rem',
+            sage: {
+              50: '#F5F7F6',
+              100: '#E8ECE9',
+              200: '#CFD9D2',
+              300: '#B0BEB4',
+              400: '#8FA094',
+              500: '#6E8074',
+              600: '#4F5E4F',
+              800: '#344034',
             },
-            colors: {
-              stone: {
-                50: '#fafaf9',
-                100: '#f5f5f4',
-                200: '#e7e5e4',
-                300: '#d6d3d1',
-                400: '#a8a29e',
-                500: '#78716c',
-                600: '#57534e',
-                700: '#44403c',
-                800: '#292524',
-                900: '#1c1917',
-              },
-              sage: {
-                50: '#F5F7F6',
-                100: '#E8ECE9',
-                200: '#CFD9D2',
-                300: '#B0BEB4',
-                400: '#8FA094',
-                500: '#6E8074',
-                600: '#4F5E4F',
-                800: '#344034',
-              },
-              sand: {
-                50: '#F9F8F6',   
-                100: '#F2EFEC',  
-                200: '#E6E2DD',  
-                300: '#D6CEC5',
-                400: '#BDB4A8',
-                500: '#9C9284',
-                600: '#7D7365',
-                800: '#4A453B',  
-                900: '#332E26',
-              },
-              clay: {
-                50: '#FDF9F8',
-                100: '#FAEFEC',  
-                200: '#F2DCD6',
-                300: '#E6BDB3',
-                400: '#D69C8F',
-                500: '#C07B6B',
-                600: '#A35E4F',
-              },
+            sand: {
+              50: '#F9F8F6',
+              100: '#F2EFEC',
+              200: '#E6E2DD',
+              300: '#D6CEC5',
+              400: '#BDB4A8',
+              500: '#9C9284',
+              600: '#7D7365',
+              800: '#4A453B',
+              900: '#332E26',
             },
-            boxShadow: {
-              'soft': '0 4px 20px -2px rgba(74, 69, 59, 0.05)',
-              'medium': '0 10px 40px -4px rgba(74, 69, 59, 0.08)',
+            clay: {
+              50: '#FDF9F8',
+              100: '#FAEFEC',
+              200: '#F2DCD6',
+              300: '#E6BDB3',
+              400: '#D69C8F',
+              500: '#C07B6B',
+              600: '#A35E4F',
             },
-            keyframes: {
-              'fade-in': {
-                '0%': { opacity: '0', transform: 'translateY(10px)' },
-                '100%': { opacity: '1', transform: 'translateY(0)' },
-              },
-              'shimmer': {
-                '0%': { backgroundPosition: '-1000px 0' },
-                '100%': { backgroundPosition: '1000px 0' }
-              }
+          },
+          boxShadow: {
+            'soft': '0 4px 20px -2px rgba(74, 69, 59, 0.05)',
+            'medium': '0 10px 40px -4px rgba(74, 69, 59, 0.08)',
+            'premium': '0 20px 40px -8px rgba(74, 69, 59, 0.12), inset 0 0 0 1px rgba(255, 255, 255, 0.6)',
+            'glass': '0 8px 32px 0 rgba(74, 69, 59, 0.05), inset 0 0 0 1px rgba(255, 255, 255, 0.5)'
+          },
+          keyframes: {
+            'fade-in': {
+              '0%': { opacity: '0', transform: 'translateY(10px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
             },
-            animation: {
-              'fade-in': 'fade-in 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards',
-              'shimmer': 'shimmer 2s infinite linear',
+            'shimmer': {
+              '0%': { backgroundPosition: '-1000px 0' },
+              '100%': { backgroundPosition: '1000px 0' }
+            },
+            'float': {
+              '0%, 100%': { transform: 'translateY(0) scale(1)' },
+              '50%': { transform: 'translateY(-20px) scale(1.05)' }
+            },
+            'float-delayed': {
+              '0%, 100%': { transform: 'translateY(0) scale(1.05)' },
+              '50%': { transform: 'translateY(20px) scale(1)' }
             }
+          },
+          animation: {
+            'fade-in': 'fade-in 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards',
+            'shimmer': 'shimmer 2s infinite linear',
+            'float': 'float 12s ease-in-out infinite',
+            'float-delayed': 'float-delayed 15s ease-in-out infinite',
           }
         }
       }
-    </script>
-    <style>
-      body {
-        background-color: #F9F8F6; /* sand-50 */
-        color: #4A453B; /* sand-800 */
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
+    }
+  </script>
+  <style>
+    body {
+      background-color: #F9F8F6;
+      /* sand-50 */
+      color: #4A453B;
+      /* sand-800 */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Custom Selection Color */
+    ::selection {
+      background-color: #F2DCD6;
+      /* clay-200 */
+      color: #4A453B;
+    }
+
+    /* Hide scrollbar for clean look */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    /* Typography refinements — optical balance */
+    h1,
+    h2,
+    h3 {
+      letter-spacing: -0.025em;
+      /* tighter tracking on large serif headings */
+      line-height: 1.05;
+    }
+
+    h1 {
+      line-height: 1;
+      /* even tighter for massive headings */
+    }
+
+    p {
+      text-wrap: pretty;
+      /* better line breaks for readability */
+    }
+
+    /* Respect reduced motion preferences */
+    @media (prefers-reduced-motion: reduce) {
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
       }
-      /* Custom Selection Color */
-      ::selection {
-        background-color: #F2DCD6; /* clay-200 */
-        color: #4A453B;
-      }
-      /* Hide scrollbar for clean look */
-      .no-scrollbar::-webkit-scrollbar {
-        display: none;
-      }
-      .no-scrollbar {
-        -ms-overflow-style: none;
-        scrollbar-width: none;
-      }
-      /* Typography refinements — optical balance */
-      h1, h2, h3 {
-        letter-spacing: -0.025em; /* tighter tracking on large serif headings */
-        line-height: 1.05;
-      }
-      h1 {
-        line-height: 1; /* even tighter for massive headings */
-      }
-      p {
-        text-wrap: pretty; /* better line breaks for readability */
-      }
-      /* Respect reduced motion preferences */
-      @media (prefers-reduced-motion: reduce) {
-        *, *::before, *::after {
-          animation-duration: 0.01ms !important;
-          animation-iteration-count: 1 !important;
-          transition-duration: 0.01ms !important;
-        }
-      }
-      /* Screen-reader only utility */
-      .sr-only {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        padding: 0;
-        margin: -1px;
-        overflow: hidden;
-        clip: rect(0, 0, 0, 0);
-        white-space: nowrap;
-        border-width: 0;
-      }
-    </style>
+    }
+
+    /* Screen-reader only utility */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border-width: 0;
+    }
+  </style>
   <script type="importmap">
 {
   "imports": {
@@ -153,10 +188,12 @@
   }
 }
 </script>
-<link rel="stylesheet" href="/index.css">
+  <link rel="stylesheet" href="/index.css">
 </head>
-  <body>
-    <div id="root"></div>
+
+<body>
+  <div id="root"></div>
   <script type="module" src="/index.tsx"></script>
 </body>
+
 </html>

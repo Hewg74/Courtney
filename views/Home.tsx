@@ -22,7 +22,8 @@ export const Home: React.FC<HomeProps> = ({ setView }) => {
       <section className="relative min-h-[90vh] flex items-center px-6 overflow-hidden pt-32 lg:pt-32 pb-20 lg:pb-24">
         {/* Ambient Washes */}
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-clay-50/50 via-sand-50 to-white -z-20" />
-        <div className="absolute top-[10%] right-[5%] w-[500px] h-[500px] bg-sage-100/40 rounded-full blur-[100px] -z-10" />
+        <div className="absolute top-[5%] right-[-5%] w-[600px] h-[600px] bg-sage-100/50 rounded-full blur-[120px] mix-blend-multiply animate-float -z-10" />
+        <div className="absolute bottom-[-5%] left-[-5%] w-[500px] h-[500px] bg-clay-100/40 rounded-full blur-[100px] mix-blend-multiply animate-float-delayed -z-10" />
 
         <div className="max-w-7xl mx-auto w-full grid lg:grid-cols-2 gap-12 lg:gap-20 items-center relative z-10">
 
@@ -30,7 +31,7 @@ export const Home: React.FC<HomeProps> = ({ setView }) => {
           <div className="space-y-8 text-center lg:text-left order-2 lg:order-1 relative">
             <Reveal variant="fadeUp" delay={0.2} className="mx-auto lg:mx-0">
               <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif text-sand-900 leading-[1.05] tracking-tight">
-                Helping adults & families feel steadier, calmer, & more <span className="italic font-light text-clay-600">connected.</span>
+                Helping adults & families feel steadier, calmer, & more <span className="italic font-light bg-clip-text text-transparent bg-gradient-to-r from-clay-600 to-clay-400 pb-2">connected.</span>
               </h1>
             </Reveal>
 
@@ -83,12 +84,12 @@ export const Home: React.FC<HomeProps> = ({ setView }) => {
                 <div className="absolute inset-0 bg-sand-200 rounded-t-full rounded-b-[2rem] rotate-2 opacity-50 blur-xl"></div>
 
                 {/* Image */}
-                <div className="absolute inset-0 overflow-hidden rounded-t-full rounded-b-[2rem] shadow-inner border border-sand-100">
+                <div className="absolute inset-0 overflow-hidden rounded-t-full rounded-b-[2rem] shadow-premium ring-1 ring-white border-2 border-white/80 transition-all duration-700 hover:shadow-2xl">
                   <img
                     src="/images/headshot.jpg"
                     alt="Courtney Alex, health and wellness coach"
                     fetchPriority="high"
-                    className="w-full h-full object-cover transition-opacity duration-700 hover:opacity-95"
+                    className="w-full h-full object-cover transform scale-105 hover:scale-110 transition-transform duration-1000 ease-out"
                   />
                 </div>
               </div>
@@ -112,13 +113,13 @@ export const Home: React.FC<HomeProps> = ({ setView }) => {
             <Reveal delay={0.1}>
               <button
                 onClick={() => setView('work-with-me')}
-                className="group cursor-pointer bg-sand-50 p-8 rounded-2xl hover:shadow-medium transition-all duration-700 border border-transparent hover:border-sand-200 h-full text-left w-full"
+                className="group cursor-pointer bg-gradient-to-br from-white to-sand-50/50 backdrop-blur-sm p-8 rounded-3xl hover:shadow-premium hover:-translate-y-1 transition-all duration-500 border border-white/60 hover:border-white h-full text-left w-full"
               >
                 <h3 className="text-2xl font-serif text-sand-900 mb-4">Adult Coaching</h3>
                 <p className="text-sand-600 text-sm leading-relaxed mb-8 min-h-[80px]">
                   Personalized support for stress, overwhelm, and building sustainable routines that fit your life.
                 </p>
-                <div className="text-xs font-bold uppercase tracking-widest text-sand-500 group-hover:text-clay-600">Learn More &rarr;</div>
+                <div className="text-xs font-bold uppercase tracking-widest text-sand-500 group-hover:text-clay-600 flex items-center transition-colors">Learn More <span className="ml-1 group-hover:translate-x-1 transition-transform duration-300">&rarr;</span></div>
               </button>
             </Reveal>
 
@@ -126,13 +127,13 @@ export const Home: React.FC<HomeProps> = ({ setView }) => {
             <Reveal delay={0.2} variant="scaleUp">
               <button
                 onClick={() => setView('work-with-me')}
-                className="group cursor-pointer bg-clay-50 p-8 rounded-2xl shadow-soft hover:shadow-medium transition-all duration-700 relative border border-clay-100 h-full text-left w-full"
+                className="group cursor-pointer bg-gradient-to-br from-clay-50/80 to-clay-100/50 backdrop-blur-sm p-8 rounded-3xl shadow-glass hover:shadow-premium hover:-translate-y-1 transition-all duration-500 relative border border-white/60 hover:border-white h-full text-left w-full"
               >
                 <h3 className="text-2xl font-serif text-sand-900 mb-4">Family & Youth Coaching</h3>
                 <p className="text-sand-600 text-sm leading-relaxed mb-8 min-h-[80px]">
                   Practical strategies for anxiety, ADHD, behavior, communication, and connection — for kids and the adults who support them.
                 </p>
-                <div className="text-xs font-bold uppercase tracking-widest text-clay-700">Learn More &rarr;</div>
+                <div className="text-xs font-bold uppercase tracking-widest text-clay-700 flex items-center transition-colors">Learn More <span className="ml-1 group-hover:translate-x-1 transition-transform duration-300">&rarr;</span></div>
               </button>
             </Reveal>
 
@@ -140,13 +141,13 @@ export const Home: React.FC<HomeProps> = ({ setView }) => {
             <Reveal delay={0.3}>
               <button
                 onClick={() => setView('qigong')}
-                className="group cursor-pointer bg-sand-50 p-8 rounded-2xl hover:shadow-medium transition-all duration-700 border border-transparent hover:border-sand-200 h-full text-left w-full"
+                className="group cursor-pointer bg-gradient-to-br from-white to-sand-50/50 backdrop-blur-sm p-8 rounded-3xl hover:shadow-premium hover:-translate-y-1 transition-all duration-500 border border-white/60 hover:border-white h-full text-left w-full"
               >
                 <h3 className="text-2xl font-serif text-sand-900 mb-4">Qigong Classes</h3>
                 <p className="text-sand-600 text-sm leading-relaxed mb-8 min-h-[80px]">
                   A gentle mind-body practice to ease tension and restore calm. Group, private, and retreat sessions available.
                 </p>
-                <div className="text-xs font-bold uppercase tracking-widest text-sand-500 group-hover:text-clay-600">See Classes &rarr;</div>
+                <div className="text-xs font-bold uppercase tracking-widest text-sand-500 group-hover:text-clay-600 flex items-center transition-colors">See Classes <span className="ml-1 group-hover:translate-x-1 transition-transform duration-300">&rarr;</span></div>
               </button>
             </Reveal>
           </div>
@@ -156,8 +157,8 @@ export const Home: React.FC<HomeProps> = ({ setView }) => {
       {/* 3. What Clients Notice (Moved & Updated) */}
       <section className="py-24 px-6 bg-sand-50 relative overflow-hidden">
         {/* Subtle Background Pattern */}
-        <div className="absolute top-0 right-0 w-96 h-96 bg-sage-50/50 rounded-full blur-3xl -z-10 translate-x-1/2 -translate-y-1/2"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-clay-50/50 rounded-full blur-3xl -z-10 -translate-x-1/2 translate-y-1/2"></div>
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-sage-100/40 rounded-full blur-[120px] -z-10 translate-x-1/2 -translate-y-1/4 animate-float"></div>
+        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-clay-100/40 rounded-full blur-[120px] -z-10 -translate-x-1/4 translate-y-1/4 animate-float-delayed"></div>
 
         <div className="max-w-6xl mx-auto text-center space-y-16 relative z-10">
           <Reveal width="100%">
@@ -208,8 +209,8 @@ export const Home: React.FC<HomeProps> = ({ setView }) => {
               }
             ].map((item, i) => (
               <Reveal key={i} delay={i * 0.1} width="100%">
-                <div className="group bg-white p-8 md:p-10 rounded-2xl shadow-sm hover:shadow-soft transition-shadow duration-700 border border-sand-100 h-full flex flex-col items-center text-center space-y-4">
-                  <div className={`p-4 rounded-full ${item.bg} bg-opacity-50 transition-colors duration-700`}>
+                <div className="group bg-gradient-to-b from-white to-sand-50/30 p-8 md:p-10 rounded-2xl shadow-sm hover:shadow-premium transition-all duration-500 border border-white/80 ring-1 ring-sand-900/5 h-full flex flex-col items-center text-center space-y-5 hover:-translate-y-1">
+                  <div className={`p-4 rounded-full ${item.bg} bg-opacity-40 group-hover:scale-110 transition-transform duration-500 ease-out shadow-[inset_0_1px_1px_rgba(255,255,255,0.8)]`}>
                     <item.icon size={24} className={item.color} strokeWidth={1.25} />
                   </div>
                   <p className="text-sand-800 text-lg leading-relaxed font-medium">

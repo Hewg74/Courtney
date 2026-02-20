@@ -224,7 +224,7 @@ const CATEGORIES: TestimonialCategory[] = [
 
 const TestimonialCard: React.FC<{ testimonial: PageTestimonial; index: number }> = ({ testimonial, index }) => (
   <motion.div
-    initial={{ opacity: 0, y: 40, scale: 0.95 }}
+    initial={{ opacity: 0, y: 40, scale: 1 }}
     whileInView={{ opacity: 1, y: 0, scale: 1 }}
     viewport={{ once: true, margin: "-80px" }}
     transition={{
@@ -233,7 +233,7 @@ const TestimonialCard: React.FC<{ testimonial: PageTestimonial; index: number }>
       ease: [0.22, 1, 0.36, 1]
     }}
   >
-    <div className="bg-white p-8 md:p-10 rounded-2xl shadow-sm border border-transparent hover:border-sand-200 hover:shadow-md hover:-translate-y-1 transition-all duration-500 relative group h-full">
+    <div className="bg-white p-8 md:p-10 rounded-2xl shadow-sm border border-transparent hover:border-sand-200 hover:shadow-medium transition-all duration-700 relative group h-full">
       <div className="absolute top-8 left-8 text-clay-100 opacity-40 group-hover:text-amber-500/10 transition-all duration-700">
         <Quote size={56} fill="currentColor" strokeWidth={0} />
       </div>

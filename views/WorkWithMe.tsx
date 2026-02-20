@@ -32,7 +32,7 @@ export const WorkWithMe: React.FC<WorkWithMeProps> = ({ setView }) => {
             {/* ─── Adult Coaching ─── */}
             <section className="space-y-8">
                 <Reveal width="100%">
-                    <div className="bg-white rounded-[3rem] p-8 md:p-12 lg:p-16 shadow-soft border border-sand-50">
+                    <div className="bg-white rounded-2xl p-8 md:p-12 lg:p-16 shadow-soft border border-sand-50">
                         <div className="grid lg:grid-cols-2 gap-12 items-center">
                             <div className="order-2 lg:order-1">
                                 <h2 className="text-4xl md:text-5xl font-serif text-sand-900 mb-8">Coaching for Adults</h2>
@@ -56,13 +56,13 @@ export const WorkWithMe: React.FC<WorkWithMeProps> = ({ setView }) => {
                                         "Resilience and well-being",
                                     ].map((area, i) => (
                                         <div key={i} className="flex items-start text-sand-700 text-sm">
-                                            <Check size={18} className="text-sage-500 mr-3 mt-0.5 flex-shrink-0" />
+                                            <Check size={16} className="text-sage-500 mr-3 mt-0.5 flex-shrink-0" strokeWidth={1.25} />
                                             {area}
                                         </div>
                                     ))}
                                 </div>
                             </div>
-                            <div className="order-1 lg:order-2 relative aspect-[4/3] lg:aspect-[3/4] rounded-[2.5rem] overflow-hidden shadow-md bg-sand-50">
+                            <div className="order-1 lg:order-2 relative aspect-[4/3] lg:aspect-[3/4] rounded-2xl overflow-hidden shadow-md bg-sand-50">
                                 <img
                                     src="/images/teaching-class.png"
                                     alt="Courtney teaching a class"
@@ -78,7 +78,7 @@ export const WorkWithMe: React.FC<WorkWithMeProps> = ({ setView }) => {
             {/* ─── Family & Parent Coaching ─── */}
             <section className="space-y-8">
                 <Reveal width="100%">
-                    <div className="bg-white rounded-[3rem] p-10 md:p-16 shadow-soft border border-sand-50">
+                    <div className="bg-white rounded-2xl p-10 md:p-16 shadow-soft border border-sand-50">
                         <div className="max-w-3xl ml-auto">
                             <h2 className="text-4xl md:text-5xl font-serif text-sand-900 mb-8">Coaching for Families &amp; Youth</h2>
                             <div className="text-sand-600 leading-relaxed text-lg font-light space-y-6">
@@ -101,7 +101,7 @@ export const WorkWithMe: React.FC<WorkWithMeProps> = ({ setView }) => {
                                     "Resilience and connection",
                                 ].map((area, i) => (
                                     <div key={i} className="flex items-start text-sand-700 text-sm">
-                                        <Check size={18} className="text-sage-500 mr-3 mt-0.5 flex-shrink-0" />
+                                        <Check size={16} className="text-sage-500 mr-3 mt-0.5 flex-shrink-0" strokeWidth={1.25} />
                                         {area}
                                     </div>
                                 ))}
@@ -128,7 +128,7 @@ export const WorkWithMe: React.FC<WorkWithMeProps> = ({ setView }) => {
                             "More confidence and emotional resilience",
                             "A greater sense of calm and connection"
                         ].map((item, i) => (
-                            <div key={i} className="flex items-center gap-4 p-6 bg-sand-50 rounded-[2rem] border border-sand-100 flex-1 min-w-[280px] max-w-[350px]">
+                            <div key={i} className="flex items-center gap-4 p-6 bg-sand-50 rounded-2xl border border-sand-100 flex-1 min-w-[280px] max-w-[350px]">
                                 <div className="w-2 h-2 rounded-full bg-sage-400 flex-shrink-0" />
                                 <p className="text-sand-700 text-sm leading-relaxed">{item}</p>
                             </div>
@@ -140,7 +140,7 @@ export const WorkWithMe: React.FC<WorkWithMeProps> = ({ setView }) => {
             {/* ─── How Coaching Works ─── */}
             <section>
                 <Reveal width="100%">
-                    <div className="bg-clay-50 rounded-[3rem] p-10 md:p-20 space-y-12">
+                    <div className="bg-clay-50 rounded-2xl p-10 md:p-20 space-y-12">
                         <h2 className="text-4xl md:text-5xl font-serif text-sand-900">How coaching works</h2>
                         <div className="grid md:grid-cols-2 gap-12 md:gap-20">
                             <div className="space-y-8 text-sand-700 leading-relaxed font-light">
@@ -177,7 +177,7 @@ export const WorkWithMe: React.FC<WorkWithMeProps> = ({ setView }) => {
                 <div className="grid md:grid-cols-2 gap-6 md:gap-8 max-w-5xl mx-auto">
                     {/* Packages — Recommended */}
                     <Reveal delay={0.1} className="h-full">
-                        <div className="bg-white rounded-[3rem] p-10 md:p-14 shadow-soft border border-sand-100 relative h-full flex flex-col hover:shadow-medium transition-shadow duration-300">
+                        <div className="bg-white rounded-2xl p-10 md:p-14 shadow-soft border border-sand-100 relative h-full flex flex-col hover:shadow-medium transition-shadow duration-700">
                             <div className="mb-6 md:mb-0 md:absolute md:top-8 md:right-8 bg-sage-50 px-4 py-1.5 rounded-full text-[11px] font-bold uppercase tracking-wider text-sage-700 self-start inline-block">
                                 Recommended
                             </div>
@@ -194,7 +194,7 @@ export const WorkWithMe: React.FC<WorkWithMeProps> = ({ setView }) => {
                                     "Customized to your goals",
                                 ].map((f, i) => (
                                     <div key={i} className="flex items-start text-sand-700 text-sm">
-                                        <Check size={16} className="text-sage-500 mr-3 mt-0.5 flex-shrink-0" />
+                                        <Check size={16} className="text-sage-500 mr-3 mt-0.5 flex-shrink-0" strokeWidth={1.25} />
                                         {f}
                                     </div>
                                 ))}
@@ -208,7 +208,7 @@ export const WorkWithMe: React.FC<WorkWithMeProps> = ({ setView }) => {
 
                     {/* Single Sessions */}
                     <Reveal delay={0.2} className="h-full">
-                        <div className="bg-sand-50 rounded-[3rem] p-10 md:p-14 border border-sand-100 h-full flex flex-col">
+                        <div className="bg-sand-50 rounded-2xl p-10 md:p-14 border border-sand-100 h-full flex flex-col hover:shadow-soft transition-shadow duration-700">
                             <h3 className="text-3xl font-serif text-sand-900 mb-2">Single Session</h3>
                             <div className="text-3xl font-serif text-sand-900 mb-6">$85</div>
                             <p className="text-sand-600 text-sm leading-relaxed mb-8 flex-grow font-light">
@@ -224,7 +224,7 @@ export const WorkWithMe: React.FC<WorkWithMeProps> = ({ setView }) => {
                                     "Clarity and next steps",
                                 ].map((f, i) => (
                                     <div key={i} className="flex items-start text-sand-700 text-sm">
-                                        <Check size={16} className="text-sage-500 mr-3 mt-0.5 flex-shrink-0" />
+                                        <Check size={16} className="text-sage-500 mr-3 mt-0.5 flex-shrink-0" strokeWidth={1.25} />
                                         {f}
                                     </div>
                                 ))}
@@ -241,7 +241,7 @@ export const WorkWithMe: React.FC<WorkWithMeProps> = ({ setView }) => {
             {/* ─── Workshops (secondary) ─── */}
             <section>
                 <Reveal width="100%">
-                    <div className="bg-sand-50 rounded-[3rem] p-10 md:p-20 space-y-8">
+                    <div className="bg-sand-50 rounded-2xl p-10 md:p-20 space-y-8">
                         <span className="text-xs font-bold uppercase tracking-widest text-sand-500">For Schools &amp; Organizations</span>
                         <h2 className="text-4xl md:text-5xl font-serif text-sand-900">Workshops</h2>
                         <p className="text-sand-600 leading-relaxed text-lg font-light max-w-3xl">
@@ -264,7 +264,7 @@ export const WorkWithMe: React.FC<WorkWithMeProps> = ({ setView }) => {
                 <div className="space-y-4">
                     {FAQ_ITEMS.map((item, i) => (
                         <Reveal key={i} delay={i * 0.05} width="100%">
-                            <div className="bg-white rounded-3xl border border-sand-100 overflow-hidden">
+                            <div className="bg-white rounded-2xl border border-sand-100 overflow-hidden">
                                 <button
                                     onClick={() => setOpenFaq(openFaq === i ? null : i)}
                                     aria-expanded={openFaq === i}
@@ -274,9 +274,9 @@ export const WorkWithMe: React.FC<WorkWithMeProps> = ({ setView }) => {
                                     <span className="font-serif text-xl text-sand-900">{item.q}</span>
                                     <motion.div
                                         animate={{ rotate: openFaq === i ? 180 : 0 }}
-                                        transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+                                        transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
                                     >
-                                        <ChevronDown size={20} className="text-sand-400 flex-shrink-0" />
+                                        <ChevronDown size={20} className="text-sand-400 flex-shrink-0" strokeWidth={1.25} />
                                     </motion.div>
                                 </button>
                                 <AnimatePresence initial={false}>
@@ -303,7 +303,7 @@ export const WorkWithMe: React.FC<WorkWithMeProps> = ({ setView }) => {
             </section>
 
             {/* ─── Bottom CTA ─── */}
-            <section className="text-center bg-sage-50 rounded-[3rem] p-16 md:p-24">
+            <section className="text-center bg-sage-50 rounded-2xl p-16 md:p-24">
                 <h2 className="text-4xl md:text-5xl font-serif text-sand-900 mb-6">Ready to get started?</h2>
                 <p className="text-sand-600 font-light mb-10 text-lg">Book a free 15-minute chat to talk through what might work for you.</p>
                 <Button size="lg" onClick={() => openExternal(CALENDLY_URL)}>

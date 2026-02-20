@@ -24,9 +24,9 @@ export const Contact: React.FC = () => {
             <div className="grid md:grid-cols-2 gap-6 md:gap-12">
                 {/* Book a Call */}
                 <Reveal delay={0.1} width="100%" className="h-full">
-                    <div className="bg-white rounded-[3rem] p-10 md:p-16 shadow-soft border border-sand-50 h-full flex flex-col items-center text-center space-y-8 hover:shadow-medium hover:-translate-y-1 transition-all duration-300">
-                        <div className="w-20 h-20 bg-sage-50 rounded-[2rem] flex items-center justify-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-sage-600">
+                    <div className="bg-white rounded-2xl p-10 md:p-16 shadow-soft border border-sand-50 h-full flex flex-col items-center text-center space-y-8 hover:shadow-medium transition-shadow duration-700">
+                        <div className="w-20 h-20 bg-sage-50 rounded-xl flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round" className="text-sage-600">
                                 <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
                                 <line x1="16" y1="2" x2="16" y2="6"></line>
                                 <line x1="8" y1="2" x2="8" y2="6"></line>
@@ -49,9 +49,9 @@ export const Contact: React.FC = () => {
 
                 {/* Email */}
                 <Reveal delay={0.2} width="100%" className="h-full">
-                    <div className="bg-sand-50 rounded-[3rem] p-10 md:p-16 border border-sand-100 h-full flex flex-col items-center text-center space-y-8 hover:shadow-soft hover:-translate-y-1 transition-all duration-300">
-                        <div className="w-20 h-20 bg-white rounded-[2rem] flex items-center justify-center shadow-sm">
-                            <Mail size={32} className="text-clay-500" strokeWidth={1.5} />
+                    <div className="bg-sand-50 rounded-2xl p-10 md:p-16 border border-sand-100 h-full flex flex-col items-center text-center space-y-8 hover:shadow-soft transition-shadow duration-700">
+                        <div className="w-20 h-20 bg-white rounded-xl flex items-center justify-center shadow-sm">
+                            <Mail size={32} className="text-clay-500" strokeWidth={1.25} />
                         </div>
                         <h2 className="text-3xl font-serif text-sand-900">Send an email</h2>
                         <p className="text-sand-600 font-light text-base leading-relaxed flex-grow max-w-xs mx-auto">
@@ -59,7 +59,7 @@ export const Contact: React.FC = () => {
                         </p>
                         <a
                             href="mailto:hello@courtneyalex.com"
-                            className="w-full inline-flex items-center justify-center px-8 py-4 rounded-full border-2 border-sand-300 text-sand-800 text-base font-medium hover:bg-white hover:border-sand-400 transition-all bg-transparent"
+                            className="w-full inline-flex items-center justify-center px-8 py-4 rounded-full border border-sand-300 text-sand-800 text-base font-medium hover:bg-white hover:border-sand-400 transition-colors bg-transparent"
                         >
                             hello@courtneyalex.com
                         </a>

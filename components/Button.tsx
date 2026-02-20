@@ -5,23 +5,23 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   size?: 'sm' | 'md' | 'lg';
 }
 
-export const Button: React.FC<ButtonProps> = ({ 
-  children, 
-  variant = 'primary', 
-  size = 'md', 
+export const Button: React.FC<ButtonProps> = ({
+  children,
+  variant = 'primary',
+  size = 'md',
   className = '',
-  ...props 
+  ...props
 }) => {
-  
+
   const baseStyles = "inline-flex items-center justify-center transition-all duration-300 font-sans tracking-wide rounded-full disabled:opacity-50 disabled:cursor-not-allowed focus:outline-none focus:ring-2 focus:ring-clay-500 focus:ring-offset-2";
-  
+
   const variants = {
     // Primary: Deep sand/charcoal. Tactile but not harsh.
-    primary: "bg-sand-800 text-sand-50 hover:bg-clay-600 hover:shadow-medium active:scale-95 active:shadow-soft",
+    primary: "bg-sand-800 text-sand-50 hover:bg-clay-600 hover:shadow-medium active:bg-clay-700 active:shadow-inner",
     // Secondary: Soft clay wash.
-    secondary: "bg-clay-100 text-clay-800 hover:bg-clay-200 active:scale-[0.98]",
+    secondary: "bg-clay-100 text-clay-800 hover:bg-clay-200 active:bg-clay-300 active:shadow-inner",
     // Outline: Delicate line.
-    outline: "border-2 border-sand-300 text-sand-800 hover:border-sand-400 hover:bg-sand-100/50 bg-transparent active:scale-[0.98]",
+    outline: "border border-sand-300 text-sand-800 hover:border-sand-400 hover:bg-sand-100/50 bg-transparent active:bg-sand-200/50 active:shadow-inner",
     // Text only
     text: "bg-transparent text-sand-600 hover:text-sand-900 underline decoration-sand-300 underline-offset-4 hover:underline-offset-2 transition-all"
   };
@@ -33,7 +33,7 @@ export const Button: React.FC<ButtonProps> = ({
   };
 
   return (
-    <button 
+    <button
       className={`${baseStyles} ${variants[variant]} ${sizes[size]} ${className}`}
       {...props}
     >

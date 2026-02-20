@@ -9,7 +9,7 @@ interface FooterProps {
 
 export const Footer: React.FC<FooterProps> = ({ setView }) => {
   return (
-    <footer className="bg-sand-900 text-sand-200 py-24 px-6 rounded-t-[3rem] mt-16 mx-2">
+    <footer className="bg-sand-900 text-sand-200 py-24 px-6 rounded-t-2xl mt-16 mx-2">
       <div className="max-w-6xl mx-auto">
 
         {/* Brand Section — Centered */}
@@ -43,7 +43,7 @@ export const Footer: React.FC<FooterProps> = ({ setView }) => {
             <h4 className="text-sand-50 font-sans font-bold text-xs uppercase tracking-widest">Connect</h4>
             <p className="text-sm text-sand-300">
               <a href="mailto:hello@courtneyalex.com" className="hover:text-clay-200 transition-colors">hello@courtneyalex.com</a><br />
-              Virtual Worldwide<br/>
+              Virtual Worldwide<br />
               In-person on Maui
             </p>
           </div>

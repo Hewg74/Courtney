@@ -80,15 +80,15 @@ export const Home: React.FC<HomeProps> = ({ setView }) => {
             <Reveal variant="scaleUp" delay={0.4}>
               <div className="relative w-72 h-[26rem] md:w-80 md:h-[30rem] lg:w-[420px] lg:h-[520px]">
                 {/* Soft Background */}
-                <div className="absolute inset-0 bg-sand-200 rounded-t-full rounded-b-[2rem] rotate-2 opacity-50 blur-xl"></div>
+                <div className="absolute inset-0 bg-sand-200 rounded-2xl rotate-2 opacity-50 blur-xl"></div>
 
                 {/* Image */}
-                <div className="absolute inset-0 overflow-hidden rounded-t-full rounded-b-[2rem] shadow-2xl border-4 border-white/80">
+                <div className="absolute inset-0 overflow-hidden rounded-2xl shadow-inner border border-sand-100">
                   <img
                     src="/images/headshot.jpg"
                     alt="Courtney Alex, health and wellness coach"
                     fetchPriority="high"
-                    className="w-full h-full object-cover transform scale-105 hover:scale-110 transition-transform duration-700"
+                    className="w-full h-full object-cover transition-opacity duration-700 hover:opacity-95"
                   />
                 </div>
               </div>
@@ -112,7 +112,7 @@ export const Home: React.FC<HomeProps> = ({ setView }) => {
             <Reveal delay={0.1}>
               <button
                 onClick={() => setView('work-with-me')}
-                className="group cursor-pointer bg-sand-50 p-8 rounded-3xl hover:shadow-medium hover:-translate-y-1 transition-all duration-300 border border-transparent hover:border-sand-200 h-full text-left w-full"
+                className="group cursor-pointer bg-sand-50 p-8 rounded-2xl hover:shadow-medium transition-all duration-700 border border-transparent hover:border-sand-200 h-full text-left w-full"
               >
                 <h3 className="text-2xl font-serif text-sand-900 mb-4">Adult Coaching</h3>
                 <p className="text-sand-600 text-sm leading-relaxed mb-8 min-h-[80px]">
@@ -126,7 +126,7 @@ export const Home: React.FC<HomeProps> = ({ setView }) => {
             <Reveal delay={0.2} variant="scaleUp">
               <button
                 onClick={() => setView('work-with-me')}
-                className="group cursor-pointer bg-clay-50 p-8 rounded-3xl shadow-soft hover:shadow-medium hover:-translate-y-1 transition-all duration-300 relative border border-clay-100 h-full text-left w-full"
+                className="group cursor-pointer bg-clay-50 p-8 rounded-2xl shadow-soft hover:shadow-medium transition-all duration-700 relative border border-clay-100 h-full text-left w-full"
               >
                 <h3 className="text-2xl font-serif text-sand-900 mb-4">Family & Youth Coaching</h3>
                 <p className="text-sand-600 text-sm leading-relaxed mb-8 min-h-[80px]">
@@ -140,7 +140,7 @@ export const Home: React.FC<HomeProps> = ({ setView }) => {
             <Reveal delay={0.3}>
               <button
                 onClick={() => setView('qigong')}
-                className="group cursor-pointer bg-sand-50 p-8 rounded-3xl hover:shadow-medium hover:-translate-y-1 transition-all duration-300 border border-transparent hover:border-sand-200 h-full text-left w-full"
+                className="group cursor-pointer bg-sand-50 p-8 rounded-2xl hover:shadow-medium transition-all duration-700 border border-transparent hover:border-sand-200 h-full text-left w-full"
               >
                 <h3 className="text-2xl font-serif text-sand-900 mb-4">Qigong Classes</h3>
                 <p className="text-sand-600 text-sm leading-relaxed mb-8 min-h-[80px]">
@@ -208,9 +208,9 @@ export const Home: React.FC<HomeProps> = ({ setView }) => {
               }
             ].map((item, i) => (
               <Reveal key={i} delay={i * 0.1} width="100%">
-                <div className="group bg-white p-8 md:p-10 rounded-2xl shadow-sm hover:shadow-soft transition-all duration-300 border border-sand-100 h-full flex flex-col items-center text-center space-y-4">
-                  <div className={`p-4 rounded-full ${item.bg} bg-opacity-50 group-hover:scale-110 transition-transform duration-300`}>
-                    <item.icon size={24} className={item.color} strokeWidth={1.5} />
+                <div className="group bg-white p-8 md:p-10 rounded-2xl shadow-sm hover:shadow-soft transition-shadow duration-700 border border-sand-100 h-full flex flex-col items-center text-center space-y-4">
+                  <div className={`p-4 rounded-full ${item.bg} bg-opacity-50 transition-colors duration-700`}>
+                    <item.icon size={24} className={item.color} strokeWidth={1.25} />
                   </div>
                   <p className="text-sand-800 text-lg leading-relaxed font-medium">
                     {item.text}
@@ -230,7 +230,7 @@ export const Home: React.FC<HomeProps> = ({ setView }) => {
 
             {/* Main Testimonial — Kerrie (id 5, index 4) */}
             <div className="space-y-8">
-              <Quote className="mx-auto text-clay-400 opacity-50" size={48} />
+              <Quote className="mx-auto text-clay-400 opacity-50" size={48} strokeWidth={1.25} />
               <p className="text-xl md:text-2xl font-serif italic leading-relaxed text-sand-100 max-w-4xl mx-auto">
                 "{TESTIMONIALS[4].quote}"
               </p>
@@ -262,7 +262,7 @@ export const Home: React.FC<HomeProps> = ({ setView }) => {
       {/* 5. Short Intro (Old "About Preview" Design) */}
       <section className="py-24 px-6 max-w-4xl mx-auto text-center space-y-8">
         <Reveal className="mx-auto">
-          <div className="w-32 h-32 bg-sand-200 rounded-full mx-auto overflow-hidden border-4 border-white shadow-sm">
+          <div className="w-32 h-32 bg-sand-200 rounded-2xl mx-auto overflow-hidden shadow-inner border border-sand-100">
             <img src="/images/meditation.png" alt="Courtney meditating" loading="lazy" className="w-full h-full object-cover" />
           </div>
         </Reveal>

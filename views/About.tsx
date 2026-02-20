@@ -17,10 +17,10 @@ export const About: React.FC<AboutProps> = ({ setView }) => {
       <div className="flex flex-col md:flex-row gap-16 items-center">
         <div className="w-full md:w-1/2 relative">
           <Reveal variant="scaleUp">
-            <div className="aspect-[4/5] bg-sand-200 rounded-[3rem] overflow-hidden relative z-10 shadow-lg">
+            <div className="aspect-[4/5] bg-sand-200 rounded-2xl overflow-hidden relative z-10 shadow-lg">
               <img src="/images/courtney-pose.png" alt="Courtney Alex in a thoughtful pose" loading="lazy" className="w-full h-full object-cover" />
             </div>
-            <div className="absolute -bottom-6 -right-6 w-full h-full border-2 border-sand-300 rounded-[3rem] -z-10"></div>
+            <div className="absolute -bottom-6 -right-6 w-full h-full border border-sand-300 rounded-2xl -z-10"></div>
           </Reveal>
         </div>
 
@@ -104,9 +104,9 @@ export const About: React.FC<AboutProps> = ({ setView }) => {
             }
           ].map((item, i) => (
             <Reveal key={i} delay={i * 0.1} className="h-full">
-              <div className="bg-white p-8 rounded-[2.5rem] shadow-soft border border-sand-50 hover:shadow-medium transition-all duration-300 h-full">
-                <div className={`w-14 h-14 ${item.color} rounded-2xl flex items-center justify-center mb-6 transition-transform duration-300 group-hover:scale-110`}>
-                  <item.icon size={24} className={item.iconColor} strokeWidth={1.5} />
+              <div className="group bg-white p-8 rounded-2xl shadow-soft border border-sand-50 hover:shadow-medium transition-shadow duration-700 h-full">
+                <div className={`w-14 h-14 ${item.color} rounded-2xl flex items-center justify-center mb-6 transition-colors duration-700`}>
+                  <item.icon size={24} className={item.iconColor} strokeWidth={1.25} />
                 </div>
                 <h3 className="text-2xl font-serif text-sand-900 mb-4">{item.title}</h3>
                 <p className="text-sand-600 font-light leading-relaxed text-sm">{item.desc}</p>
@@ -118,7 +118,7 @@ export const About: React.FC<AboutProps> = ({ setView }) => {
 
       {/* ─── 3. Credentials ─── */}
       <Reveal width="100%">
-        <div className="bg-sand-50 rounded-[3rem] p-10 md:p-20 space-y-12">
+        <div className="bg-sand-50 rounded-2xl p-10 md:p-20 space-y-12">
           <h2 className="text-4xl md:text-5xl font-serif text-sand-900 text-center">Experience & Training</h2>
           <div className="grid md:grid-cols-2 gap-x-16 gap-y-10 max-w-4xl mx-auto text-lg font-light">
             <ul className="space-y-6 text-sand-700">
@@ -156,7 +156,7 @@ export const About: React.FC<AboutProps> = ({ setView }) => {
       {/* ─── 4. Qigong / Personal ─── */}
       <div className="text-center space-y-12">
         <Reveal width="100%">
-          <div className="w-full aspect-video bg-sage-50 rounded-[3rem] overflow-hidden relative shadow-soft">
+          <div className="w-full aspect-video bg-sage-50 rounded-2xl overflow-hidden relative shadow-soft">
             <img
               src="/images/maui.jpg"
               alt="Maui Landscape"
@@ -174,7 +174,7 @@ export const About: React.FC<AboutProps> = ({ setView }) => {
 
       {/* ─── 5. CTA ─── */}
       <Reveal width="100%">
-        <div className="text-center bg-sage-50 rounded-[3rem] p-16 md:p-24">
+        <div className="text-center bg-sage-50 rounded-2xl p-16 md:p-24">
           <h2 className="text-4xl md:text-5xl font-serif text-sand-900 mb-6">Let's talk.</h2>
           <p className="text-sand-600 font-light mb-10 text-lg">Book a free 15-minute chat to see if coaching is a good fit.</p>
           <Button variant="primary" size="lg" onClick={() => openExternal(CALENDLY_URL)}>

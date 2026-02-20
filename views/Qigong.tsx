@@ -21,7 +21,7 @@ export const Qigong: React.FC = () => {
 
             {/* ─── Video / Image Section ─── */}
             <Reveal delay={0.2} width="100%">
-                <div className="relative aspect-video bg-sage-50 rounded-[2.5rem] overflow-hidden shadow-soft">
+                <div className="relative aspect-video bg-sage-50 rounded-2xl overflow-hidden shadow-soft">
                     <img src="/images/qigong-eyes-closed.png" alt="Courtney teaching Qigong" loading="lazy" className="w-full h-full object-cover" />
                     <a
                         href="https://youtube.com/@courtneyalexqi"
@@ -29,7 +29,7 @@ export const Qigong: React.FC = () => {
                         rel="noopener noreferrer"
                         className="absolute inset-0 flex items-center justify-center bg-black/10 hover:bg-black/20 transition-colors group z-10"
                     >
-                        <div className="w-20 h-20 bg-white/90 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                        <div className="w-20 h-20 bg-white/90 rounded-full flex items-center justify-center shadow-lg group-hover:shadow-2xl transition-shadow duration-700">
                             <Play size={32} className="text-sage-700 ml-1" fill="currentColor" />
                         </div>
                     </a>
@@ -39,7 +39,7 @@ export const Qigong: React.FC = () => {
             {/* ─── Details ─── */}
             <div className="grid md:grid-cols-2 gap-8">
                 <Reveal delay={0.3} width="100%">
-                    <div className="bg-white p-10 rounded-[2.5rem] border border-sand-100 shadow-soft h-full hover:shadow-medium transition-shadow duration-300">
+                    <div className="bg-white p-10 rounded-2xl border border-sand-100 shadow-soft h-full hover:shadow-medium transition-shadow duration-700">
                         <span className="text-[10px] font-bold uppercase tracking-widest text-sage-500 mb-4 block">Weekly Group Class</span>
                         <h3 className="text-3xl font-serif text-sand-900 mb-4">Chi Energy Flow</h3>
                         <p className="text-sand-600 font-light leading-relaxed mb-8">
@@ -54,7 +54,7 @@ export const Qigong: React.FC = () => {
                 </Reveal>
 
                 <Reveal delay={0.4} width="100%">
-                    <div className="bg-sage-50 p-10 rounded-[2.5rem] border border-sage-100 h-full">
+                    <div className="bg-sage-50 p-10 rounded-2xl border border-sage-100 h-full">
                         <span className="text-[10px] font-bold uppercase tracking-widest text-sage-600 mb-4 block">Private &amp; Semi-Private</span>
                         <h3 className="text-3xl font-serif text-sand-900 mb-4">Custom Sessions</h3>
                         <p className="text-sand-600 font-light leading-relaxed mb-8">
@@ -71,7 +71,7 @@ export const Qigong: React.FC = () => {
 
             {/* ─── YouTube CTA ─── */}
             <Reveal delay={0.5} width="100%">
-                <div className="text-center space-y-6 bg-sand-50 rounded-[2.5rem] p-12 border border-sand-100">
+                <div className="text-center space-y-6 bg-sand-50 rounded-2xl p-12 border border-sand-100">
                     <h2 className="text-3xl font-serif text-sand-900">Try a class at home</h2>
                     <p className="text-sand-600 font-light max-w-xl mx-auto">
                         Check out my YouTube channel for free Qigong classes you can follow along with anytime.

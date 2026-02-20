@@ -47,7 +47,7 @@ export const TestimonialCarousel: React.FC<TestimonialCarouselProps> = ({ testim
             <div className="absolute top-1/2 left-0 -translate-y-1/2 z-10 hidden md:block -ml-4 lg:-ml-12">
                 <button
                     onClick={prevSlide}
-                    className="p-3 rounded-full bg-sand-800 text-sand-50 shadow-md hover:bg-clay-600 transition-colors duration-300 transform hover:scale-105"
+                    className="p-3 rounded-full bg-sand-800 text-sand-50 shadow-md hover:bg-clay-600 transition-all duration-700 hover:shadow-lg"
                     aria-label="Previous testimonial"
                 >
                     <ChevronLeft size={24} />
@@ -57,7 +57,7 @@ export const TestimonialCarousel: React.FC<TestimonialCarouselProps> = ({ testim
             <div className="absolute top-1/2 right-0 -translate-y-1/2 z-10 hidden md:block -mr-4 lg:-mr-12">
                 <button
                     onClick={nextSlide}
-                    className="p-3 rounded-full bg-sand-800 text-sand-50 shadow-md hover:bg-clay-600 transition-colors duration-300 transform hover:scale-105"
+                    className="p-3 rounded-full bg-sand-800 text-sand-50 shadow-md hover:bg-clay-600 transition-all duration-700 hover:shadow-lg"
                     aria-label="Next testimonial"
                 >
                     <ChevronRight size={24} />
@@ -87,7 +87,7 @@ export const TestimonialCarousel: React.FC<TestimonialCarouselProps> = ({ testim
                         <div
                             key={`${testimonial.id}-${i}`} // Composite key to ensure uniqueness in render map
                             className={`
-                    relative bg-white p-8 rounded-2xl shadow-sm border border-transparent hover:border-sand-200 hover:shadow-md transition-all duration-500 flex flex-col h-full
+                    relative bg-white p-8 rounded-2xl shadow-sm border border-transparent hover:border-sand-200 hover:shadow-medium transition-all duration-700 flex flex-col h-full
                     ${i === 1 ? 'hidden md:flex' : ''} 
                     ${i === 2 ? 'hidden lg:flex' : ''}
                     ${i === 0 ? 'flex' : ''}

@@ -130,11 +130,6 @@ const CATEGORIES: TestimonialCategory[] = [
         context: "Former Coaching Manager"
       },
       {
-        quote: "Dear Courtney, a very big thank you for this course and your energy, your guidance and your tool sharing, your encouragements, explanations and support.",
-        author: "Christine",
-        context: "UK"
-      },
-      {
         quote: "You have such a gift for listening with presence, and teaching in a clear, concise and gentle way. You make way out inexplicable things really accessible and normal (no small feat!). I've had important aha moments from every class. Your thoughtful responses to everyone wherever they were at was so encouraging, and I feel like you created a really safe space for us to move through whatever came up in a gentle, nurturing way.",
         author: "Rebekah",
         context: "CA"
@@ -143,6 +138,11 @@ const CATEGORIES: TestimonialCategory[] = [
         quote: "You gave clear, easy for a beginner to follow instructions, even with experienced practitioners in the class. I felt that we went somewhere together. The whole experience was uplifting and life affirming.",
         author: "David",
         context: "CA"
+      },
+      {
+        quote: "[After our workshop] I cleaned the room and added air purifier, blue colors and intentional grid and through last days I sleep much better and waking up more energized and in peace. All works well. Thank you so much to you and your wonderful spirit who’s showing the way of light and support and care and love and open heart. Deeply grateful sending you blessings and love from my heart to yours!",
+        author: "Oksana",
+        context: "SF"
       }
     ]
   },
@@ -221,6 +221,11 @@ const CATEGORIES: TestimonialCategory[] = [
         quote: "Courtney, just a quick note to say thank you for sharing the first part of your book - I'm really moved, full of tears, belief, disbelief, confusion, and a bit of warmth too, thank you!",
         author: "Christine",
         context: "UK"
+      },
+      {
+        quote: "I read the first chapter of your book that you had offered as a free download a while back - it's soo good!!! I usually don't like to read things on a computer but I actually might make an exception for this one since it's so good :)",
+        author: "Tiffany",
+        context: "CA"
       }
     ]
   }
@@ -291,7 +296,7 @@ export const Testimonials: React.FC = () => {
                   </div>
                 </Reveal>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-start">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
                   {category.items.map((testimonial, idx) => (
                     <TestimonialCard
                       key={`${category.label}-${idx}`}

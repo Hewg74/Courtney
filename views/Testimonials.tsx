@@ -68,9 +68,9 @@ const CATEGORIES: TestimonialCategory[] = [
     label: 'Adult Coaching',
     items: [
       {
-        quote: "Courtney created a space where I felt truly heard and supported. Her compassionate, practical guidance helped me stay on track and gain clarity in areas that mattered most. I've been a therapist for decades and can feel she is just a natural at this!",
+        quote: "Once I committed to add weight training in my schedule, everything else fell into place! Thank you. It was a pleasure to have you as my coach. I felt you really listened and were able to hear me, respond to where I’m at with no judgement only compassion, you provided gentle guidance, great feedback and helped give me clarity! I was able to stay on track and I appreciated your flexibility as well. I’ve been a therapist for several decades and can feel you are just a natural at this!",
         author: "RL",
-        context: "Canada"
+        context: "CA"
       },
       {
         quote: "Working with Courtney has led to an amazing amount of habit change around food and movement. I'm eating more intuitively, and I've figured out routines for exercise that work with my body and mind, not against it. I feel so much better and more in control. Courtney holds such a lovely and nonjudgemental space for self-exploration and I really trust her expertise around health and wellbeing. And it's surprising how even small changes ripple out to my wider lifestyle and level of contentment. Thank you Courtney!",

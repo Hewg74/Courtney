@@ -217,7 +217,7 @@ export const WorkWithMe: React.FC<WorkWithMeProps> = ({ setView }) => {
                             <div className="mb-6 md:mb-0 md:absolute md:top-8 md:right-8 bg-sage-50 px-4 py-1.5 rounded-full text-[11px] font-bold uppercase tracking-wider text-sage-700 self-start inline-block">
                                 Recommended
                             </div>
-                            <h3 className="text-3xl font-serif text-sand-900 mb-2">6-Session Package</h3>
+                            <h3 className="text-3xl font-serif text-sand-900 mb-2">6-Session Coaching Package</h3>
                             <div className="text-3xl font-serif text-sand-900 mb-6">$495</div>
                             <p className="text-sand-600 text-sm leading-relaxed mb-8 flex-grow font-light">
                                 Packages are designed for sustained support and real progress. Most clients see the best results with consistent sessions over time.
@@ -245,7 +245,7 @@ export const WorkWithMe: React.FC<WorkWithMeProps> = ({ setView }) => {
                     {/* Single Sessions */}
                     <Reveal delay={0.2} className="h-full">
                         <div className="bg-sand-50 rounded-2xl p-10 md:p-14 border border-sand-100 h-full flex flex-col hover:shadow-soft transition-shadow duration-700">
-                            <h3 className="text-3xl font-serif text-sand-900 mb-2">Single Session</h3>
+                            <h3 className="text-3xl font-serif text-sand-900 mb-2">Single Coaching Session</h3>
                             <div className="text-3xl font-serif text-sand-900 mb-6">$85</div>
                             <p className="text-sand-600 text-sm leading-relaxed mb-8 flex-grow font-light">
                                 Single sessions are a great way to get focused support on a specific challenge, try out coaching and assess fit, or check in when you need it.
@@ -279,7 +279,7 @@ export const WorkWithMe: React.FC<WorkWithMeProps> = ({ setView }) => {
                         <div>
                             <h3 className="text-3xl font-serif text-sand-900 mb-2">Workshops &amp; Group Coaching</h3>
                             <p className="text-sand-700 font-light leading-relaxed">
-                                Workshop pricing varies - please contact me to discuss tailoring a topic to your group!
+                                Group pricing varies. Please contact me to discuss tailoring a topic to your group!
                             </p>
                         </div>
                         <div className="shrink-0">

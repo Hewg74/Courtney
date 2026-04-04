@@ -174,7 +174,7 @@ export const TESTIMONIALS: Testimonial[] = [
   },
   {
     id: '28',
-    quote: "Courtney is a brilliant Guide for tuning in and making sense of energy that is overwhelming or unclear. She read my Akashic records and it was super powerful. Being someone who is also energetically sensitive and advanced — I can feel when someone is super connected and she definitely is. The session confirmed certain information for me and helped to align something else I was struggling with. Her book has also been transformative for clients I have given it to to understand their own gifts and superpowers more effectively. I would highly recommend working with Courtney if you are wanting to gain clarity, expand your own connection and clear your way to trusting deeper!",
+    quote: "Courtney is a brilliant Guide for tuning in and making sense of energy that is overwhelming or unclear. She read my Akashic records and it was super powerful. Being someone who is also energetically sensitive and advanced it's easy for me to feel when someone is super connected, and she definitely is. The session confirmed certain information for me and helped to align something else I was struggling with. Her book has also been transformative for clients I have given it to to understand their own gifts and superpowers more effectively. I would highly recommend working with Courtney if you are wanting to gain clarity, expand your own connection and clear your way to trusting deeper!",
     author: "Stephanie",
     context: "HI"
   },
@@ -369,7 +369,7 @@ export const TESTIMONIALS: Testimonial[] = [
 export const FAQ_ITEMS = [
   {
     q: "Who do you work with?",
-    a: "I work with adults, children, teens, and their families. I specialize in working with people dealing with anxiety, ADHD, stress, sleep challenges, executive functioning, and communication — and the parents who want real tools to support them."
+    a: "I work with adults, children, teens, and their families. I specialize in working with people dealing with anxiety, ADHD, stress, sleep challenges, executive functioning, and communication as well as the parents who want real tools to support them."
   },
   {
     q: "What is health and wellness coaching, and how is it different from therapy?",
@@ -388,8 +388,8 @@ export const FAQ_ITEMS = [
     a: "The initial engagement is often a 6-session package over 3 months. That said, it depends on your goals for our work together, which we’ll outline during the first coaching session. Every 6 sessions, we’ll check in. Once goals are complete, many people choose to continue with periodic check-ins or rejoin for specific transitions (like starting a new school year or navigating a career change)."
   },
   {
-    q: "For family coaching — do you work with the parents or the child?",
-    a: "Both. For younger children (under 13), I often work with parents only, or parent and child together. For teens, it's mostly 1-on-1, with parent check-ins. Parents often end up doing meaningful work through coaching too — and that's where a lot of real change happens."
+    q: "For family coaching, do you work with the parents or the child?",
+    a: "Both. For younger children (under 13), I often work with parents only, or parent and child together. For teens, it's mostly 1-on-1, with parent check-ins. Parents often end up doing meaningful work through coaching too, which is where a lot of real change happens."
   },
   {
     q: "Is coaching covered by insurance?",

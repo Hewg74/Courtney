@@ -30,14 +30,14 @@ export const Home: React.FC<HomeProps> = ({ setView }) => {
           {/* Left: Text Content */}
           <div className="space-y-8 text-center lg:text-left order-2 lg:order-1 relative">
             <Reveal variant="fadeUp" delay={0.2} className="mx-auto lg:mx-0">
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif text-sand-900 leading-[1.05] tracking-tight">
-                Helping adults & families feel steadier, calmer, & more <span className="italic font-light bg-clip-text text-transparent bg-gradient-to-r from-clay-600 to-clay-400 pb-2">connected.</span>
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif text-sand-900 leading-[1.05] tracking-tight">
+                Helping adults & families feel steadier, calmer, & <span className="whitespace-nowrap">more <span className="italic font-light bg-clip-text text-transparent bg-gradient-to-r from-clay-600 to-clay-400 pb-2">connected.</span></span>
               </h1>
             </Reveal>
 
             <Reveal variant="fadeUp" delay={0.4} className="mx-auto lg:mx-0">
               <p className="text-lg md:text-xl text-sand-600 max-w-xl mx-auto lg:mx-0 leading-relaxed font-sans">
-                Coaching and mind-body tools for stress relief, emotional regulation, and resilience — for adults, parents, and kids.
+                Coaching and mind-body tools for stress relief, emotional regulation, and resilience for adults, parents, and kids.
               </p>
             </Reveal>
 
@@ -108,7 +108,7 @@ export const Home: React.FC<HomeProps> = ({ setView }) => {
             </div>
           </Reveal>
 
-          <div className="grid md:grid-cols-3 gap-6 md:gap-8">
+          <div className="grid md:grid-cols-2 gap-6 md:gap-8">
             {/* Adult Coaching */}
             <Reveal delay={0.1}>
               <button
@@ -131,14 +131,28 @@ export const Home: React.FC<HomeProps> = ({ setView }) => {
               >
                 <h3 className="text-2xl font-serif text-sand-900 mb-4">Family & Youth Coaching</h3>
                 <p className="text-sand-600 text-sm leading-relaxed mb-8 min-h-[80px]">
-                  Practical strategies for anxiety, ADHD, behavior, communication, and connection — for kids and the adults who support them.
+                  Practical strategies for anxiety, ADHD, behavior, communication, and connection for kids and the adults who support them.
                 </p>
                 <div className="text-xs font-bold uppercase tracking-widest text-clay-700 flex items-center transition-colors">Learn More <span className="ml-1 group-hover:translate-x-1 transition-transform duration-300">&rarr;</span></div>
               </button>
             </Reveal>
 
-            {/* Qigong Classes */}
+            {/* Workshops & Group Coaching */}
             <Reveal delay={0.3}>
+              <button
+                onClick={() => setView('contact')}
+                className="group cursor-pointer bg-gradient-to-br from-white to-sand-50/50 backdrop-blur-sm p-8 rounded-3xl hover:shadow-premium hover:-translate-y-1 transition-all duration-500 border border-white/60 hover:border-white h-full text-left w-full"
+              >
+                <h3 className="text-2xl font-serif text-sand-900 mb-4">Workshops & Group Coaching</h3>
+                <p className="text-sand-600 text-sm leading-relaxed mb-8 min-h-[80px]">
+                  Custom workshops and group programs designed for schools, health institutions, and parents.
+                </p>
+                <div className="text-xs font-bold uppercase tracking-widest text-sand-500 group-hover:text-clay-600 flex items-center transition-colors">Inquire Now <span className="ml-1 group-hover:translate-x-1 transition-transform duration-300">&rarr;</span></div>
+              </button>
+            </Reveal>
+
+            {/* Qigong Classes */}
+            <Reveal delay={0.4}>
               <button
                 onClick={() => setView('qigong')}
                 className="group cursor-pointer bg-gradient-to-br from-white to-sand-50/50 backdrop-blur-sm p-8 rounded-3xl hover:shadow-premium hover:-translate-y-1 transition-all duration-500 border border-white/60 hover:border-white h-full text-left w-full"
@@ -229,27 +243,27 @@ export const Home: React.FC<HomeProps> = ({ setView }) => {
           <div className="max-w-5xl mx-auto px-6 text-center space-y-12">
             <h2 className="text-xs font-bold uppercase tracking-widest text-sand-400">What Clients Say</h2>
 
-            {/* Main Testimonial — Kerrie (id 5, index 4) */}
+            {/* Main Testimonial - Kerrie (id 5, index 4) */}
             <div className="space-y-8">
               <Quote className="mx-auto text-clay-400 opacity-50" size={48} strokeWidth={1.25} />
               <p className="text-xl md:text-2xl font-serif italic leading-relaxed text-sand-100 max-w-4xl mx-auto">
                 "{TESTIMONIALS[4].quote}"
               </p>
               <cite className="block not-italic text-sm font-sans tracking-wide text-sand-400">
-                — {TESTIMONIALS[4].author}{TESTIMONIALS[4].context ? `, ${TESTIMONIALS[4].context}` : ''}
+                {TESTIMONIALS[4].author}{TESTIMONIALS[4].context ? `, ${TESTIMONIALS[4].context}` : ''}
               </cite>
             </div>
 
-            {/* Secondary Testimonials — Anonymous college student (id 2, index 1) & RL therapist (id 13, index 12) */}
+            {/* Secondary Testimonials - Anonymous college student (id 2, index 1) & RL therapist (id 13, index 12) */}
             <div className="flex flex-col md:flex-row gap-8 pt-12 border-t border-sand-800 text-center md:text-left">
               <div className="flex-1 space-y-4">
                 <p className="text-lg md:text-xl font-serif italic text-sand-300">"{TESTIMONIALS[1].quote}"</p>
-                <cite className="block not-italic text-sm font-sans tracking-wide text-sand-500 mt-4">— {TESTIMONIALS[1].author}{TESTIMONIALS[1].context ? `, ${TESTIMONIALS[1].context}` : ''}</cite>
+                <cite className="block not-italic text-sm font-sans tracking-wide text-sand-500 mt-4">{TESTIMONIALS[1].author}{TESTIMONIALS[1].context ? `, ${TESTIMONIALS[1].context}` : ''}</cite>
               </div>
               <div className="hidden md:block w-px bg-sand-800 self-stretch"></div>
               <div className="flex-1 space-y-4">
                 <p className="text-lg md:text-xl font-serif italic text-sand-300">"{TESTIMONIALS[12].quote}"</p>
-                <cite className="block not-italic text-sm font-sans tracking-wide text-sand-500 mt-4">— {TESTIMONIALS[12].author}{TESTIMONIALS[12].context ? `, ${TESTIMONIALS[12].context}` : ''}</cite>
+                <cite className="block not-italic text-sm font-sans tracking-wide text-sand-500 mt-4">{TESTIMONIALS[12].author}{TESTIMONIALS[12].context ? `, ${TESTIMONIALS[12].context}` : ''}</cite>
               </div>
             </div>
 
@@ -273,10 +287,10 @@ export const Home: React.FC<HomeProps> = ({ setView }) => {
         <Reveal delay={0.3}>
           <div className="space-y-6 max-w-2xl mx-auto">
             <p className="text-xl text-sand-600 font-light">
-              My approach is strengths-based and practical — we start with what's already working and build from there, through small steps that fit your lifestyle. Every session and tool is based on what works for you.
+              My approach is strengths-based and practical. We start with what's already working and build from there, through small steps that fit your lifestyle. Every session and tool is based on what works for you.
             </p>
             <p className="text-base text-sand-500 font-light tracking-wide pt-2">
-              Board-certified (NBC-HWC) coach supporting adults and families — including experience working alongside therapists and psychiatric providers through leading digital health organizations.
+              Board-certified (NBC-HWC) coach supporting adults and families, bringing experience working alongside therapists and psychiatric providers through leading digital health organizations.
             </p>
           </div>
         </Reveal>
@@ -291,7 +305,7 @@ export const Home: React.FC<HomeProps> = ({ setView }) => {
           <div className="max-w-2xl mx-auto space-y-8">
             <h2 className="text-4xl md:text-5xl font-serif text-sand-900">Not sure what's the best fit?</h2>
             <p className="text-lg text-sand-600 font-light">
-              Reach out — I'm happy to talk through what might work for you.
+              Reach out and I'm happy to talk through what might work for you.
             </p>
             <Button size="lg" onClick={() => setView('contact')}>
               Contact

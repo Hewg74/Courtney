@@ -12,7 +12,7 @@ interface TestimonialGridProps {
 /**
  * Distribute items into columns round-robin style.
  * Because the assignment is index-based, existing items never change
- * columns when new items are appended — only new items fill in after them.
+ * columns when new items are appended - only new items fill in after them.
  */
 function distributeToColumns<T>(items: T[], columnCount: number): T[][] {
     const columns: T[][] = Array.from({ length: columnCount }, () => []);
@@ -59,7 +59,7 @@ export const TestimonialGrid: React.FC<TestimonialGridProps> = ({ testimonials, 
 
     return (
         <div className="w-full max-w-7xl mx-auto">
-            {/* Stable Masonry Grid — items never change columns */}
+            {/* Stable Masonry Grid - items never change columns */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-start">
                 {columns.map((column, colIdx) => (
                     <div key={colIdx} className="flex flex-col gap-8">

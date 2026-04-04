@@ -36,7 +36,7 @@ export const About: React.FC<AboutProps> = ({ setView }) => {
                 I'm a Board-Certified Health & Wellness Coach (NBC-HWC) and long-time Qigong teacher. I've spent years working alongside licensed therapists and psychiatric providers, supporting families and individuals through anxiety, ADHD, stress, and daily overwhelm.
               </p>
               <p>
-                My approach is individualized and strengths-based — built on what's already working in your life. I help people figure out small, practical shifts that actually stick, through tools that fit your lifestyle.
+                My approach is individualized, strengths-based, and built on what's already working in your life. I help people figure out small, practical shifts that actually stick, through tools that fit your lifestyle.
               </p>
               <p>
                 I've worked at organizations like Education Therapy, 826 Valencia, and Reading Partners, and as faculty at Lumeria Maui Retreat Center. I'm also the author of <em>Trust Your Magical Self</em>.
@@ -62,28 +62,28 @@ export const About: React.FC<AboutProps> = ({ setView }) => {
           {[
             {
               title: "Strengths-Based",
-              desc: "Every person has something working well. We build from there — working with your strengths, interests, and learning style.",
+              desc: "Every person has something working well. We build from there by working with your strengths, interests, and learning style.",
               color: "bg-clay-100",
               iconColor: "text-clay-600",
               icon: Sparkles
             },
             {
               title: "Mind & Body",
-              desc: "Mind, body, and heart. Because we don't experience life in separate compartments — coaching can include embodied tools when they're a fit.",
+              desc: "Mind, body, and heart. Because we don't experience life in separate compartments, coaching can include embodied tools when they're a fit.",
               color: "bg-sage-100",
               iconColor: "text-sage-600",
               icon: Heart
             },
             {
               title: "Evidence-Informed",
-              desc: "Grounded in research and best practices — but always flexible. What works for your life is what matters.",
+              desc: "Grounded in research and best practices but always flexible. What works for your life is what matters.",
               color: "bg-sand-100",
               iconColor: "text-sand-600",
               icon: BookOpen
             },
             {
               title: "Family-Centered",
-              desc: "The whole family matters. Parents are always part of the conversation — and often, that's where the biggest shifts happen.",
+              desc: "The whole family matters. Parents are always part of the conversation since that's often where the biggest shifts happen.",
               color: "bg-clay-50",
               iconColor: "text-clay-600",
               icon: Users
@@ -132,7 +132,7 @@ export const About: React.FC<AboutProps> = ({ setView }) => {
               </li>
               <li className="flex items-start gap-4">
                 <div className="w-1.5 h-1.5 rounded-full bg-clay-500 mt-2.5 flex-shrink-0" />
-                <span>Coaching experience through leading digital health organizations — collaborating with licensed pediatric therapists and psychiatric providers</span>
+                <span>Coaching experience through leading digital health organizations, collaborating with licensed pediatric therapists and psychiatric providers</span>
               </li>
             </ul>
             <ul className="space-y-6 text-sand-700">

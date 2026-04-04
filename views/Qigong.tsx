@@ -14,7 +14,7 @@ export const Qigong: React.FC = () => {
                     <span className="text-sage-500 font-sans text-xs font-bold uppercase tracking-widest">Mind &amp; Body</span>
                     <h1 className="text-5xl md:text-6xl font-serif text-sand-900 mt-3 mb-6">Qigong with Courtney</h1>
                     <p className="text-xl text-sand-600 font-light leading-relaxed">
-                        Qigong (pronounced CHEE-gong) is a gentle mind-body practice that combines slow movement, breathwork, and meditation. Think of it as a moving meditation — a way to release tension and stress from the body and quiet the mind.
+                        Qigong (pronounced CHEE-gong) is a gentle mind-body practice that combines slow movement, breathwork, and meditation. Think of it as a moving meditation that helps release tension and stress from the body and quiet the mind.
                     </p>
                 </Reveal>
             </div>
@@ -43,7 +43,7 @@ export const Qigong: React.FC = () => {
                         <span className="text-[10px] font-bold uppercase tracking-widest text-sage-500 mb-4 block">Weekly Group Class</span>
                         <h3 className="text-3xl font-serif text-sand-900 mb-4">Chi Energy Flow</h3>
                         <p className="text-sand-600 font-light leading-relaxed mb-8">
-                            A classic mind-body movement practice to ease tension and stress from mind, body, and heart. All levels welcome — no experience needed.
+                            A classic mind-body movement practice to ease tension and stress from mind, body, and heart. All levels are welcome, and no experience is needed.
                         </p>
                         <dl className="text-sm text-sand-700 space-y-3 pt-6 border-t border-sand-50">
                             <div className="flex gap-4"><dt className="font-medium text-sand-900 shrink-0 w-14">When</dt><dd className="text-right ml-auto">Every Tuesday, 7:30–8:30 PM</dd></div>

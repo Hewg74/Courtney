@@ -20,7 +20,7 @@ export const WorkWithMe: React.FC<WorkWithMeProps> = ({ setView }) => {
             <div className="grid md:grid-cols-2 gap-12 items-end border-b border-sand-200 pb-16 text-center md:text-left">
                 <div className="space-y-6">
                     <span className="text-clay-600 font-sans text-xs font-bold uppercase tracking-widest">Services</span>
-                    <h1 className="text-5xl md:text-7xl font-serif text-sand-900 leading-[0.9]">Work With Me</h1>
+                    <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif text-sand-900 leading-[0.9]">Workshops &amp; Coaching</h1>
                 </div>
                 <div className="text-xl text-sand-600 font-light leading-relaxed max-w-md md:ml-auto">
                     <p>
@@ -29,31 +29,31 @@ export const WorkWithMe: React.FC<WorkWithMeProps> = ({ setView }) => {
                 </div>
             </div>
 
-            {/* ─── Adult Coaching ─── */}
+            {/* ─── Workshops & Group Coaching ─── */}
             <section className="space-y-8">
                 <Reveal width="100%">
                     <div className="bg-white rounded-2xl p-8 md:p-12 lg:p-16 shadow-soft border border-sand-50">
                         <div className="grid lg:grid-cols-2 gap-12 items-center">
                             <div className="order-2 lg:order-1">
-                                <h2 className="text-4xl md:text-5xl font-serif text-sand-900 mb-8">Coaching for Adults</h2>
+                                <span className="text-xs font-bold uppercase tracking-widest text-sand-500 mb-4 block">For Schools &amp; Health Institutions</span>
+                                <h2 className="text-4xl md:text-5xl font-serif text-sand-900 mb-8">Workshops &amp; Group Coaching</h2>
                                 <div className="text-sand-600 leading-relaxed text-lg font-light space-y-6">
                                     <p>
-                                        Whether you're dealing with chronic stress, overwhelm, ADHD, difficulty with routines, or just feeling stuck — coaching gives you a space to figure out what's working, what's not, and what to try next.
+                                        Custom workshops, seminars, and group programs designed for schools, health institutions, and parents. Workshops are available online and in-person, and can be tailored to your group's exact needs.
                                     </p>
                                     <p>
-                                        We focus on your strengths and build from there. Sessions are practical, action-oriented, and tailored to your life — not a pre-made program.
+                                        I offer interactive sessions on a variety of mind-body and practical topics, ensuring participants walk away with tools they can use immediately.
                                     </p>
                                 </div>
 
                                 <div className="mt-10 grid sm:grid-cols-2 gap-y-4 gap-x-8">
                                     {[
-                                        "Stress and overwhelm",
-                                        "Anxiety",
-                                        "ADHD and executive functioning",
-                                        "Organization and routines",
                                         "Emotional regulation",
-                                        "Communication",
-                                        "Resilience and well-being",
+                                        "Communication skills",
+                                        "Stress resilience",
+                                        "Mind-body tools",
+                                        "Burnout prevention",
+                                        "Parenting support",
                                     ].map((area, i) => (
                                         <div key={i} className="flex items-start text-sand-700 text-sm">
                                             <Check size={16} className="text-sage-500 mr-3 mt-0.5 flex-shrink-0" strokeWidth={1.25} />
@@ -75,6 +75,42 @@ export const WorkWithMe: React.FC<WorkWithMeProps> = ({ setView }) => {
                 </Reveal>
             </section>
 
+            {/* ─── Adult Coaching ─── */}
+            <section className="space-y-8">
+                <Reveal width="100%">
+                    <div className="bg-white rounded-2xl p-10 md:p-16 shadow-soft border border-sand-50">
+                        <div className="max-w-3xl mr-auto">
+                            <h2 className="text-4xl md:text-5xl font-serif text-sand-900 mb-8">Coaching for Adults</h2>
+                            <div className="text-sand-600 leading-relaxed text-lg font-light space-y-6">
+                                <p>
+                                    Whether you're dealing with chronic stress, overwhelm, ADHD, difficulty with routines, or just feeling stuck, coaching gives you a space to figure out what's working, what's not, and what to try next.
+                                </p>
+                                <p>
+                                    We focus on your strengths and build from there. Sessions are practical, action-oriented, and tailored to your life rather than a pre-made program.
+                                </p>
+                            </div>
+
+                            <div className="mt-10 grid sm:grid-cols-2 gap-y-4 gap-x-8">
+                                {[
+                                    "Stress and overwhelm",
+                                    "Anxiety",
+                                    "ADHD and executive functioning",
+                                    "Organization and routines",
+                                    "Emotional regulation",
+                                    "Communication",
+                                    "Resilience and well-being",
+                                ].map((area, i) => (
+                                    <div key={i} className="flex items-start text-sand-700 text-sm">
+                                        <Check size={16} className="text-sage-500 mr-3 mt-0.5 flex-shrink-0" strokeWidth={1.25} />
+                                        {area}
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                </Reveal>
+            </section>
+
             {/* ─── Family & Parent Coaching ─── */}
             <section className="space-y-8">
                 <Reveal width="100%">
@@ -83,10 +119,10 @@ export const WorkWithMe: React.FC<WorkWithMeProps> = ({ setView }) => {
                             <h2 className="text-4xl md:text-5xl font-serif text-sand-900 mb-8">Coaching for Families &amp; Youth</h2>
                             <div className="text-sand-600 leading-relaxed text-lg font-light space-y-6">
                                 <p>
-                                    I work with kids, parents, and families — together and individually. Whether your child is navigating anxiety, ADHD, big emotions, sleep challenges, or school stress, we build practical tools that fit your family's life.
+                                    I work with kids, parents, and families both together and individually. Whether your child is navigating anxiety, ADHD, big emotions, sleep challenges, or school stress, we build practical tools that fit your family's life.
                                 </p>
                                 <p>
-                                    My approach is strengths-based. Every child has something that's working well, and we build from there. Parents are always part of the conversation — and often, that's where the biggest shifts happen.
+                                    My approach is strengths-based. Every child has something that's working well, and we build from there. Parents are always part of the conversation since that's often where the biggest shifts happen.
                                 </p>
                             </div>
 
@@ -150,13 +186,13 @@ export const WorkWithMe: React.FC<WorkWithMeProps> = ({ setView }) => {
                                 </div>
                                 <div>
                                     <h4 className="font-serif text-2xl text-sand-900 mb-3">Strengths-based approach</h4>
-                                    <p className="text-base">We start with what's already working in your life and build from there. Every plan is individualized — there's no scripted method or one-size-fits-all program.</p>
+                                    <p className="text-base">We start with what's already working in your life and build from there. Every plan is individualized and there's no scripted method or one-size-fits-all program.</p>
                                 </div>
                             </div>
                             <div className="space-y-8 text-sand-700 leading-relaxed font-light">
                                 <div>
                                     <h4 className="font-serif text-2xl text-sand-900 mb-3">Practical + embodied tools</h4>
-                                    <p className="text-base">Coaching includes practical strategies for daily life, along with optional mind-body and nervous system support tools — like breathwork, movement, and grounding techniques.</p>
+                                    <p className="text-base">Coaching includes practical strategies for daily life, along with optional mind-body and nervous system support tools like breathwork, movement, and grounding techniques.</p>
                                 </div>
                                 <div>
                                     <h4 className="font-serif text-2xl text-sand-900 mb-3">For families</h4>
@@ -168,14 +204,14 @@ export const WorkWithMe: React.FC<WorkWithMeProps> = ({ setView }) => {
                 </Reveal>
             </section>
 
-            {/* ─── Session Options ─── */}
+            {/* ─── Session Pricing ─── */}
             <section className="space-y-12">
                 <Reveal width="100%">
-                    <h2 className="text-4xl md:text-5xl font-serif text-sand-900 text-center">Session options</h2>
+                    <h2 className="text-4xl md:text-5xl font-serif text-sand-900 text-center">Session Pricing</h2>
                 </Reveal>
 
                 <div className="grid md:grid-cols-2 gap-6 md:gap-8 max-w-5xl mx-auto">
-                    {/* Packages — Recommended */}
+                    {/* Packages - Recommended */}
                     <Reveal delay={0.1} className="h-full">
                         <div className="bg-white rounded-2xl p-10 md:p-14 shadow-soft border border-sand-100 relative h-full flex flex-col hover:shadow-medium transition-shadow duration-700">
                             <div className="mb-6 md:mb-0 md:absolute md:top-8 md:right-8 bg-sage-50 px-4 py-1.5 rounded-full text-[11px] font-bold uppercase tracking-wider text-sage-700 self-start inline-block">
@@ -235,26 +271,26 @@ export const WorkWithMe: React.FC<WorkWithMeProps> = ({ setView }) => {
                             <p className="text-[10px] text-sand-400 mt-4 text-center">Hawaii GE Tax applies</p>
                         </div>
                     </Reveal>
-                </div>
-            </section>
 
-            {/* ─── Workshops (secondary) ─── */}
-            <section>
-                <Reveal width="100%">
-                    <div className="bg-sand-50 rounded-2xl p-10 md:p-20 space-y-8">
-                        <span className="text-xs font-bold uppercase tracking-widest text-sand-500">For Schools &amp; Organizations</span>
-                        <h2 className="text-4xl md:text-5xl font-serif text-sand-900">Workshops</h2>
-                        <p className="text-sand-600 leading-relaxed text-lg font-light max-w-3xl">
-                            I offer interactive workshops on topics like emotional regulation, communication, stress resilience, and mind-body tools. Workshops are available online and in-person, and can be tailored to your group's needs.
-                        </p>
-                        <div className="pt-4">
+                </div>
+
+                <Reveal delay={0.3} width="100%">
+                    <div className="max-w-5xl mx-auto bg-sage-50 rounded-2xl p-8 md:p-12 border border-sage-100 shadow-soft flex flex-col md:flex-row items-start md:items-center justify-between gap-8 text-left">
+                        <div>
+                            <h3 className="text-3xl font-serif text-sand-900 mb-2">Workshops &amp; Group Coaching</h3>
+                            <p className="text-sand-700 font-light leading-relaxed">
+                                Workshop pricing varies - please contact me to discuss tailoring a topic to your group!
+                            </p>
+                        </div>
+                        <div className="shrink-0">
                             <Button variant="outline" onClick={() => setView('contact')}>
-                                Contact me to discuss
+                                Get in Touch
                             </Button>
                         </div>
                     </div>
                 </Reveal>
             </section>
+
 
             {/* ─── FAQ Accordion ─── */}
             <section className="max-w-4xl mx-auto">

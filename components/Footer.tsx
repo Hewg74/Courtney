@@ -12,7 +12,7 @@ export const Footer: React.FC<FooterProps> = ({ setView }) => {
     <footer className="bg-sand-900 text-sand-200 py-24 px-6 rounded-t-2xl mt-16 mx-2">
       <div className="max-w-6xl mx-auto">
 
-        {/* Brand Section — Centered */}
+        {/* Brand Section - Centered */}
         <div className="text-center mb-16 pb-12 border-b border-sand-800">
           <h3 className="text-3xl md:text-4xl font-serif text-sand-50 mb-4">Courtney Alex</h3>
           <p className="text-sand-300 font-sans text-base leading-relaxed">

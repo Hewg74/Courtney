@@ -18,7 +18,7 @@ export const TESTIMONIALS: Testimonial[] = [
   },
   {
     id: '2',
-    quote: "I was really anxious about starting college and doubted myself a lot. Coaching helped me feel more balanced and learn how to be my own best friend. I’m sleeping better, spending less time on my phone, getting out more, and saying kind things to myself. Now I even help other students who are going through what I did and I’m excited about my first job.",
+    quote: "I was really anxious about starting college and doubted myself a lot. Coaching helped me feel more balanced and learn how to be my own best friend. I’m sleeping better, spending less time on my phone, getting out more, and saying kind things to myself. Last week I even helped another student who was going through what I did and I was really excited!",
     author: "Anonymous",
     context: "CA"
   },

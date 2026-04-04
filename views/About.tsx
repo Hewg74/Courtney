@@ -39,7 +39,7 @@ export const About: React.FC<AboutProps> = ({ setView }) => {
                 My approach is individualized and strengths-based — built on what's already working in your life. I help people figure out small, practical shifts that actually stick, through tools that fit your lifestyle.
               </p>
               <p>
-                I've worked at organizations like 826Valencia and Reading Partners, and as faculty at Lumeria Maui Retreat Center. I'm also the author of <em>Trust Your Magical Self</em>.
+                I've worked at organizations like Education Therapy, 826 Valencia, and Reading Partners, and as faculty at Lumeria Maui Retreat Center. I'm also the author of <em>Trust Your Magical Self</em>.
               </p>
               <p>
                 When I'm not coaching, you’ll probably find me in the garden, painting, drawing, or learning something new about health!
@@ -128,11 +128,11 @@ export const About: React.FC<AboutProps> = ({ setView }) => {
               </li>
               <li className="flex items-start gap-4">
                 <div className="w-1.5 h-1.5 rounded-full bg-clay-500 mt-2.5 flex-shrink-0" />
-                <span>Coaching experience through leading digital health organizations — collaborating with licensed pediatric therapists and psychiatric providers</span>
+                <span>Additional training in pediatric coaching</span>
               </li>
               <li className="flex items-start gap-4">
                 <div className="w-1.5 h-1.5 rounded-full bg-clay-500 mt-2.5 flex-shrink-0" />
-                <span>Author of <em>Trust Your Magical Self</em></span>
+                <span>Coaching experience through leading digital health organizations — collaborating with licensed pediatric therapists and psychiatric providers</span>
               </li>
             </ul>
             <ul className="space-y-6 text-sand-700">
@@ -147,6 +147,10 @@ export const About: React.FC<AboutProps> = ({ setView }) => {
               <li className="flex items-start gap-4">
                 <div className="w-1.5 h-1.5 rounded-full bg-clay-500 mt-2.5 flex-shrink-0" />
                 <span>Certified Holden Qigong Teacher</span>
+              </li>
+              <li className="flex items-start gap-4">
+                <div className="w-1.5 h-1.5 rounded-full bg-clay-500 mt-2.5 flex-shrink-0" />
+                <span>Author of <em>Trust Your Magical Self</em></span>
               </li>
             </ul>
           </div>

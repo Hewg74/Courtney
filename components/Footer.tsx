@@ -19,7 +19,7 @@ export const Footer: React.FC<FooterProps> = ({ setView }) => {
             Helping adults and families feel steadier, calmer, and more connected.
           </p>
           <div className="pt-4 text-xs tracking-widest uppercase text-sand-500 font-bold">
-            NBC-HWC Certified · Qigong Teacher · Author
+            NBC-HWC CERTIFIED COACH · QIGONG TEACHER
           </div>
         </div>
 

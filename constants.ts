@@ -393,7 +393,7 @@ export const FAQ_ITEMS = [
   },
   {
     q: "Is coaching covered by insurance?",
-    a: "Coaching is generally not covered by insurance, though some HSA/FSA plans may accept it with a Letter of Medical Necessity. I can provide an invoice for you to submit."
+    a: "While coaching is generally not fully covered by traditional insurance, some HSA/FSA plans may accept it with a Letter of Medical Necessity (I can provide an invoice for you to submit). That said, I'm excited to share that there will be a new avenue for working with insurance plans coming soon. Please reach out to chat further about this option."
   },
   {
     q: "How do I know if coaching is right for me (or my child) vs. therapy?",

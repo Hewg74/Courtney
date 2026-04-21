@@ -115,14 +115,9 @@ const CATEGORIES: TestimonialCategory[] = [
     label: 'Workshops & Professional Collaboration',
     items: [
       {
-        quote: "Incredible workshop Courtney - your skills, experience, and voice grounded me and gave me some fresh tools to access my own wisdom. Wise woman!",
-        author: "Anna",
-        context: "CA"
-      },
-      {
-        quote: "I really enjoyed the last video [of our Group Workshop]. Your talk made me 'notice' things that I had never paid attention to before. Thank you!",
-        author: "Cynthia B",
-        context: "Cuba"
+        quote: "That was wonderful today :)) I loved it! You are amazing! I really enjoyed the way you structured the presentation of the material. It was approachable with multiple avenues for accessing the core of the content: imagery, philosophy, movement, felt sense work, and discussion.",
+        author: "Student Support Director",
+        context: "Maui, HI"
       },
       {
         quote: "Courtney was a joy to work with - she was diligent in her work and really cared about the families she served. Not only was she a thoughtful coach but a skilled one. Whenever she had a question, she would seek support and feedback in an open minded way allowing her to continuously grow in her craft.",
@@ -143,6 +138,11 @@ const CATEGORIES: TestimonialCategory[] = [
         quote: "[After our workshop] I cleaned the room and added air purifier, blue colors and intentional grid and through last days I sleep much better and waking up more energized and in peace. All works well. Thank you so much to you and your wonderful spirit who’s showing the way of light and support and care and love and open heart. Deeply grateful sending you blessings and love from my heart to yours!",
         author: "Oksana",
         context: "SF"
+      },
+      {
+        quote: "Incredible workshop Courtney - your skills, experience, and voice grounded me and gave me some fresh tools to access my own wisdom. Wise woman!",
+        author: "Ana",
+        context: "CA"
       }
     ]
   },

@@ -60,8 +60,8 @@ export const Qigong: React.FC = () => {
                         <p className="text-sand-600 font-light leading-relaxed mb-6 text-sm">
                             Join our monthly community practice. Feel free to stay for a delicious farm-to-table brunch or dinner after class, or simply come to move!
                         </p>
-                        <div className="bg-sand-50 rounded-xl p-4 mb-8 text-center border border-sand-100">
-                            <span className="block text-[10px] font-bold uppercase tracking-widest text-sage-600 mb-1">Next Class</span>
+                        <div className="bg-[#fcf0f2] rounded-xl p-4 mb-8 text-center border border-[#f4dbdf]">
+                            <span className="block text-[10px] font-bold uppercase tracking-widest text-clay-600 mb-1">Next Class</span>
                             <span className="block text-sand-900 font-medium">Friday, June 5th</span>
                             <span className="block text-xs text-sand-600 mt-0.5">4:30 – 5:30 PM</span>
                         </div>

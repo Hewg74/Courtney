@@ -369,7 +369,7 @@ export const TESTIMONIALS: Testimonial[] = [
 export const FAQ_ITEMS = [
   {
     q: "Who do you work with?",
-    a: "I work with adults, children, teens, and their families. I specialize in helping people navigate stress, anxiety, sleep challenges, ADHD, executive function skills building, and communication tools. I also partner with caregivers to support overall balance and stress resilience."
+    a: "I work with adults, children, teens, and their families. I specialize in helping people navigate stress, anxiety, sleep challenges, ADHD, executive function skills building, and communication tools. I also support caregivers with tools and strategies for overall balance and stress resilience."
   },
   {
     q: "What is health and wellness coaching, and how is it different from therapy?",

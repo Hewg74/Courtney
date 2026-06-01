@@ -274,6 +274,15 @@ export const WorkWithMe: React.FC<WorkWithMeProps> = ({ setView }) => {
 
                 </div>
 
+                <Reveal delay={0.25} width="100%">
+                    <div className="max-w-5xl mx-auto mt-8 bg-[#eaf1ec] rounded-2xl p-6 md:p-8 border border-[#cbe0d3] text-center shadow-soft">
+                        <span className="block text-[10px] font-bold uppercase tracking-widest text-sage-600 mb-2">Insurance &amp; HSA/FSA Coverage</span>
+                        <p className="text-sand-700 font-light text-sm max-w-3xl mx-auto leading-relaxed">
+                            Through a new partnership with <strong>Active &amp; Fit</strong>, some in-person sessions on Maui can now be covered by insurance. For online clients, some <strong>HSA/FSA</strong> plans may accept coaching with a Letter of Medical Necessity. Please reach out to find out more!
+                        </p>
+                    </div>
+                </Reveal>
+
                 <Reveal delay={0.3} width="100%">
                     <div className="max-w-5xl mx-auto bg-sage-50 rounded-2xl p-8 md:p-12 border border-sage-100 shadow-soft flex flex-col md:flex-row items-start md:items-center justify-between gap-8 text-left">
                         <div>

@@ -369,7 +369,7 @@ export const TESTIMONIALS: Testimonial[] = [
 export const FAQ_ITEMS = [
   {
     q: "Who do you work with?",
-    a: "I work with adults, children, teens, and their families. I specialize in working with people dealing with anxiety, ADHD, stress, sleep challenges, executive functioning, and communication as well as the parents who want real tools to support them."
+    a: "I work with adults, children, teens, and their families. I specialize in helping people navigate stress, anxiety, sleep challenges, ADHD, executive function skills building, and communication tools. I also partner with caregivers to support overall balance and stress resilience."
   },
   {
     q: "What is health and wellness coaching, and how is it different from therapy?",
@@ -393,7 +393,7 @@ export const FAQ_ITEMS = [
   },
   {
     q: "Is coaching covered by insurance?",
-    a: "While coaching is generally not fully covered by traditional insurance, some HSA/FSA plans may accept it with a Letter of Medical Necessity (I can provide an invoice for you to submit). That said, I'm excited to share that there will be a new avenue for working with insurance plans coming soon. Please reach out to chat further about this option."
+    a: "Through a new partnership with Active & Fit, some in-person sessions on Maui can now be covered by insurance. For online clients, some HSA/FSA plans may accept coaching with a Letter of Medical Necessity (I can provide an invoice for you to submit). Please reach out to me to find out more about these coverage options!"
   },
   {
     q: "How do I know if coaching is right for me (or my child) vs. therapy?",

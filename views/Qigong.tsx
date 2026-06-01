@@ -48,7 +48,7 @@ export const Qigong: React.FC = () => {
                         <dl className="text-sm text-sand-700 space-y-3 pt-6 border-t border-sand-50">
                             <div className="flex gap-4"><dt className="font-medium text-sand-900 shrink-0 w-14">When</dt><dd className="text-right ml-auto">Every Tuesday, 7:30–8:30 PM</dd></div>
                             <div className="flex gap-4"><dt className="font-medium text-sand-900 shrink-0 w-14">Where</dt><dd className="text-right ml-auto"><a href="https://www.fuzionfit.com/contact" target="_blank" rel="noopener noreferrer" className="text-sage-600 underline underline-offset-2 hover:text-sage-800">FuzionFit Maui</a></dd></div>
-                            <div className="flex gap-4"><dt className="font-medium text-sand-900 shrink-0 w-14">Rate</dt><dd className="text-right ml-auto">$25 drop-in or included in membership</dd></div>
+                            <div className="flex gap-4"><dt className="font-medium text-sand-900 shrink-0 w-14">Rate</dt><dd className="text-right ml-auto">$25 drop-in or included in gym membership</dd></div>
                         </dl>
                     </div>
                 </Reveal>
@@ -58,7 +58,7 @@ export const Qigong: React.FC = () => {
                         <span className="text-[10px] font-bold uppercase tracking-widest text-sage-500 mb-4 block">Monthly Group Class</span>
                         <h3 className="text-3xl font-serif text-sand-900 mb-4">Chi Energy Flow</h3>
                         <p className="text-sand-600 font-light leading-relaxed mb-6 text-sm">
-                            Join our monthly community practice. Feel free to stay for a delicious farm-to-table brunch or dinner after, or simply come to move!
+                            Join our monthly community practice. Feel free to stay for a delicious farm-to-table brunch or dinner after class, or simply come to move!
                         </p>
                         <div className="bg-sand-50 rounded-xl p-4 mb-8 text-center border border-sand-100">
                             <span className="block text-[10px] font-bold uppercase tracking-widest text-sage-600 mb-1">Next Class</span>

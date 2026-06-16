@@ -62,8 +62,8 @@ export const Qigong: React.FC = () => {
                         </p>
                         <div className="bg-[#fcf0f2] rounded-xl p-4 mb-8 text-center border border-[#f4dbdf]">
                             <span className="block text-[10px] font-bold uppercase tracking-widest text-clay-600 mb-1">Next Class</span>
-                            <span className="block text-sand-900 font-medium">Friday, June 5th</span>
-                            <span className="block text-xs text-sand-600 mt-0.5">4:30 – 5:30 PM</span>
+                            <span className="block text-sand-900 font-medium">Sunday, June 21st</span>
+                            <span className="block text-xs text-sand-600 mt-0.5">9:00 – 10:00 AM</span>
                         </div>
                         <dl className="text-sm text-sand-700 space-y-3 pt-6 border-t border-sand-50">
                             <div className="flex gap-4"><dt className="font-medium text-sand-900 shrink-0 w-14">When</dt><dd className="text-right ml-auto">Monthly (Sun 9am or Fri 4:30pm)</dd></div>
@@ -74,13 +74,13 @@ export const Qigong: React.FC = () => {
                 </Reveal>
 
                 <Reveal delay={0.5} width="100%">
-                    <div className="bg-sage-50 p-6 md:p-8 rounded-2xl border border-sage-100 h-full">
-                        <span className="text-[10px] font-bold uppercase tracking-widest text-sage-600 mb-4 block">Private &amp; Semi-Private</span>
+                    <div className="bg-white p-6 md:p-8 rounded-2xl border border-sand-100 shadow-soft h-full hover:shadow-medium transition-shadow duration-700">
+                        <span className="text-[10px] font-bold uppercase tracking-widest text-sage-500 mb-4 block">Private &amp; Semi-Private</span>
                         <h3 className="text-3xl font-serif text-sand-900 mb-4">Custom Sessions</h3>
                         <p className="text-sand-600 font-light leading-relaxed mb-8 text-sm">
                             Sessions are tailored for you and can be held online via Zoom or in person on Maui's North Shore. Offered 1:1 or for small groups.
                         </p>
-                        <div className="text-sm text-sand-700 space-y-3 pt-6 border-t border-sage-200/50">
+                        <div className="text-sm text-sand-700 space-y-3 pt-6 border-t border-sand-50">
                             <p className="flex justify-between"><strong className="font-medium text-sand-900">Rate</strong> <span>$110 / 60-min (up to 5 people)</span></p>
                             <p className="flex justify-between"><strong className="font-medium text-sand-900">Add'l</strong> <span>+$15 per extra person</span></p>
                             <p className="text-[10px] text-sand-500 text-right mt-2">Hawaii GE Tax applies</p>

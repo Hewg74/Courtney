@@ -207,7 +207,7 @@ export const WorkWithMe: React.FC<WorkWithMeProps> = ({ setView }) => {
             {/* ─── Session Pricing ─── */}
             <section className="space-y-12">
                 <Reveal width="100%">
-                    <h2 className="text-4xl md:text-5xl font-serif text-sand-900 text-center">Session Pricing</h2>
+                    <h2 className="text-4xl md:text-5xl font-serif text-sand-900 text-center mb-6">Session Pricing</h2>
                 </Reveal>
 
                 <div className="grid md:grid-cols-2 gap-6 md:gap-8 max-w-5xl mx-auto">
@@ -296,6 +296,17 @@ export const WorkWithMe: React.FC<WorkWithMeProps> = ({ setView }) => {
                                 Get in Touch
                             </Button>
                         </div>
+                    </div>
+                </Reveal>
+
+                <Reveal delay={0.35} width="100%">
+                    <div className="max-w-2xl mx-auto text-center mt-8 p-8 md:p-10 rounded-2xl border border-[#f4dbdf] bg-[#fcf0f2] shadow-soft">
+                        <p className="text-sand-600 font-light text-sm leading-relaxed">
+                            <strong className="text-clay-600 font-medium">*New clients receive 10% off</strong> their first session or first coaching package. This gives you a chance to experience the work, ask questions, and see whether ongoing support feels like the right fit.
+                        </p>
+                        <p className="text-[9px] text-sand-400 mt-3 font-light uppercase tracking-widest">
+                            After the first session or package, regular rates apply.
+                        </p>
                     </div>
                 </Reveal>
             </section>

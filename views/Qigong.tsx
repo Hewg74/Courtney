@@ -62,8 +62,8 @@ export const Qigong: React.FC = () => {
                         </p>
                         <div className="bg-[#fcf0f2] rounded-xl p-4 mb-8 text-center border border-[#f4dbdf]">
                             <span className="block text-[10px] font-bold uppercase tracking-widest text-clay-600 mb-1">Next Class</span>
-                            <span className="block text-sand-900 font-medium">Sunday, June 21st</span>
-                            <span className="block text-xs text-sand-600 mt-0.5">9:00 – 10:00 AM</span>
+                            <span className="block text-sand-900 font-medium">Date TBD</span>
+                            <span className="block text-xs text-sand-600 mt-0.5">Check back soon for our next gathering!</span>
                         </div>
                         <dl className="text-sm text-sand-700 space-y-3 pt-6 border-t border-sand-50">
                             <div className="flex gap-4"><dt className="font-medium text-sand-900 shrink-0 w-14">When</dt><dd className="text-right ml-auto">Monthly (Sun 9am or Fri 4:30pm)</dd></div>

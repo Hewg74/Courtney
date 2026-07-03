@@ -58,12 +58,13 @@ export const Qigong: React.FC = () => {
                         <span className="text-[10px] font-bold uppercase tracking-widest text-sage-500 mb-4 block">Monthly Group Class</span>
                         <h3 className="text-3xl font-serif text-sand-900 mb-4">Chi Energy Flow</h3>
                         <p className="text-sand-600 font-light leading-relaxed mb-6 text-sm">
-                            Join our monthly community practice. Feel free to stay for a delicious farm-to-table brunch or dinner after class, or simply come to move!
+                            Join our monthly community practice. Feel free to stay for a delicious farm-to-table brunch or dinner after class, or simply come to move! <br/><br/>
+                            <span className="italic text-clay-600 font-medium">*Note: This month I am offering a special 1-hour workshop focused entirely on sleep in place of my regular movement flow.</span>
                         </p>
                         <div className="bg-[#fcf0f2] rounded-xl p-4 mb-8 text-center border border-[#f4dbdf]">
-                            <span className="block text-[10px] font-bold uppercase tracking-widest text-clay-600 mb-1">Next Class</span>
-                            <span className="block text-sand-900 font-medium">Date TBD</span>
-                            <span className="block text-xs text-sand-600 mt-0.5">Check back soon for our next gathering!</span>
+                            <span className="block text-[10px] font-bold uppercase tracking-widest text-clay-600 mb-1">This Month: Sleep Workshop</span>
+                            <span className="block text-sand-900 font-medium">Friday, July 24th</span>
+                            <span className="block text-xs text-sand-600 mt-0.5">4:30 – 5:30 PM</span>
                         </div>
                         <dl className="text-sm text-sand-700 space-y-3 pt-6 border-t border-sand-50">
                             <div className="flex gap-4"><dt className="font-medium text-sand-900 shrink-0 w-14">When</dt><dd className="text-right ml-auto">Monthly (Sun 9am or Fri 4:30pm)</dd></div>

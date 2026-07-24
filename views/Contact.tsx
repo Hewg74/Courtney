@@ -24,8 +24,9 @@ export const Contact: React.FC = () => {
             <div className="grid md:grid-cols-2 gap-6 md:gap-12">
                 {/* Book a Call */}
                 <Reveal delay={0.1} width="100%" className="h-full">
-                    <div className="bg-white rounded-2xl p-10 md:p-16 shadow-soft border border-sand-50 h-full flex flex-col items-center text-center space-y-8 hover:shadow-medium transition-shadow duration-700">
-                        <div className="w-20 h-20 bg-sage-50 rounded-xl flex items-center justify-center">
+                    <div className="group relative overflow-hidden bg-white/80 backdrop-blur-md p-10 md:p-16 rounded-[2.5rem] border border-white shadow-soft h-full flex flex-col items-center text-center space-y-8 hover:shadow-premium hover:-translate-y-2 transition-all duration-500 ring-1 ring-sand-900/5">
+                        <div className="absolute inset-0 bg-gradient-to-br from-sage-50/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+                        <div className="w-20 h-20 bg-sage-50 rounded-2xl flex items-center justify-center shadow-inner relative z-10 group-hover:scale-110 transition-transform duration-500">
                             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round" className="text-sage-600">
                                 <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
                                 <line x1="16" y1="2" x2="16" y2="6"></line>
@@ -49,8 +50,9 @@ export const Contact: React.FC = () => {
 
                 {/* Email */}
                 <Reveal delay={0.2} width="100%" className="h-full">
-                    <div className="bg-sand-50 rounded-2xl p-10 md:p-16 border border-sand-100 h-full flex flex-col items-center text-center space-y-8 hover:shadow-soft transition-shadow duration-700">
-                        <div className="w-20 h-20 bg-white rounded-xl flex items-center justify-center shadow-sm">
+                    <div className="group relative overflow-hidden bg-sand-50/80 backdrop-blur-md p-10 md:p-16 rounded-[2.5rem] border border-white shadow-soft h-full flex flex-col items-center text-center space-y-8 hover:shadow-premium hover:-translate-y-2 transition-all duration-500 ring-1 ring-sand-900/5">
+                        <div className="absolute inset-0 bg-gradient-to-br from-white/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+                        <div className="w-20 h-20 bg-white rounded-2xl flex items-center justify-center shadow-soft relative z-10 group-hover:scale-110 transition-transform duration-500">
                             <Mail size={32} className="text-clay-500" strokeWidth={1.25} />
                         </div>
                         <h2 className="text-3xl font-serif text-sand-900">Send an email</h2>

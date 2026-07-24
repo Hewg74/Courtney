@@ -242,7 +242,8 @@ const TestimonialCard: React.FC<{ testimonial: PageTestimonial; index: number }>
       ease: [0.22, 1, 0.36, 1]
     }}
   >
-    <div className="bg-white p-8 md:p-10 rounded-2xl shadow-sm border border-transparent hover:border-sand-200 hover:shadow-medium transition-all duration-700 relative group h-full">
+    <div className="group relative overflow-hidden bg-white/80 backdrop-blur-md p-8 md:p-10 rounded-[2rem] border border-white shadow-soft h-full hover:shadow-premium hover:-translate-y-1.5 transition-all duration-500 ring-1 ring-sand-900/5">
+      <div className="absolute inset-0 bg-gradient-to-br from-sand-50/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
       <div className="absolute top-8 left-8 text-clay-100 opacity-40 group-hover:text-amber-500/10 transition-all duration-700">
         <Quote size={56} fill="currentColor" strokeWidth={0} />
       </div>

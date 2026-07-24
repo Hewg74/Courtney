@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #F9F8F6; /* sand-50 */
+    color: #4A453B; /* sand-800 */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Custom Selection Color */
+  ::selection {
+    background-color: #F2DCD6; /* clay-200 */
+    color: #4A453B;
+  }
+
+  /* Typography refinements - optical balance */
+  h1, h2, h3 {
+    letter-spacing: -0.025em; /* tighter tracking on large serif headings */
+    line-height: 1.05;
+  }
+
+  h1 {
+    line-height: 1; /* even tighter for massive headings */
+  }
+
+  p {
+    text-wrap: pretty; /* better line breaks for readability */
+  }
+
+  /* Respect reduced motion preferences */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer utilities {
+  /* Hide scrollbar for clean look */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}

@@ -104,8 +104,9 @@ export const About: React.FC<AboutProps> = ({ setView }) => {
             }
           ].map((item, i) => (
             <Reveal key={i} delay={i * 0.1} className="h-full">
-              <div className="group bg-white p-8 rounded-2xl shadow-soft border border-sand-50 hover:shadow-medium transition-shadow duration-700 h-full">
-                <div className={`w-14 h-14 ${item.color} rounded-2xl flex items-center justify-center mb-6 transition-colors duration-700`}>
+              <div className="group relative overflow-hidden bg-white/80 backdrop-blur-md p-8 rounded-3xl border border-white shadow-soft h-full hover:shadow-premium hover:-translate-y-1.5 transition-all duration-500 ring-1 ring-sand-900/5">
+                <div className="absolute inset-0 bg-gradient-to-br from-sand-50/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+                <div className={`w-14 h-14 ${item.color} rounded-2xl flex items-center justify-center mb-6 transition-transform duration-700 relative z-10 group-hover:scale-110 shadow-inner`}>
                   <item.icon size={24} className={item.iconColor} strokeWidth={1.25} />
                 </div>
                 <h3 className="text-2xl font-serif text-sand-900 mb-4">{item.title}</h3>
@@ -118,8 +119,9 @@ export const About: React.FC<AboutProps> = ({ setView }) => {
 
       {/* ─── 3. Credentials ─── */}
       <Reveal width="100%">
-        <div className="bg-sand-50 rounded-2xl p-10 md:p-20 space-y-12">
-          <h2 className="text-4xl md:text-5xl font-serif text-sand-900 text-center">Experience & Training</h2>
+        <div className="bg-sand-50/80 backdrop-blur-md rounded-[2.5rem] p-10 md:p-20 space-y-12 border border-white shadow-soft ring-1 ring-sand-900/5 relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-b from-white/30 to-transparent pointer-events-none" />
+          <h2 className="text-4xl md:text-5xl font-serif text-sand-900 text-center relative z-10">Experience & Training</h2>
           <div className="grid md:grid-cols-2 gap-x-16 gap-y-10 max-w-4xl mx-auto text-lg font-light">
             <ul className="space-y-6 text-sand-700">
               <li className="flex items-start gap-4">
@@ -159,15 +161,16 @@ export const About: React.FC<AboutProps> = ({ setView }) => {
 
       {/* ─── 4. Books ─── */}
       <Reveal width="100%">
-        <div className="bg-white rounded-3xl p-10 md:p-20 shadow-soft border border-sand-50 space-y-12">
+        <div className="bg-white/80 backdrop-blur-md rounded-[2.5rem] p-10 md:p-20 shadow-soft border border-white space-y-12 ring-1 ring-sand-900/5 relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-t from-sand-50/20 to-transparent pointer-events-none" />
           <div className="text-center max-w-3xl mx-auto space-y-4">
             <span className="text-xs font-bold uppercase tracking-widest text-clay-600">Publications</span>
             <h2 className="text-4xl md:text-5xl font-serif text-sand-900">My Books</h2>
           </div>
-          <div className="grid md:grid-cols-2 gap-8 lg:gap-12 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-8 lg:gap-12 max-w-4xl mx-auto relative z-10">
             {/* Book 1 */}
-            <a href="https://www.amazon.com/Trust-Your-Magical-Self-Intuitive-ebook/dp/B081M6WVDB" target="_blank" rel="noopener noreferrer" className="group block bg-gradient-to-br from-sand-50 to-white p-8 rounded-2xl border border-sand-100 hover:shadow-premium hover:-translate-y-2 transition-all duration-700 text-center h-full flex flex-col relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-clay-100/50 rounded-bl-full -z-10 group-hover:scale-110 transition-transform duration-700"></div>
+            <a href="https://www.amazon.com/Trust-Your-Magical-Self-Intuitive-ebook/dp/B081M6WVDB" target="_blank" rel="noopener noreferrer" className="group block relative overflow-hidden bg-white/80 backdrop-blur-md p-8 rounded-3xl border border-white shadow-soft h-full flex flex-col hover:shadow-premium hover:-translate-y-2 transition-all duration-500 text-center ring-1 ring-sand-900/5">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-clay-100/50 rounded-bl-[4rem] -z-10 group-hover:scale-125 transition-transform duration-700"></div>
               <div className="w-32 h-48 mx-auto rounded shadow-lg mb-8 overflow-hidden flex items-center justify-center relative transform group-hover:-translate-y-1 group-hover:shadow-2xl transition-all duration-700 bg-clay-100">
                 <img src="https://images-na.ssl-images-amazon.com/images/P/B07YWFQ13G.01.LZZZZZZZ.jpg" alt="Trust Your Magical Self Cover" className="w-full h-full object-cover" />
               </div>
@@ -176,8 +179,8 @@ export const About: React.FC<AboutProps> = ({ setView }) => {
               <div className="text-xs font-bold uppercase tracking-widest text-sand-500 group-hover:text-clay-600 flex items-center justify-center transition-colors">View on Amazon <span className="ml-1 group-hover:translate-x-1 transition-transform duration-300">&rarr;</span></div>
             </a>
             {/* Book 2 */}
-            <a href="https://www.amazon.com/Turning-Other-Things-Were-Supposed-ebook/dp/B0H9VXSGGV?th=1&psc=1&dib=eyJ2IjoiMSJ9.C6F16VSTWjyG8Z9qZKIyuhxunI72PTgYfCCfGz64B1U.mN9N9IkBVefpnYdln9T2saHl7Q4_ATKiOp42gpNQCmQ&dib_tag=AUTHOR" target="_blank" rel="noopener noreferrer" className="group block bg-gradient-to-br from-sand-50 to-white p-8 rounded-2xl border border-sand-100 hover:shadow-premium hover:-translate-y-2 transition-all duration-700 text-center h-full flex flex-col relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-sage-100/50 rounded-bl-full -z-10 group-hover:scale-110 transition-transform duration-700"></div>
+            <a href="https://www.amazon.com/Turning-Other-Things-Were-Supposed-ebook/dp/B0H9VXSGGV?th=1&psc=1&dib=eyJ2IjoiMSJ9.C6F16VSTWjyG8Z9qZKIyuhxunI72PTgYfCCfGz64B1U.mN9N9IkBVefpnYdln9T2saHl7Q4_ATKiOp42gpNQCmQ&dib_tag=AUTHOR" target="_blank" rel="noopener noreferrer" className="group block relative overflow-hidden bg-white/80 backdrop-blur-md p-8 rounded-3xl border border-white shadow-soft h-full flex flex-col hover:shadow-premium hover:-translate-y-2 transition-all duration-500 text-center ring-1 ring-sand-900/5">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-sage-100/50 rounded-bl-[4rem] -z-10 group-hover:scale-125 transition-transform duration-700"></div>
               <div className="w-32 h-48 mx-auto rounded shadow-lg mb-8 overflow-hidden flex items-center justify-center relative transform group-hover:-translate-y-1 group-hover:shadow-2xl transition-all duration-700 bg-sage-100">
                 <img src="https://images-na.ssl-images-amazon.com/images/P/B0H9VXSGGV.01.LZZZZZZZ.jpg" alt="Turning 40 Cover" className="w-full h-full object-cover" />
               </div>
@@ -210,12 +213,15 @@ export const About: React.FC<AboutProps> = ({ setView }) => {
 
       {/* ─── 5. CTA ─── */}
       <Reveal width="100%">
-        <div className="text-center bg-sage-50 rounded-2xl p-16 md:p-24">
-          <h2 className="text-4xl md:text-5xl font-serif text-sand-900 mb-6">Let's talk.</h2>
-          <p className="text-sand-600 font-light mb-10 text-lg">Book a free 15-minute chat to see if coaching is a good fit.</p>
-          <Button variant="primary" size="lg" onClick={() => openExternal(CALENDLY_URL)}>
-            Book a Free Chat
-          </Button>
+        <div className="text-center bg-sage-50/80 backdrop-blur-md rounded-[2.5rem] p-16 md:p-24 border border-white shadow-soft ring-1 ring-sage-900/5 relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-b from-white/40 to-transparent pointer-events-none" />
+          <h2 className="text-4xl md:text-5xl font-serif text-sand-900 mb-6 relative z-10">Let's talk.</h2>
+          <p className="text-sand-600 font-light mb-10 text-lg relative z-10">Book a free 15-minute chat to see if coaching is a good fit.</p>
+          <div className="relative z-10">
+            <Button variant="primary" size="lg" onClick={() => openExternal(CALENDLY_URL)}>
+              Book a Free Chat
+            </Button>
+          </div>
         </div>
       </Reveal>
 

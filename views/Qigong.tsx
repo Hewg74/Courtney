@@ -39,52 +39,55 @@ export const Qigong: React.FC = () => {
             {/* ─── Details ─── */}
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <Reveal delay={0.3} width="100%">
-                    <div className="bg-white p-6 md:p-8 rounded-2xl border border-sand-100 shadow-soft h-full hover:shadow-medium transition-shadow duration-700">
-                        <span className="text-[10px] font-bold uppercase tracking-widest text-sage-500 mb-4 block">Weekly Group Class</span>
-                        <h3 className="text-3xl font-serif text-sand-900 mb-4">Chi Energy Flow</h3>
-                        <p className="text-sand-600 font-light leading-relaxed mb-8 text-sm">
+                    <div className="group relative overflow-hidden bg-white/80 backdrop-blur-md p-8 md:p-10 rounded-[2rem] border border-white shadow-soft h-full hover:shadow-premium hover:-translate-y-1.5 transition-all duration-500 ring-1 ring-sand-900/5">
+                        <div className="absolute inset-0 bg-gradient-to-br from-white/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+                        <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-sage-600 mb-5 block relative z-10 flex items-center gap-2"><span className="w-4 h-px bg-sage-300"></span>Weekly Group Class</span>
+                        <h3 className="text-3xl font-serif text-sand-900 mb-4 relative z-10">Chi Energy Flow</h3>
+                        <p className="text-sand-600 font-light leading-relaxed mb-8 text-sm relative z-10">
                             A classic mind-body movement practice to ease tension and stress from mind, body, and heart. All levels are welcome, and no experience is needed.
                         </p>
-                        <dl className="text-sm text-sand-700 space-y-3 pt-6 border-t border-sand-50">
-                            <div className="flex gap-4"><dt className="font-medium text-sand-900 shrink-0 w-14">When</dt><dd className="text-right ml-auto">Every Tuesday, 7:30–8:30 PM</dd></div>
-                            <div className="flex gap-4"><dt className="font-medium text-sand-900 shrink-0 w-14">Where</dt><dd className="text-right ml-auto"><a href="https://www.fuzionfit.com/contact" target="_blank" rel="noopener noreferrer" className="text-sage-600 underline underline-offset-2 hover:text-sage-800">FuzionFit Maui</a></dd></div>
-                            <div className="flex gap-4"><dt className="font-medium text-sand-900 shrink-0 w-14">Rate</dt><dd className="text-right ml-auto">$25 drop-in or included in gym membership</dd></div>
+                        <dl className="text-sm text-sand-700 space-y-3 pt-6 border-t border-sand-200/50 relative z-10">
+                            <div className="flex gap-4"><dt className="font-medium text-sand-900 shrink-0 w-14">When</dt><dd className="text-right ml-auto text-sand-600">Every Tuesday, 7:30–8:30 PM</dd></div>
+                            <div className="flex gap-4"><dt className="font-medium text-sand-900 shrink-0 w-14">Where</dt><dd className="text-right ml-auto"><a href="https://www.fuzionfit.com/contact" target="_blank" rel="noopener noreferrer" className="text-sage-600 underline decoration-sage-200 underline-offset-4 hover:decoration-sage-400 hover:text-sage-800 transition-colors">FuzionFit Maui</a></dd></div>
+                            <div className="flex gap-4"><dt className="font-medium text-sand-900 shrink-0 w-14">Rate</dt><dd className="text-right ml-auto text-sand-600">$25 drop-in or included in gym membership</dd></div>
                         </dl>
                     </div>
                 </Reveal>
 
                 <Reveal delay={0.4} width="100%">
-                    <div className="bg-white p-6 md:p-8 rounded-2xl border border-sand-100 shadow-soft h-full hover:shadow-medium transition-shadow duration-700">
-                        <span className="text-[10px] font-bold uppercase tracking-widest text-sage-500 mb-4 block">Monthly Group Class</span>
-                        <h3 className="text-3xl font-serif text-sand-900 mb-4">Chi Energy Flow</h3>
-                        <p className="text-sand-600 font-light leading-relaxed mb-6 text-sm">
+                    <div className="group relative overflow-hidden bg-white/80 backdrop-blur-md p-8 md:p-10 rounded-[2rem] border border-white shadow-soft h-full hover:shadow-premium hover:-translate-y-1.5 transition-all duration-500 ring-1 ring-sand-900/5">
+                        <div className="absolute inset-0 bg-gradient-to-br from-clay-50/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+                        <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-sage-600 mb-5 block relative z-10 flex items-center gap-2"><span className="w-4 h-px bg-sage-300"></span>Monthly Group Class</span>
+                        <h3 className="text-3xl font-serif text-sand-900 mb-4 relative z-10">Chi Energy Flow</h3>
+                        <p className="text-sand-600 font-light leading-relaxed mb-6 text-sm relative z-10">
                             Join our monthly community practice. Feel free to stay for a delicious farm-to-table brunch or dinner after class, or simply come to move! <br/><br/>
                             <span className="italic text-clay-600 font-medium">*Note: This month I am offering a special 1-hour workshop focused entirely on sleep in place of my regular movement flow.</span>
                         </p>
-                        <div className="bg-[#fcf0f2] rounded-xl p-4 mb-8 text-center border border-[#f4dbdf]">
-                            <span className="block text-[10px] font-bold uppercase tracking-widest text-clay-600 mb-1">Next Class</span>
-                            <span className="block text-sand-900 font-medium">Sept 25th</span>
-                            <span className="block text-xs text-sand-600 mt-0.5">Join us for our next gathering!</span>
+                        <div className="bg-clay-50/50 backdrop-blur-sm rounded-2xl p-5 mb-8 text-center border border-white shadow-[inset_0_1px_2px_rgba(0,0,0,0.02)] group-hover:bg-clay-50/80 transition-colors relative z-10">
+                            <span className="block text-[10px] font-bold uppercase tracking-widest text-clay-600 mb-1.5">Next Class</span>
+                            <span className="block text-lg text-sand-900 font-medium">Sept 25th</span>
+                            <span className="block text-xs text-sand-500 mt-1">Join us for our next gathering!</span>
                         </div>
-                        <dl className="text-sm text-sand-700 space-y-3 pt-6 border-t border-sand-50">
-                            <div className="flex gap-4"><dt className="font-medium text-sand-900 shrink-0 w-14">When</dt><dd className="text-right ml-auto">Monthly (Sun 9am or Fri 4:30pm)</dd></div>
-                            <div className="flex gap-4"><dt className="font-medium text-sand-900 shrink-0 w-14">Where</dt><dd className="text-right ml-auto"><a href="https://www.mokuroots.com/" target="_blank" rel="noopener noreferrer" className="text-sage-600 underline underline-offset-2 hover:text-sage-800">Moku Roots Maui</a></dd></div>
-                            <div className="flex gap-4"><dt className="font-medium text-sand-900 shrink-0 w-14">Rate</dt><dd className="text-right ml-auto">By Donation</dd></div>
+                        <dl className="text-sm text-sand-700 space-y-3 pt-6 border-t border-sand-200/50 relative z-10">
+                            <div className="flex gap-4"><dt className="font-medium text-sand-900 shrink-0 w-14">When</dt><dd className="text-right ml-auto text-sand-600">Monthly (Sun 9am or Fri 4:30pm)</dd></div>
+                            <div className="flex gap-4"><dt className="font-medium text-sand-900 shrink-0 w-14">Where</dt><dd className="text-right ml-auto"><a href="https://www.mokuroots.com/" target="_blank" rel="noopener noreferrer" className="text-sage-600 underline decoration-sage-200 underline-offset-4 hover:decoration-sage-400 hover:text-sage-800 transition-colors">Moku Roots Maui</a></dd></div>
+                            <div className="flex gap-4"><dt className="font-medium text-sand-900 shrink-0 w-14">Rate</dt><dd className="text-right ml-auto text-sand-600">By Donation</dd></div>
                         </dl>
                     </div>
                 </Reveal>
 
                 <Reveal delay={0.5} width="100%">
-                    <div className="bg-white p-6 md:p-8 rounded-2xl border border-sand-100 shadow-soft h-full hover:shadow-medium transition-shadow duration-700">
-                        <span className="text-[10px] font-bold uppercase tracking-widest text-sage-500 mb-4 block">Private &amp; Semi-Private</span>
-                        <h3 className="text-3xl font-serif text-sand-900 mb-4">Custom Sessions</h3>
-                        <p className="text-sand-600 font-light leading-relaxed mb-8 text-sm">
+                    <div className="group relative overflow-hidden bg-white/80 backdrop-blur-md p-8 md:p-10 rounded-[2rem] border border-white shadow-soft h-full hover:shadow-premium hover:-translate-y-1.5 transition-all duration-500 ring-1 ring-sand-900/5">
+                        <div className="absolute inset-0 bg-gradient-to-br from-white/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+                        <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-sage-600 mb-5 block relative z-10 flex items-center gap-2"><span className="w-4 h-px bg-sage-300"></span>Private &amp; Semi-Private</span>
+                        <h3 className="text-3xl font-serif text-sand-900 mb-4 relative z-10">Custom Sessions</h3>
+                        <p className="text-sand-600 font-light leading-relaxed mb-8 text-sm relative z-10">
                             Sessions are tailored for you and can be held online via Zoom or in person on Maui's North Shore. Offered 1:1 or for small groups.
                         </p>
-                        <div className="text-sm text-sand-700 space-y-3 pt-6 border-t border-sand-50">
-                            <p className="flex justify-between"><strong className="font-medium text-sand-900">Rate</strong> <span>$110 / 60-min (up to 5 people)</span></p>
-                            <p className="flex justify-between"><strong className="font-medium text-sand-900">Add'l</strong> <span>+$15 per extra person</span></p>
-                            <p className="text-[10px] text-sand-500 text-right mt-2">Hawaii GE Tax applies</p>
+                        <div className="text-sm text-sand-700 space-y-3 pt-6 border-t border-sand-200/50 relative z-10">
+                            <p className="flex justify-between gap-4"><strong className="font-medium text-sand-900 shrink-0">Rate</strong> <span className="text-right text-sand-600">$110 / 60-min (up to 5 people)</span></p>
+                            <p className="flex justify-between gap-4"><strong className="font-medium text-sand-900 shrink-0">Add'l</strong> <span className="text-right text-sand-600">+$15 per extra person</span></p>
+                            <p className="text-[10px] text-sand-400 text-right mt-2 uppercase tracking-widest">Hawaii GE Tax applies</p>
                         </div>
                     </div>
                 </Reveal>

@@ -213,7 +213,8 @@ export const WorkWithMe: React.FC<WorkWithMeProps> = ({ setView }) => {
                 <div className="grid md:grid-cols-2 gap-6 md:gap-8 max-w-5xl mx-auto">
                     {/* Packages - Recommended */}
                     <Reveal delay={0.1} className="h-full">
-                        <div className="bg-white rounded-2xl p-10 md:p-14 shadow-soft border border-sand-100 relative h-full flex flex-col hover:shadow-medium transition-shadow duration-700">
+                        <div className="group relative overflow-hidden bg-white/80 backdrop-blur-md p-10 md:p-14 rounded-[2rem] border border-white shadow-soft h-full flex flex-col hover:shadow-premium hover:-translate-y-1.5 transition-all duration-500 ring-1 ring-sand-900/5">
+                            <div className="absolute inset-0 bg-gradient-to-br from-sage-50/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
                             <div className="mb-6 md:mb-0 md:absolute md:top-8 md:right-8 bg-sage-50 px-4 py-1.5 rounded-full text-[11px] font-bold uppercase tracking-wider text-sage-700 self-start inline-block">
                                 Recommended
                             </div>
@@ -244,7 +245,8 @@ export const WorkWithMe: React.FC<WorkWithMeProps> = ({ setView }) => {
 
                     {/* Single Sessions */}
                     <Reveal delay={0.2} className="h-full">
-                        <div className="bg-sand-50 rounded-2xl p-10 md:p-14 border border-sand-100 h-full flex flex-col hover:shadow-soft transition-shadow duration-700">
+                        <div className="group relative overflow-hidden bg-sand-50/80 backdrop-blur-md p-10 md:p-14 rounded-[2rem] border border-white shadow-soft h-full flex flex-col hover:shadow-premium hover:-translate-y-1.5 transition-all duration-500 ring-1 ring-sand-900/5">
+                            <div className="absolute inset-0 bg-gradient-to-br from-white/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
                             <h3 className="text-3xl font-serif text-sand-900 mb-2">Single Coaching Session</h3>
                             <div className="text-3xl font-serif text-sand-900 mb-6">$85</div>
                             <p className="text-sand-600 text-sm leading-relaxed mb-8 flex-grow font-light">
@@ -275,7 +277,8 @@ export const WorkWithMe: React.FC<WorkWithMeProps> = ({ setView }) => {
                 </div>
 
                 <Reveal delay={0.25} width="100%">
-                    <div className="max-w-5xl mx-auto mt-8 bg-[#eaf1ec] rounded-2xl p-6 md:p-8 border border-[#cbe0d3] text-center shadow-soft">
+                    <div className="max-w-5xl mx-auto mt-8 bg-sage-50/80 backdrop-blur-md rounded-3xl p-6 md:p-8 border border-white text-center shadow-soft ring-1 ring-sage-900/5 relative overflow-hidden">
+                        <div className="absolute inset-0 bg-gradient-to-b from-white/20 to-transparent pointer-events-none" />
                         <span className="block text-[10px] font-bold uppercase tracking-widest text-sage-600 mb-2">Insurance &amp; HSA/FSA Coverage</span>
                         <p className="text-sand-700 font-light text-sm max-w-3xl mx-auto leading-relaxed">
                             Through a new partnership with <strong>Active &amp; Fit</strong>, some in-person sessions on Maui can now be covered by insurance. For online clients, some <strong>HSA/FSA</strong> plans may accept coaching with a Letter of Medical Necessity. Please reach out to find out more!
@@ -284,7 +287,8 @@ export const WorkWithMe: React.FC<WorkWithMeProps> = ({ setView }) => {
                 </Reveal>
 
                 <Reveal delay={0.3} width="100%">
-                    <div className="max-w-5xl mx-auto bg-sage-50 rounded-2xl p-8 md:p-12 border border-sage-100 shadow-soft flex flex-col md:flex-row items-start md:items-center justify-between gap-8 text-left">
+                    <div className="max-w-5xl mx-auto bg-white/80 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-white shadow-glass ring-1 ring-sand-900/5 flex flex-col md:flex-row items-start md:items-center justify-between gap-8 text-left relative overflow-hidden group hover:shadow-premium transition-all duration-500">
+                        <div className="absolute inset-0 bg-gradient-to-r from-sage-50/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
                         <div>
                             <h3 className="text-3xl font-serif text-sand-900 mb-2">Workshops &amp; Group Coaching</h3>
                             <p className="text-sand-700 font-light leading-relaxed">
@@ -300,7 +304,8 @@ export const WorkWithMe: React.FC<WorkWithMeProps> = ({ setView }) => {
                 </Reveal>
 
                 <Reveal delay={0.35} width="100%">
-                    <div className="max-w-2xl mx-auto text-center mt-8 p-8 md:p-10 rounded-2xl border border-[#f4dbdf] bg-[#fcf0f2] shadow-soft">
+                    <div className="max-w-2xl mx-auto text-center mt-8 p-8 md:p-10 rounded-3xl border border-white bg-clay-50/80 backdrop-blur-md shadow-glass ring-1 ring-clay-900/5 relative overflow-hidden">
+                        <div className="absolute inset-0 bg-gradient-to-b from-white/30 to-transparent pointer-events-none" />
                         <p className="text-sand-600 font-light text-sm leading-relaxed">
                             <strong className="text-clay-600 font-medium">*New clients receive 10% off</strong> their first session or first coaching package. This gives you a chance to experience the work, ask questions, and see whether ongoing support feels like the right fit.
                         </p>

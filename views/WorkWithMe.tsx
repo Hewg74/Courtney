@@ -14,7 +14,7 @@ export const WorkWithMe: React.FC<WorkWithMeProps> = ({ setView }) => {
     const [openFaq, setOpenFaq] = useState<number | null>(0);
 
     return (
-        <div className="animate-fade-in pt-32 pb-24 px-6 max-w-6xl mx-auto space-y-32">
+        <div className="animate-fade-in pt-40 pb-32 px-6 max-w-6xl mx-auto space-y-40">
 
             {/* ─── Page Header ─── */}
             <div className="grid md:grid-cols-2 gap-12 items-end border-b border-sand-200 pb-16 text-center md:text-left">

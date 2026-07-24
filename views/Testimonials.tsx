@@ -273,7 +273,7 @@ const TestimonialCard: React.FC<{ testimonial: PageTestimonial; index: number }>
 export const Testimonials: React.FC = () => {
   return (
     <div className="animate-fade-in pb-24 relative overflow-x-hidden">
-      <section className="py-32 bg-gradient-to-b from-white via-sand-50/50 to-white relative overflow-hidden">
+      <section className="py-40 bg-gradient-to-b from-white via-sand-50/50 to-white relative overflow-hidden">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-full border-x border-sand-100/50 pointer-events-none -z-10" />
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-clay-50/50 rounded-full blur-[120px] -z-10 opacity-60 translate-x-1/3 -translate-y-1/4" />
         <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-sand-100/40 rounded-full blur-[100px] -z-10 opacity-70 -translate-x-1/3 translate-y-1/4" />

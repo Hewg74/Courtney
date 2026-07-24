@@ -19,7 +19,7 @@ export const Home: React.FC<HomeProps> = ({ setView }) => {
     <div className="animate-fade-in pb-24 relative overflow-x-hidden">
 
       {/* 1. Hero Section - Side-by-Side Layout (Old Design) */}
-      <section className="relative min-h-[90vh] flex items-center px-6 overflow-hidden pt-32 lg:pt-32 pb-20 lg:pb-24">
+      <section className="relative min-h-[100vh] flex items-center px-6 overflow-hidden pt-40 lg:pt-40 pb-32 lg:pb-32">
         {/* Ambient Washes */}
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-clay-50/50 via-sand-50 to-white -z-20" />
         <div className="absolute top-[5%] right-[-5%] w-[600px] h-[600px] bg-sage-100/50 rounded-full blur-[120px] mix-blend-multiply animate-float -z-10" />

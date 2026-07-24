@@ -11,7 +11,7 @@ interface AboutProps {
 
 export const About: React.FC<AboutProps> = ({ setView }) => {
   return (
-    <div className="animate-fade-in pt-32 pb-24 px-6 max-w-5xl mx-auto space-y-32">
+    <div className="animate-fade-in pt-40 pb-32 px-6 max-w-5xl mx-auto space-y-40">
 
       {/* ─── 1. Intro ─── */}
       <div className="flex flex-col md:flex-row gap-16 items-center">
@@ -157,7 +157,39 @@ export const About: React.FC<AboutProps> = ({ setView }) => {
         </div>
       </Reveal>
 
-      {/* ─── 4. Qigong / Personal ─── */}
+      {/* ─── 4. Books ─── */}
+      <Reveal width="100%">
+        <div className="bg-white rounded-3xl p-10 md:p-20 shadow-soft border border-sand-50 space-y-12">
+          <div className="text-center max-w-3xl mx-auto space-y-4">
+            <span className="text-xs font-bold uppercase tracking-widest text-clay-600">Publications</span>
+            <h2 className="text-4xl md:text-5xl font-serif text-sand-900">My Books</h2>
+          </div>
+          <div className="grid md:grid-cols-2 gap-8 lg:gap-12 max-w-4xl mx-auto">
+            {/* Book 1 */}
+            <a href="https://www.amazon.com/stores/Courtney-Alex-Aldor/author/B081N2CYDM/allbooks?ccs_id=c3a72e10-78a2-4412-a95b-dcde251ffdcb" target="_blank" rel="noopener noreferrer" className="group block bg-gradient-to-br from-sand-50 to-white p-8 rounded-2xl border border-sand-100 hover:shadow-premium hover:-translate-y-2 transition-all duration-700 text-center h-full flex flex-col relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-clay-100/50 rounded-bl-full -z-10 group-hover:scale-110 transition-transform duration-700"></div>
+              <div className="w-32 h-48 bg-clay-200 mx-auto rounded shadow-lg mb-8 overflow-hidden flex items-center justify-center relative transform group-hover:-translate-y-1 group-hover:shadow-2xl transition-all duration-700">
+                <span className="font-serif text-clay-900 text-sm px-4 italic leading-tight">Trust Your Magical Self</span>
+              </div>
+              <h3 className="text-2xl font-serif text-sand-900 mb-3 group-hover:text-clay-700 transition-colors">Trust Your Magical Self</h3>
+              <p className="text-sm text-sand-600 font-light mb-8 flex-grow leading-relaxed">How to be Super Psychic, Extra Intuitive, and Love Your Sensitive Soul</p>
+              <div className="text-xs font-bold uppercase tracking-widest text-sand-500 group-hover:text-clay-600 flex items-center justify-center transition-colors">View on Amazon <span className="ml-1 group-hover:translate-x-1 transition-transform duration-300">&rarr;</span></div>
+            </a>
+            {/* Book 2 */}
+            <a href="https://www.amazon.com/stores/Courtney-Alex-Aldor/author/B081N2CYDM/allbooks?ccs_id=c3a72e10-78a2-4412-a95b-dcde251ffdcb" target="_blank" rel="noopener noreferrer" className="group block bg-gradient-to-br from-sand-50 to-white p-8 rounded-2xl border border-sand-100 hover:shadow-premium hover:-translate-y-2 transition-all duration-700 text-center h-full flex flex-col relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-sage-100/50 rounded-bl-full -z-10 group-hover:scale-110 transition-transform duration-700"></div>
+              <div className="w-32 h-48 bg-sage-200 mx-auto rounded shadow-lg mb-8 overflow-hidden flex items-center justify-center relative transform group-hover:-translate-y-1 group-hover:shadow-2xl transition-all duration-700">
+                <span className="font-serif text-sage-900 text-sm px-4 italic leading-tight">Turning 40</span>
+              </div>
+              <h3 className="text-2xl font-serif text-sand-900 mb-3 group-hover:text-sage-700 transition-colors">Turning 40</h3>
+              <p className="text-sm text-sand-600 font-light mb-8 flex-grow leading-relaxed">Available now on Amazon</p>
+              <div className="text-xs font-bold uppercase tracking-widest text-sand-500 group-hover:text-sage-600 flex items-center justify-center transition-colors">View on Amazon <span className="ml-1 group-hover:translate-x-1 transition-transform duration-300">&rarr;</span></div>
+            </a>
+          </div>
+        </div>
+      </Reveal>
+
+      {/* ─── 5. Qigong / Personal ─── */}
       <div className="text-center space-y-12">
         <Reveal width="100%">
           <div className="w-full aspect-video bg-sage-50 rounded-2xl overflow-hidden relative shadow-soft">

@@ -169,6 +169,16 @@ export const About: React.FC<AboutProps> = ({ setView }) => {
           </div>
           <div className="grid md:grid-cols-2 gap-8 lg:gap-12 max-w-4xl mx-auto relative z-10">
             {/* Book 1 */}
+            <a href="https://www.amazon.com/Turning-Other-Things-Were-Supposed-ebook/dp/B0H9VXSGGV?th=1&psc=1&dib=eyJ2IjoiMSJ9.C6F16VSTWjyG8Z9qZKIyuhxunI72PTgYfCCfGz64B1U.mN9N9IkBVefpnYdln9T2saHl7Q4_ATKiOp42gpNQCmQ&dib_tag=AUTHOR" target="_blank" rel="noopener noreferrer" className="group block relative overflow-hidden bg-white/80 backdrop-blur-md p-8 rounded-3xl border border-white shadow-soft h-full flex flex-col hover:shadow-premium hover:-translate-y-2 transition-all duration-500 text-center ring-1 ring-sand-900/5">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-sage-100/50 rounded-bl-[4rem] -z-10 group-hover:scale-125 transition-transform duration-700"></div>
+              <div className="w-32 h-48 mx-auto rounded shadow-lg mb-8 overflow-hidden flex items-center justify-center relative transform group-hover:-translate-y-1 group-hover:shadow-2xl transition-all duration-700 bg-sage-100">
+                <img src="https://images-na.ssl-images-amazon.com/images/P/B0H9VXSGGV.01.LZZZZZZZ.jpg" alt="Turning 40 Cover" className="w-full h-full object-cover" />
+              </div>
+              <h3 className="text-2xl font-serif text-sand-900 mb-3 group-hover:text-sage-700 transition-colors">Turning 40 &amp; Other Things We're Not Supposed to Do</h3>
+              <p className="text-sm text-sand-600 font-light mb-8 flex-grow leading-relaxed">Notes on Beauty, Bodies, Renewal, and Becoming More of Ourselves</p>
+              <div className="text-xs font-bold uppercase tracking-widest text-sand-500 group-hover:text-sage-600 flex items-center justify-center transition-colors">View on Amazon <span className="ml-1 group-hover:translate-x-1 transition-transform duration-300">&rarr;</span></div>
+            </a>
+            {/* Book 2 */}
             <a href="https://www.amazon.com/Trust-Your-Magical-Self-Intuitive-ebook/dp/B081M6WVDB" target="_blank" rel="noopener noreferrer" className="group block relative overflow-hidden bg-white/80 backdrop-blur-md p-8 rounded-3xl border border-white shadow-soft h-full flex flex-col hover:shadow-premium hover:-translate-y-2 transition-all duration-500 text-center ring-1 ring-sand-900/5">
               <div className="absolute top-0 right-0 w-32 h-32 bg-clay-100/50 rounded-bl-[4rem] -z-10 group-hover:scale-125 transition-transform duration-700"></div>
               <div className="w-32 h-48 mx-auto rounded shadow-lg mb-8 overflow-hidden flex items-center justify-center relative transform group-hover:-translate-y-1 group-hover:shadow-2xl transition-all duration-700 bg-clay-100">
@@ -177,16 +187,6 @@ export const About: React.FC<AboutProps> = ({ setView }) => {
               <h3 className="text-2xl font-serif text-sand-900 mb-3 group-hover:text-clay-700 transition-colors">Trust Your Magical Self</h3>
               <p className="text-sm text-sand-600 font-light mb-8 flex-grow leading-relaxed">How to be Super Psychic, Extra Intuitive, and Love Your Sensitive Soul</p>
               <div className="text-xs font-bold uppercase tracking-widest text-sand-500 group-hover:text-clay-600 flex items-center justify-center transition-colors">View on Amazon <span className="ml-1 group-hover:translate-x-1 transition-transform duration-300">&rarr;</span></div>
-            </a>
-            {/* Book 2 */}
-            <a href="https://www.amazon.com/Turning-Other-Things-Were-Supposed-ebook/dp/B0H9VXSGGV?th=1&psc=1&dib=eyJ2IjoiMSJ9.C6F16VSTWjyG8Z9qZKIyuhxunI72PTgYfCCfGz64B1U.mN9N9IkBVefpnYdln9T2saHl7Q4_ATKiOp42gpNQCmQ&dib_tag=AUTHOR" target="_blank" rel="noopener noreferrer" className="group block relative overflow-hidden bg-white/80 backdrop-blur-md p-8 rounded-3xl border border-white shadow-soft h-full flex flex-col hover:shadow-premium hover:-translate-y-2 transition-all duration-500 text-center ring-1 ring-sand-900/5">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-sage-100/50 rounded-bl-[4rem] -z-10 group-hover:scale-125 transition-transform duration-700"></div>
-              <div className="w-32 h-48 mx-auto rounded shadow-lg mb-8 overflow-hidden flex items-center justify-center relative transform group-hover:-translate-y-1 group-hover:shadow-2xl transition-all duration-700 bg-sage-100">
-                <img src="https://images-na.ssl-images-amazon.com/images/P/B0H9VXSGGV.01.LZZZZZZZ.jpg" alt="Turning 40 Cover" className="w-full h-full object-cover" />
-              </div>
-              <h3 className="text-2xl font-serif text-sand-900 mb-3 group-hover:text-sage-700 transition-colors">Turning 40</h3>
-              <p className="text-sm text-sand-600 font-light mb-8 flex-grow leading-relaxed">And Other Things We Were Supposed To Do</p>
-              <div className="text-xs font-bold uppercase tracking-widest text-sand-500 group-hover:text-sage-600 flex items-center justify-center transition-colors">View on Amazon <span className="ml-1 group-hover:translate-x-1 transition-transform duration-300">&rarr;</span></div>
             </a>
           </div>
         </div>

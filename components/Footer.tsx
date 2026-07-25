@@ -34,6 +34,7 @@ export const Footer: React.FC<FooterProps> = ({ setView }) => {
               <li><button onClick={() => setView('qigong')} className="hover:text-clay-200 transition-colors">Qigong</button></li>
               <li><button onClick={() => setView('testimonials')} className="hover:text-clay-200 transition-colors">Testimonials</button></li>
               <li><button onClick={() => setView('about')} className="hover:text-clay-200 transition-colors">About</button></li>
+              <li><button onClick={() => setView('book')} className="hover:text-clay-200 transition-colors">Books</button></li>
               <li><button onClick={() => setView('contact')} className="hover:text-clay-200 transition-colors">Contact</button></li>
             </ul>
           </div>

@@ -61,7 +61,7 @@ export const Qigong: React.FC = () => {
                         <h3 className="text-3xl font-serif text-sand-900 mb-4 relative z-10">Chi Energy Flow</h3>
                         <p className="text-sand-600 font-light leading-relaxed mb-6 text-sm relative z-10">
                             Join our monthly community practice. Feel free to stay for a delicious farm-to-table brunch or dinner after class, or simply come to move! <br/><br/>
-                            <span className="italic text-clay-600 font-medium">*Note: This month I am offering a special 1-hour workshop focused entirely on sleep in place of my regular movement flow.</span>
+                            <span className="italic text-clay-600 font-medium">*Note: In September I am offering a special 1-hour workshop focused entirely on sleep in place of my regular movement flow.</span>
                         </p>
                         <div className="bg-clay-50/50 backdrop-blur-sm rounded-2xl p-5 mb-8 text-center border border-white shadow-[inset_0_1px_2px_rgba(0,0,0,0.02)] group-hover:bg-clay-50/80 transition-colors relative z-10">
                             <span className="block text-[10px] font-bold uppercase tracking-widest text-clay-600 mb-1.5">Next Class</span>

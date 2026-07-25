@@ -39,6 +39,7 @@ export const Navigation: React.FC<NavigationProps> = ({ currentView, setView }) 
     { label: 'Qigong', value: 'qigong' },
     { label: 'Testimonials', value: 'testimonials' },
     { label: 'About', value: 'about' },
+    { label: 'Books', value: 'book' },
     { label: 'Contact', value: 'contact' },
   ];
 

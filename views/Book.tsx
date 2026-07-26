@@ -18,7 +18,7 @@ export const Book: React.FC<BookProps> = ({ setView }) => {
           <span className="text-clay-500 font-sans text-xs font-bold uppercase tracking-widest mb-4 block">Publications</span>
           <h1 className="text-5xl md:text-7xl font-serif text-sand-900 mb-6">My Books</h1>
           <p className="text-xl text-sand-600 font-light leading-relaxed max-w-2xl mx-auto">
-            Deep dives into intuitive living, embracing our bodies, and navigating the transitions of life with grace and humor.
+            Two books. One about getting older and all the rules nobody agreed to. The other about feeling things deeply and what to do with that.
           </p>
         </Reveal>
       </div>
@@ -42,7 +42,7 @@ export const Book: React.FC<BookProps> = ({ setView }) => {
                 <h2 className="text-4xl md:text-5xl font-serif text-sand-900 leading-tight">Turning 40 &amp; Other Things We're Not Supposed to Do</h2>
                 <p className="text-xl text-sage-700 font-serif italic">Notes on Beauty, Bodies, Renewal, and Becoming More of Ourselves</p>
                 <p className="text-sand-600 font-light leading-relaxed text-lg">
-                  A vulnerable, humorous, and deeply relatable exploration of what it means to hit the milestones we were "supposed" to achieve, and finding the courage to redefine success, beauty, and purpose on our own terms.
+                  We all got handed a list at some point. What we should have done by now, how we should look while doing it. This book is about setting the list down. It's honest about bodies and aging and the things we're supposed to keep quiet about, and it's funny, because most of that gets funny once somebody finally says it out loud.
                 </p>
                 <div className="pt-4 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
                   <Button variant="primary" onClick={() => openExternal('https://www.amazon.com/Turning-Other-Things-Were-Supposed-ebook/dp/B0H9VXSGGV?th=1&psc=1&dib=eyJ2IjoiMSJ9.C6F16VSTWjyG8Z9qZKIyuhxunI72PTgYfCCfGz64B1U.mN9N9IkBVefpnYdln9T2saHl7Q4_ATKiOp42gpNQCmQ&dib_tag=AUTHOR')}>
@@ -68,7 +68,7 @@ export const Book: React.FC<BookProps> = ({ setView }) => {
                 <h2 className="text-4xl md:text-5xl font-serif text-sand-900 leading-tight">Trust Your Magical Self</h2>
                 <p className="text-xl text-clay-700 font-serif italic">How to be Super Psychic, Extra Intuitive, and Love Your Sensitive Soul</p>
                 <p className="text-sand-600 font-light leading-relaxed text-lg">
-                  Designed for the deeply feeling and highly sensitive. This book offers practical tools and grounded wisdom to help you harness your intuition, protect your energy, and turn your sensitivity into your greatest superpower.
+                  The earlier of the two, written for people who feel everything. If you've been told you're too sensitive, or you need a quiet hour after a crowded room, you'll recognize yourself in here. It's a practical book. Ways to settle yourself down, trust your own read on things, and stop soaking up stress that was never yours.
                 </p>
                 <div className="pt-4 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
                   <Button variant="outline" onClick={() => openExternal('https://www.amazon.com/Trust-Your-Magical-Self-Intuitive-ebook/dp/B081M6WVDB')}>
@@ -86,13 +86,13 @@ export const Book: React.FC<BookProps> = ({ setView }) => {
         <div className="bg-sand-50/80 backdrop-blur-md rounded-[3rem] p-12 md:p-20 text-center space-y-8 border border-white shadow-soft relative overflow-hidden ring-1 ring-sand-900/5 mt-16">
           <div className="absolute inset-0 bg-gradient-to-b from-white/30 to-transparent pointer-events-none" />
           <Heart size={32} className="mx-auto text-clay-400 mb-6 relative z-10" />
-          <h2 className="text-3xl md:text-4xl font-serif text-sand-900 relative z-10">Behind the Books</h2>
+          <h2 className="text-3xl md:text-4xl font-serif text-sand-900 relative z-10">Why I wrote them</h2>
           <div className="max-w-3xl mx-auto space-y-6 text-sand-700 font-light text-lg leading-relaxed relative z-10 text-left md:text-center">
             <p>
-              I write because putting words to our experiences helps us feel less alone. Both of these books were born from a desire to take the complicated, often messy parts of life—like navigating our shifting identities as we age, or learning to manage a deeply sensitive nervous system—and offer a sense of grounding and shared humanity.
+              I write for the same reason I coach. It helps to hear that someone else has been through it, and that there's something you can actually do about it.
             </p>
             <p>
-              Whether you are looking to embrace your intuitive gifts or untangle the expectations of what it means to grow older, my hope is that these pages feel like a supportive conversation with a good friend.
+              Neither book is a plan you have to follow. Take what's useful, leave the rest. If one of them makes a hard week feel a little more manageable, that's what I wanted.
             </p>
           </div>
         </div>
@@ -106,9 +106,9 @@ export const Book: React.FC<BookProps> = ({ setView }) => {
             <div className="w-16 h-16 bg-red-50 text-red-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-500 relative z-10">
               <Youtube size={32} />
             </div>
-            <h3 className="text-2xl font-serif text-sand-900 relative z-10">Video Resources</h3>
+            <h3 className="text-2xl font-serif text-sand-900 relative z-10">The practices, on video</h3>
             <p className="text-sand-600 font-light text-sm flex-grow relative z-10 leading-relaxed">
-              Looking for the supplementary practices mentioned in <em>Trust Your Magical Self</em>? Head over to my YouTube channel for guided Qigong, energy meditations, and grounding exercises.
+              The practices from <em>Trust Your Magical Self</em> are up on my YouTube channel. Guided Qigong, short meditations, and simple things to try when you need to settle down.
             </p>
             <div className="relative z-10 w-full pt-4">
               <Button variant="outline" className="w-full" onClick={() => openExternal(YOUTUBE_URL)}>
@@ -122,9 +122,9 @@ export const Book: React.FC<BookProps> = ({ setView }) => {
             <div className="w-16 h-16 bg-sage-50 text-sage-600 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-500 relative z-10">
               <BookOpen size={32} />
             </div>
-            <h3 className="text-2xl font-serif text-sand-900 relative z-10">Keep Exploring</h3>
+            <h3 className="text-2xl font-serif text-sand-900 relative z-10">Working together</h3>
             <p className="text-sand-600 font-light text-sm flex-grow relative z-10 leading-relaxed">
-              If the themes in these books resonate with you, coaching or Qigong might be the perfect next step. We can work together to bring these practices into your daily life.
+              If any of this sounds like your life, coaching or a Qigong class might be a good fit. Same tools, worked into your actual week.
             </p>
             <div className="relative z-10 w-full pt-4">
               <Button variant="outline" className="w-full" onClick={() => setView('work-with-me')}>

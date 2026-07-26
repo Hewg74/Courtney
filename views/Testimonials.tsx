@@ -281,8 +281,8 @@ export const Testimonials: React.FC = () => {
 
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <Reveal width="100%" className="mb-20 text-center">
-            <h2 className="text-xs font-bold uppercase tracking-widest text-clay-600 mb-4">Testimonials</h2>
-            <h3 className="text-4xl md:text-5xl font-serif text-sand-900 italic mb-6">What clients say</h3>
+            <span className="text-xs font-bold uppercase tracking-widest text-clay-600 mb-4 block">Testimonials</span>
+            <h1 className="text-4xl md:text-5xl font-serif text-sand-900 italic mb-6">What clients say</h1>
           </Reveal>
 
           <div className="space-y-24">
@@ -290,9 +290,9 @@ export const Testimonials: React.FC = () => {
               <div key={category.label}>
                 <Reveal width="100%" className="mb-12">
                   <div className="flex items-center gap-6">
-                    <h4 className="text-2xl md:text-3xl font-serif text-sand-900 md:whitespace-nowrap">
+                    <h2 className="text-2xl md:text-3xl font-serif text-sand-900 md:whitespace-nowrap">
                       {category.label}
-                    </h4>
+                    </h2>
                     <div className="h-px bg-sand-200 flex-1" />
                   </div>
                 </Reveal>

@@ -363,6 +363,12 @@ export const TESTIMONIALS: Testimonial[] = [
     quote: "My friend picked up your book in the US and told me about it and I just wanted to say I love your book!! I’ve been telling all my friends here in Scotland about it….Thank you for sharing your journey.",
     author: "Anonymous",
     context: "Scotland"
+  },
+  {
+    id: '60',
+    quote: "Courtney it was such a relief to read through this table of contents it addresses so many things I’ve been grappling with and have been curious about forever. I’m excited to get deeper in to understanding how to work with everything. I’m only barely into ch 1 but your writing is so fun to read also!! Thank you again!!",
+    author: "Zoe",
+    context: "CO"
   }
 ];
 

@@ -198,6 +198,11 @@ const CATEGORIES: TestimonialCategory[] = [
     label: 'Book',
     items: [
       {
+        quote: "Courtney it was such a relief to read through this table of contents it addresses so many things I’ve been grappling with and have been curious about forever. I’m excited to get deeper in to understanding how to work with everything. I’m only barely into ch 1 but your writing is so fun to read also!! Thank you again!!",
+        author: "Zoe",
+        context: "CO"
+      },
+      {
         quote: "I finished your book beautifully written and so grateful I found it\u2026 Thank you Courtney for sharing your story and creating language for me about all the magic (synchronicities) that exists.",
         author: "AJ",
         context: "CA"

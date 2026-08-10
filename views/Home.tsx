@@ -4,7 +4,7 @@ import { ViewState } from '../types';
 import { Sparkles, Award, Users, Sun, Feather, Compass, MessageCircle, Star, Heart, Quote } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { Reveal } from '../components/Reveal';
-import { openExternal, CALENDLY_URL, TESTIMONIALS } from '../constants';
+import { openExternal, BOOKING_URL, TESTIMONIALS } from '../constants';
 
 // ... (inside component)
 

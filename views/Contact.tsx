@@ -2,7 +2,7 @@ import React from 'react';
 import { Button } from '../components/Button';
 import { Mail } from 'lucide-react';
 import { Reveal } from '../components/Reveal';
-import { CALENDLY_URL, INSTAGRAM_URL, YOUTUBE_URL, openExternal } from '../constants';
+import { BOOKING_URL, INSTAGRAM_URL, YOUTUBE_URL, openExternal } from '../constants';
 
 export const Contact: React.FC = () => {
     return (
@@ -41,9 +41,9 @@ export const Contact: React.FC = () => {
                         <Button
                             size="lg"
                             className="w-full"
-                            onClick={() => openExternal(CALENDLY_URL)}
+                            onClick={() => openExternal(BOOKING_URL)}
                         >
-                            Schedule on Calendly
+                            Schedule a Chat
                         </Button>
                     </div>
                 </Reveal>

@@ -4,7 +4,7 @@ import { Button } from '../components/Button';
 import { ViewState } from '../types';
 import { Check, ChevronDown } from 'lucide-react';
 import { Reveal } from '../components/Reveal';
-import { FAQ_ITEMS, CALENDLY_URL, openExternal } from '../constants';
+import { FAQ_ITEMS, BOOKING_URL, openExternal } from '../constants';
 
 interface WorkWithMeProps {
     setView: (view: ViewState) => void;
@@ -236,7 +236,7 @@ export const WorkWithMe: React.FC<WorkWithMeProps> = ({ setView }) => {
                                     </div>
                                 ))}
                             </div>
-                            <Button className="w-full" onClick={() => openExternal(CALENDLY_URL)}>
+                            <Button className="w-full" onClick={() => openExternal(BOOKING_URL)}>
                                 Book a Free 15-Min Chat
                             </Button>
                             <p className="text-[10px] text-sand-400 mt-4 text-center">Hawaii GE Tax applies</p>
@@ -267,7 +267,7 @@ export const WorkWithMe: React.FC<WorkWithMeProps> = ({ setView }) => {
                                     </div>
                                 ))}
                             </div>
-                            <Button variant="outline" className="w-full" onClick={() => openExternal(CALENDLY_URL)}>
+                            <Button variant="outline" className="w-full" onClick={() => openExternal(BOOKING_URL)}>
                                 Book a Free 15-Min Chat
                             </Button>
                             <p className="text-[10px] text-sand-400 mt-4 text-center">Hawaii GE Tax applies</p>
@@ -367,7 +367,7 @@ export const WorkWithMe: React.FC<WorkWithMeProps> = ({ setView }) => {
             <section className="text-center bg-sage-50 rounded-2xl p-16 md:p-24">
                 <h2 className="text-4xl md:text-5xl font-serif text-sand-900 mb-6">Ready to get started?</h2>
                 <p className="text-sand-600 font-light mb-10 text-lg">Book a free 15-minute chat to talk through what might work for you.</p>
-                <Button size="lg" onClick={() => openExternal(CALENDLY_URL)}>
+                <Button size="lg" onClick={() => openExternal(BOOKING_URL)}>
                     Book a Free Chat
                 </Button>
             </section>

@@ -3,7 +3,7 @@ import { Button } from '../components/Button';
 import { ViewState } from '../types';
 import { Reveal } from '../components/Reveal';
 import { Sparkles, Heart, BookOpen, Users, Compass, Sun } from 'lucide-react';
-import { CALENDLY_URL, openExternal } from '../constants';
+import { BOOKING_URL, openExternal } from '../constants';
 
 interface AboutProps {
   setView: (view: ViewState) => void;
@@ -218,7 +218,7 @@ export const About: React.FC<AboutProps> = ({ setView }) => {
           <h2 className="text-4xl md:text-5xl font-serif text-sand-900 mb-6 relative z-10">Let's talk.</h2>
           <p className="text-sand-600 font-light mb-10 text-lg relative z-10">Book a free 15-minute chat to see if coaching is a good fit.</p>
           <div className="relative z-10">
-            <Button variant="primary" size="lg" onClick={() => openExternal(CALENDLY_URL)}>
+            <Button variant="primary" size="lg" onClick={() => openExternal(BOOKING_URL)}>
               Book a Free Chat
             </Button>
           </div>

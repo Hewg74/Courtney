@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from './Button';
-import { CALENDLY_URL, openExternal } from '../constants';
+import { BOOKING_URL, openExternal } from '../constants';
 
 export const StickyCTA: React.FC = () => {
     const [isVisible, setIsVisible] = useState(false);
@@ -30,7 +30,7 @@ export const StickyCTA: React.FC = () => {
                         variant="primary"
                         size="md"
                         className="shadow-lg bg-sand-900 text-sand-50 hover:bg-clay-600 border border-sand-800 hover:shadow-xl"
-                        onClick={() => openExternal(CALENDLY_URL)}
+                        onClick={() => openExternal(BOOKING_URL)}
                     >
                         Book a Free Chat
                     </Button>

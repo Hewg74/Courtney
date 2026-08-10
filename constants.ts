@@ -1,7 +1,7 @@
 import { Testimonial } from './types';
 
 // ─── Centralized URLs ───
-export const CALENDLY_URL = 'https://calendly.com/courtneyalex-int/15min';
+export const BOOKING_URL = 'https://calendar.app.google/qQz9XzBxfi2vMC7R7';
 export const INSTAGRAM_URL = 'https://instagram.com/courtneyalex_healthcoach';
 export const YOUTUBE_URL = 'https://youtube.com/@courtneyalexqi';
 

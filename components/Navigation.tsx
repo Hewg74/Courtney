@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ViewState } from '../types';
 import { Button } from './Button';
 import { Menu, X } from 'lucide-react';
-import { CALENDLY_URL, openExternal } from '../constants';
+import { BOOKING_URL, openExternal } from '../constants';
 
 interface NavigationProps {
   currentView: ViewState;
@@ -88,7 +88,7 @@ export const Navigation: React.FC<NavigationProps> = ({ currentView, setView }) 
           ))}
           <Button
             size="sm"
-            onClick={() => openExternal(CALENDLY_URL)}
+            onClick={() => openExternal(BOOKING_URL)}
             className="ml-4"
           >
             Book a Call
@@ -140,7 +140,7 @@ export const Navigation: React.FC<NavigationProps> = ({ currentView, setView }) 
             >
               <Button
                 size="lg"
-                onClick={() => openExternal(CALENDLY_URL)}
+                onClick={() => openExternal(BOOKING_URL)}
               >
                 Book a Call
               </Button>

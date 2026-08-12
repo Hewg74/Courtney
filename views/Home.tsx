@@ -31,7 +31,7 @@ export const Home: React.FC<HomeProps> = ({ setView }) => {
           <div className="space-y-8 text-center lg:text-left order-2 lg:order-1 relative">
             <Reveal variant="fadeUp" delay={0.2} className="mx-auto lg:mx-0">
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif text-sand-900 leading-[1.05] tracking-tight">
-                Helping adults & families feel steadier, calmer, & <span className="whitespace-nowrap">more <span className="italic font-light bg-clip-text text-transparent bg-gradient-to-r from-clay-600 to-clay-400 pb-2">connected.</span></span>
+                Helping adults & families feel steadier, calmer & <span className="whitespace-nowrap">more <span className="italic font-light bg-clip-text text-transparent bg-gradient-to-r from-clay-600 to-clay-400 pb-2">connected.</span></span>
               </h1>
             </Reveal>
 
@@ -43,7 +43,7 @@ export const Home: React.FC<HomeProps> = ({ setView }) => {
 
             <Reveal variant="fadeUp" delay={0.5} className="mx-auto lg:mx-0">
               <p className="text-sm text-sand-500 max-w-lg mx-auto lg:mx-0 tracking-wide">
-                Areas I support: stress · anxiety · ADHD · executive functioning · communication · routines · behavior · sleep
+                Areas of support: stress · anxiety · ADHD · executive functioning · communication · routines · behavior · sleep
               </p>
             </Reveal>
 

@@ -182,7 +182,7 @@ export const WorkWithMe: React.FC<WorkWithMeProps> = ({ setView }) => {
                             <div className="space-y-8 text-sand-700 leading-relaxed font-light">
                                 <div>
                                     <h4 className="font-serif text-2xl text-sand-900 mb-3">Session format</h4>
-                                    <p className="text-base">Sessions are 30 minutes, online via Google Meet. We check in, explore tools and strategies, and agree on a small next step. The tone is collaborative, practical, and judgment-free.</p>
+                                    <p className="text-base">Sessions are online via Google Meet. We check in, explore tools and strategies, and agree on a small next step. The tone is collaborative, practical, and judgment-free.</p>
                                 </div>
                                 <div>
                                     <h4 className="font-serif text-2xl text-sand-900 mb-3">Strengths-based approach</h4>
@@ -225,7 +225,7 @@ export const WorkWithMe: React.FC<WorkWithMeProps> = ({ setView }) => {
                             </p>
                             <div className="space-y-4 mb-10">
                                 {[
-                                    "Six 30-minute sessions",
+                                    "Six sessions",
                                     "Bi-weekly scheduling (flexible)",
                                     "Parent support included (for family coaching)",
                                     "Customized to your goals",
@@ -254,7 +254,7 @@ export const WorkWithMe: React.FC<WorkWithMeProps> = ({ setView }) => {
                             </p>
                             <div className="space-y-4 mb-10">
                                 {[
-                                    "One 30-minute session",
+                                    "One session",
                                     "Flexible scheduling",
                                     "Support during a hard week",
                                     "Troubleshoot routines or communication",

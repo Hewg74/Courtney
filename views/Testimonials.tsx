@@ -197,11 +197,7 @@ const CATEGORIES: TestimonialCategory[] = [
   {
     label: 'Books',
     items: [
-      {
-        quote: "I love your words, Courtney, and I read them in your voice. This book found me in my late thirties and celebrating many friends’ 40th’s this year. I love the title - it has felt taboo to talk about many of the honest things this book discusses and it has certainly felt “wrong” by society to be a woman and to age. So much fear mongering. I remember being younger and being told that those were the best years of our lives and yet I find that I’m having more fun with each decade; and I look to women in their 60s, 70s, and 80s and see so much wisdom and life. I know if we have the privilege of living long that we will look back and think that 40 was infancy.\n\nThere are many lines in this book that I highlighted and resonate with. I really love the part about you becoming more of your whole self and deeply appreciating those wisdom our bodies provide us. Embodiment. I love this and hope you continue to write and share.",
-        author: "Sarafina",
-        context: "AZ"
-      },
+
       {
         quote: "Courtney it was such a relief to read through this table of contents it addresses so many things I’ve been grappling with and have been curious about forever. I’m excited to get deeper in to understanding how to work with everything. I’m only barely into ch 1 but your writing is so fun to read also!! Thank you again!!",
         author: "Zoe",
@@ -236,6 +232,11 @@ const CATEGORIES: TestimonialCategory[] = [
         quote: "I read the first chapter of your book that you had offered as a free download a while back - it's soo good!!! I usually don't like to read things on a computer but I actually might make an exception for this one since it's so good :)",
         author: "Tiffany",
         context: "CA"
+      },
+      {
+        quote: "I love your words, Courtney, and I read them in your voice. This book found me in my late thirties and celebrating many friends’ 40th’s this year. I love the title - it has felt taboo to talk about many of the honest things this book discusses and it has certainly felt “wrong” by society to be a woman and to age. So much fear mongering. I remember being younger and being told that those were the best years of our lives and yet I find that I’m having more fun with each decade; and I look to women in their 60s, 70s, and 80s and see so much wisdom and life. I know if we have the privilege of living long that we will look back and think that 40 was infancy.\n\nThere are many lines in this book that I highlighted and resonate with. I really love the part about you becoming more of your whole self and deeply appreciating those wisdom our bodies provide us. Embodiment. I love this and hope you continue to write and share.",
+        author: "Sarafina",
+        context: "AZ"
       }
     ]
   }

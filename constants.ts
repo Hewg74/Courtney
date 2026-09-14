@@ -393,7 +393,7 @@ export const FAQ_ITEMS = [
   },
   {
     q: "What does a typical session look like?",
-    a: "Sessions are 30 minutes, online via Google Meet. We check in on the week's wins and challenges, explore a new tool or strategy, and agree on a small next step to try before the next session. It's collaborative and practical."
+    a: "Sessions are online via Google Meet. We check in on the week's wins and challenges, explore a new tool or strategy, and agree on a small next step to try before the next session. It's collaborative and practical."
   },
   {
     q: "How long do people typically work with you?",

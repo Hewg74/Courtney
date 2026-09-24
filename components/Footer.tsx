@@ -3,7 +3,7 @@ import { ViewState } from '../types';
 import { Instagram, Youtube, ArrowUpRight } from 'lucide-react';
 import { Rings } from './Rings';
 import { Button } from './Button';
-import { INSTAGRAM_URL, YOUTUBE_URL, CALENDLY_URL, openExternal } from '../constants';
+import { INSTAGRAM_URL, YOUTUBE_URL, BOOKING_URL, openExternal } from '../constants';
 
 interface FooterProps {
   setView: (view: ViewState) => void;
@@ -33,7 +33,7 @@ export const Footer: React.FC<FooterProps> = ({ setView }) => {
               <em className="text-clay-glow">connected.</em>
             </p>
             <div className="flex flex-wrap gap-3">
-              <Button variant="light" arrow onClick={() => openExternal(CALENDLY_URL)}>
+              <Button variant="light" arrow onClick={() => openExternal(BOOKING_URL)}>
                 Book a free chat
               </Button>
               <a

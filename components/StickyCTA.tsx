@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from 'framer-motion';
 import { CalendarHeart } from 'lucide-react';
 import { EASE } from './Reveal';
-import { CALENDLY_URL, openExternal } from '../constants';
+import { BOOKING_URL, openExternal } from '../constants';
 
 export const StickyCTA: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -26,7 +26,7 @@ export const StickyCTA: React.FC = () => {
           className="fixed z-40 right-4 md:right-6 bottom-[max(1rem,env(safe-area-inset-bottom))] md:bottom-6"
         >
           <button
-            onClick={() => openExternal(CALENDLY_URL)}
+            onClick={() => openExternal(BOOKING_URL)}
             className="group flex items-center gap-2.5 min-h-[52px] pl-4 pr-6 rounded-full bg-forest text-mist shadow-lift hover:bg-ink transition-colors duration-feedback"
           >
             <CalendarHeart size={18} strokeWidth={1.5} className="text-clay-glow" aria-hidden="true" />

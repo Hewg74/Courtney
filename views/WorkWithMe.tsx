@@ -5,7 +5,7 @@ import { Button } from '../components/Button';
 import { Reveal, Photo, EASE } from '../components/Reveal';
 import { Rings } from '../components/Rings';
 import { ViewState } from '../types';
-import { FAQ_ITEMS, CALENDLY_URL, openExternal } from '../constants';
+import { FAQ_ITEMS, BOOKING_URL, openExternal } from '../constants';
 
 interface WorkWithMeProps {
   setView: (view: ViewState) => void;
@@ -221,7 +221,7 @@ const Pricing: React.FC<WorkWithMeProps> = ({ setView }) => (
                 </li>
               ))}
             </ul>
-            <Button variant="light" arrow className="relative mt-8 w-full justify-center" onClick={() => openExternal(CALENDLY_URL)}>
+            <Button variant="light" arrow className="relative mt-8 w-full justify-center" onClick={() => openExternal(BOOKING_URL)}>
               Book a Free 15-Min Chat
             </Button>
             <p className="relative mt-4 text-[0.8125rem] text-mist-2 text-center">Hawaii GE Tax applies</p>
@@ -252,7 +252,7 @@ const Pricing: React.FC<WorkWithMeProps> = ({ setView }) => (
                 </li>
               ))}
             </ul>
-            <Button variant="outline" arrow className="mt-8 w-full justify-center" onClick={() => openExternal(CALENDLY_URL)}>
+            <Button variant="outline" arrow className="mt-8 w-full justify-center" onClick={() => openExternal(BOOKING_URL)}>
               Book a Free 15-Min Chat
             </Button>
             <p className="mt-4 text-[0.8125rem] text-ink-2 text-center">Hawaii GE Tax applies</p>
@@ -376,7 +376,7 @@ const CTA: React.FC = () => (
             Book a free 15-minute chat to talk through what might work for you.
           </p>
           <div className="mt-10 flex flex-wrap justify-center gap-3">
-            <Button size="lg" arrow onClick={() => openExternal(CALENDLY_URL)}>
+            <Button size="lg" arrow onClick={() => openExternal(BOOKING_URL)}>
               Book a Free Chat
             </Button>
           </div>

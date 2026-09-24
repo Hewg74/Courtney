@@ -5,7 +5,7 @@ import { Button } from './Button';
 import { Rings } from './Rings';
 import { EASE } from './Reveal';
 import { Menu, X } from 'lucide-react';
-import { CALENDLY_URL, openExternal } from '../constants';
+import { BOOKING_URL, openExternal } from '../constants';
 
 interface NavigationProps {
   currentView: ViewState;
@@ -107,7 +107,7 @@ export const Navigation: React.FC<NavigationProps> = ({ currentView, setView }) 
                 </button>
               );
             })}
-            <Button size="sm" className="ml-4" onClick={() => openExternal(CALENDLY_URL)}>
+            <Button size="sm" className="ml-4" onClick={() => openExternal(BOOKING_URL)}>
               Book a Call
             </Button>
           </div>
@@ -169,7 +169,7 @@ export const Navigation: React.FC<NavigationProps> = ({ currentView, setView }) 
                 transition={{ delay: 0.4, duration: 0.5, ease: EASE }}
                 className="pt-10 space-y-5"
               >
-                <Button size="lg" arrow className="w-full" onClick={() => openExternal(CALENDLY_URL)}>
+                <Button size="lg" arrow className="w-full" onClick={() => openExternal(BOOKING_URL)}>
                   Book a free 15-min chat
                 </Button>
                 <a href="mailto:hello@courtneyalex.com" className="block text-center text-ink-2">

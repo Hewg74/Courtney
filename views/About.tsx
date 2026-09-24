@@ -4,7 +4,7 @@ import { Button } from '../components/Button';
 import { Reveal, Photo } from '../components/Reveal';
 import { Rings } from '../components/Rings';
 import { ViewState } from '../types';
-import { CALENDLY_URL, openExternal } from '../constants';
+import { BOOKING_URL, openExternal } from '../constants';
 
 interface AboutProps {
   setView: (view: ViewState) => void;
@@ -245,7 +245,7 @@ const Close: React.FC = () => (
             Book a free 15-minute chat to see if coaching is a good fit.
           </p>
           <div className="mt-10 flex justify-center">
-            <Button size="lg" arrow onClick={() => openExternal(CALENDLY_URL)}>
+            <Button size="lg" arrow onClick={() => openExternal(BOOKING_URL)}>
               Book a Free Chat
             </Button>
           </div>

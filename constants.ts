@@ -1,7 +1,7 @@
 import { Testimonial } from './types';
 
 // ─── Centralized URLs ───
-export const CALENDLY_URL = 'https://calendly.com/courtneyalex-int/15min';
+export const BOOKING_URL = 'https://calendar.app.google/qQz9XzBxfi2vMC7R7';
 export const INSTAGRAM_URL = 'https://instagram.com/courtneyalex_healthcoach';
 export const YOUTUBE_URL = 'https://youtube.com/@courtneyalexqi';
 
@@ -363,6 +363,18 @@ export const TESTIMONIALS: Testimonial[] = [
     quote: "My friend picked up your book in the US and told me about it and I just wanted to say I love your book!! I’ve been telling all my friends here in Scotland about it….Thank you for sharing your journey.",
     author: "Anonymous",
     context: "Scotland"
+  },
+  {
+    id: '60',
+    quote: "Courtney it was such a relief to read through this table of contents it addresses so many things I’ve been grappling with and have been curious about forever. I’m excited to get deeper in to understanding how to work with everything. I’m only barely into ch 1 but your writing is so fun to read also!! Thank you again!!",
+    author: "Zoe",
+    context: "CO"
+  },
+  {
+    id: '61',
+    quote: "I love your words, Courtney, and I read them in your voice. This book found me in my late thirties and celebrating many friends’ 40th’s this year. I love the title - it has felt taboo to talk about many of the honest things this book discusses and it has certainly felt “wrong” by society to be a woman and to age. So much fear mongering. I remember being younger and being told that those were the best years of our lives and yet I find that I’m having more fun with each decade; and I look to women in their 60s, 70s, and 80s and see so much wisdom and life. I know if we have the privilege of living long that we will look back and think that 40 was infancy.\n\nThere are many lines in this book that I highlighted and resonate with. I really love the part about you becoming more of your whole self and deeply appreciating those wisdom our bodies provide us. Embodiment. I love this and hope you continue to write and share.",
+    author: "Sarafina",
+    context: "AZ"
   }
 ];
 
@@ -381,7 +393,7 @@ export const FAQ_ITEMS = [
   },
   {
     q: "What does a typical session look like?",
-    a: "Sessions are 30 minutes, online via Google Meet. We check in on the week's wins and challenges, explore a new tool or strategy, and agree on a small next step to try before the next session. It's collaborative and practical."
+    a: "Sessions are online via Google Meet. We check in on the week's wins and challenges, explore a new tool or strategy, and agree on a small next step to try before the next session. It's collaborative and practical."
   },
   {
     q: "How long do people typically work with you?",

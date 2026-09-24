@@ -5,7 +5,7 @@ import { Button } from '../components/Button';
 import { Reveal, Photo, EASE } from '../components/Reveal';
 import { Rings } from '../components/Rings';
 import { ViewState } from '../types';
-import { openExternal, CALENDLY_URL, TESTIMONIALS } from '../constants';
+import { openExternal, BOOKING_URL, TESTIMONIALS } from '../constants';
 
 interface HomeProps {
   setView: (view: ViewState) => void;
@@ -88,7 +88,7 @@ const Hero: React.FC<HomeProps> = ({ setView }) => (
               Work With Me
             </Button>
             <button
-              onClick={() => openExternal(CALENDLY_URL)}
+              onClick={() => openExternal(BOOKING_URL)}
               className="link-underline text-ink hover:text-clay-deep font-medium"
             >
               Book a free 15-min chat
@@ -439,7 +439,7 @@ const Close: React.FC<HomeProps> = ({ setView }) => (
             <Button size="lg" arrow onClick={() => setView('contact')}>
               Contact
             </Button>
-            <Button size="lg" variant="outline" onClick={() => openExternal(CALENDLY_URL)}>
+            <Button size="lg" variant="outline" onClick={() => openExternal(BOOKING_URL)}>
               Book a free chat
             </Button>
           </div>

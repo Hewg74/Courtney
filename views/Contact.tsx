@@ -2,7 +2,7 @@ import React from 'react';
 import { CalendarHeart, Mail } from 'lucide-react';
 import { Button } from '../components/Button';
 import { Reveal, Photo } from '../components/Reveal';
-import { CALENDLY_URL, INSTAGRAM_URL, YOUTUBE_URL, openExternal } from '../constants';
+import { BOOKING_URL, INSTAGRAM_URL, YOUTUBE_URL, openExternal } from '../constants';
 
 /* ─── Page header ─── */
 const Header: React.FC = () => (
@@ -35,7 +35,7 @@ const Options: React.FC = () => (
             A 15-minute intro call to talk about what you're looking for and see if coaching is a good fit.
           </p>
           <div className="mt-8">
-            <Button variant="light" size="lg" arrow onClick={() => openExternal(CALENDLY_URL)}>
+            <Button variant="light" size="lg" arrow onClick={() => openExternal(BOOKING_URL)}>
               Schedule on Calendly
             </Button>
           </div>

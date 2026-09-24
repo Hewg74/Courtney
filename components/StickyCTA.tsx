@@ -30,7 +30,7 @@ export const StickyCTA: React.FC = () => {
             className="group flex items-center gap-2.5 min-h-[52px] pl-4 pr-6 rounded-full bg-forest text-mist shadow-lift hover:bg-ink transition-colors duration-feedback"
           >
             <CalendarHeart size={18} strokeWidth={1.5} className="text-clay-glow" aria-hidden="true" />
-            <span className="text-[0.9375rem] font-medium">Book a free chat</span>
+            <span className="text-[0.9375rem] font-medium">Book a Call</span>
           </button>
         </motion.div>
       )}

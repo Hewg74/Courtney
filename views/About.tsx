@@ -55,7 +55,7 @@ const TRAINING_COL_2 = [
   <>Children's literacy programs at 826Valencia &amp; Reading Partners; Tutoring kids of all ages at Education Therapy</>,
   <>Certified Holden Qigong Teacher</>,
   <>
-    Author of <em>Trust Your Magical Self</em>
+    Author of <em>Turning 40 &amp; Other Things We're Not Supposed to Do</em> and <em>Trust Your Magical Self</em>
   </>,
 ];
 
@@ -108,7 +108,8 @@ const Intro: React.FC = () => (
           </p>
           <p>
             I've worked at organizations like Education Therapy, 826 Valencia, and Reading Partners, and as
-            faculty at Lumeria Maui Retreat Center. I'm also the author of <em>Trust Your Magical Self</em>.
+            faculty at Lumeria Maui Retreat Center. I'm also the author of{' '}
+            <em>Turning 40 &amp; Other Things We're Not Supposed to Do</em> and <em>Trust Your Magical Self</em>.
           </p>
           <p>
             When I'm not coaching, you’ll probably find me in the garden, painting, drawing, or learning something

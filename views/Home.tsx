@@ -140,13 +140,13 @@ const Hero: React.FC<HomeProps> = ({ setView }) => (
               onClick={() => openExternal(BOOKING_URL)}
               className="link-underline text-ink hover:text-clay-deep font-medium py-2"
             >
-              Book a free 15-min chat
+              Book a Call
             </button>
           </div>
         </Reveal>
         <Reveal delay={0.9}>
           <p className="mt-10 md:mt-12 pt-6 border-t hairline max-w-[34rem] text-[0.9375rem] text-ink-2">
-            <span className="whitespace-nowrap">Board-certified coach (NBC-HWC)</span> <span className="text-clay mx-1.5">&middot;</span>{' '}
+            <span className="whitespace-nowrap">NBC-HWC certified</span> <span className="text-clay mx-1.5">&middot;</span>{' '}
             <span className="whitespace-nowrap">Qigong teacher</span> <span className="text-clay mx-1.5">&middot;</span> Author
           </p>
         </Reveal>
@@ -171,8 +171,8 @@ const Hero: React.FC<HomeProps> = ({ setView }) => (
           />
           <Reveal delay={1.2} variant="fade" width="fit-content" className="absolute -bottom-5 -right-4 sm:right-auto sm:-left-8">
             <div className="rounded-md bg-paper-2 shadow-lift px-4 py-3 sm:px-5 sm:py-3.5">
-              <p className="font-serif italic text-base sm:text-lg leading-tight text-ink">In person on Maui,</p>
-              <p className="font-serif italic text-base sm:text-lg leading-tight text-ink-2">online everywhere.</p>
+              <p className="font-serif italic text-base sm:text-lg leading-tight text-ink">In-person on Maui,</p>
+              <p className="font-serif italic text-base sm:text-lg leading-tight text-ink-2">virtual worldwide.</p>
             </div>
           </Reveal>
         </div>
@@ -328,7 +328,7 @@ const Breath: React.FC = () => {
     <section aria-label="A one-breath practice" className="relative bg-forest text-mist overflow-hidden">
       <div className="max-w-[1320px] mx-auto px-5 md:px-8 md:min-h-[100svh] py-section flex flex-col items-center justify-center text-center">
         <Reveal>
-          <p className="font-serif italic text-2xl md:text-[1.75rem] text-mist-2">Try this with me, right now.</p>
+          <p className="font-serif italic text-2xl md:text-[1.75rem] text-mist-2">Here's a fun tool that you can try…or not!</p>
         </Reveal>
         <div className="relative w-[min(92vw,720px)] my-10 md:my-14">
           <Rings className="w-full text-mist/80" strokeWidth={1.25} draw breathe glow="#D9957C" onPhase={setPhase} />
@@ -353,7 +353,8 @@ const Breath: React.FC = () => {
         </div>
         <Reveal delay={0.2}>
           <p className="text-body-lg text-mist-2 max-w-[36rem] mx-auto">
-            Small, practical tools like this one - built into your real week - are a big part of how we work together.
+            Coaching is not one size fits all. Together, we work to find tools that you enjoy doing, so you'll actually
+            want to fit them into your day.
           </p>
         </Reveal>
       </div>
@@ -469,12 +470,17 @@ const Intro: React.FC<HomeProps> = ({ setView }) => (
       </Reveal>
       <Reveal delay={0.15} className="lg:col-span-5 lg:pt-6">
         <ul className="border-t hairline">
-          {[
+          {([
             ['Board-certified', 'National Board-Certified Health & Wellness Coach (NBC-HWC)'],
             ['Clinical teams', 'Coaching experience through leading digital health organizations, collaborating with licensed pediatric therapists and psychiatric providers'],
             ['Qigong', 'Certified Holden Qigong teacher'],
-            ['Writing', 'Author of two books'],
-          ].map(([k, v]) => (
+            [
+              'Writing',
+              <>
+                Author of <em>Turning 40 &amp; Other Things We're Not Supposed to Do</em> and <em>Trust Your Magical Self</em>
+              </>,
+            ],
+          ] as [string, React.ReactNode][]).map(([k, v]) => (
             <li key={k} className="grid grid-cols-[8.5rem_1fr] gap-4 py-5 border-b hairline">
               <span className="font-serif italic text-lg text-clay-deep">{k}</span>
               <span className="text-[0.975rem] text-ink-2 leading-relaxed">{v}</span>
@@ -502,7 +508,7 @@ const Close: React.FC<HomeProps> = ({ setView }) => (
               Contact
             </Button>
             <Button size="lg" variant="outline" onClick={() => openExternal(BOOKING_URL)}>
-              Book a free chat
+              Book a Call
             </Button>
           </div>
         </Reveal>

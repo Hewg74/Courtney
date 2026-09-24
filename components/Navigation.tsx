@@ -173,7 +173,7 @@ export const Navigation: React.FC<NavigationProps> = ({ currentView, setView }) 
                 className="pt-10 space-y-5"
               >
                 <Button size="lg" arrow className="w-full" onClick={() => openExternal(BOOKING_URL)}>
-                  Book a free 15-min chat
+                  Book a Call
                 </Button>
                 <a href="mailto:hello@courtneyalex.com" className="block text-center text-ink-2">
                   hello@courtneyalex.com

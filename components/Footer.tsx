@@ -34,7 +34,7 @@ export const Footer: React.FC<FooterProps> = ({ setView }) => {
             </p>
             <div className="flex flex-wrap gap-3">
               <Button variant="light" arrow onClick={() => openExternal(BOOKING_URL)}>
-                Book a free chat
+                Book a Call
               </Button>
               <a
                 href="mailto:hello@courtneyalex.com"

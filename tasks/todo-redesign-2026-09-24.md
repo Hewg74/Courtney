@@ -28,7 +28,7 @@ Tell-someone sentence: "Her website literally breathes with you."
 - Hairlines `rgba(43,42,36,0.12)`. On forest `rgba(242,238,230,0.14)`.
 - Type: display Cormorant Garamond (hers; kept) 400/500 + italic 400. Body Figtree 400/500/600 (replaces Inter). Display line-height <= 1.05, `text-wrap: balance` on headings, `pretty` on body. Body 17-18px, never below 14px on anything readable.
 - Radius system: 4 tiers only: `sm 10px` (inputs, chips), `md 18px` (cards), `lg 28px` (large panels), `full` (buttons, arch tops). Nested = outer = inner + padding.
-- Spacing from a 4px base; section padding `clamp(88px, 12vw, 168px)`.
+- Spacing from a 4px base; section padding `clamp(64px, 10vw, 152px)`.
 
 ## Motion constants (organic grammar: grow, draw, breathe; no blur, no bouncy springs)
 - `EASE = [0.22, 1, 0.36, 1]` (css `cubic-bezier(.22,1,.36,1)`), `EASE_BREATH = [0.45, 0, 0.55, 1]` (sine in-out).
@@ -38,7 +38,8 @@ Tell-someone sentence: "Her website literally breathes with you."
 - Images enter by clip-path grow (inset 12% -> 0 with radius), not fade.
 - The rings (`<Rings/>`) draw on via stroke-dashoffset (1.6s) then breathe (scale 1 -> 1.06, gap widening).
 - Scroll: framer `useScroll` only; no `window.addEventListener('scroll')`.
-- `prefers-reduced-motion`: everything renders in its final state, rings static.
+- `prefers-reduced-motion`: everything renders in its final state (no page fades, no headline rise, no parallax), rings and nav logo static.
+- Page transitions: fade out 0.2s, scroll lands (top for a new visit, the saved spot on Back/Forward, stored per history entry), new page rises 14px over 0.55s.
 
 ## Bans (this build)
 - No em or en dashes in visible copy. Hyphen only (her dash-contrast uses " - ").
@@ -48,7 +49,7 @@ Tell-someone sentence: "Her website literally breathes with you."
 - No 3/4/6 equal cards as a default grid. Rows, lists, asymmetric splits.
 - Copy: her words are kept verbatim. Any NEW line is marked in the summary for client approval.
 
-## Pages (all keep routes, links, prices, Calendly, emails, FAQ, testimonials verbatim)
+## Pages (all keep routes, links, prices, booking link (Google Calendar BOOKING_URL since her Sept edits), emails, FAQ, testimonials verbatim)
 - Home, Work With Me, Qigong, About, Testimonials, Books, Contact, Nav, Footer, StickyCTA.
 
 ## Verify
@@ -61,4 +62,5 @@ Tell-someone sentence: "Her website literally breathes with you."
 - [ ] Prod courtneyalex.com unchanged (same bundle hash as before)
 
 ## Review
-(filled in when done)
+- v2 staged 2026-09-24; phone + polish round and Courtney's Aug-Sep copy merged the same day (synced to her main at 6419823).
+- Three Codex rounds triaged; all blockers fixed. Text parity vs live site: 100% on Work With Me, About, Testimonials, Books.

@@ -56,7 +56,7 @@
 @layer components {
   /* Page top offset so content clears the fixed nav. */
   .page-top {
-    padding-top: clamp(128px, 14vw, 176px);
+    padding-top: clamp(112px, 13vw, 176px);
   }
 
   .hairline {

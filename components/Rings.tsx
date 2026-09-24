@@ -117,6 +117,8 @@ interface RingsProps {
   glow?: string;
   /** Called with 'in' | 'out' when the breath turns (only while breathing). */
   onPhase?: (phase: 'in' | 'out') => void;
+  /** Drive the lens tint from outside (0-1), e.g. scroll progress. Needs `glow`. */
+  lens?: MotionValue<number>;
   title?: string;
 }
 
@@ -128,6 +130,7 @@ export const Rings: React.FC<RingsProps> = ({
   breathe = false,
   glow,
   onPhase,
+  lens,
   title,
 }) => {
   const ref = useRef<SVGSVGElement>(null);
@@ -165,7 +168,7 @@ export const Rings: React.FC<RingsProps> = ({
   let body: React.ReactNode = null;
   if (animateDraw && !seen) body = null; // wait offscreen so the draw-on is actually seen
   else if (live) body = <BreathingCircles {...common} onPhase={onPhase} />;
-  else body = <Circles cxL={CX_L} cxR={CX_R} r={R} lensOpacity={0.15} {...common} />;
+  else body = <Circles cxL={CX_L} cxR={CX_R} r={R} lensOpacity={lens ?? 0.15} {...common} />;
 
   return (
     <svg

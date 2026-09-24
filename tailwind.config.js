@@ -38,7 +38,7 @@ export default {
         body: ['1.0625rem', { lineHeight: '1.7' }],
       },
       spacing: {
-        section: 'clamp(88px, 12vw, 168px)',
+        section: 'clamp(64px, 10vw, 152px)',
       },
       boxShadow: {
         lift: '0 1px 2px rgba(43, 42, 36, 0.04), 0 12px 32px -12px rgba(43, 42, 36, 0.14)',

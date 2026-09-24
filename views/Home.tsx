@@ -39,7 +39,7 @@ const OFFERINGS: { title: string; desc: string; cta: string; view: ViewState; im
     view: 'contact',
     img: '/images/teaching-class.webp',
     alt: 'Courtney leading a workshop for a seated group',
-    pos: 'center 25%',
+    pos: 'center 8%',
   },
   {
     title: 'Qigong Classes',
@@ -67,51 +67,101 @@ const FEATURED = [TESTIMONIALS[4], TESTIMONIALS[1], TESTIMONIALS[12]];
 const cite = (t: { author: string; context?: string }) => (t.context ? `${t.author}, ${t.context}` : t.author);
 
 /* ─── Hero ─── */
+const HEADLINE = ['Helping', 'adults', '&', 'families', 'feel', 'steadier,', 'calmer', '&', 'more'];
+
+// The one kinetic-type moment on the site: words rise into place, then a hand-drawn stroke underlines "connected."
+const Headline: React.FC = () => {
+  const reduce = useReducedMotion();
+  const word = (i: number) =>
+    reduce
+      ? {}
+      : {
+          initial: { y: '105%' },
+          animate: { y: '0%' },
+          transition: { duration: 1, delay: 0.15 + i * 0.07, ease: EASE },
+        };
+  const last = HEADLINE.length;
+  return (
+    <h1 className="font-serif text-display-xl text-ink max-w-[14ch]">
+      {HEADLINE.map((w, i) => (
+        <React.Fragment key={i}>
+          <span className="inline-block overflow-hidden align-bottom pb-[0.12em] -mb-[0.12em]">
+            <motion.span className="inline-block" {...word(i)}>
+              {w}
+            </motion.span>
+          </span>{' '}
+        </React.Fragment>
+      ))}
+      <span className="relative inline-block overflow-visible whitespace-nowrap">
+        <span className="inline-block overflow-hidden align-bottom pb-[0.12em] -mb-[0.12em]">
+          <motion.em className="inline-block text-clay pr-[0.06em]" {...word(last)}>
+            connected.
+          </motion.em>
+        </span>
+        <svg
+          viewBox="0 0 300 24"
+          preserveAspectRatio="none"
+          aria-hidden
+          className="absolute left-[2%] -bottom-[0.12em] w-[94%] h-[0.28em] text-clay/70 overflow-visible"
+        >
+          <motion.path
+            d="M4 15 C 58 6, 118 21, 178 12 S 268 7, 296 13"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2.4"
+            strokeLinecap="round"
+            vectorEffect="non-scaling-stroke"
+            initial={reduce ? false : { pathLength: 0 }}
+            animate={{ pathLength: 1 }}
+            transition={{ duration: 1.1, delay: 0.15 + last * 0.07 + 0.55, ease: [0.65, 0, 0.35, 1] }}
+          />
+        </svg>
+      </span>
+    </h1>
+  );
+};
+
 const Hero: React.FC<HomeProps> = ({ setView }) => (
   <section className="relative page-top pb-16 md:pb-24 overflow-hidden">
-    <div className="max-w-[1320px] mx-auto px-5 md:px-8 grid lg:grid-cols-12 gap-14 lg:gap-10 items-center">
-      <div className="lg:col-span-7 lg:pr-6 relative z-10">
-        <Reveal>
-          <h1 className="font-serif text-display-xl text-ink max-w-[14ch]">
-            Helping adults & families feel steadier, calmer, & more{' '}
-            <em className="text-clay whitespace-nowrap">connected.</em>
-          </h1>
-        </Reveal>
-        <Reveal delay={0.15}>
-          <p className="mt-8 text-body-lg text-ink-2 max-w-[34rem]">
+    <div className="max-w-[1320px] mx-auto px-5 md:px-8 grid lg:grid-cols-12 gap-12 lg:gap-10 items-center">
+      <div className="order-2 lg:order-1 lg:col-span-7 lg:pr-6 relative z-10">
+        <Headline />
+        <Reveal delay={0.7}>
+          <p className="mt-7 md:mt-8 text-body-lg text-ink-2 max-w-[34rem]">
             Coaching and mind-body tools for stress relief, emotional regulation, and resilience for adults, parents, and kids.
           </p>
         </Reveal>
-        <Reveal delay={0.25}>
-          <div className="mt-10 flex flex-wrap items-center gap-x-7 gap-y-4">
+        <Reveal delay={0.8}>
+          <div className="mt-9 md:mt-10 flex flex-wrap items-center gap-x-7 gap-y-4">
             <Button size="lg" arrow onClick={() => setView('work-with-me')}>
               Work With Me
             </Button>
             <button
               onClick={() => openExternal(BOOKING_URL)}
-              className="link-underline text-ink hover:text-clay-deep font-medium"
+              className="link-underline text-ink hover:text-clay-deep font-medium py-2"
             >
               Book a free 15-min chat
             </button>
           </div>
         </Reveal>
-        <Reveal delay={0.35}>
-          <p className="mt-12 pt-6 border-t hairline max-w-[34rem] text-[0.9375rem] text-ink-2">
+        <Reveal delay={0.9}>
+          <p className="mt-10 md:mt-12 pt-6 border-t hairline max-w-[34rem] text-[0.9375rem] text-ink-2">
             <span className="whitespace-nowrap">Board-certified coach (NBC-HWC)</span> <span className="text-clay mx-1.5">&middot;</span>{' '}
             <span className="whitespace-nowrap">Qigong teacher</span> <span className="text-clay mx-1.5">&middot;</span> Author
           </p>
         </Reveal>
       </div>
 
-      <div className="lg:col-span-5 relative">
-        <div className="relative mx-auto w-[min(82vw,440px)] lg:w-full lg:max-w-[460px] lg:ml-auto">
+      <div className="order-1 lg:order-2 lg:col-span-5 relative">
+        <div className="relative mx-auto w-[min(74vw,340px)] sm:w-[min(60vw,400px)] lg:w-full lg:max-w-[460px] lg:ml-auto">
           <Photo
             src="/images/headshot.webp"
             alt="Courtney Alex, health and wellness coach, smiling among Maui greenery"
             priority
+            drift={28}
             radius="999px 999px 28px 28px"
-            className="aspect-[4/5.2] shadow-photo"
-            imgClassName="object-[center_20%]"
+            className="aspect-[4/5] lg:aspect-[4/5.2] shadow-photo"
+            imgClassName="object-[center_22%]"
           />
           <Rings
             className="absolute -left-[16%] top-[3%] w-[58%] text-clay pointer-events-none"
@@ -119,10 +169,10 @@ const Hero: React.FC<HomeProps> = ({ setView }) => (
             draw
             breathe
           />
-          <Reveal delay={0.9} variant="fade" width="fit-content" className="absolute -bottom-5 left-4 sm:-left-8">
-            <div className="rounded-md bg-paper-2 shadow-lift px-5 py-3.5">
-              <p className="font-serif italic text-lg leading-tight text-ink">In person on Maui,</p>
-              <p className="font-serif italic text-lg leading-tight text-ink-2">online everywhere.</p>
+          <Reveal delay={1.2} variant="fade" width="fit-content" className="absolute -bottom-5 -right-4 sm:right-auto sm:-left-8">
+            <div className="rounded-md bg-paper-2 shadow-lift px-4 py-3 sm:px-5 sm:py-3.5">
+              <p className="font-serif italic text-base sm:text-lg leading-tight text-ink">In person on Maui,</p>
+              <p className="font-serif italic text-base sm:text-lg leading-tight text-ink-2">online everywhere.</p>
             </div>
           </Reveal>
         </div>
@@ -145,24 +195,32 @@ const AreasBand: React.FC = () => {
     </span>
   );
   return (
-    <section aria-label="Areas I support" className="border-y hairline py-6 md:py-8 overflow-hidden">
-      <p className="sr-only">Areas I support: {AREAS.join(', ')}.</p>
-      {reduce ? (
-        <p className="px-5 text-center font-serif italic text-2xl text-ink" aria-hidden>
-          {AREAS.join(' · ')}
+    <section aria-label="Areas of support" className="border-y hairline overflow-hidden">
+      <p className="sr-only">Areas of support: {AREAS.join(', ')}.</p>
+      <div className="flex flex-col md:flex-row md:items-center">
+        <p
+          aria-hidden
+          className="shrink-0 px-5 pt-5 md:pt-0 md:pl-8 md:pr-8 md:py-3 md:translate-y-[5px] md:border-r hairline text-[0.9375rem] text-ink-2 text-center md:text-left"
+        >
+          Areas of support
         </p>
-      ) : (
-        <div className="flex w-max [mask-image:linear-gradient(90deg,transparent,#000_8%,#000_92%,transparent)]">
-          <motion.div
-            className="flex"
-            animate={{ x: ['0%', '-50%'] }}
-            transition={{ duration: 70, ease: 'linear', repeat: Infinity }}
-          >
-            {row}
-            {row}
-          </motion.div>
+        <div className="min-w-0 flex-1 py-4 md:py-8 overflow-hidden [mask-image:linear-gradient(90deg,transparent,#000_8%,#000_92%,transparent)]">
+          {reduce ? (
+            <p className="px-5 text-center font-serif italic text-2xl text-ink" aria-hidden>
+              {AREAS.join(' · ')}
+            </p>
+          ) : (
+            <motion.div
+              className="flex w-max"
+              animate={{ x: ['0%', '-50%'] }}
+              transition={{ duration: 70, ease: 'linear', repeat: Infinity }}
+            >
+              {row}
+              {row}
+            </motion.div>
+          )}
         </div>
-      )}
+      </div>
     </section>
   );
 };
@@ -208,8 +266,8 @@ const Offerings: React.FC<HomeProps> = ({ setView }) => {
                 onFocus={() => setActive(i)}
                 className="group w-full text-left py-9 md:py-12 grid gap-6 md:grid-cols-[1fr_auto] md:items-end"
               >
-                <div className="lg:hidden aspect-[16/9] rounded-md overflow-hidden bg-paper-3">
-                  <img src={o.img} alt="" loading="lazy" className="w-full h-full object-cover" style={{ objectPosition: o.pos }} />
+                <div className="lg:hidden">
+                  <Photo src={o.img} alt="" radius="18px" className="aspect-[4/3] bg-paper-3" imgClassName="" pos={o.pos} />
                 </div>
                 <div>
                   <h3
@@ -268,7 +326,7 @@ const Breath: React.FC = () => {
   const reduce = useReducedMotion();
   return (
     <section aria-label="A one-breath practice" className="relative bg-forest text-mist overflow-hidden">
-      <div className="max-w-[1320px] mx-auto px-5 md:px-8 min-h-[100svh] py-section flex flex-col items-center justify-center text-center">
+      <div className="max-w-[1320px] mx-auto px-5 md:px-8 md:min-h-[100svh] py-section flex flex-col items-center justify-center text-center">
         <Reveal>
           <p className="font-serif italic text-2xl md:text-[1.75rem] text-mist-2">Try this with me, right now.</p>
         </Reveal>
@@ -364,7 +422,7 @@ const Voices: React.FC<HomeProps> = ({ setView }) => {
               <span className="block font-serif text-[5rem] leading-[0.6] text-clay-glow" aria-hidden>
                 &ldquo;
               </span>
-              <blockquote className="font-serif text-display-sm md:text-[2.35rem] md:leading-[1.25] text-mist">
+              <blockquote className="font-serif text-[1.45rem] leading-[1.36] md:text-[2.35rem] md:leading-[1.25] text-mist">
                 {t.quote}
               </blockquote>
               <figcaption className="mt-8 text-mist-2">{cite(t)}</figcaption>
@@ -389,7 +447,7 @@ const Intro: React.FC<HomeProps> = ({ setView }) => (
         <h2 className="font-serif text-display-lg text-ink">
           Hi, I'm{' '}
           <span className="inline-block align-middle w-[0.95em] h-[0.95em] md:w-[1.1em] md:h-[1.1em] rounded-full overflow-hidden mx-1 -translate-y-[0.06em] ring-4 ring-paper shadow-lift">
-            <img src="/images/meditation.webp" alt="" className="w-full h-full object-cover" loading="lazy" />
+            <img src="/images/headshot.webp" alt="" className="w-full h-full object-cover object-[50%_21%] scale-[2.1] origin-[50%_21%]" loading="lazy" />
           </span>{' '}
           <em className="text-clay">Courtney.</em>
         </h2>
@@ -398,6 +456,10 @@ const Intro: React.FC<HomeProps> = ({ setView }) => (
         </p>
         <p className="mt-6 text-body text-ink-2 max-w-[48ch]">
           Every session and tool is based on what works for you.
+        </p>
+        <p className="mt-4 text-body text-ink-2 max-w-[48ch]">
+          Board-certified (NBC-HWC) coach supporting adults and families, bringing experience working alongside
+          therapists and psychiatric providers through leading digital health organizations.
         </p>
         <div className="mt-10">
           <Button variant="outline" arrow onClick={() => setView('about')}>

@@ -1,5 +1,5 @@
-import React, { useRef } from 'react';
-import { motion, useInView, useReducedMotion, type Variants } from 'framer-motion';
+import React, { useEffect, useRef, useState } from 'react';
+import { motion, useInView, useReducedMotion, useScroll, useTransform, type Variants } from 'framer-motion';
 
 // Motion constants for the whole site (organic grammar: things grow and settle, nothing bounces).
 export const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1];
@@ -67,6 +67,10 @@ interface PhotoProps {
   radius?: string;
   priority?: boolean;
   delay?: number;
+  /** CSS object-position for the picture. */
+  pos?: string;
+  /** Parallax: the picture drifts this many px inside its frame as the frame crosses the viewport. */
+  drift?: number;
 }
 
 /** A photo that grows open from its center, like a window being drawn back. */
@@ -78,10 +82,25 @@ export const Photo: React.FC<PhotoProps> = ({
   radius = '28px',
   priority = false,
   delay = 0,
+  drift = 0,
+  pos,
 }) => {
-  const ref = useRef(null);
+  const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true, margin: '0px 0px -10% 0px' });
   const reduce = useReducedMotion();
+  const [frameH, setFrameH] = useState(0);
+  useEffect(() => {
+    const el = ref.current;
+    if (!el || !drift) return;
+    const ro = new ResizeObserver(([e]) => setFrameH(e.contentRect.height));
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, [drift]);
+  const { scrollYProgress } = useScroll({ target: ref, offset: ['start end', 'end start'] });
+  const y = useTransform(scrollYProgress, [0, 1], [-drift, drift]);
+  const moving = drift > 0 && !reduce;
+  // A drifting picture is held just large enough (scale grows from the center) to cover the full drift.
+  const rest = moving && frameH > 0 ? 1 + (2 * drift + 4) / frameH : moving ? 1.25 : 1;
   const open = `inset(0% 0% 0% 0% round ${radius})`;
   const closed = `inset(9% 9% 9% 9% round ${radius})`;
 
@@ -101,8 +120,9 @@ export const Photo: React.FC<PhotoProps> = ({
         fetchPriority={priority ? 'high' : undefined}
         decoding="async"
         className={`w-full h-full object-cover ${imgClassName}`}
-        initial={reduce ? { scale: 1 } : { scale: 1.12 }}
-        animate={inView || reduce ? { scale: 1 } : { scale: 1.12 }}
+        style={{ objectPosition: pos, ...(moving ? { y } : {}) }}
+        initial={reduce ? { scale: rest } : { scale: rest + 0.12 }}
+        animate={inView || reduce ? { scale: rest } : { scale: rest + 0.12 }}
         transition={{ duration: 1.6, delay, ease: EASE }}
       />
     </motion.div>

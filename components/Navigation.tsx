@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { motion, AnimatePresence, useScroll, useMotionValueEvent } from 'framer-motion';
+import { motion, AnimatePresence, useScroll, useMotionValueEvent, useTransform, useReducedMotion } from 'framer-motion';
 import { ViewState } from '../types';
 import { Button } from './Button';
 import { Rings } from './Rings';
@@ -24,7 +24,10 @@ const NAV_ITEMS: { label: string; value: ViewState }[] = [
 export const Navigation: React.FC<NavigationProps> = ({ currentView, setView }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
-  const { scrollY } = useScroll();
+  const { scrollY, scrollYProgress } = useScroll();
+  // The logo's overlap fills with clay as you read down the page.
+  const lens = useTransform(scrollYProgress, [0, 1], [0.08, 0.95]);
+  const reduce = useReducedMotion();
 
   useMotionValueEvent(scrollY, 'change', (y) => setIsScrolled(y > 24));
 
@@ -80,7 +83,7 @@ export const Navigation: React.FC<NavigationProps> = ({ currentView, setView }) 
             aria-label="Courtney Alex, home"
             className="group flex items-center gap-3 text-ink"
           >
-            <Rings className="w-10 h-6 text-clay transition-transform duration-500 ease-calm group-hover:scale-110" strokeWidth={1.5} />
+            <Rings className="w-10 h-6 text-clay transition-transform duration-500 ease-calm group-hover:scale-110" strokeWidth={1.5} glow="#B8674F" lens={reduce ? undefined : lens} />
             <span className="font-serif text-[1.55rem] leading-none tracking-[-0.01em]">Courtney Alex</span>
           </button>
 

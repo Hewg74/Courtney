@@ -217,7 +217,9 @@ const MauiMoment: React.FC = () => (
           src="/images/maui.webp"
           alt="Footprints along a quiet Maui beach lined with palm trees"
           radius="28px"
-          className="aspect-[16/9] md:aspect-[21/9] shadow-photo"
+          drift={48}
+          pos="center 62%"
+          className="aspect-[4/3] sm:aspect-[16/9] md:aspect-[21/9] shadow-photo"
         />
         <Reveal delay={0.6} variant="fade" width="fit-content" className="absolute -bottom-5 left-5 sm:left-10">
           <div className="rounded-md bg-paper-2 shadow-lift px-5 py-3.5">

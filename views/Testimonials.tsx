@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Reveal } from '../components/Reveal';
+import { useReducedMotion } from 'framer-motion';
 
 interface PageTestimonial {
   quote: string;
@@ -193,8 +194,13 @@ const CATEGORIES: TestimonialCategory[] = [
     ]
   },
   {
-    label: 'Book',
+    label: 'Books',
     items: [
+      {
+        quote: "Courtney it was such a relief to read through this table of contents it addresses so many things I’ve been grappling with and have been curious about forever. I’m excited to get deeper in to understanding how to work with everything. I’m only barely into ch 1 but your writing is so fun to read also!! Thank you again!!",
+        author: "Zoe",
+        context: "CO"
+      },
       {
         quote: "I finished your book beautifully written and so grateful I found it\u2026 Thank you Courtney for sharing your story and creating language for me about all the magic (synchronicities) that exists.",
         author: "AJ",
@@ -224,6 +230,11 @@ const CATEGORIES: TestimonialCategory[] = [
         quote: "I read the first chapter of your book that you had offered as a free download a while back - it's soo good!!! I usually don't like to read things on a computer but I actually might make an exception for this one since it's so good :)",
         author: "Tiffany",
         context: "CA"
+      },
+      {
+        quote: "I love your words, Courtney, and I read them in your voice. This book found me in my late thirties and celebrating many friends’ 40th’s this year. I love the title - it has felt taboo to talk about many of the honest things this book discusses and it has certainly felt “wrong” by society to be a woman and to age. So much fear mongering. I remember being younger and being told that those were the best years of our lives and yet I find that I’m having more fun with each decade; and I look to women in their 60s, 70s, and 80s and see so much wisdom and life. I know if we have the privilege of living long that we will look back and think that 40 was infancy.\n\nThere are many lines in this book that I highlighted and resonate with. I really love the part about you becoming more of your whole self and deeply appreciating those wisdom our bodies provide us. Embodiment. I love this and hope you continue to write and share.",
+        author: "Sarafina",
+        context: "AZ"
       }
     ]
   }
@@ -235,13 +246,13 @@ const slugify = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').repla
 const Category: React.FC<{ cat: TestimonialCategory }> = ({ cat }) => {
   const [standout, ...rest] = cat.items;
   return (
-    <section id={slugify(cat.label)} className="scroll-mt-32 pb-16 md:pb-20 border-b hairline last:border-b-0">
+    <section id={slugify(cat.label)} data-category className="scroll-mt-36 lg:scroll-mt-32 pt-12 md:pt-16 first:pt-0 pb-12 md:pb-20 border-b hairline last:border-b-0">
       <Reveal>
         <h2 className="font-serif text-display-md text-ink">{cat.label}</h2>
       </Reveal>
       {standout && (
         <Reveal delay={0.08} className="mt-9 max-w-[65ch] border-t hairline pt-9">
-          <blockquote className="font-serif text-display-sm leading-snug text-ink">{standout.quote}</blockquote>
+          <blockquote className="font-serif text-[1.45rem] leading-[1.36] md:text-display-sm md:leading-snug text-ink whitespace-pre-line">{standout.quote}</blockquote>
           <p className="mt-5 text-[0.9375rem] text-ink-2">{cite(standout)}</p>
         </Reveal>
       )}
@@ -253,7 +264,7 @@ const Category: React.FC<{ cat: TestimonialCategory }> = ({ cat }) => {
             delay={Math.min(i * 0.04, 0.32)}
             className="list-none break-inside-avoid mb-9 pb-9 border-t hairline pt-9 max-w-[65ch]"
           >
-            <blockquote className="font-serif text-[1.3rem] leading-[1.5] text-ink">{t.quote}</blockquote>
+            <blockquote className="font-serif text-[1.18rem] leading-[1.5] md:text-[1.3rem] text-ink whitespace-pre-line">{t.quote}</blockquote>
             <p className="mt-4 text-[0.9375rem] text-ink-2">{cite(t)}</p>
           </Reveal>
         ))}
@@ -262,10 +273,40 @@ const Category: React.FC<{ cat: TestimonialCategory }> = ({ cat }) => {
   );
 };
 
+// Jump to a category, clearing the fixed header.
+const jumpTo = (label: string, smooth: boolean) => {
+  document.getElementById(slugify(label))?.scrollIntoView({ behavior: smooth ? 'smooth' : 'auto', block: 'start' });
+};
+
 export const Testimonials: React.FC = () => {
+  const [active, setActive] = useState(slugify(CATEGORIES[0].label));
+  const smooth = !useReducedMotion();
+
+  // Track which category is being read, for the index highlight.
+  useEffect(() => {
+    const io = new IntersectionObserver(
+      (entries) => {
+        const hit = entries.filter((e) => e.isIntersecting).sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top)[0];
+        if (hit) setActive(hit.target.id);
+      },
+      { rootMargin: '-30% 0px -60% 0px' },
+    );
+    document.querySelectorAll('[data-category]').forEach((el) => io.observe(el));
+    return () => io.disconnect();
+  }, []);
+
+  // Keep the highlighted chip visible in the phone bar (horizontal only; never moves the page).
+  useEffect(() => {
+    const chip = document.querySelector<HTMLElement>(`[data-chip="${active}"]`);
+    const bar = chip?.parentElement; // the scrolling <ul>
+    if (!chip || !bar) return;
+    const left = chip.offsetLeft - (bar.clientWidth - chip.offsetWidth) / 2;
+    bar.scrollTo({ left, behavior: smooth ? 'smooth' : 'auto' });
+  }, [active, smooth]);
+
   return (
     <div className="overflow-x-clip">
-      <section className="page-top pb-16 md:pb-20">
+      <section className="page-top pb-10 md:pb-20">
         <div className="max-w-[1320px] mx-auto px-5 md:px-8">
           <Reveal>
             <p className="font-serif italic text-lg text-clay-deep">Testimonials</p>
@@ -276,18 +317,49 @@ export const Testimonials: React.FC = () => {
         </div>
       </section>
 
+      {/* Phones: a swipeable category bar that stays just under the header. */}
+      <nav aria-label="Categories" className="lg:hidden sticky top-[72px] z-30 -mt-2 mb-8 bg-paper/90 backdrop-blur-md border-y hairline">
+        <ul className="relative flex gap-2 overflow-x-auto no-scrollbar px-5 py-3 [mask-image:linear-gradient(90deg,#000_85%,transparent)]">
+          {CATEGORIES.map((c) => {
+            const on = active === slugify(c.label);
+            return (
+              <li key={c.label} data-chip={slugify(c.label)} className="shrink-0">
+                <button
+                  onClick={() => jumpTo(c.label, smooth)}
+                  aria-current={on ? 'true' : undefined}
+                  className={`whitespace-nowrap rounded-full px-4 min-h-[40px] text-[0.9rem] transition-colors duration-feedback ${
+                    on ? 'bg-ink text-paper' : 'bg-paper-3 text-ink-2'
+                  }`}
+                >
+                  {c.label}
+                </button>
+              </li>
+            );
+          })}
+        </ul>
+      </nav>
+
       <section className="pb-section">
         <div className="max-w-[1320px] mx-auto px-5 md:px-8 grid lg:grid-cols-12 gap-12 lg:gap-16">
           <nav aria-label="Categories" className="hidden lg:block lg:col-span-3">
             <ul className="lg:sticky lg:top-32 border-t hairline pt-6 space-y-1">
               {CATEGORIES.map((c) => (
                 <li key={c.label}>
-                  <a
-                    href={`#${slugify(c.label)}`}
-                    className="block py-2 text-[0.9375rem] text-ink-2 hover:text-clay-deep transition-colors duration-feedback"
+                  <button
+                    onClick={() => jumpTo(c.label, smooth)}
+                    aria-current={active === slugify(c.label) ? 'true' : undefined}
+                    className={`flex items-center gap-3 py-2 text-left text-[0.9375rem] transition-colors duration-feedback ${
+                      active === slugify(c.label) ? 'text-ink' : 'text-ink-2 hover:text-clay-deep'
+                    }`}
                   >
+                    <span
+                      className={`h-1.5 w-1.5 rounded-full transition-colors duration-300 ${
+                        active === slugify(c.label) ? 'bg-clay' : 'bg-transparent'
+                      }`}
+                      aria-hidden
+                    />
                     {c.label}
-                  </a>
+                  </button>
                 </li>
               ))}
             </ul>

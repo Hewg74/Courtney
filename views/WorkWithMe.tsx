@@ -23,7 +23,7 @@ const NOTICES = [
 const HOW_IT_WORKS: [string, string][] = [
   [
     'Session format',
-    "Sessions are 30 minutes, online via Google Meet. We check in, explore tools and strategies, and agree on a small next step. The tone is collaborative, practical, and judgment-free.",
+    "Sessions are online via Google Meet. We check in, explore tools and strategies, and agree on a small next step. The tone is collaborative, practical, and judgment-free.",
   ],
   [
     'Strengths-based approach',
@@ -53,8 +53,8 @@ const AreaList: React.FC<{ items: string[] }> = ({ items }) => (
 
 /* ─── Page header ─── */
 const Header: React.FC = () => (
-  <section className="page-top pb-16 md:pb-24">
-    <div className="max-w-[1320px] mx-auto px-5 md:px-8 grid lg:grid-cols-12 gap-10 items-end border-b hairline pb-12 md:pb-16">
+  <section className="page-top">
+    <div className="max-w-[1320px] mx-auto px-5 md:px-8 grid lg:grid-cols-12 gap-10 items-end border-b hairline pb-10 md:pb-16">
       <Reveal className="lg:col-span-7">
         <h1 className="font-serif text-display-xl text-ink">
           Workshops &amp; <em className="text-clay">Coaching</em>
@@ -210,7 +210,7 @@ const Pricing: React.FC<WorkWithMeProps> = ({ setView }) => (
             </p>
             <ul className="relative mt-8 space-y-3 border-t border-line-dark pt-6">
               {[
-                'Six 30-minute sessions',
+                'Six sessions',
                 'Bi-weekly scheduling (flexible)',
                 'Parent support included (for family coaching)',
                 'Customized to your goals',
@@ -239,7 +239,7 @@ const Pricing: React.FC<WorkWithMeProps> = ({ setView }) => (
             </p>
             <ul className="mt-8 space-y-3 border-t hairline pt-6">
               {[
-                'One 30-minute session',
+                'One session',
                 'Flexible scheduling',
                 'Support during a hard week',
                 'Troubleshoot routines or communication',

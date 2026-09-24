@@ -6,8 +6,8 @@ import { YOUTUBE_URL, openExternal } from '../constants';
 
 /* ─── Page header ─── */
 const Header: React.FC = () => (
-  <section className="page-top pb-16 md:pb-24">
-    <div className="max-w-[1320px] mx-auto px-5 md:px-8 grid lg:grid-cols-12 gap-10 items-end border-b hairline pb-12 md:pb-16">
+  <section className="page-top">
+    <div className="max-w-[1320px] mx-auto px-5 md:px-8 grid lg:grid-cols-12 gap-10 items-end border-b hairline pb-10 md:pb-16">
       <Reveal className="lg:col-span-6">
         <h1 className="font-serif text-display-xl text-ink">
           Qigong with <em className="text-clay">Courtney</em>
@@ -26,7 +26,7 @@ const Header: React.FC = () => (
 
 /* ─── Big photo with a YouTube play overlay ─── */
 const VideoPhoto: React.FC = () => (
-  <section className="pb-section">
+  <section className="py-section">
     <div className="max-w-[1320px] mx-auto px-5 md:px-8">
       <Reveal>
         <div className="relative">
@@ -34,7 +34,9 @@ const VideoPhoto: React.FC = () => (
             src="/images/qigong-eyes-closed.webp"
             alt="Courtney practicing Qigong outdoors with her eyes closed"
             radius="28px"
-            className="aspect-[16/9] shadow-photo"
+            drift={36}
+            pos="center 28%"
+            className="aspect-[4/5] sm:aspect-[16/9] shadow-photo"
           />
           <a
             href={YOUTUBE_URL}
@@ -119,41 +121,6 @@ const ClassesSection: React.FC = () => (
           ['Rate', '$25 drop-in or included in gym membership'],
         ]}
         delay={0}
-      />
-
-      <ClassRow
-        kicker="Monthly group class"
-        title="Chi Energy Flow"
-        desc={
-          <>
-            <p>
-              Join our monthly community practice. Feel free to stay for a delicious farm-to-table brunch or dinner
-              after class, or simply come to move!
-            </p>
-            <p className="italic text-clay-deep">
-              *Note: In September I am offering a special 1-hour workshop focused entirely on sleep in place of my
-              regular movement flow.
-            </p>
-          </>
-        }
-        callout={{ label: 'Next class', value: 'Sept 25th', sub: 'Join us for our next gathering!' }}
-        facts={[
-          ['When', 'Monthly (Sun 9am or Fri 4:30pm)'],
-          [
-            'Where',
-            <a
-              key="moku"
-              href="https://www.mokuroots.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="link-underline text-clay-deep hover:text-clay"
-            >
-              Moku Roots Maui
-            </a>,
-          ],
-          ['Rate', 'By Donation'],
-        ]}
-        delay={0.06}
       />
 
       <ClassRow

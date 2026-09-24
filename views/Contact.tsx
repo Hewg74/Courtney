@@ -6,8 +6,8 @@ import { BOOKING_URL, INSTAGRAM_URL, YOUTUBE_URL, openExternal } from '../consta
 
 /* ─── Page header ─── */
 const Header: React.FC = () => (
-  <section className="page-top pb-16 md:pb-24">
-    <div className="max-w-[1320px] mx-auto px-5 md:px-8 grid lg:grid-cols-12 gap-10 items-end border-b hairline pb-12 md:pb-16">
+  <section className="page-top">
+    <div className="max-w-[1320px] mx-auto px-5 md:px-8 grid lg:grid-cols-12 gap-10 items-end border-b hairline pb-10 md:pb-16">
       <Reveal className="lg:col-span-6">
         <h1 className="font-serif text-display-xl text-ink">
           Get in <em className="text-clay">touch</em>
@@ -22,7 +22,7 @@ const Header: React.FC = () => (
   </section>
 );
 
-/* ─── Two ways to reach her: an asymmetric pair, Calendly primary ─── */
+/* ─── Two ways to reach her: an asymmetric pair, booking primary ─── */
 const Options: React.FC = () => (
   <section className="py-section">
     <div className="max-w-[1320px] mx-auto px-5 md:px-8 grid lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
@@ -36,7 +36,7 @@ const Options: React.FC = () => (
           </p>
           <div className="mt-8">
             <Button variant="light" size="lg" arrow onClick={() => openExternal(BOOKING_URL)}>
-              Schedule on Calendly
+              Schedule a Chat
             </Button>
           </div>
         </div>

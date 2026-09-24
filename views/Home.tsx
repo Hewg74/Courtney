@@ -1,324 +1,463 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
+import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
+import { ArrowRight } from 'lucide-react';
 import { Button } from '../components/Button';
+import { Reveal, Photo, EASE } from '../components/Reveal';
+import { Rings } from '../components/Rings';
 import { ViewState } from '../types';
-import { Sparkles, Award, Users, Sun, Feather, Compass, MessageCircle, Star, Heart, Quote } from 'lucide-react';
-import { motion } from 'framer-motion';
-import { Reveal } from '../components/Reveal';
 import { openExternal, CALENDLY_URL, TESTIMONIALS } from '../constants';
-
-// ... (inside component)
-
-
 
 interface HomeProps {
   setView: (view: ViewState) => void;
 }
 
-export const Home: React.FC<HomeProps> = ({ setView }) => {
+const AREAS = ['stress', 'anxiety', 'ADHD', 'executive functioning', 'communication', 'routines', 'behavior', 'sleep'];
+
+const OFFERINGS: { title: string; desc: string; cta: string; view: ViewState; img: string; alt: string; pos?: string }[] = [
+  {
+    title: 'Adult Coaching',
+    desc: 'Personalized support for stress, overwhelm, and building sustainable routines that fit your life.',
+    cta: 'Learn more',
+    view: 'work-with-me',
+    img: '/images/courtney-pose.webp',
+    alt: 'Courtney in a Qigong stance in a garden at golden hour',
+    pos: 'center 40%',
+  },
+  {
+    title: 'Family & Youth Coaching',
+    desc: 'Practical strategies for anxiety, ADHD, behavior, communication, and connection for kids and the adults who support them.',
+    cta: 'Learn more',
+    view: 'work-with-me',
+    img: '/images/maui.webp',
+    alt: 'Footprints along a quiet Maui beach lined with palm trees',
+    pos: 'center 70%',
+  },
+  {
+    title: 'Workshops & Group Coaching',
+    desc: 'Custom workshops and group programs designed for schools, health institutions, and parents.',
+    cta: 'Inquire now',
+    view: 'contact',
+    img: '/images/teaching-class.webp',
+    alt: 'Courtney leading a workshop for a seated group',
+    pos: 'center 25%',
+  },
+  {
+    title: 'Qigong Classes',
+    desc: 'A gentle mind-body practice to ease tension and restore calm. Group, private, and retreat sessions available.',
+    cta: 'See classes',
+    view: 'qigong',
+    img: '/images/qigong-eyes-closed.webp',
+    alt: 'Courtney practicing Qigong outdoors with her eyes closed',
+    pos: 'center 30%',
+  },
+];
+
+const NOTICES = [
+  'Better sleep and steadier energy',
+  'Less overwhelm, shutdown, and reactivity',
+  'Stronger routines and follow-through',
+  'Clearer communication and boundaries',
+  'More confidence and emotional resilience',
+  'A greater sense of calm and connection',
+];
+
+// Featured voices: Kerrie (AZ), a college student (CA), and a therapist (Canada).
+const FEATURED = [TESTIMONIALS[4], TESTIMONIALS[1], TESTIMONIALS[12]];
+
+const cite = (t: { author: string; context?: string }) => (t.context ? `${t.author}, ${t.context}` : t.author);
+
+/* ─── Hero ─── */
+const Hero: React.FC<HomeProps> = ({ setView }) => (
+  <section className="relative page-top pb-16 md:pb-24 overflow-hidden">
+    <div className="max-w-[1320px] mx-auto px-5 md:px-8 grid lg:grid-cols-12 gap-14 lg:gap-10 items-center">
+      <div className="lg:col-span-7 lg:pr-6 relative z-10">
+        <Reveal>
+          <h1 className="font-serif text-display-xl text-ink max-w-[14ch]">
+            Helping adults & families feel steadier, calmer, & more{' '}
+            <em className="text-clay whitespace-nowrap">connected.</em>
+          </h1>
+        </Reveal>
+        <Reveal delay={0.15}>
+          <p className="mt-8 text-body-lg text-ink-2 max-w-[34rem]">
+            Coaching and mind-body tools for stress relief, emotional regulation, and resilience for adults, parents, and kids.
+          </p>
+        </Reveal>
+        <Reveal delay={0.25}>
+          <div className="mt-10 flex flex-wrap items-center gap-x-7 gap-y-4">
+            <Button size="lg" arrow onClick={() => setView('work-with-me')}>
+              Work With Me
+            </Button>
+            <button
+              onClick={() => openExternal(CALENDLY_URL)}
+              className="link-underline text-ink hover:text-clay-deep font-medium"
+            >
+              Book a free 15-min chat
+            </button>
+          </div>
+        </Reveal>
+        <Reveal delay={0.35}>
+          <p className="mt-12 pt-6 border-t hairline max-w-[34rem] text-[0.9375rem] text-ink-2">
+            <span className="whitespace-nowrap">Board-certified coach (NBC-HWC)</span> <span className="text-clay mx-1.5">&middot;</span>{' '}
+            <span className="whitespace-nowrap">Qigong teacher</span> <span className="text-clay mx-1.5">&middot;</span> Author
+          </p>
+        </Reveal>
+      </div>
+
+      <div className="lg:col-span-5 relative">
+        <div className="relative mx-auto w-[min(82vw,440px)] lg:w-full lg:max-w-[460px] lg:ml-auto">
+          <Photo
+            src="/images/headshot.webp"
+            alt="Courtney Alex, health and wellness coach, smiling among Maui greenery"
+            priority
+            radius="999px 999px 28px 28px"
+            className="aspect-[4/5.2] shadow-photo"
+            imgClassName="object-[center_20%]"
+          />
+          <Rings
+            className="absolute -left-[16%] top-[3%] w-[58%] text-clay pointer-events-none"
+            strokeWidth={1.25}
+            draw
+            breathe
+          />
+          <Reveal delay={0.9} variant="fade" width="fit-content" className="absolute -bottom-5 left-4 sm:-left-8">
+            <div className="rounded-md bg-paper-2 shadow-lift px-5 py-3.5">
+              <p className="font-serif italic text-lg leading-tight text-ink">In person on Maui,</p>
+              <p className="font-serif italic text-lg leading-tight text-ink-2">online everywhere.</p>
+            </div>
+          </Reveal>
+        </div>
+      </div>
+    </div>
+  </section>
+);
+
+/* ─── Areas band: a slow, quiet drift ─── */
+const AreasBand: React.FC = () => {
+  const reduce = useReducedMotion();
+  const row = (
+    <span className="flex items-center shrink-0" aria-hidden>
+      {AREAS.map((a) => (
+        <span key={a} className="flex items-center">
+          <span className="font-serif italic text-[1.7rem] md:text-[2.1rem] text-ink px-6 md:px-9 whitespace-nowrap">{a}</span>
+          <Rings className="w-7 h-4 text-clay/70" strokeWidth={1.25} />
+        </span>
+      ))}
+    </span>
+  );
   return (
-    <div className="animate-fade-in pb-24 relative overflow-x-hidden">
-
-      {/* 1. Hero Section - Side-by-Side Layout (Old Design) */}
-      <section className="relative min-h-[100vh] flex items-center px-6 overflow-hidden pt-40 lg:pt-40 pb-32 lg:pb-32">
-        {/* Ambient Washes */}
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-clay-50/50 via-sand-50 to-white -z-20" />
-        <div className="absolute top-[5%] right-[-5%] w-[600px] h-[600px] bg-sage-100/50 rounded-full blur-[120px] mix-blend-multiply animate-float -z-10" />
-        <div className="absolute bottom-[-5%] left-[-5%] w-[500px] h-[500px] bg-clay-100/40 rounded-full blur-[100px] mix-blend-multiply animate-float-delayed -z-10" />
-
-        <div className="max-w-7xl mx-auto w-full grid lg:grid-cols-2 gap-12 lg:gap-20 items-center relative z-10">
-
-          {/* Left: Text Content */}
-          <div className="space-y-8 text-center lg:text-left order-2 lg:order-1 relative">
-            <Reveal variant="fadeUp" delay={0.2} className="mx-auto lg:mx-0">
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif text-sand-900 leading-[1.05] tracking-tight">
-                Helping adults & families feel steadier, calmer, & <span className="whitespace-nowrap">more <span className="italic font-light bg-clip-text text-transparent bg-gradient-to-r from-clay-600 to-clay-400 pb-2">connected.</span></span>
-              </h1>
-            </Reveal>
-
-            <Reveal variant="fadeUp" delay={0.4} className="mx-auto lg:mx-0">
-              <p className="text-lg md:text-xl text-sand-600 max-w-xl mx-auto lg:mx-0 leading-relaxed font-sans">
-                Coaching and mind-body tools for stress relief, emotional regulation, and resilience for adults, parents, and kids.
-              </p>
-            </Reveal>
-
-            <Reveal variant="fadeUp" delay={0.5} className="mx-auto lg:mx-0">
-              <p className="text-sm text-sand-500 max-w-lg mx-auto lg:mx-0 tracking-wide">
-                Areas I support: stress · anxiety · ADHD · executive functioning · communication · routines · behavior · sleep
-              </p>
-            </Reveal>
-
-            <Reveal variant="fadeUp" delay={0.6} className="mx-auto lg:mx-0">
-              <div className="pt-2 flex flex-col sm:flex-row items-center lg:items-start justify-center lg:justify-start gap-5">
-                <Button size="lg" onClick={() => setView('work-with-me')}>
-                  Work With Me
-                </Button>
-              </div>
-            </Reveal>
-
-            {/* Trust Anchors - Enhanced (Old Design Structure with New Content) */}
-            <Reveal variant="fadeIn" delay={0.8} className="mx-auto lg:mx-0">
-              <div className="pt-8 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 sm:gap-8 border-t border-sand-200 mt-8">
-                <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-sand-500">
-                  <Award size={16} className="text-clay-500" />
-                  <span>NBC-HWC Certified</span>
-                </div>
-                <div className="hidden sm:block w-px h-4 bg-sand-300"></div>
-                <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-sand-500">
-                  <Sparkles size={16} className="text-clay-500" />
-                  <span>Qigong Teacher</span>
-                </div>
-                <div className="hidden sm:block w-px h-4 bg-sand-300"></div>
-                <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-sand-500">
-                  <Users size={16} className="text-clay-500" />
-                  <span>Author</span>
-                </div>
-              </div>
-            </Reveal>
-          </div>
-
-          {/* Right: Keyhole Shape Image */}
-          <div className="order-1 lg:order-2 flex justify-center lg:justify-end relative">
-            <Reveal variant="scaleUp" delay={0.4}>
-              <div className="relative w-72 h-[26rem] md:w-80 md:h-[30rem] lg:w-[420px] lg:h-[520px]">
-                {/* Soft Background */}
-                <div className="absolute inset-0 bg-sand-200 rounded-t-full rounded-b-[2rem] rotate-2 opacity-50 blur-xl"></div>
-
-                {/* Image */}
-                <div className="absolute inset-0 overflow-hidden rounded-t-full rounded-b-[2rem] shadow-premium ring-1 ring-white border-2 border-white/80 transition-all duration-700 hover:shadow-2xl">
-                  <img
-                    src="/images/headshot.jpg"
-                    alt="Courtney Alex, health and wellness coach"
-                    fetchPriority="high"
-                    className="w-full h-full object-cover transform scale-105 hover:scale-110 transition-transform duration-1000 ease-out"
-                  />
-                </div>
-              </div>
-            </Reveal>
-          </div>
-
+    <section aria-label="Areas I support" className="border-y hairline py-6 md:py-8 overflow-hidden">
+      <p className="sr-only">Areas I support: {AREAS.join(', ')}.</p>
+      {reduce ? (
+        <p className="px-5 text-center font-serif italic text-2xl text-ink" aria-hidden>
+          {AREAS.join(' · ')}
+        </p>
+      ) : (
+        <div className="flex w-max [mask-image:linear-gradient(90deg,transparent,#000_8%,#000_92%,transparent)]">
+          <motion.div
+            className="flex"
+            animate={{ x: ['0%', '-50%'] }}
+            transition={{ duration: 70, ease: 'linear', repeat: Infinity }}
+          >
+            {row}
+            {row}
+          </motion.div>
         </div>
-      </section>
+      )}
+    </section>
+  );
+};
 
-      {/* 2. Services Overview (Moved & Renamed) */}
-      <section className="py-24 bg-white relative">
-        <div className="max-w-6xl mx-auto px-6 relative z-10">
-          <Reveal className="mx-auto">
-            <div className="text-center mb-16 space-y-4">
-              <h2 className="text-4xl md:text-5xl font-serif text-sand-900">Here are my offerings</h2>
+/* ─── Offerings: an editorial index; the picture follows your attention ─── */
+const Offerings: React.FC<HomeProps> = ({ setView }) => {
+  const [active, setActive] = useState(0);
+  const current = OFFERINGS[active];
+  return (
+    <section className="py-section">
+      <div className="max-w-[1320px] mx-auto px-5 md:px-8 grid lg:grid-cols-12 gap-12 lg:gap-16">
+        <div className="lg:col-span-5">
+          <div className="lg:sticky lg:top-32">
+            <Reveal>
+              <h2 className="font-serif text-display-lg text-ink">
+                Here are my <em className="text-clay">offerings</em>
+              </h2>
+            </Reveal>
+            <div className="hidden lg:block mt-12 relative aspect-[4/5] rounded-lg overflow-hidden bg-paper-3 shadow-photo">
+              <AnimatePresence initial={false}>
+                <motion.img
+                  key={current.img}
+                  src={current.img}
+                  alt={current.alt}
+                  className="absolute inset-0 w-full h-full object-cover"
+                  style={{ objectPosition: current.pos }}
+                  initial={{ opacity: 0, scale: 1.05 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.7, ease: EASE }}
+                />
+              </AnimatePresence>
             </div>
-          </Reveal>
-
-          <div className="grid md:grid-cols-2 gap-6 md:gap-8">
-            {/* Adult Coaching */}
-            <Reveal delay={0.1}>
-              <button
-                onClick={() => setView('work-with-me')}
-                className="group cursor-pointer bg-white/60 backdrop-blur-md p-8 rounded-3xl shadow-soft hover:shadow-premium hover:-translate-y-2 transition-all duration-500 border border-white/80 hover:border-white h-full text-left w-full relative overflow-hidden"
-              >
-                <div className="absolute inset-0 bg-gradient-to-br from-white/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-                <h3 className="text-2xl font-serif text-sand-900 mb-4 relative z-10">Adult Coaching</h3>
-                <p className="text-sand-600 text-sm leading-relaxed mb-8 min-h-[80px] relative z-10">
-                  Personalized support for stress, overwhelm, and building sustainable routines that fit your life.
-                </p>
-                <div className="text-xs font-bold uppercase tracking-widest text-sand-500 group-hover:text-clay-600 flex items-center transition-colors relative z-10">Learn More <span className="ml-1 group-hover:translate-x-1 transition-transform duration-300">&rarr;</span></div>
-              </button>
-            </Reveal>
-
-            {/* Family & Parent Coaching - Highlighted */}
-            <Reveal delay={0.2} variant="scaleUp">
-              <button
-                onClick={() => setView('work-with-me')}
-                className="group cursor-pointer bg-gradient-to-br from-clay-100/90 to-clay-50/80 backdrop-blur-md p-8 rounded-3xl shadow-glass hover:shadow-premium hover:-translate-y-2 transition-all duration-500 relative border border-white hover:border-white/90 h-full text-left w-full overflow-hidden"
-              >
-                <div className="absolute inset-0 bg-gradient-to-tr from-white/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-                <h3 className="text-2xl font-serif text-sand-900 mb-4 relative z-10">Family & Youth Coaching</h3>
-                <p className="text-sand-600 text-sm leading-relaxed mb-8 min-h-[80px] relative z-10">
-                  Practical strategies for anxiety, ADHD, behavior, communication, and connection for kids and the adults who support them.
-                </p>
-                <div className="text-xs font-bold uppercase tracking-widest text-clay-700 flex items-center transition-colors relative z-10">Learn More <span className="ml-1 group-hover:translate-x-1 transition-transform duration-300">&rarr;</span></div>
-              </button>
-            </Reveal>
-
-            {/* Workshops & Group Coaching */}
-            <Reveal delay={0.3}>
-              <button
-                onClick={() => setView('contact')}
-                className="group cursor-pointer bg-white/60 backdrop-blur-md p-8 rounded-3xl shadow-soft hover:shadow-premium hover:-translate-y-2 transition-all duration-500 border border-white/80 hover:border-white h-full text-left w-full relative overflow-hidden"
-              >
-                <div className="absolute inset-0 bg-gradient-to-br from-white/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-                <h3 className="text-2xl font-serif text-sand-900 mb-4 relative z-10">Workshops & Group Coaching</h3>
-                <p className="text-sand-600 text-sm leading-relaxed mb-8 min-h-[80px] relative z-10">
-                  Custom workshops and group programs designed for schools, health institutions, and parents.
-                </p>
-                <div className="text-xs font-bold uppercase tracking-widest text-sand-500 group-hover:text-clay-600 flex items-center transition-colors relative z-10">Inquire Now <span className="ml-1 group-hover:translate-x-1 transition-transform duration-300">&rarr;</span></div>
-              </button>
-            </Reveal>
-
-            {/* Qigong Classes */}
-            <Reveal delay={0.4}>
-              <button
-                onClick={() => setView('qigong')}
-                className="group cursor-pointer bg-white/60 backdrop-blur-md p-8 rounded-3xl shadow-soft hover:shadow-premium hover:-translate-y-2 transition-all duration-500 border border-white/80 hover:border-white h-full text-left w-full relative overflow-hidden"
-              >
-                <div className="absolute inset-0 bg-gradient-to-br from-white/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-                <h3 className="text-2xl font-serif text-sand-900 mb-4 relative z-10">Qigong Classes</h3>
-                <p className="text-sand-600 text-sm leading-relaxed mb-8 min-h-[80px] relative z-10">
-                  A gentle mind-body practice to ease tension and restore calm. Group, private, and retreat sessions available.
-                </p>
-                <div className="text-xs font-bold uppercase tracking-widest text-sand-500 group-hover:text-clay-600 flex items-center transition-colors relative z-10">See Classes <span className="ml-1 group-hover:translate-x-1 transition-transform duration-300">&rarr;</span></div>
-              </button>
-            </Reveal>
           </div>
         </div>
-      </section>
 
-      {/* 3. What Clients Notice (Moved & Updated) */}
-      <section className="py-24 px-6 bg-sand-50 relative overflow-hidden">
-        {/* Subtle Background Pattern */}
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-sage-100/40 rounded-full blur-[120px] -z-10 translate-x-1/2 -translate-y-1/4 animate-float"></div>
-        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-clay-100/40 rounded-full blur-[120px] -z-10 -translate-x-1/4 translate-y-1/4 animate-float-delayed"></div>
-
-        <div className="max-w-6xl mx-auto text-center space-y-16 relative z-10">
-          <Reveal width="100%">
-            <div className="space-y-4">
-              <h2 className="text-3xl md:text-4xl font-serif text-sand-900 italic">What clients notice</h2>
-              <p className="text-sand-600 max-w-2xl mx-auto font-light">
-                Change happens in small, sustainable shifts. Here’s what clients often report after working together.
-              </p>
-            </div>
-          </Reveal>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 text-left">
-            {[
-              {
-                icon: Sun,
-                text: "Better sleep and steadier energy",
-                color: "text-clay-600",
-                bg: "bg-clay-100"
-              },
-              {
-                icon: Feather,
-                text: "Less overwhelm, shutdown, and reactivity",
-                color: "text-sage-600",
-                bg: "bg-sage-100"
-              },
-              {
-                icon: Compass,
-                text: "Stronger routines and follow-through",
-                color: "text-sand-600",
-                bg: "bg-sand-200"
-              },
-              {
-                icon: MessageCircle,
-                text: "Clearer communication and boundaries",
-                color: "text-clay-500",
-                bg: "bg-clay-50"
-              },
-              {
-                icon: Star,
-                text: "More confidence and emotional resilience",
-                color: "text-sage-500",
-                bg: "bg-sage-50"
-              },
-              {
-                icon: Heart,
-                text: "A greater sense of calm and connection",
-                color: "text-sand-500",
-                bg: "bg-sand-100"
-              }
-            ].map((item, i) => (
-              <Reveal key={i} delay={i * 0.1} width="100%">
-                <div className="group bg-white/70 backdrop-blur-md p-8 md:p-10 rounded-2xl shadow-soft hover:shadow-premium transition-all duration-500 border border-white ring-1 ring-sand-900/5 h-full flex flex-col items-center text-center space-y-5 hover:-translate-y-2 relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-b from-white/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-                  <div className={`p-4 rounded-full ${item.bg} bg-opacity-40 group-hover:scale-110 transition-transform duration-500 ease-out shadow-[inset_0_1px_1px_rgba(255,255,255,0.8)] relative z-10`}>
-                    <item.icon size={24} className={item.color} strokeWidth={1.25} />
-                  </div>
-                  <p className="text-sand-800 text-lg leading-relaxed font-medium relative z-10">
-                    {item.text}
-                  </p>
+        <ul className="lg:col-span-7 lg:pt-4 border-t hairline">
+          {OFFERINGS.map((o, i) => (
+            <Reveal as="li" key={o.title} delay={i * 0.08} className="border-b hairline">
+              <button
+                onClick={() => setView(o.view)}
+                onMouseEnter={() => setActive(i)}
+                onFocus={() => setActive(i)}
+                className="group w-full text-left py-9 md:py-12 grid gap-6 md:grid-cols-[1fr_auto] md:items-end"
+              >
+                <div className="lg:hidden aspect-[16/9] rounded-md overflow-hidden bg-paper-3">
+                  <img src={o.img} alt="" loading="lazy" className="w-full h-full object-cover" style={{ objectPosition: o.pos }} />
                 </div>
+                <div>
+                  <h3
+                    className={`font-serif text-display-md transition-[color,transform] duration-500 ease-calm lg:group-hover:translate-x-2 ${
+                      active === i ? 'lg:text-ink' : 'lg:text-ink/55'
+                    } text-ink`}
+                  >
+                    {o.title}
+                  </h3>
+                  <p className="mt-4 text-body text-ink-2 max-w-[40ch]">{o.desc}</p>
+                </div>
+                <span className="inline-flex items-center gap-2 text-[0.9375rem] font-medium text-clay-deep whitespace-nowrap">
+                  {o.cta}
+                  <ArrowRight size={17} strokeWidth={1.75} className="transition-transform duration-feedback group-hover:translate-x-1" aria-hidden />
+                </span>
+              </button>
+            </Reveal>
+          ))}
+        </ul>
+      </div>
+    </section>
+  );
+};
+
+/* ─── What clients notice: quiet, just the words ─── */
+const Notices: React.FC = () => (
+  <section className="pb-section">
+    <div className="max-w-[1320px] mx-auto px-5 md:px-8">
+      <div className="rounded-lg bg-paper-2 grain px-6 py-16 md:px-16 md:py-24">
+        <div className="grid lg:grid-cols-12 gap-10 lg:gap-16">
+          <Reveal className="lg:col-span-4">
+            <h2 className="font-serif text-display-md text-ink">
+              What clients <em className="text-clay">notice</em>
+            </h2>
+            <p className="mt-6 text-body text-ink-2 max-w-[30ch]">
+              Change happens in small, sustainable shifts. Here's what clients often report after working together.
+            </p>
+          </Reveal>
+          <ul className="lg:col-span-8 grid sm:grid-cols-2 gap-x-12">
+            {NOTICES.map((n, i) => (
+              <Reveal as="li" key={n} delay={i * 0.06} className="border-t hairline py-6 flex gap-4 items-baseline">
+                <span className="shrink-0 w-2 h-2 rounded-full bg-sage translate-y-[-2px]" aria-hidden />
+                <span className="font-serif text-[1.55rem] leading-snug text-ink">{n}</span>
               </Reveal>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+);
+
+/* ─── The breath: the one moment the page asks you to stop ─── */
+const Breath: React.FC = () => {
+  const [phase, setPhase] = useState<'in' | 'out'>('in');
+  const reduce = useReducedMotion();
+  return (
+    <section aria-label="A one-breath practice" className="relative bg-forest text-mist overflow-hidden">
+      <div className="max-w-[1320px] mx-auto px-5 md:px-8 min-h-[100svh] py-section flex flex-col items-center justify-center text-center">
+        <Reveal>
+          <p className="font-serif italic text-2xl md:text-[1.75rem] text-mist-2">Try this with me, right now.</p>
+        </Reveal>
+        <div className="relative w-[min(92vw,720px)] my-10 md:my-14">
+          <Rings className="w-full text-mist/80" strokeWidth={1.25} draw breathe glow="#D9957C" onPhase={setPhase} />
+          <div className="absolute inset-0 flex items-center justify-center" aria-live="off">
+            {reduce ? (
+              <p className="font-serif italic text-display-sm text-mist">Breathe in, and out.</p>
+            ) : (
+              <AnimatePresence mode="wait">
+                <motion.p
+                  key={phase}
+                  initial={{ opacity: 0, y: 8 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -8, transition: { duration: 0.35 } }}
+                  transition={{ duration: 0.9, ease: EASE }}
+                  className="font-serif italic text-display-sm text-mist"
+                >
+                  {phase === 'in' ? 'Breathe in...' : '...and out.'}
+                </motion.p>
+              </AnimatePresence>
+            )}
+          </div>
+        </div>
+        <Reveal delay={0.2}>
+          <p className="text-body-lg text-mist-2 max-w-[36rem] mx-auto">
+            Small, practical tools like this one - built into your real week - are a big part of how we work together.
+          </p>
+        </Reveal>
+      </div>
+    </section>
+  );
+};
+
+/* ─── Voices: one quote held in focus ─── */
+const Voices: React.FC<HomeProps> = ({ setView }) => {
+  const [i, setI] = useState(0);
+  const t = FEATURED[i];
+  const tabs = useRef<(HTMLButtonElement | null)[]>([]);
+  // Arrow keys move between stories (standard tabs pattern); only the selected tab is in the Tab order.
+  const onKey = (e: React.KeyboardEvent) => {
+    const step = { ArrowRight: 1, ArrowDown: 1, ArrowLeft: -1, ArrowUp: -1 }[e.key];
+    let next = step === undefined ? -1 : (i + step + FEATURED.length) % FEATURED.length;
+    if (e.key === 'Home') next = 0;
+    if (e.key === 'End') next = FEATURED.length - 1;
+    if (next < 0) return;
+    e.preventDefault();
+    setI(next);
+    tabs.current[next]?.focus();
+  };
+  return (
+    <section className="bg-forest text-mist border-t border-line-dark">
+      <div className="max-w-[1320px] mx-auto px-5 md:px-8 py-section grid lg:grid-cols-12 gap-12">
+        <div className="lg:col-span-3">
+          <h2 className="font-serif italic text-2xl text-mist-2">What clients say</h2>
+          <div role="tablist" aria-label="Choose a story" onKeyDown={onKey} className="mt-8 flex lg:flex-col gap-2 flex-wrap">
+            {FEATURED.map((f, k) => (
+              <button
+                key={f.id}
+                ref={(el) => {
+                  tabs.current[k] = el;
+                }}
+                id={`story-tab-${k}`}
+                role="tab"
+                aria-selected={k === i}
+                aria-controls="story-panel"
+                tabIndex={k === i ? 0 : -1}
+                onClick={() => setI(k)}
+                className={`text-left rounded-full lg:rounded-sm px-4 py-2.5 text-[0.9375rem] transition-colors duration-feedback ${
+                  k === i ? 'bg-mist/10 text-mist' : 'text-mist-2 hover:text-mist'
+                }`}
+              >
+                {cite(f)}
+              </button>
             ))}
           </div>
         </div>
-      </section>
-
-      {/* 4. Featured Testimonials */}
-      <section className="py-24 bg-sand-900 text-sand-50 overflow-hidden">
-        <Reveal width="100%">
-          <div className="max-w-5xl mx-auto px-6 text-center space-y-12">
-            <h2 className="text-xs font-bold uppercase tracking-widest text-sand-400">What Clients Say</h2>
-
-            {/* Main Testimonial - Kerrie (id 5, index 4) */}
-            <div className="space-y-8">
-              <Quote className="mx-auto text-clay-400 opacity-50" size={48} strokeWidth={1.25} />
-              <p className="text-xl md:text-2xl font-serif italic leading-relaxed text-sand-100 max-w-4xl mx-auto">
-                "{TESTIMONIALS[4].quote}"
-              </p>
-              <cite className="block not-italic text-sm font-sans tracking-wide text-sand-400">
-                {TESTIMONIALS[4].author}{TESTIMONIALS[4].context ? `, ${TESTIMONIALS[4].context}` : ''}
-              </cite>
-            </div>
-
-            {/* Secondary Testimonials - Anonymous college student (id 2, index 1) & RL therapist (id 13, index 12) */}
-            <div className="flex flex-col md:flex-row gap-8 pt-12 border-t border-sand-800 text-center md:text-left">
-              <div className="flex-1 space-y-4">
-                <p className="text-lg md:text-xl font-serif italic text-sand-300">"{TESTIMONIALS[1].quote}"</p>
-                <cite className="block not-italic text-sm font-sans tracking-wide text-sand-500 mt-4">{TESTIMONIALS[1].author}{TESTIMONIALS[1].context ? `, ${TESTIMONIALS[1].context}` : ''}</cite>
-              </div>
-              <div className="hidden md:block w-px bg-sand-800 self-stretch"></div>
-              <div className="flex-1 space-y-4">
-                <p className="text-lg md:text-xl font-serif italic text-sand-300">"{TESTIMONIALS[12].quote}"</p>
-                <cite className="block not-italic text-sm font-sans tracking-wide text-sand-500 mt-4">{TESTIMONIALS[12].author}{TESTIMONIALS[12].context ? `, ${TESTIMONIALS[12].context}` : ''}</cite>
-              </div>
-            </div>
-
-            <Button variant="outline" className="bg-white text-sand-900 border-white hover:bg-sand-100" onClick={() => setView('testimonials')}>
-              Read All Stories
+        <div
+          id="story-panel"
+          role="tabpanel"
+          aria-labelledby={`story-tab-${i}`}
+          tabIndex={0}
+          className="lg:col-span-9 min-h-[22rem] md:min-h-[20rem] rounded-sm"
+        >
+          <AnimatePresence mode="wait">
+            <motion.figure
+              key={t.id}
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -8, transition: { duration: 0.25 } }}
+              transition={{ duration: 0.7, ease: EASE }}
+            >
+              <span className="block font-serif text-[5rem] leading-[0.6] text-clay-glow" aria-hidden>
+                &ldquo;
+              </span>
+              <blockquote className="font-serif text-display-sm md:text-[2.35rem] md:leading-[1.25] text-mist">
+                {t.quote}
+              </blockquote>
+              <figcaption className="mt-8 text-mist-2">{cite(t)}</figcaption>
+            </motion.figure>
+          </AnimatePresence>
+          <div className="mt-12">
+            <Button variant="outline-light" arrow onClick={() => setView('testimonials')}>
+              Read all stories
             </Button>
           </div>
-        </Reveal>
-      </section>
-
-      {/* 5. Short Intro (Old "About Preview" Design) */}
-      <section className="py-24 px-6 max-w-4xl mx-auto text-center space-y-8">
-        <Reveal className="mx-auto">
-          <div className="w-32 h-32 bg-sand-200 rounded-2xl mx-auto overflow-hidden shadow-inner border border-sand-100">
-            <img src="/images/meditation.png" alt="Courtney meditating" loading="lazy" className="w-full h-full object-cover" />
-          </div>
-        </Reveal>
-        <Reveal delay={0.2}>
-          <h2 className="text-4xl font-serif text-sand-900">Hi, I'm Courtney.</h2>
-        </Reveal>
-        <Reveal delay={0.3}>
-          <div className="space-y-6 max-w-2xl mx-auto">
-            <p className="text-xl text-sand-600 font-light">
-              My approach is strengths-based and practical. We start with what's already working and build from there, through small steps that fit your lifestyle. Every session and tool is based on what works for you.
-            </p>
-            <p className="text-base text-sand-500 font-light tracking-wide pt-2">
-              Board-certified (NBC-HWC) coach supporting adults and families, bringing experience working alongside therapists and psychiatric providers through leading digital health organizations.
-            </p>
-          </div>
-        </Reveal>
-        <Reveal delay={0.4}>
-          <Button variant="text" onClick={() => setView('about')}>Meet Courtney &rarr;</Button>
-        </Reveal>
-      </section>
-
-      {/* 6. Final CTA (Old Design) */}
-      <section className="py-24 bg-sage-50 text-center px-6">
-        <Reveal className="mx-auto">
-          <div className="max-w-2xl mx-auto space-y-8">
-            <h2 className="text-4xl md:text-5xl font-serif text-sand-900">Not sure what's the best fit?</h2>
-            <p className="text-lg text-sand-600 font-light">
-              Reach out and I'm happy to talk through what might work for you.
-            </p>
-            <Button size="lg" onClick={() => setView('contact')}>
-              Contact
-            </Button>
-          </div>
-        </Reveal>
-      </section>
-
-    </div>
+        </div>
+      </div>
+    </section>
   );
 };
+
+/* ─── Hi, I'm Courtney ─── */
+const Intro: React.FC<HomeProps> = ({ setView }) => (
+  <section className="py-section">
+    <div className="max-w-[1320px] mx-auto px-5 md:px-8 grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+      <Reveal className="lg:col-span-7">
+        <h2 className="font-serif text-display-lg text-ink">
+          Hi, I'm{' '}
+          <span className="inline-block align-middle w-[0.95em] h-[0.95em] md:w-[1.1em] md:h-[1.1em] rounded-full overflow-hidden mx-1 -translate-y-[0.06em] ring-4 ring-paper shadow-lift">
+            <img src="/images/meditation.webp" alt="" className="w-full h-full object-cover" loading="lazy" />
+          </span>{' '}
+          <em className="text-clay">Courtney.</em>
+        </h2>
+        <p className="mt-8 font-serif text-[1.65rem] md:text-[1.9rem] leading-[1.35] text-ink max-w-[30ch]">
+          My approach is strengths-based and practical. We start with what's already working and build from there, through small steps that fit your lifestyle.
+        </p>
+        <p className="mt-6 text-body text-ink-2 max-w-[48ch]">
+          Every session and tool is based on what works for you.
+        </p>
+        <div className="mt-10">
+          <Button variant="outline" arrow onClick={() => setView('about')}>
+            Meet Courtney
+          </Button>
+        </div>
+      </Reveal>
+      <Reveal delay={0.15} className="lg:col-span-5 lg:pt-6">
+        <ul className="border-t hairline">
+          {[
+            ['Board-certified', 'National Board-Certified Health & Wellness Coach (NBC-HWC)'],
+            ['Clinical teams', 'Coaching experience through leading digital health organizations, collaborating with licensed pediatric therapists and psychiatric providers'],
+            ['Qigong', 'Certified Holden Qigong teacher'],
+            ['Writing', 'Author of two books'],
+          ].map(([k, v]) => (
+            <li key={k} className="grid grid-cols-[8.5rem_1fr] gap-4 py-5 border-b hairline">
+              <span className="font-serif italic text-lg text-clay-deep">{k}</span>
+              <span className="text-[0.975rem] text-ink-2 leading-relaxed">{v}</span>
+            </li>
+          ))}
+        </ul>
+      </Reveal>
+    </div>
+  </section>
+);
+
+/* ─── Close ─── */
+const Close: React.FC<HomeProps> = ({ setView }) => (
+  <section className="pb-section">
+    <div className="max-w-[1320px] mx-auto px-5 md:px-8">
+      <div className="relative overflow-hidden rounded-lg bg-clay-wash grain px-6 py-20 md:py-28 text-center">
+        <Rings className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[min(120vw,900px)] text-clay/20 pointer-events-none" strokeWidth={1} breathe />
+        <Reveal className="relative">
+          <h2 className="font-serif text-display-lg text-ink mx-auto max-w-[16ch]">Not sure what's the best fit?</h2>
+          <p className="mt-6 text-body-lg text-ink-2 mx-auto max-w-[32rem]">
+            Reach out and I'm happy to talk through what might work for you.
+          </p>
+          <div className="mt-10 flex flex-wrap justify-center gap-3">
+            <Button size="lg" arrow onClick={() => setView('contact')}>
+              Contact
+            </Button>
+            <Button size="lg" variant="outline" onClick={() => openExternal(CALENDLY_URL)}>
+              Book a free chat
+            </Button>
+          </div>
+        </Reveal>
+      </div>
+    </div>
+  </section>
+);
+
+export const Home: React.FC<HomeProps> = ({ setView }) => (
+  <div className="overflow-x-clip">
+    <Hero setView={setView} />
+    <AreasBand />
+    <Offerings setView={setView} />
+    <Notices />
+    <Breath />
+    <Voices setView={setView} />
+    <Intro setView={setView} />
+    <Close setView={setView} />
+  </div>
+);

@@ -3,45 +3,97 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --paper: #F7F3EC;
+    --ink: #2B2A24;
+    --forest: #1E2B23;
+    --clay: #B8674F;
+    --ease-calm: cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  html {
+    background-color: var(--paper);
+    -webkit-tap-highlight-color: transparent;
+  }
+
   body {
-    background-color: #F9F8F6; /* sand-50 */
-    color: #4A453B; /* sand-800 */
+    background-color: var(--paper);
+    color: var(--ink);
+    font-size: 1.0625rem;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
-  /* Custom Selection Color */
   ::selection {
-    background-color: #F2DCD6; /* clay-200 */
-    color: #4A453B;
+    background-color: #E9C9BC;
+    color: var(--ink);
   }
 
-  /* Typography refinements - optical balance */
-  h1, h2, h3 {
-    letter-spacing: -0.025em; /* tighter tracking on large serif headings */
-    line-height: 1.05;
+  h1, h2, h3, h4 {
+    text-wrap: balance;
   }
 
-  h1 {
-    line-height: 1; /* even tighter for massive headings */
+  p, li, dd, blockquote {
+    text-wrap: pretty;
   }
 
-  p {
-    text-wrap: pretty; /* better line breaks for readability */
+  :focus-visible {
+    outline: 2px solid var(--clay);
+    outline-offset: 3px;
+    border-radius: 6px;
   }
 
-  /* Respect reduced motion preferences */
   @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after {
       animation-duration: 0.01ms !important;
       animation-iteration-count: 1 !important;
       transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
     }
   }
 }
 
+@layer components {
+  /* Page top offset so content clears the fixed nav. */
+  .page-top {
+    padding-top: clamp(128px, 14vw, 176px);
+  }
+
+  .hairline {
+    border-color: rgba(43, 42, 36, 0.12);
+  }
+
+  /* Soft paper grain, so large flat fields read as material instead of screen. */
+  .grain {
+    position: relative;
+    isolation: isolate;
+  }
+  .grain::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0.35;
+    mix-blend-mode: multiply;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.35 0 0 0 0 0.3 0 0 0 0 0.22 0 0 0 0.09 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  .link-underline {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-size: 100% 1px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    padding-bottom: 2px;
+    transition: background-size 150ms var(--ease-calm), color 150ms var(--ease-calm);
+  }
+  .link-underline:hover {
+    background-size: 0% 1px;
+    background-position: 100% 100%;
+  }
+}
+
 @layer utilities {
-  /* Hide scrollbar for clean look */
   .no-scrollbar::-webkit-scrollbar {
     display: none;
   }
@@ -49,5 +101,9 @@
   .no-scrollbar {
     -ms-overflow-style: none;
     scrollbar-width: none;
+  }
+
+  .tabular {
+    font-variant-numeric: tabular-nums;
   }
 }

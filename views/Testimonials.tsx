@@ -1,6 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { Quote } from 'lucide-react';
 import { Reveal } from '../components/Reveal';
 
 interface PageTestimonial {
@@ -39,7 +37,7 @@ const CATEGORIES: TestimonialCategory[] = [
         context: "NY"
       },
       {
-        quote: "My child has often struggled with feeling different and socially awkward due to their ADHD. Through coaching, they've learned so many skills \u2014 from learning styles to how to organize their day to laughing at their mistakes which is helping them feel more socially comfortable. I'm seeing my child actually start to love who they are \u2014 and they're finding their own solutions more and more. I'm relieved knowing they're moving into adulthood with adult tools, feeling empowered and smiling!",
+        quote: "My child has often struggled with feeling different and socially awkward due to their ADHD. Through coaching, they've learned so many skills - from learning styles to how to organize their day to laughing at their mistakes which is helping them feel more socially comfortable. I'm seeing my child actually start to love who they are - and they're finding their own solutions more and more. I'm relieved knowing they're moving into adulthood with adult tools, feeling empowered and smiling!",
         author: "Anonymous Parent",
         context: "NJ"
       },
@@ -231,82 +229,72 @@ const CATEGORIES: TestimonialCategory[] = [
   }
 ];
 
-const TestimonialCard: React.FC<{ testimonial: PageTestimonial; index: number }> = ({ testimonial, index }) => (
-  <motion.div
-    initial={{ opacity: 0, y: 40, scale: 1 }}
-    whileInView={{ opacity: 1, y: 0, scale: 1 }}
-    viewport={{ once: true, margin: "-80px" }}
-    transition={{
-      duration: 0.7,
-      delay: (index % 3) * 0.1,
-      ease: [0.22, 1, 0.36, 1]
-    }}
-  >
-    <div className="group relative overflow-hidden bg-white/80 backdrop-blur-md p-8 md:p-10 rounded-[2rem] border border-white shadow-soft h-full hover:shadow-premium hover:-translate-y-1.5 transition-all duration-500 ring-1 ring-sand-900/5">
-      <div className="absolute inset-0 bg-gradient-to-br from-sand-50/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-      <div className="absolute top-8 left-8 text-clay-100 opacity-40 group-hover:text-amber-500/10 transition-all duration-700">
-        <Quote size={56} fill="currentColor" strokeWidth={0} />
-      </div>
+const cite = (t: PageTestimonial) => (t.context ? `${t.author}, ${t.context}` : t.author);
+const slugify = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
 
-      <div className="relative z-10">
-        <p className="font-serif text-sand-900 leading-relaxed text-xl mb-8 italic opacity-90">
-          "{testimonial.quote}"
-        </p>
-
-        <div className="flex items-center gap-4 pt-6 border-t border-sand-50 group-hover:border-sand-100 transition-colors duration-500">
-          <div className="w-8 h-[1px] bg-clay-400 group-hover:w-12 transition-all duration-500"></div>
-          <div>
-            <p className="font-sans text-sm font-bold text-sand-900 tracking-wide uppercase">
-              {testimonial.author}
-            </p>
-            {testimonial.context && (
-              <p className="text-xs font-medium text-sand-500 mt-1">
-                {testimonial.context}
-              </p>
-            )}
-          </div>
-        </div>
-      </div>
-    </div>
-  </motion.div>
-);
+const Category: React.FC<{ cat: TestimonialCategory }> = ({ cat }) => {
+  const [standout, ...rest] = cat.items;
+  return (
+    <section id={slugify(cat.label)} className="scroll-mt-32 pb-16 md:pb-20 border-b hairline last:border-b-0">
+      <Reveal>
+        <h2 className="font-serif text-display-md text-ink">{cat.label}</h2>
+      </Reveal>
+      {standout && (
+        <Reveal delay={0.08} className="mt-9 max-w-[65ch] border-t hairline pt-9">
+          <blockquote className="font-serif text-display-sm leading-snug text-ink">{standout.quote}</blockquote>
+          <p className="mt-5 text-[0.9375rem] text-ink-2">{cite(standout)}</p>
+        </Reveal>
+      )}
+      <ul className="mt-12 columns-1 md:columns-2 gap-x-12">
+        {rest.map((t, i) => (
+          <Reveal
+            as="li"
+            key={i}
+            delay={Math.min(i * 0.04, 0.32)}
+            className="list-none break-inside-avoid mb-9 pb-9 border-t hairline pt-9 max-w-[65ch]"
+          >
+            <blockquote className="font-serif text-[1.3rem] leading-[1.5] text-ink">{t.quote}</blockquote>
+            <p className="mt-4 text-[0.9375rem] text-ink-2">{cite(t)}</p>
+          </Reveal>
+        ))}
+      </ul>
+    </section>
+  );
+};
 
 export const Testimonials: React.FC = () => {
   return (
-    <div className="animate-fade-in pb-24 relative overflow-x-hidden">
-      <section className="py-40 bg-gradient-to-b from-white via-sand-50/50 to-white relative overflow-hidden">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-full border-x border-sand-100/50 pointer-events-none -z-10" />
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-clay-50/50 rounded-full blur-[120px] -z-10 opacity-60 translate-x-1/3 -translate-y-1/4" />
-        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-sand-100/40 rounded-full blur-[100px] -z-10 opacity-70 -translate-x-1/3 translate-y-1/4" />
-
-        <div className="max-w-7xl mx-auto px-6 relative z-10">
-          <Reveal width="100%" className="mb-20 text-center">
-            <span className="text-xs font-bold uppercase tracking-widest text-clay-600 mb-4 block">Testimonials</span>
-            <h1 className="text-4xl md:text-5xl font-serif text-sand-900 italic mb-6">What clients say</h1>
+    <div className="overflow-x-clip">
+      <section className="page-top pb-16 md:pb-20">
+        <div className="max-w-[1320px] mx-auto px-5 md:px-8">
+          <Reveal>
+            <p className="font-serif italic text-lg text-clay-deep">Testimonials</p>
+            <h1 className="mt-3 font-serif text-display-lg text-ink">
+              What clients <em className="text-clay">say</em>
+            </h1>
           </Reveal>
+        </div>
+      </section>
 
-          <div className="space-y-24">
-            {CATEGORIES.map((category) => (
-              <div key={category.label}>
-                <Reveal width="100%" className="mb-12">
-                  <div className="flex items-center gap-6">
-                    <h2 className="text-2xl md:text-3xl font-serif text-sand-900 md:whitespace-nowrap">
-                      {category.label}
-                    </h2>
-                    <div className="h-px bg-sand-200 flex-1" />
-                  </div>
-                </Reveal>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
-                  {category.items.map((testimonial, idx) => (
-                    <TestimonialCard
-                      key={`${category.label}-${idx}`}
-                      testimonial={testimonial}
-                      index={idx}
-                    />
-                  ))}
-                </div>
-              </div>
+      <section className="pb-section">
+        <div className="max-w-[1320px] mx-auto px-5 md:px-8 grid lg:grid-cols-12 gap-12 lg:gap-16">
+          <nav aria-label="Categories" className="hidden lg:block lg:col-span-3">
+            <ul className="lg:sticky lg:top-32 border-t hairline pt-6 space-y-1">
+              {CATEGORIES.map((c) => (
+                <li key={c.label}>
+                  <a
+                    href={`#${slugify(c.label)}`}
+                    className="block py-2 text-[0.9375rem] text-ink-2 hover:text-clay-deep transition-colors duration-feedback"
+                  >
+                    {c.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+          <div className="lg:col-span-9">
+            {CATEGORIES.map((cat) => (
+              <Category key={cat.label} cat={cat} />
             ))}
           </div>
         </div>

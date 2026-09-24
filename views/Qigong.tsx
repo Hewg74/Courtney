@@ -1,123 +1,227 @@
 import React from 'react';
-import { Button } from '../components/Button';
 import { Play } from 'lucide-react';
-import { Reveal } from '../components/Reveal';
+import { Button } from '../components/Button';
+import { Reveal, Photo } from '../components/Reveal';
 import { YOUTUBE_URL, openExternal } from '../constants';
 
-export const Qigong: React.FC = () => {
-    return (
-        <div className="animate-fade-in pt-32 pb-24 px-6 max-w-5xl mx-auto space-y-20">
+/* ─── Page header ─── */
+const Header: React.FC = () => (
+  <section className="page-top pb-16 md:pb-24">
+    <div className="max-w-[1320px] mx-auto px-5 md:px-8 grid lg:grid-cols-12 gap-10 items-end border-b hairline pb-12 md:pb-16">
+      <Reveal className="lg:col-span-6">
+        <h1 className="font-serif text-display-xl text-ink">
+          Qigong with <em className="text-clay">Courtney</em>
+        </h1>
+      </Reveal>
+      <Reveal delay={0.15} className="lg:col-span-6">
+        <p className="text-body-lg text-ink-2 max-w-[38rem]">
+          Qigong (pronounced CHEE-gong) is a gentle mind-body practice that combines slow movement, breathwork, and
+          meditation. Think of it as a moving meditation that helps release tension and stress from the body and
+          quiet the mind.
+        </p>
+      </Reveal>
+    </div>
+  </section>
+);
 
-            {/* ─── Header ─── */}
-            <div className="text-center space-y-6 max-w-3xl mx-auto pb-12 border-b border-sand-200">
-                <Reveal width="100%">
-                    <span className="text-sage-500 font-sans text-xs font-bold uppercase tracking-widest">Mind &amp; Body</span>
-                    <h1 className="text-5xl md:text-6xl font-serif text-sand-900 mt-3 mb-6">Qigong with Courtney</h1>
-                    <p className="text-xl text-sand-600 font-light leading-relaxed">
-                        Qigong (pronounced CHEE-gong) is a gentle mind-body practice that combines slow movement, breathwork, and meditation. Think of it as a moving meditation that helps release tension and stress from the body and quiet the mind.
-                    </p>
-                </Reveal>
-            </div>
-
-            {/* ─── Video / Image Section ─── */}
-            <Reveal delay={0.2} width="100%">
-                <div className="relative aspect-video bg-sage-50 rounded-2xl overflow-hidden shadow-soft">
-                    <img src="/images/qigong-eyes-closed.png" alt="Courtney teaching Qigong" loading="lazy" className="w-full h-full object-cover" />
-                    <a
-                        href="https://youtube.com/@courtneyalexqi"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="absolute inset-0 flex items-center justify-center bg-black/10 hover:bg-black/20 transition-colors group z-10"
-                    >
-                        <div className="w-20 h-20 bg-white/90 rounded-full flex items-center justify-center shadow-lg group-hover:shadow-2xl transition-shadow duration-700">
-                            <Play size={32} className="text-sage-700 ml-1" fill="currentColor" />
-                        </div>
-                    </a>
-                </div>
-            </Reveal>
-
-            {/* ─── Details ─── */}
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <Reveal delay={0.3} width="100%">
-                    <div className="group relative overflow-hidden bg-white/80 backdrop-blur-md p-8 md:p-10 rounded-[2rem] border border-white shadow-soft h-full hover:shadow-premium hover:-translate-y-1.5 transition-all duration-500 ring-1 ring-sand-900/5">
-                        <div className="absolute inset-0 bg-gradient-to-br from-white/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-                        <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-sage-600 mb-5 block relative z-10 flex items-center gap-2"><span className="w-4 h-px bg-sage-300"></span>Weekly Group Class</span>
-                        <h3 className="text-3xl font-serif text-sand-900 mb-4 relative z-10">Chi Energy Flow</h3>
-                        <p className="text-sand-600 font-light leading-relaxed mb-8 text-sm relative z-10">
-                            A classic mind-body movement practice to ease tension and stress from mind, body, and heart. All levels are welcome, and no experience is needed.
-                        </p>
-                        <dl className="text-sm text-sand-700 space-y-3 pt-6 border-t border-sand-200/50 relative z-10">
-                            <div className="flex gap-4"><dt className="font-medium text-sand-900 shrink-0 w-14">When</dt><dd className="text-right ml-auto text-sand-600">Every Tuesday, 7:30–8:30 PM</dd></div>
-                            <div className="flex gap-4"><dt className="font-medium text-sand-900 shrink-0 w-14">Where</dt><dd className="text-right ml-auto"><a href="https://www.fuzionfit.com/contact" target="_blank" rel="noopener noreferrer" className="text-sage-600 underline decoration-sage-200 underline-offset-4 hover:decoration-sage-400 hover:text-sage-800 transition-colors">FuzionFit Maui</a></dd></div>
-                            <div className="flex gap-4"><dt className="font-medium text-sand-900 shrink-0 w-14">Rate</dt><dd className="text-right ml-auto text-sand-600">$25 drop-in or included in gym membership</dd></div>
-                        </dl>
-                    </div>
-                </Reveal>
-
-                <Reveal delay={0.4} width="100%">
-                    <div className="group relative overflow-hidden bg-white/80 backdrop-blur-md p-8 md:p-10 rounded-[2rem] border border-white shadow-soft h-full hover:shadow-premium hover:-translate-y-1.5 transition-all duration-500 ring-1 ring-sand-900/5">
-                        <div className="absolute inset-0 bg-gradient-to-br from-clay-50/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-                        <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-sage-600 mb-5 block relative z-10 flex items-center gap-2"><span className="w-4 h-px bg-sage-300"></span>Monthly Group Class</span>
-                        <h3 className="text-3xl font-serif text-sand-900 mb-4 relative z-10">Chi Energy Flow</h3>
-                        <p className="text-sand-600 font-light leading-relaxed mb-6 text-sm relative z-10">
-                            Join our monthly community practice. Feel free to stay for a delicious farm-to-table brunch or dinner after class, or simply come to move! <br/><br/>
-                            <span className="italic text-clay-600 font-medium">*Note: In September I am offering a special 1-hour workshop focused entirely on sleep in place of my regular movement flow.</span>
-                        </p>
-                        <div className="bg-clay-50/50 backdrop-blur-sm rounded-2xl p-5 mb-8 text-center border border-white shadow-[inset_0_1px_2px_rgba(0,0,0,0.02)] group-hover:bg-clay-50/80 transition-colors relative z-10">
-                            <span className="block text-[10px] font-bold uppercase tracking-widest text-clay-600 mb-1.5">Next Class</span>
-                            <span className="block text-lg text-sand-900 font-medium">Sept 25th</span>
-                            <span className="block text-xs text-sand-500 mt-1">Join us for our next gathering!</span>
-                        </div>
-                        <dl className="text-sm text-sand-700 space-y-3 pt-6 border-t border-sand-200/50 relative z-10">
-                            <div className="flex gap-4"><dt className="font-medium text-sand-900 shrink-0 w-14">When</dt><dd className="text-right ml-auto text-sand-600">Monthly (Sun 9am or Fri 4:30pm)</dd></div>
-                            <div className="flex gap-4"><dt className="font-medium text-sand-900 shrink-0 w-14">Where</dt><dd className="text-right ml-auto"><a href="https://www.mokuroots.com/" target="_blank" rel="noopener noreferrer" className="text-sage-600 underline decoration-sage-200 underline-offset-4 hover:decoration-sage-400 hover:text-sage-800 transition-colors">Moku Roots Maui</a></dd></div>
-                            <div className="flex gap-4"><dt className="font-medium text-sand-900 shrink-0 w-14">Rate</dt><dd className="text-right ml-auto text-sand-600">By Donation</dd></div>
-                        </dl>
-                    </div>
-                </Reveal>
-
-                <Reveal delay={0.5} width="100%">
-                    <div className="group relative overflow-hidden bg-white/80 backdrop-blur-md p-8 md:p-10 rounded-[2rem] border border-white shadow-soft h-full hover:shadow-premium hover:-translate-y-1.5 transition-all duration-500 ring-1 ring-sand-900/5">
-                        <div className="absolute inset-0 bg-gradient-to-br from-white/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-                        <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-sage-600 mb-5 block relative z-10 flex items-center gap-2"><span className="w-4 h-px bg-sage-300"></span>Private &amp; Semi-Private</span>
-                        <h3 className="text-3xl font-serif text-sand-900 mb-4 relative z-10">Custom Sessions</h3>
-                        <p className="text-sand-600 font-light leading-relaxed mb-8 text-sm relative z-10">
-                            Sessions are tailored for you and can be held online via Zoom or in person on Maui's North Shore. Offered 1:1 or for small groups.
-                        </p>
-                        <div className="text-sm text-sand-700 space-y-3 pt-6 border-t border-sand-200/50 relative z-10">
-                            <p className="flex justify-between gap-4"><strong className="font-medium text-sand-900 shrink-0">Rate</strong> <span className="text-right text-sand-600">$110 / 60-min (up to 5 people)</span></p>
-                            <p className="flex justify-between gap-4"><strong className="font-medium text-sand-900 shrink-0">Add'l</strong> <span className="text-right text-sand-600">+$15 per extra person</span></p>
-                            <p className="text-[10px] text-sand-400 text-right mt-2 uppercase tracking-widest">Hawaii GE Tax applies</p>
-                        </div>
-                    </div>
-                </Reveal>
-            </div>
-
-            {/* ─── YouTube CTA ─── */}
-            <Reveal delay={0.5} width="100%">
-                <div className="text-center space-y-6 bg-sand-50 rounded-2xl p-12 border border-sand-100">
-                    <h2 className="text-3xl font-serif text-sand-900">Try a class at home</h2>
-                    <p className="text-sand-600 font-light max-w-xl mx-auto">
-                        Check out my YouTube channel for free Qigong classes you can follow along with anytime.
-                    </p>
-                    <Button variant="outline" onClick={() => openExternal(YOUTUBE_URL)}>
-                        Watch on YouTube &rarr;
-                    </Button>
-                </div>
-            </Reveal>
-
-            {/* ─── Contact CTA ─── */}
-            <Reveal delay={0.6} width="100%">
-                <div className="text-center space-y-8 py-12 flex flex-col items-center justify-center">
-                    <p className="text-xl text-sand-600 font-light">
-                        Questions about classes? Want to book a private session or retreat?
-                    </p>
-                    <a href="mailto:hello@courtneyalex.com" className="inline-block text-2xl font-serif text-sand-900 border-b border-sand-300 hover:border-clay-400 hover:text-clay-600 transition-all pb-1">
-                        hello@courtneyalex.com
-                    </a>
-                </div>
-            </Reveal>
-
+/* ─── Big photo with a YouTube play overlay ─── */
+const VideoPhoto: React.FC = () => (
+  <section className="pb-section">
+    <div className="max-w-[1320px] mx-auto px-5 md:px-8">
+      <Reveal>
+        <div className="relative">
+          <Photo
+            src="/images/qigong-eyes-closed.webp"
+            alt="Courtney practicing Qigong outdoors with her eyes closed"
+            radius="28px"
+            className="aspect-[16/9] shadow-photo"
+          />
+          <a
+            href={YOUTUBE_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Watch Qigong videos on YouTube"
+            className="absolute inset-0 flex items-center justify-center group"
+          >
+            <span className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-paper/90 flex items-center justify-center shadow-lift transition-transform duration-feedback ease-calm group-hover:scale-105">
+              <Play size={26} className="text-forest ml-1" fill="currentColor" strokeWidth={0} aria-hidden />
+            </span>
+          </a>
         </div>
-    );
-};
+      </Reveal>
+    </div>
+  </section>
+);
+
+/* ─── One class, one editorial row: description + facts, not a glass card ─── */
+interface ClassRowProps {
+  kicker: string;
+  title: string;
+  desc: React.ReactNode;
+  facts: [string, React.ReactNode][];
+  callout?: { label: string; value: string; sub: string };
+  note?: string;
+  delay?: number;
+}
+
+const ClassRow: React.FC<ClassRowProps> = ({ kicker, title, desc, facts, callout, note, delay = 0 }) => (
+  <Reveal delay={delay} className="border-t hairline py-10 md:py-12 grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+    <div className="lg:col-span-7">
+      <p className="font-serif italic text-lg text-clay-deep">{kicker}</p>
+      <h3 className="mt-2 font-serif text-display-sm text-ink">{title}</h3>
+      <div className="mt-4 text-[0.9375rem] text-ink-2 leading-relaxed max-w-[52ch] space-y-3">{desc}</div>
+      {callout && (
+        <div className="mt-6 inline-flex flex-wrap items-baseline gap-x-3 gap-y-1 rounded-md bg-clay-wash px-5 py-3">
+          <span className="font-serif italic text-clay-deep">{callout.label}</span>
+          <span className="font-serif text-lg text-ink">{callout.value}</span>
+          <span className="text-[0.8125rem] text-ink-2">{callout.sub}</span>
+        </div>
+      )}
+    </div>
+    <dl className="lg:col-span-5 text-[0.9375rem] space-y-3 lg:border-l hairline lg:pl-10">
+      {facts.map(([k, v]) => (
+        <div key={k} className="flex gap-4 justify-between">
+          <dt className="font-medium text-ink shrink-0">{k}</dt>
+          <dd className="text-ink-2 text-right">{v}</dd>
+        </div>
+      ))}
+      {note && <p className="text-[0.8125rem] text-ink-2 text-right pt-1">{note}</p>}
+    </dl>
+  </Reveal>
+);
+
+const ClassesSection: React.FC = () => (
+  <section className="pb-section">
+    <div className="max-w-[1320px] mx-auto px-5 md:px-8">
+      <ClassRow
+        kicker="Weekly group class"
+        title="Chi Energy Flow"
+        desc={
+          <p>
+            A classic mind-body movement practice to ease tension and stress from mind, body, and heart. All levels
+            are welcome, and no experience is needed.
+          </p>
+        }
+        facts={[
+          ['When', 'Every Tuesday, 7:30-8:30 PM'],
+          [
+            'Where',
+            <a
+              key="fuzion"
+              href="https://www.fuzionfit.com/contact"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="link-underline text-clay-deep hover:text-clay"
+            >
+              FuzionFit Maui
+            </a>,
+          ],
+          ['Rate', '$25 drop-in or included in gym membership'],
+        ]}
+        delay={0}
+      />
+
+      <ClassRow
+        kicker="Monthly group class"
+        title="Chi Energy Flow"
+        desc={
+          <>
+            <p>
+              Join our monthly community practice. Feel free to stay for a delicious farm-to-table brunch or dinner
+              after class, or simply come to move!
+            </p>
+            <p className="italic text-clay-deep">
+              *Note: In September I am offering a special 1-hour workshop focused entirely on sleep in place of my
+              regular movement flow.
+            </p>
+          </>
+        }
+        callout={{ label: 'Next class', value: 'Sept 25th', sub: 'Join us for our next gathering!' }}
+        facts={[
+          ['When', 'Monthly (Sun 9am or Fri 4:30pm)'],
+          [
+            'Where',
+            <a
+              key="moku"
+              href="https://www.mokuroots.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="link-underline text-clay-deep hover:text-clay"
+            >
+              Moku Roots Maui
+            </a>,
+          ],
+          ['Rate', 'By Donation'],
+        ]}
+        delay={0.06}
+      />
+
+      <ClassRow
+        kicker="Private & semi-private"
+        title="Custom Sessions"
+        desc={
+          <p>
+            Sessions are tailored for you and can be held online via Zoom or in person on Maui's North Shore. Offered
+            1:1 or for small groups.
+          </p>
+        }
+        facts={[
+          ['Rate', '$110 / 60-min (up to 5 people)'],
+          ["Add'l", '+$15 per extra person'],
+        ]}
+        note="Hawaii GE Tax applies"
+        delay={0.12}
+      />
+    </div>
+  </section>
+);
+
+/* ─── YouTube CTA ─── */
+const YouTubeCTA: React.FC = () => (
+  <section className="pb-section">
+    <div className="max-w-[1320px] mx-auto px-5 md:px-8">
+      <div className="rounded-lg bg-paper-2 grain px-6 py-16 md:px-16 md:py-20 text-center">
+        <Reveal>
+          <h2 className="font-serif text-display-sm text-ink">Try a class at home</h2>
+          <p className="mt-4 text-body text-ink-2 max-w-xl mx-auto">
+            Check out my YouTube channel for free Qigong classes you can follow along with anytime.
+          </p>
+          <div className="mt-8">
+            <Button variant="outline" arrow onClick={() => openExternal(YOUTUBE_URL)}>
+              Watch on YouTube
+            </Button>
+          </div>
+        </Reveal>
+      </div>
+    </div>
+  </section>
+);
+
+/* ─── Email CTA ─── */
+const EmailCTA: React.FC = () => (
+  <section className="pb-section">
+    <div className="max-w-[1320px] mx-auto px-5 md:px-8 text-center">
+      <Reveal>
+        <p className="text-body-lg text-ink-2 max-w-[36rem] mx-auto">
+          Questions about classes? Want to book a private session or retreat?
+        </p>
+        <a
+          href="mailto:hello@courtneyalex.com"
+          className="link-underline mt-6 inline-block font-serif text-2xl text-ink hover:text-clay-deep transition-colors duration-feedback"
+        >
+          hello@courtneyalex.com
+        </a>
+      </Reveal>
+    </div>
+  </section>
+);
+
+export const Qigong: React.FC = () => (
+  <div className="overflow-x-clip">
+    <Header />
+    <VideoPhoto />
+    <ClassesSection />
+    <YouTubeCTA />
+    <EmailCTA />
+  </div>
+);

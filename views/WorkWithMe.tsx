@@ -12,12 +12,12 @@ interface WorkWithMeProps {
 }
 
 const NOTICES = [
-  'Better sleep and steadier energy',
+  'More confidence and emotional resilience',
   'Less overwhelm, shutdown, and reactivity',
   'Stronger routines and follow-through',
   'Clearer communication and boundaries',
-  'More confidence and emotional resilience',
   'A greater sense of calm and connection',
+  'Better sleep and steadier energy',
 ];
 
 const HOW_IT_WORKS: [string, string][] = [

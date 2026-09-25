@@ -53,12 +53,12 @@ const OFFERINGS: { title: string; desc: string; cta: string; view: ViewState; im
 ];
 
 const NOTICES = [
-  'Better sleep and steadier energy',
+  'More confidence and emotional resilience',
   'Less overwhelm, shutdown, and reactivity',
   'Stronger routines and follow-through',
   'Clearer communication and boundaries',
-  'More confidence and emotional resilience',
   'A greater sense of calm and connection',
+  'Better sleep and steadier energy',
 ];
 
 // Featured voices: Kerrie (AZ), a college student (CA), and a therapist (Canada).

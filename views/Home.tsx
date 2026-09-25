@@ -5,7 +5,8 @@ import { Button } from '../components/Button';
 import { Reveal, Photo, EASE } from '../components/Reveal';
 import { Rings } from '../components/Rings';
 import { ViewState } from '../types';
-import { openExternal, BOOKING_URL, TESTIMONIALS } from '../constants';
+import { openExternal, BOOKING_URL } from '../constants';
+import { FEATURED_TESTIMONIALS as FEATURED } from './Testimonials';
 
 interface HomeProps {
   setView: (view: ViewState) => void;
@@ -60,9 +61,6 @@ const NOTICES = [
   'A greater sense of calm and connection',
   'Better sleep and steadier energy',
 ];
-
-// Featured voices: Kerrie (AZ), a college student (CA), and a therapist (Canada).
-const FEATURED = [TESTIMONIALS[4], TESTIMONIALS[1], TESTIMONIALS[12]];
 
 const cite = (t: { author: string; context?: string }) => (t.context ? `${t.author}, ${t.context}` : t.author);
 
@@ -386,7 +384,7 @@ const Voices: React.FC<HomeProps> = ({ setView }) => {
           <div role="tablist" aria-label="Choose a story" onKeyDown={onKey} className="mt-8 flex lg:flex-col gap-2 flex-wrap">
             {FEATURED.map((f, k) => (
               <button
-                key={f.id}
+                key={f.featured}
                 ref={(el) => {
                   tabs.current[k] = el;
                 }}
@@ -414,7 +412,7 @@ const Voices: React.FC<HomeProps> = ({ setView }) => {
         >
           <AnimatePresence mode="wait">
             <motion.figure
-              key={t.id}
+              key={t.featured}
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -8, transition: { duration: 0.25 } }}

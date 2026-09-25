@@ -6,6 +6,8 @@ interface PageTestimonial {
   quote: string;
   author: string;
   context?: string;
+  /** Shows in the home page's "What clients say" slider, in this order (1 first). */
+  featured?: number;
 }
 
 interface TestimonialCategory {
@@ -45,7 +47,8 @@ const CATEGORIES: TestimonialCategory[] = [
       {
         quote: "I was really anxious about starting college and doubted myself a lot. Coaching helped me feel more balanced and learn how to be my own best friend. I'm sleeping better, spending less time on my phone, getting out more, and saying kind things to myself. Last week I even helped another student who was going through what I did and I was really excited!",
         author: "Anonymous",
-        context: "CA"
+        context: "CA",
+        featured: 2
       },
       {
         quote: "My old baseball coach asked me what I was doing differently. He said that I looked happy now instead of sad and it made me so proud. Now that I know more about who I am and what I like, what kinds of friends feel good to be around, I haven't been as worried. And when I do feel upset, I just grab my favorite book and make myself laugh!",
@@ -55,7 +58,8 @@ const CATEGORIES: TestimonialCategory[] = [
       {
         quote: "Since working with you, I have seen a miraculous transformation in my son. Once nearly debilitated by anxiety, he now has confidence and courage and tools to help him curtail negative thoughts and toxic people. He has learned to embrace his unique talents rather than fear or suppress them and pursue a healthy lifestyle that includes organic foods and mindfulness in all things. You have made such a difference in his life! Thank you for all that you do.",
         author: "Kerrie",
-        context: "AZ"
+        context: "AZ",
+        featured: 1
       },
       {
         quote: "My daughter is hard at work writing a novel. She has gained a lot from coaching, and I'm amazed to see how her creative expression has blossomed. She's working on her memory, scheduling homework and creative time well, and able to see neurodiversity as a strength. Her relationships are improving. Thanks! We loved your warm coaching style.",
@@ -69,7 +73,8 @@ const CATEGORIES: TestimonialCategory[] = [
       {
         quote: "Once I committed to add weight training in my schedule, everything else fell into place! Thank you. It was a pleasure to have you as my coach. I felt you really listened and were able to hear me, respond to where I’m at with no judgement only compassion, you provided gentle guidance, great feedback and helped give me clarity! I was able to stay on track and I appreciated your flexibility as well. I’ve been a therapist for several decades and can feel you are just a natural at this!",
         author: "RL",
-        context: "CA"
+        context: "CA",
+        featured: 3
       },
       {
         quote: "Working with Courtney has led to an amazing amount of habit change around food and movement. I'm eating more intuitively, and I've figured out routines for exercise that work with my body and mind, not against it. I feel so much better and more in control. Courtney holds such a lovely and nonjudgemental space for self-exploration and I really trust her expertise around health and wellbeing. And it's surprising how even small changes ripple out to my wider lifestyle and level of contentment. Thank you Courtney!",
@@ -239,6 +244,10 @@ const CATEGORIES: TestimonialCategory[] = [
     ]
   }
 ];
+
+export const FEATURED_TESTIMONIALS = CATEGORIES.flatMap((c) => c.items)
+  .filter((t) => t.featured)
+  .sort((a, b) => a.featured! - b.featured!);
 
 const cite = (t: PageTestimonial) => (t.context ? `${t.author}, ${t.context}` : t.author);
 const slugify = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');

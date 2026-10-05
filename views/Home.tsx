@@ -30,14 +30,12 @@ export const Home: React.FC<HomeProps> = ({ setView }) => {
         <div className="max-w-6xl mx-auto w-full grid lg:grid-cols-[1.1fr_0.9fr] gap-8 lg:gap-12 items-center relative z-10">
 
           {/* Left: Text Content */}
-          <div className="space-y-8 text-center lg:text-left order-2 lg:order-1 relative min-w-0">
-            <Reveal variant="fadeUp" delay={0.2} width="100%">
-              <h1 className="text-5xl md:text-6xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-serif text-sand-900 leading-[1.1] tracking-tight">
-                <span className="block">How does your</span>
-                <span className="block">lifestyle support</span>
-                <span className="block whitespace-nowrap">your <AnimatedText words={["mental health", "stress resilience", "emotional regulation", "well-being"]} longestWord="emotional regulation" /></span>
-              </h1>
-            </Reveal>
+          <div className="space-y-8 text-center lg:text-left relative min-w-0">
+            <h1 className="text-[clamp(3.25rem,6vw,4.5rem)] md:text-[clamp(4rem,6vw,4.75rem)] lg:text-[clamp(3.75rem,4.75vw,4.75rem)] font-serif text-sand-900 leading-[1.1] tracking-tight">
+              <span className="block">How does your</span>
+              <span className="block">lifestyle support</span>
+              <span className="block">your <AnimatedText words={["mental health", "stress resilience", "emotional regulation", "well-being"]} longestWord="emotional regulation" /></span>
+            </h1>
 
             <Reveal variant="fadeUp" delay={0.4} width="100%">
               <p className="text-lg md:text-xl text-sand-600 max-w-xl mx-auto lg:mx-0 leading-relaxed font-sans">
@@ -47,10 +45,10 @@ export const Home: React.FC<HomeProps> = ({ setView }) => {
 
             <Reveal variant="fadeUp" delay={0.5} width="100%" className="min-w-0">
               <Marquee items={[
-                "Sleep & energy",
-                "Movement & NS regulation",
-                "Routine & follow-through",
-                "Motivation & executive function",
+                "Sleep & NS Regulation",
+                "Movement & Energy",
+                "Routine & Executive Function",
+                "Motivation & Follow-Through",
                 "Communication & relationships",
                 "Mindset & self-talk",
                 "Emotional regulation & stress resilience"
@@ -59,7 +57,7 @@ export const Home: React.FC<HomeProps> = ({ setView }) => {
 
             <Reveal variant="fadeUp" delay={0.6} className="mx-auto lg:mx-0">
               <div className="pt-2 flex flex-col sm:flex-row items-center lg:items-start justify-center lg:justify-start gap-5">
-                <Button size="lg" onClick={() => setView('work-with-me')}>
+                <Button size="md" onClick={() => setView('work-with-me')}>
                   Work With Me
                 </Button>
               </div>
@@ -87,7 +85,7 @@ export const Home: React.FC<HomeProps> = ({ setView }) => {
           </div>
 
           {/* Right: Keyhole Shape Image */}
-          <div className="order-1 lg:order-2 flex justify-center lg:justify-end relative">
+          <div className="flex justify-center lg:justify-end relative">
             <Reveal variant="scaleUp" delay={0.4}>
               <div className="relative w-72 h-[26rem] md:w-80 md:h-[30rem] lg:w-[420px] lg:h-[520px]">
                 {/* Soft Background */}

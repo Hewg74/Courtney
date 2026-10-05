@@ -4,6 +4,8 @@ import { ViewState } from '../types';
 import { Sparkles, Award, Users, Sun, Feather, Compass, MessageCircle, Star, Heart, Quote } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { Reveal } from '../components/Reveal';
+import { AnimatedText } from '../components/AnimatedText';
+import { Marquee } from '../components/Marquee';
 import { openExternal, BOOKING_URL, TESTIMONIALS } from '../constants';
 
 // ... (inside component)
@@ -25,26 +27,34 @@ export const Home: React.FC<HomeProps> = ({ setView }) => {
         <div className="absolute top-[5%] right-[-5%] w-[600px] h-[600px] bg-sage-100/50 rounded-full blur-[120px] mix-blend-multiply animate-float -z-10" />
         <div className="absolute bottom-[-5%] left-[-5%] w-[500px] h-[500px] bg-clay-100/40 rounded-full blur-[100px] mix-blend-multiply animate-float-delayed -z-10" />
 
-        <div className="max-w-7xl mx-auto w-full grid lg:grid-cols-2 gap-12 lg:gap-20 items-center relative z-10">
+        <div className="max-w-6xl mx-auto w-full grid lg:grid-cols-[1.1fr_0.9fr] gap-8 lg:gap-12 items-center relative z-10">
 
           {/* Left: Text Content */}
-          <div className="space-y-8 text-center lg:text-left order-2 lg:order-1 relative">
-            <Reveal variant="fadeUp" delay={0.2} className="mx-auto lg:mx-0">
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif text-sand-900 leading-[1.05] tracking-tight">
-                Helping adults & families feel steadier, calmer & <span className="whitespace-nowrap">more <span className="italic font-light bg-clip-text text-transparent bg-gradient-to-r from-clay-600 to-clay-400 pb-2">connected.</span></span>
+          <div className="space-y-8 text-center lg:text-left order-2 lg:order-1 relative min-w-0">
+            <Reveal variant="fadeUp" delay={0.2} width="100%">
+              <h1 className="text-5xl md:text-6xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-serif text-sand-900 leading-[1.1] tracking-tight">
+                <span className="block">How does your</span>
+                <span className="block">lifestyle support</span>
+                <span className="block whitespace-nowrap">your <AnimatedText words={["mental health", "stress resilience", "emotional regulation", "well-being"]} longestWord="emotional regulation" /></span>
               </h1>
             </Reveal>
 
-            <Reveal variant="fadeUp" delay={0.4} className="mx-auto lg:mx-0">
+            <Reveal variant="fadeUp" delay={0.4} width="100%">
               <p className="text-lg md:text-xl text-sand-600 max-w-xl mx-auto lg:mx-0 leading-relaxed font-sans">
-                Coaching and mind-body tools for stress relief, emotional regulation, and resilience for adults, parents, and kids.
+                I help adults and families build everyday routines, behaviors, and practices that support greater resilience, energy, and emotional wellbeing.
               </p>
             </Reveal>
 
-            <Reveal variant="fadeUp" delay={0.5} className="mx-auto lg:mx-0">
-              <p className="text-sm text-sand-500 max-w-lg mx-auto lg:mx-0 tracking-wide">
-                Areas of support: stress · anxiety · ADHD · executive functioning · communication · routines · behavior · sleep
-              </p>
+            <Reveal variant="fadeUp" delay={0.5} width="100%" className="min-w-0">
+              <Marquee items={[
+                "Sleep & energy",
+                "Movement & NS regulation",
+                "Routine & follow-through",
+                "Motivation & executive function",
+                "Communication & relationships",
+                "Mindset & self-talk",
+                "Emotional regulation & stress resilience"
+              ]} />
             </Reveal>
 
             <Reveal variant="fadeUp" delay={0.6} className="mx-auto lg:mx-0">

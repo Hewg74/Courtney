@@ -67,7 +67,7 @@ export const Navigation: React.FC<NavigationProps> = ({ currentView, setView }) 
         </button>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex items-center space-x-8">
+        <div className="hidden xl:flex items-center space-x-8">
           {navItems.map((item) => (
             <button
               key={item.value}
@@ -97,7 +97,7 @@ export const Navigation: React.FC<NavigationProps> = ({ currentView, setView }) 
 
         {/* Mobile Menu Toggle */}
         <button
-          className="md:hidden text-sand-900 z-50 relative p-2 hover:bg-sand-200/50 rounded-full transition-colors"
+          className="xl:hidden text-sand-900 z-50 relative p-2 hover:bg-sand-200/50 rounded-full transition-colors"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
           aria-expanded={isMobileMenuOpen}

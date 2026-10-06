@@ -21,20 +21,20 @@ export const Home: React.FC<HomeProps> = ({ setView }) => {
     <div className="animate-fade-in pb-24 relative overflow-x-hidden">
 
       {/* 1. Hero Section - Side-by-Side Layout (Old Design) */}
-      <section className="relative min-h-[100vh] flex items-center px-6 overflow-hidden pt-40 lg:pt-40 pb-32 lg:pb-32">
+      <section className="relative lg:min-h-[100vh] flex items-center px-6 overflow-hidden pt-32 md:pt-36 lg:pt-40 pb-16 md:pb-20 lg:pb-32">
         {/* Ambient Washes */}
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-clay-50/50 via-sand-50 to-white -z-20" />
         <div className="absolute top-[5%] right-[-5%] w-[600px] h-[600px] bg-sage-100/50 rounded-full blur-[120px] mix-blend-multiply animate-float -z-10" />
         <div className="absolute bottom-[-5%] left-[-5%] w-[500px] h-[500px] bg-clay-100/40 rounded-full blur-[100px] mix-blend-multiply animate-float-delayed -z-10" />
 
-        <div className="max-w-6xl mx-auto w-full grid lg:grid-cols-[1.1fr_0.9fr] gap-8 lg:gap-12 items-center relative z-10">
+        <div className="max-w-6xl mx-auto w-full grid lg:grid-cols-[1.1fr_0.9fr] gap-10 lg:gap-12 items-center relative z-10">
 
           {/* Left: Text Content */}
-          <div className="space-y-8 text-center lg:text-left relative min-w-0">
-            <h1 className="text-[clamp(3.25rem,6vw,4.5rem)] md:text-[clamp(4rem,6vw,4.75rem)] lg:text-[clamp(3.75rem,4.75vw,4.75rem)] font-serif text-sand-900 leading-[1.1] tracking-tight">
+          <div className="space-y-6 lg:space-y-8 text-center lg:text-left relative min-w-0 max-w-2xl mx-auto lg:max-w-none w-full">
+            <h1 className="text-[clamp(3.25rem,6vw,4.5rem)] md:text-[clamp(3.75rem,6vw,4.25rem)] lg:text-[clamp(3.75rem,4.75vw,4.75rem)] font-serif text-sand-900 leading-[1.1] tracking-tight">
               <span className="block">How does your</span>
-              <span className="block">lifestyle support</span>
-              <span className="block">your <AnimatedText words={["mental health", "stress resilience", "emotional regulation", "well-being"]} longestWord="emotional regulation" /></span>
+              <span className="block">lifestyle support your</span>
+              <AnimatedText words={["mental health", "stress resilience", "emotional regulation", "well-being"]} longestWord="emotional regulation" />
             </h1>
 
             <Reveal variant="fadeUp" delay={0.4} width="100%">
@@ -65,18 +65,18 @@ export const Home: React.FC<HomeProps> = ({ setView }) => {
 
             {/* Trust Anchors - Enhanced (Old Design Structure with New Content) */}
             <Reveal variant="fadeIn" delay={0.8} className="mx-auto lg:mx-0">
-              <div className="pt-8 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 sm:gap-8 border-t border-sand-200 mt-8">
-                <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-sand-500">
+              <div className="pt-6 lg:pt-8 flex flex-col sm:flex-row sm:flex-wrap items-center justify-center lg:justify-start gap-4 sm:gap-6 xl:gap-8 border-t border-sand-200">
+                <div className="flex items-center gap-2 whitespace-nowrap text-xs font-bold uppercase tracking-widest text-sand-500">
                   <Award size={16} className="text-clay-500" />
                   <span>NBC-HWC Certified</span>
                 </div>
-                <div className="hidden sm:block w-px h-4 bg-sand-300"></div>
-                <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-sand-500">
+                <div className="hidden xl:block w-px h-4 bg-sand-300"></div>
+                <div className="flex items-center gap-2 whitespace-nowrap text-xs font-bold uppercase tracking-widest text-sand-500">
                   <Sparkles size={16} className="text-clay-500" />
                   <span>Qigong Teacher</span>
                 </div>
-                <div className="hidden sm:block w-px h-4 bg-sand-300"></div>
-                <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-sand-500">
+                <div className="hidden xl:block w-px h-4 bg-sand-300"></div>
+                <div className="flex items-center gap-2 whitespace-nowrap text-xs font-bold uppercase tracking-widest text-sand-500">
                   <Users size={16} className="text-clay-500" />
                   <span>Author</span>
                 </div>
@@ -85,9 +85,9 @@ export const Home: React.FC<HomeProps> = ({ setView }) => {
           </div>
 
           {/* Right: Keyhole Shape Image */}
-          <div className="flex justify-center lg:justify-end relative">
-            <Reveal variant="scaleUp" delay={0.4}>
-              <div className="relative w-72 h-[26rem] md:w-80 md:h-[30rem] lg:w-[420px] lg:h-[520px]">
+          <div className="flex justify-center lg:justify-end relative min-w-0">
+            <Reveal variant="scaleUp" delay={0.4} width="100%" className="max-w-72 md:max-w-80 lg:max-w-[420px]">
+              <div className="relative w-full aspect-[9/13] md:aspect-[2/3] lg:aspect-[21/26]">
                 {/* Soft Background */}
                 <div className="absolute inset-0 bg-sand-200 rounded-t-full rounded-b-[2rem] rotate-2 opacity-50 blur-xl"></div>
 

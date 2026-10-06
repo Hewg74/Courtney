@@ -39,7 +39,7 @@ export const Home: React.FC<HomeProps> = ({ setView }) => {
 
             <Reveal variant="fadeUp" delay={0.4} width="100%">
               <p className="text-lg md:text-xl text-sand-600 max-w-xl mx-auto lg:mx-0 leading-relaxed font-sans">
-                I help adults and families build everyday routines, behaviors, and practices that support greater resilience, energy, and emotional wellbeing.
+                I help adults and families build everyday habits that support how they feel, function, and handle stress.
               </p>
             </Reveal>
 

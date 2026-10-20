@@ -1,0 +1,98 @@
+{
+  "version": 1,
+  "generated_by": "~/.claude/scripts/agent-map.mjs",
+  "profile": {
+    "value": "site",
+    "evidence": [
+      "index.html",
+      "public/",
+      "dep:static-site-tooling"
+    ],
+    "llm_surface": false,
+    "synced_at": "2026-10-20"
+  },
+  "purpose": {
+    "claim": null,
+    "verified": null
+  },
+  "run": {
+    "dev": "npm run dev",
+    "build": "npm run build",
+    "test": null,
+    "check": null,
+    "verify": null
+  },
+  "map": [],
+  "capabilities": [],
+  "actions": [],
+  "invariants": [],
+  "features": [
+    {
+      "id": "/",
+      "claim": null,
+      "reach": {
+        "route": "/"
+      },
+      "verify": null,
+      "anchors": [
+        "index.html"
+      ],
+      "derived": true
+    },
+    {
+      "id": "/homepage_source",
+      "claim": null,
+      "reach": {
+        "route": "/homepage_source"
+      },
+      "verify": null,
+      "anchors": [
+        "homepage_source.html"
+      ],
+      "derived": true
+    }
+  ],
+  "in_flight": {
+    "handoff": null,
+    "tasks_glob": "tasks/todo-*.md"
+  },
+  "agents": [],
+  "routing": [],
+  "defaults_offered": [
+    "no-deferral-markers",
+    "file-size"
+  ],
+  "guards": [
+    {
+      "id": "no-deferral-markers",
+      "claim": "No TODO/FIXME/HACK/XXX markers: fix it, or defer through a `ponytail:` comment (what was simplified, ceiling, upgrade trigger) that the debt ledger harvests",
+      "pattern": "\\b(?:TODO|FIXME|HACK|XXX)\\b",
+      "flags": "",
+      "globs": [
+        "**/*.{js,mjs,cjs,ts,tsx,jsx,py,go,rs,rb,php,java,kt,swift,cs,vue,svelte,astro,css,scss,html,sh,ps1,sql}"
+      ],
+      "ignore_line": "ponytail:",
+      "grandfathered": {},
+      "added": "2026-10-20"
+    },
+    {
+      "id": "file-size",
+      "claim": "No source file past 2,000 lines (one agent Read window); a file already past it may shrink, never grow. Split by concern in its own refactor commit, then make the change",
+      "type": "lines",
+      "max_lines": 2000,
+      "globs": [
+        "**/*.{js,mjs,cjs,ts,tsx,jsx,py,go,rs,rb,php,java,kt,swift,cs,vue,svelte,astro,css,scss,html,sh,ps1,sql}"
+      ],
+      "ignore": [
+        "**/*.min.*",
+        "**/vendor/**",
+        "**/generated/**",
+        "**/*.generated.*",
+        "**/*.d.ts"
+      ],
+      "ignore_line": "@section",
+      "grandfathered": {},
+      "added": "2026-10-20"
+    }
+  ]
+}

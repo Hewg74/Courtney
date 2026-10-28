@@ -21,44 +21,43 @@ export const Home: React.FC<HomeProps> = ({ setView }) => {
     <div className="animate-fade-in pb-24 relative overflow-x-hidden">
 
       {/* 1. Hero Section - Side-by-Side Layout (Old Design) */}
-      <section className="relative min-h-[100vh] flex items-center px-6 overflow-hidden pt-40 lg:pt-40 pb-32 lg:pb-32">
+      <section className="relative lg:min-h-[100vh] flex items-center px-6 overflow-hidden pt-32 md:pt-36 lg:pt-40 pb-16 md:pb-20 lg:pb-32">
         {/* Ambient Washes */}
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-clay-50/50 via-sand-50 to-white -z-20" />
         <div className="absolute top-[5%] right-[-5%] w-[600px] h-[600px] bg-sage-100/50 rounded-full blur-[120px] mix-blend-multiply animate-float -z-10" />
         <div className="absolute bottom-[-5%] left-[-5%] w-[500px] h-[500px] bg-clay-100/40 rounded-full blur-[100px] mix-blend-multiply animate-float-delayed -z-10" />
 
-        <div className="max-w-6xl mx-auto w-full grid lg:grid-cols-[1.1fr_0.9fr] gap-8 lg:gap-12 items-center relative z-10">
+        <div className="max-w-6xl mx-auto w-full grid lg:grid-cols-[1.1fr_0.9fr] gap-10 lg:gap-12 items-center relative z-10">
 
           {/* Left: Text Content */}
-          <div className="space-y-8 text-center lg:text-left order-2 lg:order-1 relative min-w-0">
-            <Reveal variant="fadeUp" delay={0.2} width="100%">
-              <h1 className="text-5xl md:text-6xl lg:text-6xl xl:text-7xl font-serif text-sand-900 leading-[1.1] tracking-tight">
-                <span className="block">How does your</span>
-                <span className="block">lifestyle support</span>
-                <span className="block whitespace-nowrap">your <AnimatedText words={["mental health", "stress resilience", "emotional regulation", "well-being"]} longestWord="emotional regulation" /></span>
-              </h1>
-            </Reveal>
+          <div className="space-y-6 lg:space-y-8 text-center lg:text-left relative min-w-0 max-w-2xl mx-auto lg:max-w-none w-full">
+            <h1 className="text-[clamp(3.25rem,6vw,4.5rem)] md:text-[clamp(3.75rem,6vw,4.25rem)] lg:text-[clamp(3.75rem,4.75vw,4.75rem)] font-serif text-sand-900 leading-[1.1] tracking-tight">
+              <span className="block">How does your</span>
+              <span className="block">lifestyle support your</span>
+              <AnimatedText words={["mental health", "stress resilience", "emotional regulation", "well-being"]} longestWord="emotional regulation" />
+            </h1>
 
             <Reveal variant="fadeUp" delay={0.4} width="100%">
               <p className="text-lg md:text-xl text-sand-600 max-w-xl mx-auto lg:mx-0 leading-relaxed font-sans">
-                I help adults and families build everyday routines, behaviors, and practices that support greater resilience, energy, and emotional wellbeing.
+                I help adults and families build everyday habits that support how they feel, function, and handle stress.
               </p>
             </Reveal>
 
             <Reveal variant="fadeUp" delay={0.5} width="100%" className="min-w-0">
               <Marquee items={[
                 "Sleep & NS Regulation",
-                "Motivation & Follow-Through",
+                "Movement & Energy",
                 "Routine & Executive Function",
-                "Communication & Relationships",
-                "Mindset & Self-Talk",
-                "Emotional Regulation & Stress Resilience"
+                "Motivation & Follow-Through",
+                "Communication & relationships",
+                "Mindset & self-talk",
+                "Emotional regulation & stress resilience"
               ]} />
             </Reveal>
 
             <Reveal variant="fadeUp" delay={0.6} className="mx-auto lg:mx-0">
               <div className="pt-2 flex flex-col sm:flex-row items-center lg:items-start justify-center lg:justify-start gap-5">
-                <Button size="lg" onClick={() => setView('work-with-me')}>
+                <Button size="md" onClick={() => setView('work-with-me')}>
                   Work With Me
                 </Button>
               </div>
@@ -66,18 +65,18 @@ export const Home: React.FC<HomeProps> = ({ setView }) => {
 
             {/* Trust Anchors - Enhanced (Old Design Structure with New Content) */}
             <Reveal variant="fadeIn" delay={0.8} className="mx-auto lg:mx-0">
-              <div className="pt-8 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 sm:gap-8 border-t border-sand-200 mt-8">
-                <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-sand-500">
+              <div className="pt-6 lg:pt-8 flex flex-col sm:flex-row sm:flex-wrap items-center justify-center lg:justify-start gap-4 sm:gap-6 xl:gap-8 border-t border-sand-200">
+                <div className="flex items-center gap-2 whitespace-nowrap text-xs font-bold uppercase tracking-widest text-sand-500">
                   <Award size={16} className="text-clay-500" />
                   <span>NBC-HWC Certified</span>
                 </div>
-                <div className="hidden sm:block w-px h-4 bg-sand-300"></div>
-                <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-sand-500">
+                <div className="hidden xl:block w-px h-4 bg-sand-300"></div>
+                <div className="flex items-center gap-2 whitespace-nowrap text-xs font-bold uppercase tracking-widest text-sand-500">
                   <Sparkles size={16} className="text-clay-500" />
                   <span>Qigong Teacher</span>
                 </div>
-                <div className="hidden sm:block w-px h-4 bg-sand-300"></div>
-                <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-sand-500">
+                <div className="hidden xl:block w-px h-4 bg-sand-300"></div>
+                <div className="flex items-center gap-2 whitespace-nowrap text-xs font-bold uppercase tracking-widest text-sand-500">
                   <Users size={16} className="text-clay-500" />
                   <span>Author</span>
                 </div>
@@ -86,9 +85,9 @@ export const Home: React.FC<HomeProps> = ({ setView }) => {
           </div>
 
           {/* Right: Keyhole Shape Image */}
-          <div className="order-1 lg:order-2 flex justify-center lg:justify-end relative">
-            <Reveal variant="scaleUp" delay={0.4}>
-              <div className="relative w-72 h-[26rem] md:w-80 md:h-[30rem] lg:w-[420px] lg:h-[520px]">
+          <div className="flex justify-center lg:justify-end relative min-w-0">
+            <Reveal variant="scaleUp" delay={0.4} width="100%" className="max-w-72 md:max-w-80 lg:max-w-[420px]">
+              <div className="relative w-full aspect-[9/13] md:aspect-[2/3] lg:aspect-[21/26]">
                 {/* Soft Background */}
                 <div className="absolute inset-0 bg-sand-200 rounded-t-full rounded-b-[2rem] rotate-2 opacity-50 blur-xl"></div>
 
@@ -106,33 +105,6 @@ export const Home: React.FC<HomeProps> = ({ setView }) => {
           </div>
 
         </div>
-      </section>
-
-      {/* ─── Upcoming Event Banner ─── */}
-      <section className="py-6 px-6 bg-clay-50 border-y border-clay-100">
-        <Reveal width="100%">
-          <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
-            <div className="flex items-center gap-5">
-              <div className="hidden sm:flex flex-col items-center justify-center bg-white rounded-2xl shadow-soft border border-clay-100 px-4 py-3 min-w-[60px]">
-                <span className="text-[10px] font-bold uppercase tracking-widest text-clay-500">Nov</span>
-                <span className="text-3xl font-serif text-sand-900 leading-none">14</span>
-              </div>
-              <div>
-                <span className="text-[10px] font-bold uppercase tracking-widest text-clay-500 block mb-1">Upcoming Workshop</span>
-                <h3 className="text-xl font-serif text-sand-900">Sleep: Practical Tools for Better Rest</h3>
-                <p className="text-sm text-sand-500 mt-1">Sat, Nov 14 · 3–4 PM · Makawao Community Acupuncture Clinic</p>
-              </div>
-            </div>
-            <a
-              href="https://www.eventbrite.com/e/sleep-practical-tools-for-better-rest-tickets-2003948511944"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="shrink-0 inline-flex items-center gap-2 bg-sand-900 text-sand-50 text-sm font-medium px-6 py-3 rounded-full hover:bg-clay-700 transition-all duration-300 hover:-translate-y-0.5 shadow-soft hover:shadow-medium whitespace-nowrap"
-            >
-              Register on Eventbrite →
-            </a>
-          </div>
-        </Reveal>
       </section>
 
       {/* 2. Services Overview (Moved & Renamed) */}

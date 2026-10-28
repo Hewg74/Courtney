@@ -28,7 +28,7 @@ export const AnimatedText: React.FC<AnimatedTextProps> = ({
   }
 
   return (
-    <span className="relative inline-block text-left whitespace-nowrap">
+    <span className="relative inline-grid max-w-full align-bottom whitespace-normal">
       <AnimatePresence mode="wait">
         <motion.span
           key={index}
@@ -36,13 +36,13 @@ export const AnimatedText: React.FC<AnimatedTextProps> = ({
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 1.5, ease: "easeInOut" }}
-          className="absolute inset-0 italic font-light text-clay-500"
+          className="col-start-1 row-start-1 italic font-light text-clay-500"
         >
           {words[index]}?
         </motion.span>
       </AnimatePresence>
       {/* Invisible spacer to reserve width */}
-      <span className="invisible italic font-light pr-2">
+      <span aria-hidden="true" className="invisible col-start-1 row-start-1 italic font-light pr-2">
         {getLongest()}?
       </span>
     </span>

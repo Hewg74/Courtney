@@ -31,6 +31,33 @@ export const WorkWithMe: React.FC<WorkWithMeProps> = ({ setView }) => {
 
             {/* ─── Workshops & Group Coaching ─── */}
             <section className="space-y-8">
+
+                {/* Upcoming Event */}
+                <Reveal width="100%">
+                    <div className="bg-clay-50 border border-clay-100 rounded-2xl p-6 md:p-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+                        <div className="flex items-center gap-5">
+                            <div className="hidden sm:flex flex-col items-center justify-center bg-white rounded-2xl shadow-soft border border-clay-100 px-4 py-3 min-w-[60px] shrink-0">
+                                <span className="text-[10px] font-bold uppercase tracking-widest text-clay-500">Nov</span>
+                                <span className="text-3xl font-serif text-sand-900 leading-none">14</span>
+                            </div>
+                            <div>
+                                <span className="text-[10px] font-bold uppercase tracking-widest text-clay-500 block mb-1">Upcoming Workshop</span>
+                                <h3 className="text-xl font-serif text-sand-900">Sleep: Practical Tools for Better Rest</h3>
+                                <p className="text-sm text-sand-500 mt-1">Sat, Nov 14 · 3–4 PM · Makawao Community Acupuncture Clinic</p>
+                                <p className="text-sm text-sand-500 mt-2 max-w-lg font-light">Explore common sleep disruptors, why routines matter, and practical ways to support more restful sleep. You'll leave with simple, realistic tools you can adapt to your lifestyle.</p>
+                            </div>
+                        </div>
+                        <a
+                            href="https://www.eventbrite.com/e/sleep-practical-tools-for-better-rest-tickets-2003948511944"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="shrink-0 inline-flex items-center gap-2 bg-sand-900 text-sand-50 text-sm font-medium px-6 py-3 rounded-full hover:bg-clay-700 transition-all duration-300 hover:-translate-y-0.5 shadow-soft hover:shadow-medium whitespace-nowrap"
+                        >
+                            Register on Eventbrite →
+                        </a>
+                    </div>
+                </Reveal>
+
                 <Reveal width="100%">
                     <div className="bg-white rounded-2xl p-8 md:p-12 lg:p-16 shadow-soft border border-sand-50">
                         <div className="grid lg:grid-cols-2 gap-12 items-center">

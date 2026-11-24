@@ -29,7 +29,7 @@ export const Home: React.FC<HomeProps> = ({ setView }) => {
         <div className="absolute bottom-[-5%] left-[-5%] w-[500px] h-[500px] bg-clay-100/40 rounded-full blur-[100px] mix-blend-multiply animate-float-delayed -z-10" />
 
         {/* Seasonal promo (hides itself when the sale ends) */}
-        <PromoBanner className="relative z-10 mb-10 md:mb-14" />
+        <PromoBanner className="relative z-10 mb-8 md:mb-12" />
 
         <div className="max-w-6xl mx-auto my-auto w-full grid lg:grid-cols-[1.1fr_0.9fr] gap-10 lg:gap-12 items-center relative z-10">
 

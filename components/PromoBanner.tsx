@@ -22,39 +22,39 @@ export const PromoBanner: React.FC<PromoBannerProps> = ({ className = '' }) => {
     <Reveal width="100%" className={className}>
       <aside
         aria-label="Black Friday sale"
-        className="relative overflow-hidden max-w-5xl mx-auto bg-[#BE3F6B] text-white rounded-3xl shadow-premium px-6 py-8 md:px-12 md:py-10"
+        className="relative overflow-hidden max-w-5xl mx-auto bg-[#BE3F6B] text-white rounded-2xl md:rounded-3xl shadow-soft px-5 py-4 md:px-8 md:py-5"
       >
-        <div className="absolute -top-24 -right-16 w-72 h-72 rounded-full bg-white/10 blur-3xl pointer-events-none" />
-        <div className="absolute -bottom-28 -left-20 w-72 h-72 rounded-full bg-[#993556]/40 blur-3xl pointer-events-none" />
+        <div className="absolute -top-20 -right-16 w-56 h-56 rounded-full bg-white/10 blur-3xl pointer-events-none" />
 
-        <div className="relative flex flex-col md:flex-row items-center gap-6 md:gap-10 text-center md:text-left">
-          <div className="flex-shrink-0">
-            <span className="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.16em] text-[#FBEAF0]">
-              <Gift size={14} strokeWidth={2} aria-hidden="true" />
-              Black Friday · Nov 25–30
-            </span>
-            <div className="font-serif italic text-6xl md:text-7xl leading-none mt-3">20% off</div>
-            <span className="block text-[11px] font-bold uppercase tracking-[0.16em] text-[#FBEAF0] mt-3">
-              Qigong &amp; Health Coaching*
-            </span>
+        <div className="relative flex flex-col md:flex-row md:items-center gap-3 md:gap-8">
+          <div className="flex items-center gap-4 md:gap-6 flex-grow">
+            <div className="flex-shrink-0 text-center">
+              <div className="font-serif italic text-4xl md:text-5xl leading-none">20% off</div>
+              <span className="inline-flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-[0.14em] text-[#FBEAF0] mt-1.5">
+                <Gift size={12} strokeWidth={2} aria-hidden="true" />
+                Nov 25–30
+              </span>
+            </div>
+            <div className="border-l border-white/25 pl-4 md:pl-6">
+              <span className="block text-[10px] font-bold uppercase tracking-[0.14em] text-[#FBEAF0] mb-1">
+                Black Friday · Qigong &amp; Health Coaching*
+              </span>
+              <p className="font-serif text-lg md:text-xl leading-snug">
+                Give yourself (or someone you love) the gift of wellness!
+              </p>
+            </div>
           </div>
-
-          <div className="flex-grow md:border-l md:border-white/25 md:pl-10 space-y-5">
-            <p className="font-serif text-2xl md:text-3xl leading-snug">
-              Give yourself (or someone you love) the gift of wellness!
-            </p>
-            <button
-              type="button"
-              onClick={() => openExternal(BOOKING_URL)}
-              className="inline-flex items-center gap-2 bg-white text-[#993556] text-sm font-medium px-7 py-3.5 rounded-full shadow-soft hover:bg-[#FBEAF0] hover:-translate-y-0.5 transition-all duration-300 whitespace-nowrap"
-            >
-              Book a Free 15-Min Chat
-            </button>
-          </div>
+          <button
+            type="button"
+            onClick={() => openExternal(BOOKING_URL)}
+            className="flex-shrink-0 inline-flex items-center justify-center bg-white text-[#993556] text-sm font-medium px-6 py-2.5 rounded-full shadow-soft hover:bg-[#FBEAF0] hover:-translate-y-0.5 transition-all duration-300 whitespace-nowrap"
+          >
+            Book a Free 15-Min Chat
+          </button>
         </div>
 
         {/* Fine print: short by default, Courtney's full wording on tap */}
-        <p className="relative text-xs text-white font-light leading-relaxed mt-6 pt-5 border-t border-white/25 text-center md:text-left">
+        <p className="relative text-[11px] text-white font-light leading-relaxed mt-3">
           {showDetails ? (
             <>*New &amp; Returning Health Coaching Clients, please book a complimentary 15-min intro chat to explore coaching fit. Black Friday session prices will be secured for any intro chats booked between Nov 23–30th, even if we meet after the sale!</>
           ) : (

@@ -313,7 +313,7 @@ export const WorkWithMe: React.FC<WorkWithMeProps> = ({ setView }) => {
                             <strong className="text-clay-600 font-medium">*New clients receive 10% off</strong> their first session. This gives you a chance to experience the work, ask questions, and see whether ongoing support feels like the right fit.
                         </p>
                         <p className="text-[9px] text-sand-400 mt-3 font-light uppercase tracking-widest">
-                            After the first session, regular rates apply.
+                            After the first session, regular rates apply. Not applicable with other discounted offers.
                         </p>
                     </div>
                 </Reveal>

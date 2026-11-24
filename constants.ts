@@ -397,7 +397,7 @@ export const FAQ_ITEMS = [
   },
   {
     q: "How long do people typically work with you?",
-    a: "The initial engagement is often a 6-session package over 3 months. That said, it depends on your goals for our work together, which we’ll outline during the first coaching session. Every 6 sessions, we’ll check in. Once goals are complete, many people choose to continue with periodic check-ins or rejoin for specific transitions (like starting a new school year or navigating a career change)."
+    a: "It depends on your goals and what works for your life. Some clients come for a handful of sessions around a specific challenge, while others check in regularly over time. We'll talk through what makes sense during our first session and revisit it as we go."
   },
   {
     q: "For family coaching, do you work with the parents or the child?",

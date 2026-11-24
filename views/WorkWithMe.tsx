@@ -238,24 +238,23 @@ export const WorkWithMe: React.FC<WorkWithMeProps> = ({ setView }) => {
                 </Reveal>
 
                 <div className="grid md:grid-cols-2 gap-6 md:gap-8 max-w-5xl mx-auto">
-                    {/* Packages - Recommended */}
+
+                    {/* Initial & Comprehensive Coaching */}
                     <Reveal delay={0.1} className="h-full">
                         <div className="group relative overflow-hidden bg-white/80 backdrop-blur-md p-10 md:p-14 rounded-[2rem] border border-white shadow-soft h-full flex flex-col hover:shadow-premium hover:-translate-y-1.5 transition-all duration-500 ring-1 ring-sand-900/5">
                             <div className="absolute inset-0 bg-gradient-to-br from-sage-50/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-                            <div className="mb-6 md:mb-0 md:absolute md:top-8 md:right-8 bg-sage-50 px-4 py-1.5 rounded-full text-[11px] font-bold uppercase tracking-wider text-sage-700 self-start inline-block">
-                                Recommended
-                            </div>
-                            <h3 className="text-3xl font-serif text-sand-900 mb-2">6-Session Coaching Package</h3>
-                            <div className="text-3xl font-serif text-sand-900 mb-6">$495</div>
+                            <span className="text-[11px] font-bold uppercase tracking-widest text-sage-600 mb-5 block">45 minutes</span>
+                            <h3 className="text-3xl font-serif text-sand-900 mb-2">Initial &amp; Comprehensive</h3>
+                            <div className="text-3xl font-serif text-sand-900 mb-6">$85</div>
                             <p className="text-sand-600 text-sm leading-relaxed mb-8 flex-grow font-light">
-                                Packages are designed for sustained support and real progress. Most clients see the best results with consistent sessions over time.
+                                For new clients or those who benefit from more time exploring goals, challenges, and strategies.
                             </p>
                             <div className="space-y-4 mb-10">
                                 {[
-                                    "Six sessions",
-                                    "Bi-weekly scheduling (flexible)",
-                                    "Parent support included (for family coaching)",
-                                    "Customized to your goals",
+                                    "Ideal for first sessions",
+                                    "Deep dive into goals & challenges",
+                                    "Explore tools and strategies together",
+                                    "Customized to your life",
                                 ].map((f, i) => (
                                     <div key={i} className="flex items-start text-sand-700 text-sm">
                                         <Check size={16} className="text-sage-500 mr-3 mt-0.5 flex-shrink-0" strokeWidth={1.25} />
@@ -270,23 +269,22 @@ export const WorkWithMe: React.FC<WorkWithMeProps> = ({ setView }) => {
                         </div>
                     </Reveal>
 
-                    {/* Single Sessions */}
+                    {/* Ongoing Coaching */}
                     <Reveal delay={0.2} className="h-full">
                         <div className="group relative overflow-hidden bg-sand-50/80 backdrop-blur-md p-10 md:p-14 rounded-[2rem] border border-white shadow-soft h-full flex flex-col hover:shadow-premium hover:-translate-y-1.5 transition-all duration-500 ring-1 ring-sand-900/5">
                             <div className="absolute inset-0 bg-gradient-to-br from-white/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-                            <h3 className="text-3xl font-serif text-sand-900 mb-2">Single Coaching Session</h3>
-                            <div className="text-3xl font-serif text-sand-900 mb-6">$85</div>
+                            <span className="text-[11px] font-bold uppercase tracking-widest text-sage-600 mb-5 block">30 minutes</span>
+                            <h3 className="text-3xl font-serif text-sand-900 mb-2">Ongoing Coaching</h3>
+                            <div className="text-3xl font-serif text-sand-900 mb-6">$55</div>
                             <p className="text-sand-600 text-sm leading-relaxed mb-8 flex-grow font-light">
-                                Single sessions are a great way to get focused support on a specific challenge, try out coaching and assess fit, or check in when you need it.
+                                For established clients focused on maintaining progress, identifying barriers, building healthy habits, and ongoing accountability.
                             </p>
                             <div className="space-y-4 mb-10">
                                 {[
-                                    "One session",
-                                    "Flexible scheduling",
-                                    "Support during a hard week",
-                                    "Troubleshoot routines or communication",
-                                    "Nervous system reset",
-                                    "Clarity and next steps",
+                                    "For returning clients",
+                                    "Maintaining momentum & accountability",
+                                    "Identifying barriers & troubleshooting",
+                                    "Building healthy habits over time",
                                 ].map((f, i) => (
                                     <div key={i} className="flex items-start text-sand-700 text-sm">
                                         <Check size={16} className="text-sage-500 mr-3 mt-0.5 flex-shrink-0" strokeWidth={1.25} />
@@ -302,6 +300,7 @@ export const WorkWithMe: React.FC<WorkWithMeProps> = ({ setView }) => {
                     </Reveal>
 
                 </div>
+
 
                 <Reveal delay={0.25} width="100%">
                     <div className="max-w-5xl mx-auto mt-8 bg-sage-50/80 backdrop-blur-md rounded-3xl p-6 md:p-8 border border-white text-center shadow-soft ring-1 ring-sage-900/5 relative overflow-hidden">
@@ -334,10 +333,10 @@ export const WorkWithMe: React.FC<WorkWithMeProps> = ({ setView }) => {
                     <div className="max-w-2xl mx-auto text-center mt-8 p-8 md:p-10 rounded-3xl border border-white bg-clay-50/80 backdrop-blur-md shadow-glass ring-1 ring-clay-900/5 relative overflow-hidden">
                         <div className="absolute inset-0 bg-gradient-to-b from-white/30 to-transparent pointer-events-none" />
                         <p className="text-sand-600 font-light text-sm leading-relaxed">
-                            <strong className="text-clay-600 font-medium">*New clients receive 10% off</strong> their first session or first coaching package. This gives you a chance to experience the work, ask questions, and see whether ongoing support feels like the right fit.
+                            <strong className="text-clay-600 font-medium">*New clients receive 10% off</strong> their first session. This gives you a chance to experience the work, ask questions, and see whether ongoing support feels like the right fit.
                         </p>
                         <p className="text-[9px] text-sand-400 mt-3 font-light uppercase tracking-widest">
-                            After the first session or package, regular rates apply.
+                            After the first session, regular rates apply.
                         </p>
                     </div>
                 </Reveal>

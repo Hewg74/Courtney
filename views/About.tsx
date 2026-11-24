@@ -152,7 +152,7 @@ export const About: React.FC<AboutProps> = ({ setView }) => {
               </li>
               <li className="flex items-start gap-4">
                 <div className="w-1.5 h-1.5 rounded-full bg-clay-500 mt-2.5 flex-shrink-0" />
-                <span>Author of <em>Trust Your Magical Self</em></span>
+                <span>Author of <em>Trust Your Magical Self</em> &amp; <em>Turning 40</em></span>
               </li>
             </ul>
           </div>

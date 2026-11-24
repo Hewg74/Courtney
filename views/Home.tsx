@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 import { Reveal } from '../components/Reveal';
 import { AnimatedText } from '../components/AnimatedText';
 import { Marquee } from '../components/Marquee';
+import { PromoBanner } from '../components/PromoBanner';
 import { openExternal, BOOKING_URL, TESTIMONIALS } from '../constants';
 
 // ... (inside component)
@@ -21,13 +22,16 @@ export const Home: React.FC<HomeProps> = ({ setView }) => {
     <div className="animate-fade-in pb-24 relative overflow-x-hidden">
 
       {/* 1. Hero Section - Side-by-Side Layout (Old Design) */}
-      <section className="relative lg:min-h-[100vh] flex items-center px-6 overflow-hidden pt-32 md:pt-36 lg:pt-40 pb-16 md:pb-20 lg:pb-32">
+      <section className="relative lg:min-h-[100vh] flex flex-col px-6 overflow-hidden pt-32 md:pt-36 lg:pt-40 pb-16 md:pb-20 lg:pb-32">
         {/* Ambient Washes */}
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-clay-50/50 via-sand-50 to-white -z-20" />
         <div className="absolute top-[5%] right-[-5%] w-[600px] h-[600px] bg-sage-100/50 rounded-full blur-[120px] mix-blend-multiply animate-float -z-10" />
         <div className="absolute bottom-[-5%] left-[-5%] w-[500px] h-[500px] bg-clay-100/40 rounded-full blur-[100px] mix-blend-multiply animate-float-delayed -z-10" />
 
-        <div className="max-w-6xl mx-auto w-full grid lg:grid-cols-[1.1fr_0.9fr] gap-10 lg:gap-12 items-center relative z-10">
+        {/* Seasonal promo (hides itself when the sale ends) */}
+        <PromoBanner className="relative z-10 mb-10 md:mb-14" />
+
+        <div className="max-w-6xl mx-auto my-auto w-full grid lg:grid-cols-[1.1fr_0.9fr] gap-10 lg:gap-12 items-center relative z-10">
 
           {/* Left: Text Content */}
           <div className="space-y-6 lg:space-y-8 text-center lg:text-left relative min-w-0 max-w-2xl mx-auto lg:max-w-none w-full">
@@ -105,33 +109,6 @@ export const Home: React.FC<HomeProps> = ({ setView }) => {
           </div>
 
         </div>
-      </section>
-
-      {/* ─── Upcoming Event Banner ─── */}
-      <section className="py-6 px-6 bg-clay-50 border-y border-clay-100">
-        <Reveal width="100%">
-          <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
-            <div className="flex items-center gap-5">
-              <div className="hidden sm:flex flex-col items-center justify-center bg-white rounded-2xl shadow-soft border border-clay-100 px-4 py-3 min-w-[60px]">
-                <span className="text-[10px] font-bold uppercase tracking-widest text-clay-500">Nov</span>
-                <span className="text-3xl font-serif text-sand-900 leading-none">14</span>
-              </div>
-              <div>
-                <span className="text-[10px] font-bold uppercase tracking-widest text-clay-500 block mb-1">Upcoming Workshop</span>
-                <h3 className="text-xl font-serif text-sand-900">Sleep: Practical Tools for Better Rest</h3>
-                <p className="text-sm text-sand-500 mt-1">Sat, Nov 14 · 3–4 PM · Makawao Community Acupuncture Clinic</p>
-              </div>
-            </div>
-            <a
-              href="https://www.eventbrite.com/e/sleep-practical-tools-for-better-rest-tickets-2003948511944"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="shrink-0 inline-flex items-center gap-2 bg-sand-900 text-sand-50 text-sm font-medium px-6 py-3 rounded-full hover:bg-clay-700 transition-all duration-300 hover:-translate-y-0.5 shadow-soft hover:shadow-medium whitespace-nowrap"
-            >
-              Register on Eventbrite →
-            </a>
-          </div>
-        </Reveal>
       </section>
 
       {/* 2. Services Overview (Moved & Renamed) */}

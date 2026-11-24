@@ -2,14 +2,17 @@ import React from 'react';
 import { Button } from '../components/Button';
 import { Play } from 'lucide-react';
 import { Reveal } from '../components/Reveal';
+import { PromoBanner } from '../components/PromoBanner';
 import { YOUTUBE_URL, openExternal } from '../constants';
 
 export const Qigong: React.FC = () => {
     return (
         <div className="animate-fade-in pt-32 pb-24 px-6 max-w-5xl mx-auto space-y-20">
 
+            <PromoBanner />
+
             {/* ─── Header ─── */}
-            <div className="text-center space-y-6 max-w-3xl mx-auto pb-12 border-b border-sand-200">
+            <div className="text-center space-y-6 max-w-3xl mx-auto pb-12 border-b border-sand-200 !mt-12 md:!mt-16 first:!mt-0">
                 <Reveal width="100%">
                     <span className="text-sage-500 font-sans text-xs font-bold uppercase tracking-widest">Mind &amp; Body</span>
                     <h1 className="text-5xl md:text-6xl font-serif text-sand-900 mt-3 mb-6">Qigong with Courtney</h1>

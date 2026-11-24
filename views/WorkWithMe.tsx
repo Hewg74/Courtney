@@ -5,6 +5,7 @@ import { ViewState } from '../types';
 import { Check, ChevronDown } from 'lucide-react';
 import { Reveal } from '../components/Reveal';
 import { FAQ_ITEMS, BOOKING_URL, openExternal } from '../constants';
+import { PromoBanner } from '../components/PromoBanner';
 
 interface WorkWithMeProps {
     setView: (view: ViewState) => void;
@@ -16,8 +17,10 @@ export const WorkWithMe: React.FC<WorkWithMeProps> = ({ setView }) => {
     return (
         <div className="animate-fade-in pt-40 pb-32 px-6 max-w-6xl mx-auto space-y-40">
 
+            <PromoBanner />
+
             {/* ─── Page Header ─── */}
-            <div className="grid md:grid-cols-2 gap-12 items-end border-b border-sand-200 pb-16 text-center md:text-left">
+            <div className="grid md:grid-cols-2 gap-12 items-end border-b border-sand-200 pb-16 text-center md:text-left !mt-12 md:!mt-16 first:!mt-0">
                 <div className="space-y-6">
                     <span className="text-clay-600 font-sans text-xs font-bold uppercase tracking-widest">Services</span>
                     <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif text-sand-900 leading-[0.9]">Workshops &amp; Coaching</h1>

@@ -29,22 +29,22 @@ export const PromoBanner: React.FC<PromoBannerProps> = ({ className = '' }) => {
         <div className="absolute -bottom-24 right-10 w-64 h-64 rounded-full bg-[#E6BDB3]/20 blur-3xl pointer-events-none" />
         <Sparkle aria-hidden="true" size={14} strokeWidth={1.5} className="hidden lg:block absolute top-4 right-6 text-white/50 pointer-events-none" />
         <Sparkle aria-hidden="true" size={9} strokeWidth={1.5} className="hidden lg:block absolute top-10 right-12 text-white/35 pointer-events-none" />
-        <Sparkle aria-hidden="true" size={11} strokeWidth={1.5} className="hidden lg:block absolute bottom-5 right-[38%] text-white/30 pointer-events-none" />
+        <Sparkle aria-hidden="true" size={11} strokeWidth={1.5} className="hidden lg:block absolute bottom-12 left-8 text-white/30 pointer-events-none" />
 
-        <div className="relative flex flex-col lg:flex-row items-center gap-3 lg:gap-9">
+        <div className="relative flex flex-col items-center gap-3">
           {/* Headline — first on mobile, middle on desktop */}
-          <p className="lg:order-2 lg:flex-grow font-serif text-xl lg:text-2xl leading-snug text-balance text-center lg:text-left max-w-xs lg:max-w-none">
+          <p className="font-serif text-xl lg:text-2xl leading-snug text-balance text-center max-w-xs sm:max-w-xl">
             Give yourself or someone you love the gift&nbsp;of&nbsp;wellness!
           </p>
 
           {/* The offer: big number + caption pair */}
-          <div className="lg:order-1 flex flex-col lg:flex-row items-center gap-1.5 lg:gap-4 flex-shrink-0">
+          <div className="flex flex-col items-center gap-1.5 flex-shrink-0">
             <div className="font-serif leading-none flex items-baseline gap-1.5">
               <span className="text-5xl lg:text-6xl tracking-tight">20%</span>
               <span className="italic text-2xl lg:text-3xl text-[#FBEAF0]">off</span>
             </div>
-            <div className="hidden lg:block h-10 w-px bg-white/30" aria-hidden="true" />
-            <div className="text-center lg:text-left space-y-0.5 lg:space-y-1 whitespace-nowrap">
+            <div className="hidden h-10 w-px bg-white/30" aria-hidden="true" />
+            <div className="text-center space-y-0.5 whitespace-nowrap">
               <span className="block text-[10px] font-bold uppercase tracking-[0.16em] text-white">Qigong &amp; Health Coaching*</span>
               <span className="block text-[10px] font-bold uppercase tracking-[0.16em] text-[#FBEAF0]">Black Friday · Nov 25–30</span>
             </div>
@@ -53,7 +53,7 @@ export const PromoBanner: React.FC<PromoBannerProps> = ({ className = '' }) => {
           <button
             type="button"
             onClick={() => openExternal(BOOKING_URL)}
-            className="lg:order-3 group relative overflow-hidden w-full sm:w-auto sm:px-8 flex-shrink-0 inline-flex items-center justify-center gap-2 bg-white text-[#8F2E52] text-sm font-medium px-6 py-2.5 lg:py-3 mt-1 lg:mt-0 rounded-full shadow-soft hover:shadow-premium hover:-translate-y-0.5 transition-all duration-300 whitespace-nowrap"
+            className="group relative overflow-hidden w-full sm:w-auto sm:px-8 flex-shrink-0 inline-flex items-center justify-center gap-2 bg-white text-[#8F2E52] text-sm font-medium px-6 py-2.5 lg:py-3 mt-1 rounded-full shadow-soft hover:shadow-premium hover:-translate-y-0.5 transition-all duration-300 whitespace-nowrap"
           >
             <span className="relative z-10">Book a Free 15-Min Chat</span>
             <ArrowRight aria-hidden="true" size={15} className="relative z-10 transition-transform duration-300 group-hover:translate-x-1" />
@@ -62,7 +62,7 @@ export const PromoBanner: React.FC<PromoBannerProps> = ({ className = '' }) => {
         </div>
 
         {/* Fine print: short by default, Courtney's full wording on tap */}
-        <p className="relative text-[11px] text-white/95 font-light leading-relaxed mt-4 pt-3 lg:mt-5 lg:pt-4 border-t border-white/20 text-center lg:text-left">
+        <p className="relative text-[11px] text-white/95 font-light leading-relaxed mt-4 pt-3 lg:mt-5 lg:pt-4 border-t border-white/20 text-center">
           {showDetails ? (
             <>*New &amp; Returning Health Coaching Clients, please book a complimentary 15-min intro chat to explore coaching fit. Black Friday session prices will be secured for any intro chats booked between Nov 23–30th, even if we meet after the sale!</>
           ) : (

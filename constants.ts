@@ -410,5 +410,18 @@ export const FAQ_ITEMS = [
   {
     q: "How do I know if coaching is right for me (or my child) vs. therapy?",
     a: "If someone is in acute crisis, actively self-harming, or unable to function in daily life, therapy is often the right first step. If you're dealing with stress, anxiety, sleep issues, confidence, routines, or communication challenges and want practical, action-oriented tools, coaching is a great fit. We can discuss this in more detail during our initial 15-min chat."
+  },
+  {
+    q: "What is your cancellation and refund policy for health coaching?",
+    a: "Please provide at least 24 hours’ notice to cancel or reschedule your appointment. Sessions canceled with less than 24 hours’ notice, or missed without notice, are charged in full. Prepaid sessions canceled with sufficient notice may be rescheduled or refunded upon request."
+  },
+  {
+    q: "What is your cancellation and refund policy for private Qigong?",
+    a: "Please provide at least 24 hours’ notice to cancel or reschedule your session. Sessions canceled with less than 24 hours’ notice, or missed without notice, are charged in full. Prepaid sessions canceled with sufficient notice may be rescheduled or refunded upon request.\n\nPrivate Qigong sessions are available online or in person. In-person sessions can be held at parks throughout Upcountry Maui, at your home, or in a private studio in Haʻikū (additional $40/hour studio rental fee).\n\nFor in-home sessions outside the Upcountry area (Kula, Haʻikū, Makawao, Pukalani, Pāʻia, and Spreckelsville), travel time is billed at my regular hourly rate of $110/hour. Any additional fees will be discussed before booking."
+  },
+  {
+    q: "How do the Black Friday specials work?",
+    a: "From November 25–30, 2026, enjoy 20% off comprehensive health coaching ($68 for 45 minutes) and private Qigong ($88 for 60 minutes).\n\nSessions can be scheduled after the holidays, and private Qigong sessions may also be purchased as gifts.\n\nNew health coaching clients must first complete a complimentary 15-minute consultation to ensure coaching is a good fit. Book your consultation during the promotional period to secure the special rate, even if your consultation takes place afterward. Returning clients may also need to reconnect before scheduling, and a current coaching agreement is required.\n\nAll sessions are subject to the 24-hour cancellation policy described above.",
+    promo: true
   }
 ];

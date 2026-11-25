@@ -5,7 +5,7 @@ import { ViewState } from '../types';
 import { Check, ChevronDown } from 'lucide-react';
 import { Reveal } from '../components/Reveal';
 import { FAQ_ITEMS, BOOKING_URL, openExternal } from '../constants';
-import { PromoBanner } from '../components/PromoBanner';
+import { PromoBanner, isPromoActive } from '../components/PromoBanner';
 
 interface WorkWithMeProps {
     setView: (view: ViewState) => void;
@@ -326,7 +326,7 @@ export const WorkWithMe: React.FC<WorkWithMeProps> = ({ setView }) => {
                     <h2 className="text-4xl font-serif text-sand-900 text-center mb-16">Common questions</h2>
                 </Reveal>
                 <div className="space-y-4">
-                    {FAQ_ITEMS.map((item, i) => (
+                    {FAQ_ITEMS.filter(item => !('promo' in item && item.promo) || isPromoActive()).map((item, i) => (
                         <Reveal key={i} delay={i * 0.05} width="100%">
                             <div className="bg-white rounded-2xl border border-sand-100 overflow-hidden">
                                 <button
@@ -354,8 +354,8 @@ export const WorkWithMe: React.FC<WorkWithMeProps> = ({ setView }) => {
                                             transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
                                             className="overflow-hidden"
                                         >
-                                            <div className="px-8 pb-8 text-sand-600 font-light leading-relaxed text-base">
-                                                {item.a}
+                                            <div className="px-8 pb-8 text-sand-600 font-light leading-relaxed text-base space-y-4">
+                                                {item.a.split('\n\n').map((para, j) => <p key={j}>{para}</p>)}
                                             </div>
                                         </motion.div>
                                     )}
